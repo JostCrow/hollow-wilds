@@ -1,5 +1,5 @@
 {
-    "name": "jorik",
+    "name": "Joirk",
     "gender": "male",
     "party": [
         {
@@ -12,11 +12,11 @@
             ]
         }
     ],
-    "current_route": "Willowfen Village",
+    "current_route": "Route 1",
     "position": {
-        "tx": 15,
-        "ty": 10
+        "tx": 20,
+        "ty": 23
     },
-    "timestamp": "2025-09-25T09:23:34.747541",
+    "timestamp": "2025-09-25T10:30:34.911260",
     "last_autosave": 0
 }

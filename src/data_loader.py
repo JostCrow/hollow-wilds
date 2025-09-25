@@ -1,9 +1,12 @@
 import json
 import os
+from typing import Any
+import random
 from .config import CREATURES_FILE, ROUTES_FILE
+from .models import Creature, CreaturesData, RoutesData
 
 
-def load_json(file_path):
+def load_json(file_path: str) -> Any:
     """Load JSON file with fallback to empty dict."""
     if os.path.exists(file_path):
         with open(file_path, "r") as f:
@@ -12,18 +15,50 @@ def load_json(file_path):
 
 
 # Load global data (imported once in main)
-creatures_data = load_json(CREATURES_FILE)
-routes_data = load_json(ROUTES_FILE)
+raw_creatures = load_json(CREATURES_FILE)
+creatures_data = CreaturesData.model_validate(raw_creatures)
+
+
+raw_routes = load_json(ROUTES_FILE)
+routes_data = RoutesData.model_validate(raw_routes)
 
 # Prepare starters (first 3 creatures; fallback if data missing)
-starters = (creatures_data[0], creatures_data[3], creatures_data[6])
+starters: list[Creature] = [
+    creatures_data.get_by_name("Aquapup"),
+    creatures_data.get_by_name("Flamcub"),
+    creatures_data.get_by_name("Terraplant"),
+]
 
 
-def find_creature(name):
+def find_creature(name: str) -> Creature:
     """Helper to find a creature by name in the list."""
-    if not creatures_data:
-        return None
-    for creature in creatures_data:
-        if creature.get("name") == name:
-            return creature
-    return None
+    return creatures_data.get_by_name(name)
+
+
+def calculate_stats_based_on_level(
+    creature: Creature, level: int
+) -> tuple[int, int, int, int, int, int]:
+    """This is the base stats of the creature and we modify this based on the level. There is a random change for some states to move up and down for every level between 0 and 2 points.
+    We return the HP, Attack, Defence, Special attack, Special Defence and speed for this calculation"""
+    if level < 1:
+        level = 1
+    base_stats = creature.base_stats
+    base_hp = base_stats.hp
+    base_attack = base_stats.attack
+    base_defense = base_stats.defense
+    base_sp_attack = base_stats.sp_attack
+    base_sp_defense = base_stats.sp_defense
+    base_speed = base_stats.speed
+    iv_hp = random.randint(0, 31)
+    iv_attack = random.randint(0, 31)
+    iv_defense = random.randint(0, 31)
+    iv_sp_attack = random.randint(0, 31)
+    iv_sp_defense = random.randint(0, 31)
+    iv_speed = random.randint(0, 31)
+    hp = int((2 * base_hp + iv_hp) * level / 100) + level + 10
+    attack = int((2 * base_attack + iv_attack) * level / 100 + 5)
+    defense = int((2 * base_defense + iv_defense) * level / 100 + 5)
+    sp_attack = int((2 * base_sp_attack + iv_sp_attack) * level / 100 + 5)
+    sp_defense = int((2 * base_sp_defense + iv_sp_defense) * level / 100 + 5)
+    speed = int((2 * base_speed + iv_speed) * level / 100 + 5)
+    return (hp, attack, defense, sp_attack, sp_defense, speed)

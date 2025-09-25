@@ -22,6 +22,7 @@ class Player:
         self.last_autosave = 0  # For autosave tracking
         self.shake_active = False  # For camera shake on block
         self.shake_timer = 0.0
+        self.wild_spawns = []
         self.update_sprite()
 
     def update_sprite(self):
@@ -67,24 +68,40 @@ class Player:
             f"Attempting move: dx={dx}, dy={dy}, new_x={new_x}, new_y={new_y}, new_grid=({new_grid_x}, {new_grid_y})"
         )
 
-        # Pre-check map existence and bounds
         tile_map = current_map.get("tiles", {}).get("map", [])
-        map_bounds_ok = (
-            bool(tile_map)
-            and 0 <= new_grid_x < len(tile_map[0])
-            and 0 <= new_grid_y < len(tile_map)
-        )
+        in_bounds = False
+        if tile_map:
+            if 0 <= new_grid_y < len(tile_map):
+                row_len = len(tile_map[new_grid_y])
+                if 0 <= new_grid_x < row_len:
+                    in_bounds = True
+        not_in_blocked = False
+        if in_bounds:
+            target_tile = tile_map[new_grid_y][new_grid_x]
+            not_in_blocked = target_tile != "w"
+        no_npc_collision = True
+        npcs = current_map.get("npcs", [])
+        for npc in npcs:
+            position = npc.get("position", {})
+            tx = position.get("tx", -1)
+            ty = position.get("ty", -1)
+            if tx == new_grid_x and ty == new_grid_y:
+                no_npc_collision = False
+                break
 
-        # Check map bounds
-        tile_map = current_map.get("tiles", {}).get("map", [])
-        if (
-            tile_map
-            and 0 <= new_grid_x < len(tile_map[0])
-            and 0 <= new_grid_y < len(tile_map)
-            and in_bounds
-            and not_in_blocked
-            and no_npc_collision
-        ):
+        no_object_collision = True
+        objects = current_map.get("objects", [])
+        for obj in objects:
+            if obj.get("blocks", False):
+                tx = obj.get("tx", 0)
+                ty = obj.get("ty", 0)
+                w = obj.get("w", 1)
+                h = obj.get("h", 1)
+                if tx <= new_grid_x < tx + w and ty <= new_grid_y < ty + h:
+                    no_object_collision = False
+                    break
+
+        if in_bounds and not_in_blocked and no_npc_collision and no_object_collision:
             self.x = new_x
             self.y = new_y
             self.grid_x = new_grid_x
@@ -93,26 +110,16 @@ class Player:
                 f"Position updated: x={self.x}, y={self.y}, grid=({self.grid_x}, {self.grid_y})"
             )
 
-            # Stub: Grass encounter check
-            if (
-                0 <= new_grid_y < len(tile_map)
-                and 0 <= new_grid_x < len(tile_map[new_grid_y])
-                and tile_map[new_grid_y][new_grid_x] == "g"
-            ):  # Grass tile
-                if random.random() < 0.1:  # 10% chance
-                    creatures = current_map.get("creatures", {}).get("grass", [])
-                    if creatures:
-                        print(f"Wild encounter! (Stub: {random.choice(creatures)})")
         else:
             # Determine specific block reason
-            if not map_bounds_ok:
-                reason = "map bounds"
-            elif not in_bounds:
-                reason = "not walkable"
+            if not in_bounds:
+                reason = "out of bounds"
             elif not not_in_blocked:
                 reason = "blocked area"
             elif not no_npc_collision:
                 reason = "NPC collision"
+            elif not no_object_collision:
+                reason = "object"
             else:
                 reason = "unknown"
 
