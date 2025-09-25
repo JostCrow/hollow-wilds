@@ -1,0 +1,22 @@
+{
+    "name": "jorik",
+    "gender": "male",
+    "party": [
+        {
+            "name": "Terraplant",
+            "level": 5,
+            "current_hp": 34,
+            "max_hp": 34,
+            "moves": [
+                "Vine Whip"
+            ]
+        }
+    ],
+    "current_route": "Willowfen Village",
+    "position": {
+        "tx": 15,
+        "ty": 10
+    },
+    "timestamp": "2025-09-25T09:23:34.747541",
+    "last_autosave": 0
+}
