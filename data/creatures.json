@@ -2,7 +2,9 @@
   {
     "name": "Flamcub",
     "sprite": "flamcub.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 46,
       "attack": 46,
@@ -16,57 +18,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Solar Power", "Flame Body"],
+    "abilities": [
+      "Solar Power",
+      "Flame Body"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Pyroarion",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Pyroarion"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Pyroarion"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Pyroarion",
     "sprite": "pyroarion.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 80,
       "attack": 63,
@@ -80,57 +79,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Blaze", "Solar Power"],
+    "abilities": [
+      "Blaze",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Inferlion",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Inferlion"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Inferlion"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Inferlion",
     "sprite": "inferlion.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 107,
       "attack": 100,
@@ -144,57 +140,47 @@
       "stat": "attack",
       "bonus": 20
     },
-    "abilities": ["Flame Body", "Blaze"],
+    "abilities": [
+      "Flame Body",
+      "Blaze"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
+      },
+      {
+        "move_key": "inferno_blast",
+        "level": 55
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Aquapup",
     "sprite": "aquapup.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 31,
       "attack": 41,
@@ -208,57 +194,54 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Water Veil", "Swift Swim"],
+    "abilities": [
+      "Water Veil",
+      "Swift Swim"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": "Hydracanis",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Hydracanis"
+      },
+      {
+        "type": "stone",
+        "stone": "water_stone",
+        "evolves_to": "Hydracanis"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Hydracanis",
     "sprite": "hydracanis.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 62,
       "attack": 62,
@@ -272,57 +255,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Swift Swim", "Water Veil"],
+    "abilities": [
+      "Swift Swim",
+      "Water Veil"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": "Poseidire",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Poseidire"
+      },
+      {
+        "type": "stone",
+        "stone": "water_stone",
+        "evolves_to": "Poseidire"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Poseidire",
     "sprite": "poseidire.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 104,
       "attack": 80,
@@ -336,57 +316,47 @@
       "stat": "speed",
       "bonus": 20
     },
-    "abilities": ["Swift Swim", "Water Veil"],
+    "abilities": [
+      "Swift Swim",
+      "Water Veil"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
+      },
+      {
+        "move_key": "aqua_devastation",
+        "level": 60
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Terraplant",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 34,
       "attack": 46,
@@ -400,57 +370,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Thick Fat", "Overgrow"],
+    "abilities": [
+      "Thick Fat",
+      "Overgrow"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Floradon",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Floradon"
+      },
+      {
+        "type": "stone",
+        "stone": "leaf_stone",
+        "evolves_to": "Floradon"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Floradon",
     "sprite": "floradon.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 54,
       "attack": 98,
@@ -464,57 +431,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Chlorophyll", "Thick Fat"],
+    "abilities": [
+      "Chlorophyll",
+      "Thick Fat"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Verdantitan",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Verdantitan"
+      },
+      {
+        "type": "stone",
+        "stone": "leaf_stone",
+        "evolves_to": "Verdantitan"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Verdantitan",
     "sprite": "verdantitan.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 131,
       "attack": 115,
@@ -528,57 +492,43 @@
       "stat": "defense",
       "bonus": 20
     },
-    "abilities": ["Thick Fat", "Chlorophyll"],
+    "abilities": [
+      "Thick Fat",
+      "Chlorophyll"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Solaryon",
     "sprite": "solaryon.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 121,
       "attack": 106,
@@ -592,57 +542,43 @@
       "stat": "speed",
       "bonus": 30
     },
-    "abilities": ["Radiance", "Holy Guard"],
+    "abilities": [
+      "Radiance",
+      "Holy Guard"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": true,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Lunaryon",
     "sprite": "lunaryon.png",
-    "typing": ["Dark Magic"],
+    "typing": [
+      "Dark Magic"
+    ],
     "base_stats": {
       "hp": 142,
       "attack": 168,
@@ -656,57 +592,44 @@
       "stat": "defense",
       "bonus": 30
     },
-    "abilities": ["Shadow Veil", "Dark Aura"],
+    "abilities": [
+      "Shadow Veil",
+      "Dark Aura"
+    ],
     "moveset": [
       {
-        "name": "Shadow Claw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "shadow_claw",
+        "level": 1
       },
       {
-        "name": "Night Slash",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "night_slash",
+        "level": 1
       },
       {
-        "name": "Dark Pulse",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "dark_pulse",
+        "level": 1
       },
       {
-        "name": "Abyssal Crush",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "abyssal_crush",
+        "level": 36
       },
       {
-        "name": "Eternal Eclipse",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_eclipse",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": true,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Mystryon",
     "sprite": "mystryon.png",
-    "typing": ["Light Magic", "Dark Magic"],
+    "typing": [
+      "Light Magic",
+      "Dark Magic"
+    ],
     "base_stats": {
       "hp": 99,
       "attack": 146,
@@ -720,57 +643,43 @@
       "stat": "sp_attack",
       "bonus": 25
     },
-    "abilities": ["Radiance", "Holy Guard"],
+    "abilities": [
+      "Radiance",
+      "Holy Guard"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": true
+    "mythical": true,
+    "evolution_requirements": []
   },
   {
     "name": "Geocub",
     "sprite": "terraplant.png",
-    "typing": ["Ground"],
+    "typing": [
+      "Ground"
+    ],
     "base_stats": {
       "hp": 44,
       "attack": 51,
@@ -784,57 +693,54 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Sand Veil", "Sturdy"],
+    "abilities": [
+      "Sand Veil",
+      "Sturdy"
+    ],
     "moveset": [
       {
-        "name": "Mud Slap",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "mud_slap",
+        "level": 1
       },
       {
-        "name": "Rock Throw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "rock_throw",
+        "level": 1
       },
       {
-        "name": "Earthquake",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "earthquake",
+        "level": 1
       },
       {
-        "name": "Sandstorm",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "sandstorm",
+        "level": 36
       },
       {
-        "name": "Gaia Crush",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "gaia_crush",
+        "level": 50
       }
     ],
     "evolves_to": "Geoprime",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Geoprime"
+      },
+      {
+        "type": "stone",
+        "stone": "earth_stone",
+        "evolves_to": "Geoprime"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Geokit",
     "sprite": "terraplant.png",
-    "typing": ["Ground"],
+    "typing": [
+      "Ground"
+    ],
     "base_stats": {
       "hp": 78,
       "attack": 42,
@@ -848,57 +754,54 @@
       "stat": "speed",
       "bonus": 10
     },
-    "abilities": ["Earth Power", "Sand Veil"],
+    "abilities": [
+      "Earth Power",
+      "Sand Veil"
+    ],
     "moveset": [
       {
-        "name": "Mud Slap",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "mud_slap",
+        "level": 1
       },
       {
-        "name": "Rock Throw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "rock_throw",
+        "level": 1
       },
       {
-        "name": "Earthquake",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "earthquake",
+        "level": 1
       },
       {
-        "name": "Sandstorm",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "sandstorm",
+        "level": 36
       },
       {
-        "name": "Gaia Crush",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "gaia_crush",
+        "level": 50
       }
     ],
     "evolves_to": "Geoprime",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Geoprime"
+      },
+      {
+        "type": "stone",
+        "stone": "earth_stone",
+        "evolves_to": "Geoprime"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Geoprime",
     "sprite": "terraplant.png",
-    "typing": ["Ground"],
+    "typing": [
+      "Ground"
+    ],
     "base_stats": {
       "hp": 112,
       "attack": 86,
@@ -912,57 +815,43 @@
       "stat": "hp",
       "bonus": 10
     },
-    "abilities": ["Sturdy", "Earth Power"],
+    "abilities": [
+      "Sturdy",
+      "Earth Power"
+    ],
     "moveset": [
       {
-        "name": "Mud Slap",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "mud_slap",
+        "level": 1
       },
       {
-        "name": "Rock Throw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "rock_throw",
+        "level": 1
       },
       {
-        "name": "Earthquake",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "earthquake",
+        "level": 1
       },
       {
-        "name": "Sandstorm",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "sandstorm",
+        "level": 36
       },
       {
-        "name": "Gaia Crush",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "gaia_crush",
+        "level": 50
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Hydroling",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 41,
       "attack": 44,
@@ -976,57 +865,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Torrent", "Water Veil"],
+    "abilities": [
+      "Torrent",
+      "Water Veil"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": "Hydroon",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Hydroon"
+      },
+      {
+        "type": "stone",
+        "stone": "water_stone",
+        "evolves_to": "Hydroon"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Hydroon",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 75,
       "attack": 60,
@@ -1040,57 +926,43 @@
       "stat": "speed",
       "bonus": 10
     },
-    "abilities": ["Swift Swim", "Torrent"],
+    "abilities": [
+      "Swift Swim",
+      "Torrent"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Plainling",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 85,
       "attack": 56,
@@ -1104,57 +976,43 @@
       "stat": "speed",
       "bonus": 10
     },
-    "abilities": ["Inner Focus", "Run Away"],
+    "abilities": [
+      "Inner Focus",
+      "Run Away"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Solling",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 59,
       "attack": 91,
@@ -1168,57 +1026,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Pressure", "Radiance"],
+    "abilities": [
+      "Pressure",
+      "Radiance"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Marinling",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 50,
       "attack": 41,
@@ -1232,57 +1076,43 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Torrent", "Water Veil"],
+    "abilities": [
+      "Torrent",
+      "Water Veil"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Lumiling",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 60,
       "attack": 61,
@@ -1296,57 +1126,54 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Pressure", "Radiance"],
+    "abilities": [
+      "Pressure",
+      "Radiance"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": "Lumion",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Lumion"
+      },
+      {
+        "type": "stone",
+        "stone": "light_stone",
+        "evolves_to": "Lumion"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Lumion",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 141,
       "attack": 116,
@@ -1360,57 +1187,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Holy Guard", "Pressure"],
+    "abilities": [
+      "Holy Guard",
+      "Pressure"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Emberling",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 76,
       "attack": 72,
@@ -1424,57 +1237,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Flame Body", "Solar Power"],
+    "abilities": [
+      "Flame Body",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Emberon",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Emberon"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Emberon"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Emberon",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 58,
       "attack": 60,
@@ -1488,57 +1298,54 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Solar Power", "Flame Body"],
+    "abilities": [
+      "Solar Power",
+      "Flame Body"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Emberlord",
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Emberlord"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Emberlord"
+      }
+    ],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Emberlord",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 65,
       "attack": 124,
@@ -1552,57 +1359,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Flame Body", "Solar Power"],
+    "abilities": [
+      "Flame Body",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": null,
+    "evolution_requirements": [],
     "legendary": false,
     "mythical": false
   },
   {
     "name": "Plainling",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 39,
       "attack": 57,
@@ -1616,57 +1409,46 @@
       "stat": "speed",
       "bonus": 10
     },
-    "abilities": ["Inner Focus", "Adaptability"],
+    "abilities": [
+      "Inner Focus",
+      "Adaptability"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
-    "evolves_to": ["Plainflare", "Plainshade"],
+    "evolves_to": [
+      "Plainflare",
+      "Plainshade"
+    ],
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Plainflare",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 67,
       "attack": 84,
@@ -1680,57 +1462,43 @@
       "stat": "attack",
       "bonus": 10
     },
-    "abilities": ["Run Away", "Inner Focus"],
+    "abilities": [
+      "Run Away",
+      "Inner Focus"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Plainshade",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 67,
       "attack": 95,
@@ -1744,57 +1512,43 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Run Away", "Adaptability"],
+    "abilities": [
+      "Run Away",
+      "Adaptability"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Umbraling",
     "sprite": "terraplant.png",
-    "typing": ["Dark Magic"],
+    "typing": [
+      "Dark Magic"
+    ],
     "base_stats": {
       "hp": 82,
       "attack": 75,
@@ -1808,57 +1562,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Illusion", "Dark Aura"],
+    "abilities": [
+      "Illusion",
+      "Dark Aura"
+    ],
     "moveset": [
       {
-        "name": "Shadow Claw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "shadow_claw",
+        "level": 1
       },
       {
-        "name": "Night Slash",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "night_slash",
+        "level": 1
       },
       {
-        "name": "Dark Pulse",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "dark_pulse",
+        "level": 1
       },
       {
-        "name": "Abyssal Crush",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "abyssal_crush",
+        "level": 36
       },
       {
-        "name": "Eternal Eclipse",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_eclipse",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Pyrocub",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 45,
       "attack": 71,
@@ -1872,57 +1612,54 @@
       "stat": "attack",
       "bonus": 10
     },
-    "abilities": ["Blaze", "Solar Power"],
+    "abilities": [
+      "Blaze",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Pyroprime",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Pyroprime"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Pyroprime"
+      }
+    ]
   },
   {
     "name": "Pyrokit",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 30,
       "attack": 54,
@@ -1936,57 +1673,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Blaze", "Solar Power"],
+    "abilities": [
+      "Blaze",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Pyroprime",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Pyroprime"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Pyroprime"
+      }
+    ]
   },
   {
     "name": "Pyroprime",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 67,
       "attack": 88,
@@ -2000,57 +1734,43 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Flame Body", "Solar Power"],
+    "abilities": [
+      "Flame Body",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Lumiling",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 77,
       "attack": 47,
@@ -2064,57 +1784,46 @@
       "stat": "hp",
       "bonus": 10
     },
-    "abilities": ["Radiance", "Holy Guard"],
+    "abilities": [
+      "Radiance",
+      "Holy Guard"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
-    "evolves_to": ["Lumiflare", "Lumishade"],
+    "evolves_to": [
+      "Lumiflare",
+      "Lumishade"
+    ],
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Lumiflare",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 55,
       "attack": 68,
@@ -2128,57 +1837,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Holy Guard", "Radiance"],
+    "abilities": [
+      "Holy Guard",
+      "Radiance"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Lumishade",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 91,
       "attack": 55,
@@ -2192,57 +1887,43 @@
       "stat": "attack",
       "bonus": 10
     },
-    "abilities": ["Holy Guard", "Radiance"],
+    "abilities": [
+      "Holy Guard",
+      "Radiance"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Cinderling",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 48,
       "attack": 47,
@@ -2256,57 +1937,54 @@
       "stat": "speed",
       "bonus": 10
     },
-    "abilities": ["Flame Body", "Solar Power"],
+    "abilities": [
+      "Flame Body",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Cinderon",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Cinderon"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Cinderon"
+      }
+    ]
   },
   {
     "name": "Cinderon",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 104,
       "attack": 59,
@@ -2320,57 +1998,43 @@
       "stat": "attack",
       "bonus": 10
     },
-    "abilities": ["Flame Body", "Solar Power"],
+    "abilities": [
+      "Flame Body",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Aqualing",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 54,
       "attack": 58,
@@ -2384,57 +2048,46 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Water Veil", "Torrent"],
+    "abilities": [
+      "Water Veil",
+      "Torrent"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
-    "evolves_to": ["Aquaflare", "Aquashade"],
+    "evolves_to": [
+      "Aquaflare",
+      "Aquashade"
+    ],
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Aquaflare",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 85,
       "attack": 82,
@@ -2448,57 +2101,43 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Water Veil", "Torrent"],
+    "abilities": [
+      "Water Veil",
+      "Torrent"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Aquashade",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 58,
       "attack": 61,
@@ -2512,57 +2151,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Water Veil", "Torrent"],
+    "abilities": [
+      "Water Veil",
+      "Torrent"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Blazeling",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 75,
       "attack": 64,
@@ -2576,57 +2201,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Flame Body", "Solar Power"],
+    "abilities": [
+      "Flame Body",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Auriling",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 42,
       "attack": 44,
@@ -2640,57 +2251,54 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Radiance", "Holy Guard"],
+    "abilities": [
+      "Radiance",
+      "Holy Guard"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": "Aurion",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Aurion"
+      },
+      {
+        "type": "stone",
+        "stone": "light_stone",
+        "evolves_to": "Aurion"
+      }
+    ]
   },
   {
     "name": "Aurion",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 80,
       "attack": 91,
@@ -2704,57 +2312,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Radiance", "Holy Guard"],
+    "abilities": [
+      "Radiance",
+      "Holy Guard"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Peltling",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 77,
       "attack": 33,
@@ -2768,57 +2362,54 @@
       "stat": "speed",
       "bonus": 10
     },
-    "abilities": ["Run Away", "Adaptability"],
+    "abilities": [
+      "Run Away",
+      "Adaptability"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Pelton",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Pelton"
+      },
+      {
+        "type": "stone",
+        "stone": "moon_stone",
+        "evolves_to": "Pelton"
+      }
+    ]
   },
   {
     "name": "Pelton",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 79,
       "attack": 89,
@@ -2832,57 +2423,54 @@
       "stat": "attack",
       "bonus": 10
     },
-    "abilities": ["Inner Focus", "Run Away"],
+    "abilities": [
+      "Inner Focus",
+      "Run Away"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Peltlord",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Peltlord"
+      },
+      {
+        "type": "stone",
+        "stone": "moon_stone",
+        "evolves_to": "Peltlord"
+      }
+    ]
   },
   {
     "name": "Peltlord",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 105,
       "attack": 67,
@@ -2896,57 +2484,43 @@
       "stat": "speed",
       "bonus": 10
     },
-    "abilities": ["Inner Focus", "Adaptability"],
+    "abilities": [
+      "Inner Focus",
+      "Adaptability"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Gritling",
     "sprite": "terraplant.png",
-    "typing": ["Ground"],
+    "typing": [
+      "Ground"
+    ],
     "base_stats": {
       "hp": 48,
       "attack": 38,
@@ -2960,57 +2534,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Sand Veil", "Sturdy"],
+    "abilities": [
+      "Sand Veil",
+      "Sturdy"
+    ],
     "moveset": [
       {
-        "name": "Mud Slap",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "mud_slap",
+        "level": 1
       },
       {
-        "name": "Rock Throw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "rock_throw",
+        "level": 1
       },
       {
-        "name": "Earthquake",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "earthquake",
+        "level": 1
       },
       {
-        "name": "Sandstorm",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "sandstorm",
+        "level": 36
       },
       {
-        "name": "Gaia Crush",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "gaia_crush",
+        "level": 50
       }
     ],
     "evolves_to": "Griton",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Griton"
+      },
+      {
+        "type": "stone",
+        "stone": "earth_stone",
+        "evolves_to": "Griton"
+      }
+    ]
   },
   {
     "name": "Griton",
     "sprite": "terraplant.png",
-    "typing": ["Ground"],
+    "typing": [
+      "Ground"
+    ],
     "base_stats": {
       "hp": 80,
       "attack": 84,
@@ -3024,57 +2595,54 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Sturdy", "Earth Power"],
+    "abilities": [
+      "Sturdy",
+      "Earth Power"
+    ],
     "moveset": [
       {
-        "name": "Mud Slap",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "mud_slap",
+        "level": 1
       },
       {
-        "name": "Rock Throw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "rock_throw",
+        "level": 1
       },
       {
-        "name": "Earthquake",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "earthquake",
+        "level": 1
       },
       {
-        "name": "Sandstorm",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "sandstorm",
+        "level": 36
       },
       {
-        "name": "Gaia Crush",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "gaia_crush",
+        "level": 50
       }
     ],
     "evolves_to": "Gritlord",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Gritlord"
+      },
+      {
+        "type": "stone",
+        "stone": "earth_stone",
+        "evolves_to": "Gritlord"
+      }
+    ]
   },
   {
     "name": "Gritlord",
     "sprite": "terraplant.png",
-    "typing": ["Ground"],
+    "typing": [
+      "Ground"
+    ],
     "base_stats": {
       "hp": 71,
       "attack": 63,
@@ -3088,57 +2656,43 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Earth Power", "Sand Veil"],
+    "abilities": [
+      "Earth Power",
+      "Sand Veil"
+    ],
     "moveset": [
       {
-        "name": "Mud Slap",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "mud_slap",
+        "level": 1
       },
       {
-        "name": "Rock Throw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "rock_throw",
+        "level": 1
       },
       {
-        "name": "Earthquake",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "earthquake",
+        "level": 1
       },
       {
-        "name": "Sandstorm",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "sandstorm",
+        "level": 36
       },
       {
-        "name": "Gaia Crush",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "gaia_crush",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Rivuling",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 66,
       "attack": 65,
@@ -3152,57 +2706,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Water Veil", "Swift Swim"],
+    "abilities": [
+      "Water Veil",
+      "Swift Swim"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Geoling",
     "sprite": "terraplant.png",
-    "typing": ["Ground"],
+    "typing": [
+      "Ground"
+    ],
     "base_stats": {
       "hp": 65,
       "attack": 34,
@@ -3216,57 +2756,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Sturdy", "Earth Power"],
+    "abilities": [
+      "Sturdy",
+      "Earth Power"
+    ],
     "moveset": [
       {
-        "name": "Mud Slap",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "mud_slap",
+        "level": 1
       },
       {
-        "name": "Rock Throw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "rock_throw",
+        "level": 1
       },
       {
-        "name": "Earthquake",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "earthquake",
+        "level": 1
       },
       {
-        "name": "Sandstorm",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "sandstorm",
+        "level": 36
       },
       {
-        "name": "Gaia Crush",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "gaia_crush",
+        "level": 50
       }
     ],
     "evolves_to": "Geoon",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Geoon"
+      },
+      {
+        "type": "stone",
+        "stone": "earth_stone",
+        "evolves_to": "Geoon"
+      }
+    ]
   },
   {
     "name": "Geoon",
     "sprite": "terraplant.png",
-    "typing": ["Ground"],
+    "typing": [
+      "Ground"
+    ],
     "base_stats": {
       "hp": 98,
       "attack": 44,
@@ -3280,57 +2817,54 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Sturdy", "Sand Veil"],
+    "abilities": [
+      "Sturdy",
+      "Sand Veil"
+    ],
     "moveset": [
       {
-        "name": "Mud Slap",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "mud_slap",
+        "level": 1
       },
       {
-        "name": "Rock Throw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "rock_throw",
+        "level": 1
       },
       {
-        "name": "Earthquake",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "earthquake",
+        "level": 1
       },
       {
-        "name": "Sandstorm",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "sandstorm",
+        "level": 36
       },
       {
-        "name": "Gaia Crush",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "gaia_crush",
+        "level": 50
       }
     ],
     "evolves_to": "Geolord",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Geolord"
+      },
+      {
+        "type": "stone",
+        "stone": "earth_stone",
+        "evolves_to": "Geolord"
+      }
+    ]
   },
   {
     "name": "Geolord",
     "sprite": "terraplant.png",
-    "typing": ["Ground"],
+    "typing": [
+      "Ground"
+    ],
     "base_stats": {
       "hp": 115,
       "attack": 53,
@@ -3344,57 +2878,43 @@
       "stat": "attack",
       "bonus": 10
     },
-    "abilities": ["Sand Veil", "Sturdy"],
+    "abilities": [
+      "Sand Veil",
+      "Sturdy"
+    ],
     "moveset": [
       {
-        "name": "Mud Slap",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "mud_slap",
+        "level": 1
       },
       {
-        "name": "Rock Throw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "rock_throw",
+        "level": 1
       },
       {
-        "name": "Earthquake",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "earthquake",
+        "level": 1
       },
       {
-        "name": "Sandstorm",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "sandstorm",
+        "level": 36
       },
       {
-        "name": "Gaia Crush",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "gaia_crush",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Fleetling",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 55,
       "attack": 56,
@@ -3408,57 +2928,54 @@
       "stat": "hp",
       "bonus": 10
     },
-    "abilities": ["Adaptability", "Inner Focus"],
+    "abilities": [
+      "Adaptability",
+      "Inner Focus"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Fleeton",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Fleeton"
+      },
+      {
+        "type": "stone",
+        "stone": "moon_stone",
+        "evolves_to": "Fleeton"
+      }
+    ]
   },
   {
     "name": "Fleeton",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 89,
       "attack": 76,
@@ -3472,57 +2989,43 @@
       "stat": "hp",
       "bonus": 10
     },
-    "abilities": ["Adaptability", "Run Away"],
+    "abilities": [
+      "Adaptability",
+      "Run Away"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Mossling",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 52,
       "attack": 36,
@@ -3536,57 +3039,46 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Overgrow", "Chlorophyll"],
+    "abilities": [
+      "Overgrow",
+      "Chlorophyll"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
-    "evolves_to": ["Mossflare", "Mossshade"],
+    "evolves_to": [
+      "Mossflare",
+      "Mossshade"
+    ],
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Mossflare",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 65,
       "attack": 67,
@@ -3600,57 +3092,43 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Overgrow", "Chlorophyll"],
+    "abilities": [
+      "Overgrow",
+      "Chlorophyll"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Mossshade",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 75,
       "attack": 119,
@@ -3664,57 +3142,43 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Thick Fat", "Chlorophyll"],
+    "abilities": [
+      "Thick Fat",
+      "Chlorophyll"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Ebonling",
     "sprite": "terraplant.png",
-    "typing": ["Dark Magic"],
+    "typing": [
+      "Dark Magic"
+    ],
     "base_stats": {
       "hp": 59,
       "attack": 36,
@@ -3728,57 +3192,54 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Illusion", "Shadow Veil"],
+    "abilities": [
+      "Illusion",
+      "Shadow Veil"
+    ],
     "moveset": [
       {
-        "name": "Shadow Claw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "shadow_claw",
+        "level": 1
       },
       {
-        "name": "Night Slash",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "night_slash",
+        "level": 1
       },
       {
-        "name": "Dark Pulse",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "dark_pulse",
+        "level": 1
       },
       {
-        "name": "Abyssal Crush",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "abyssal_crush",
+        "level": 36
       },
       {
-        "name": "Eternal Eclipse",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_eclipse",
+        "level": 50
       }
     ],
     "evolves_to": "Ebonon",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Ebonon"
+      },
+      {
+        "type": "stone",
+        "stone": "dark_stone",
+        "evolves_to": "Ebonon"
+      }
+    ]
   },
   {
     "name": "Ebonon",
     "sprite": "terraplant.png",
-    "typing": ["Dark Magic"],
+    "typing": [
+      "Dark Magic"
+    ],
     "base_stats": {
       "hp": 139,
       "attack": 67,
@@ -3792,57 +3253,43 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Shadow Veil", "Illusion"],
+    "abilities": [
+      "Shadow Veil",
+      "Illusion"
+    ],
     "moveset": [
       {
-        "name": "Shadow Claw",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "shadow_claw",
+        "level": 1
       },
       {
-        "name": "Night Slash",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "night_slash",
+        "level": 1
       },
       {
-        "name": "Dark Pulse",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "dark_pulse",
+        "level": 1
       },
       {
-        "name": "Abyssal Crush",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "abyssal_crush",
+        "level": 36
       },
       {
-        "name": "Eternal Eclipse",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_eclipse",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Igniscub",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 30,
       "attack": 50,
@@ -3856,57 +3303,54 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Flame Body", "Blaze"],
+    "abilities": [
+      "Flame Body",
+      "Blaze"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Ignisprime",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Ignisprime"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Ignisprime"
+      }
+    ]
   },
   {
     "name": "Igniskit",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 65,
       "attack": 56,
@@ -3920,57 +3364,54 @@
       "stat": "hp",
       "bonus": 10
     },
-    "abilities": ["Blaze", "Solar Power"],
+    "abilities": [
+      "Blaze",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Ignisprime",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Ignisprime"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Ignisprime"
+      }
+    ]
   },
   {
     "name": "Ignisprime",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 106,
       "attack": 46,
@@ -3984,57 +3425,43 @@
       "stat": "hp",
       "bonus": 10
     },
-    "abilities": ["Blaze", "Solar Power"],
+    "abilities": [
+      "Blaze",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Rivuling",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 60,
       "attack": 52,
@@ -4048,57 +3475,46 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Torrent", "Water Veil"],
+    "abilities": [
+      "Torrent",
+      "Water Veil"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
-    "evolves_to": ["Rivuflare", "Rivushade"],
+    "evolves_to": [
+      "Rivuflare",
+      "Rivushade"
+    ],
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Rivuflare",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 63,
       "attack": 123,
@@ -4112,57 +3528,43 @@
       "stat": "speed",
       "bonus": 10
     },
-    "abilities": ["Torrent", "Water Veil"],
+    "abilities": [
+      "Torrent",
+      "Water Veil"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Rivushade",
     "sprite": "terraplant.png",
-    "typing": ["Water"],
+    "typing": [
+      "Water"
+    ],
     "base_stats": {
       "hp": 94,
       "attack": 57,
@@ -4176,57 +3578,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Swift Swim", "Water Veil"],
+    "abilities": [
+      "Swift Swim",
+      "Water Veil"
+    ],
     "moveset": [
       {
-        "name": "Water Gun",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "water_gun",
+        "level": 1
       },
       {
-        "name": "Bubble Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bubble_beam",
+        "level": 1
       },
       {
-        "name": "Aqua Tail",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "aqua_tail",
+        "level": 1
       },
       {
-        "name": "Surf",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "surf",
+        "level": 36
       },
       {
-        "name": "Hydro Pump",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hydro_pump",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Floraling",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 64,
       "attack": 59,
@@ -4240,57 +3628,54 @@
       "stat": "hp",
       "bonus": 10
     },
-    "abilities": ["Chlorophyll", "Overgrow"],
+    "abilities": [
+      "Chlorophyll",
+      "Overgrow"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Floraon",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Floraon"
+      },
+      {
+        "type": "stone",
+        "stone": "leaf_stone",
+        "evolves_to": "Floraon"
+      }
+    ]
   },
   {
     "name": "Floraon",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 67,
       "attack": 83,
@@ -4304,57 +3689,54 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Overgrow", "Thick Fat"],
+    "abilities": [
+      "Overgrow",
+      "Thick Fat"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Floralord",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Floralord"
+      },
+      {
+        "type": "stone",
+        "stone": "leaf_stone",
+        "evolves_to": "Floralord"
+      }
+    ]
   },
   {
     "name": "Floralord",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 94,
       "attack": 94,
@@ -4368,57 +3750,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Chlorophyll", "Thick Fat"],
+    "abilities": [
+      "Chlorophyll",
+      "Thick Fat"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Thornling",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 77,
       "attack": 49,
@@ -4432,57 +3800,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Thick Fat", "Overgrow"],
+    "abilities": [
+      "Thick Fat",
+      "Overgrow"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Thornon",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Thornon"
+      },
+      {
+        "type": "stone",
+        "stone": "leaf_stone",
+        "evolves_to": "Thornon"
+      }
+    ]
   },
   {
     "name": "Thornon",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 50,
       "attack": 93,
@@ -4496,57 +3861,54 @@
       "stat": "attack",
       "bonus": 10
     },
-    "abilities": ["Thick Fat", "Overgrow"],
+    "abilities": [
+      "Thick Fat",
+      "Overgrow"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Thornlord",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Thornlord"
+      },
+      {
+        "type": "stone",
+        "stone": "leaf_stone",
+        "evolves_to": "Thornlord"
+      }
+    ]
   },
   {
     "name": "Thornlord",
     "sprite": "terraplant.png",
-    "typing": ["Grass"],
+    "typing": [
+      "Grass"
+    ],
     "base_stats": {
       "hp": 86,
       "attack": 67,
@@ -4560,57 +3922,43 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Chlorophyll", "Overgrow"],
+    "abilities": [
+      "Chlorophyll",
+      "Overgrow"
+    ],
     "moveset": [
       {
-        "name": "Vine Whip",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "vine_whip",
+        "level": 1
       },
       {
-        "name": "Razor Leaf",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "razor_leaf",
+        "level": 1
       },
       {
-        "name": "Seed Bomb",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "seed_bomb",
+        "level": 1
       },
       {
-        "name": "Leaf Blade",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "leaf_blade",
+        "level": 36
       },
       {
-        "name": "Solar Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Scorchcub",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 36,
       "attack": 60,
@@ -4624,57 +3972,54 @@
       "stat": "attack",
       "bonus": 10
     },
-    "abilities": ["Blaze", "Flame Body"],
+    "abilities": [
+      "Blaze",
+      "Flame Body"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Scorchprime",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Scorchprime"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Scorchprime"
+      }
+    ]
   },
   {
     "name": "Scorchkit",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 63,
       "attack": 36,
@@ -4688,57 +4033,54 @@
       "stat": "hp",
       "bonus": 10
     },
-    "abilities": ["Solar Power", "Flame Body"],
+    "abilities": [
+      "Solar Power",
+      "Flame Body"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": "Scorchprime",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Scorchprime"
+      },
+      {
+        "type": "stone",
+        "stone": "fire_stone",
+        "evolves_to": "Scorchprime"
+      }
+    ]
   },
   {
     "name": "Scorchprime",
     "sprite": "terraplant.png",
-    "typing": ["Fire"],
+    "typing": [
+      "Fire"
+    ],
     "base_stats": {
       "hp": 96,
       "attack": 93,
@@ -4752,57 +4094,43 @@
       "stat": "hp",
       "bonus": 10
     },
-    "abilities": ["Flame Body", "Solar Power"],
+    "abilities": [
+      "Flame Body",
+      "Solar Power"
+    ],
     "moveset": [
       {
-        "name": "Ember",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "ember",
+        "level": 1
       },
       {
-        "name": "Flame Burst",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flame_burst",
+        "level": 1
       },
       {
-        "name": "Fire Fang",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "fire_fang",
+        "level": 1
       },
       {
-        "name": "Heat Wave",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "heat_wave",
+        "level": 36
       },
       {
-        "name": "Flare Blitz",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "flare_blitz",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Radiling",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 49,
       "attack": 52,
@@ -4816,57 +4144,54 @@
       "stat": "sp_defense",
       "bonus": 10
     },
-    "abilities": ["Holy Guard", "Pressure"],
+    "abilities": [
+      "Holy Guard",
+      "Pressure"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": "Radion",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Radion"
+      },
+      {
+        "type": "stone",
+        "stone": "light_stone",
+        "evolves_to": "Radion"
+      }
+    ]
   },
   {
     "name": "Radion",
     "sprite": "terraplant.png",
-    "typing": ["Light Magic"],
+    "typing": [
+      "Light Magic"
+    ],
     "base_stats": {
       "hp": 92,
       "attack": 53,
@@ -4880,57 +4205,43 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Pressure", "Radiance"],
+    "abilities": [
+      "Pressure",
+      "Radiance"
+    ],
     "moveset": [
       {
-        "name": "Light Beam",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "light_beam",
+        "level": 1
       },
       {
-        "name": "Solar Flare",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "solar_flare",
+        "level": 1
       },
       {
-        "name": "Holy Nova",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "holy_nova",
+        "level": 1
       },
       {
-        "name": "Judgment Ray",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "judgment_ray",
+        "level": 36
       },
       {
-        "name": "Eternal Dawn",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "eternal_dawn",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   },
   {
     "name": "Swiftling",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 72,
       "attack": 29,
@@ -4944,57 +4255,54 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Adaptability", "Inner Focus"],
+    "abilities": [
+      "Adaptability",
+      "Inner Focus"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Swifton",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 16,
+        "evolves_to": "Swifton"
+      },
+      {
+        "type": "stone",
+        "stone": "moon_stone",
+        "evolves_to": "Swifton"
+      }
+    ]
   },
   {
     "name": "Swifton",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 83,
       "attack": 91,
@@ -5008,57 +4316,54 @@
       "stat": "sp_attack",
       "bonus": 10
     },
-    "abilities": ["Run Away", "Adaptability"],
+    "abilities": [
+      "Run Away",
+      "Adaptability"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": "Swiftlord",
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": [
+      {
+        "type": "level",
+        "level": 36,
+        "evolves_to": "Swiftlord"
+      },
+      {
+        "type": "stone",
+        "stone": "moon_stone",
+        "evolves_to": "Swiftlord"
+      }
+    ]
   },
   {
     "name": "Swiftlord",
     "sprite": "terraplant.png",
-    "typing": ["Normal"],
+    "typing": [
+      "Normal"
+    ],
     "base_stats": {
       "hp": 104,
       "attack": 62,
@@ -5072,51 +4377,35 @@
       "stat": "defense",
       "bonus": 10
     },
-    "abilities": ["Inner Focus", "Run Away"],
+    "abilities": [
+      "Inner Focus",
+      "Run Away"
+    ],
     "moveset": [
       {
-        "name": "Tackle",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "tackle",
+        "level": 1
       },
       {
-        "name": "Quick Attack",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "quick_attack",
+        "level": 1
       },
       {
-        "name": "Bite",
-        "level": 1,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "bite",
+        "level": 1
       },
       {
-        "name": "Body Slam",
-        "level": 36,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "body_slam",
+        "level": 36
       },
       {
-        "name": "Hyper Beam",
-        "level": 50,
-        "uses": 35,
-        "max_uses": 35,
-        "power": 40,
-        "accuracy": 100
+        "move_key": "hyper_beam",
+        "level": 50
       }
     ],
     "evolves_to": null,
     "legendary": false,
-    "mythical": false
+    "mythical": false,
+    "evolution_requirements": []
   }
 ]

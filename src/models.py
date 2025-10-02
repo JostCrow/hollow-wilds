@@ -1,4 +1,5 @@
 from enum import Enum
+import enum
 import os
 from pydantic import BaseModel, Field, RootModel
 import pygame
@@ -12,6 +13,8 @@ class States(str, Enum):
     STARTER_SELECT = "starter_select"
     OVERWORLD = "overworld"
     BATTLE = "battle"
+    PARTY_MENU = "party_menu"
+    POKEMON_STATS = "pokemon_stats"
 
 
 class Gender(str, Enum):
@@ -127,13 +130,48 @@ class ShinyBoost(BaseModel):
     bonus: int = Field(..., ge=0)
 
 
-class Move(BaseModel):
+class MoveCategory(str, Enum):
+    PHYSICAL = "physical"
+    SPECIAL = "special"
+    STATUS = "status"
+
+
+class EvolutionType(str, Enum):
+    LEVEL = "level"
+    STONE = "stone"
+
+
+class EvolutionRequirement(BaseModel):
+    type: EvolutionType
+    level: int | None = None  # For level-based evolution
+    stone: str | None = None  # For stone-based evolution (e.g., "fire_stone")
+    evolves_to: str  # The name of the creature it evolves into
+
+
+class MoveDefinition(BaseModel):
     name: str
-    level: int = Field(..., ge=1)
     uses: int
     max_uses: int
     power: int
     accuracy: int = Field(default=100)
+    type: str  # Move type (Fire, Water, etc.)
+    category: MoveCategory = Field(default=MoveCategory.PHYSICAL)
+
+
+class CreatureMove(BaseModel):
+    move_key: str
+    level: int = Field(..., ge=1)
+
+
+class Move(BaseModel):
+    name: str
+    uses: int
+    max_uses: int
+    power: int
+    accuracy: int = Field(default=100)
+    type: str  # Move type (Fire, Water, etc.)
+    category: MoveCategory = Field(default=MoveCategory.PHYSICAL)
+    learned_at_level: int | None = None
 
 
 class Creature(BaseModel):
@@ -143,10 +181,29 @@ class Creature(BaseModel):
     base_stats: BaseStats
     shiny_boost: ShinyBoost | None = None
     abilities: list[str] = Field(default_factory=list)
-    moveset: list[Move] = Field(default_factory=list)
-    evolves_to: str | list[str] | None = None
+    moveset: list[CreatureMove] = Field(default_factory=list)
+    evolves_to: str | list[str] | None = None  # Keep for backwards compatibility
+    evolution_requirements: list[EvolutionRequirement] = Field(default_factory=list)
     legendary: bool = False
     mythical: bool = False
+
+    def can_evolve_at_level(self, level: int) -> EvolutionRequirement | None:
+        """Check if the creature can evolve at the given level."""
+        for req in self.evolution_requirements:
+            if req.type == EvolutionType.LEVEL and req.level and level >= req.level:
+                return req
+        return None
+
+    def can_evolve_with_stone(self, stone: str) -> EvolutionRequirement | None:
+        """Check if the creature can evolve with the given stone."""
+        for req in self.evolution_requirements:
+            if req.type == EvolutionType.STONE and req.stone == stone:
+                return req
+        return None
+
+    def get_all_evolution_options(self) -> list[EvolutionRequirement]:
+        """Get all possible evolution requirements for this creature."""
+        return self.evolution_requirements
 
 
 class CreaturesData(RootModel[list[Creature]]):
@@ -158,23 +215,52 @@ class CreaturesData(RootModel[list[Creature]]):
         raise Exception("Creature not found")
 
 
+class MovesData(RootModel[dict[str, MoveDefinition]]):
+    def get_by_key(self, key: str) -> MoveDefinition:
+        if key in self.root:
+            return self.root[key]
+        raise Exception("Move not found")
+
+
 class PartyCreature(BaseModel):
     creature: Creature
     level: int = Field(min=1, max=100, default=1)  # pyright: ignore[reportCallIssue]
     moves: list[Move]
     hp: int
-    max_hp: int
+    damage: int
     attack: int
     defence: int
     special_attack: int
     special_defence: int
     speed: int
     shiny: bool = Field(default=False)
+    experience: int = Field(default=0, ge=0)  # Experience points
+
+    def can_evolve_at_current_level(self) -> EvolutionRequirement | None:
+        """Check if this party creature can evolve at its current level."""
+        return self.creature.can_evolve_at_level(self.level)
+
+    def can_evolve_with_stone(self, stone: str) -> EvolutionRequirement | None:
+        """Check if this party creature can evolve with the given stone."""
+        return self.creature.can_evolve_with_stone(stone)
+
+    def get_evolution_options(self) -> list[EvolutionRequirement]:
+        """Get all available evolution options for this party creature."""
+        options = []
+        # Level-based evolutions
+        level_req = self.can_evolve_at_current_level()
+        if level_req:
+            options.append(level_req)
+        # Stone-based evolutions (always available if creature supports it)
+        for req in self.creature.evolution_requirements:
+            if req.type == EvolutionType.STONE:
+                options.append(req)
+        return options
 
 
 class RouteLocation(BaseModel):
-    x: int
-    y: int
+    x: float
+    y: float
 
 
 class WildSpawn(BaseModel):
@@ -183,6 +269,21 @@ class WildSpawn(BaseModel):
     creature: PartyCreature
     spawn_time: int
     duration: int
+
+
+class ItemType(str, Enum):
+    CATCHING = "Catching"
+    HEALING = "Healing"
+    BATTLE = "Battle"
+    EVOLUTION = "Evolution"
+
+
+class Items(BaseModel):
+    key: str
+    name: str
+    quantity: int
+    type: ItemType
+    description: str
 
 
 class Player(BaseModel):
@@ -197,9 +298,49 @@ class Player(BaseModel):
     shake_timer: float = Field(default=0.0)
     shake_active: bool = Field(default=False)
     facing: str = Field(default="down")
-    speed: int = Field(default=32)
+    items: list[Items] = Field(default_factory=list)
+    speed: int = Field(default=128)
+    reset_spawn_route: str | None = Field(
+        default=None
+    )  # Route key to respawn at on game over
+    reset_spawn_point: str | None = Field(
+        default=None
+    )  # Spawn point name to respawn at
+    last_move_time: int = Field(
+        default=0
+    )  # Last time the player moved (in milliseconds)
+    is_tweening: bool = Field(default=False)  # True while interpolating between tiles
+    tween_start_time: int = Field(default=0)  # Tween start time in milliseconds
+    tween_duration: int = Field(default=250)  # Duration of tile-to-tile tween in ms
+    tween_start_x: float = Field(default=0.0)
+    tween_start_y: float = Field(default=0.0)
+    tween_target_x: float = Field(default=0.0)
+    tween_target_y: float = Field(default=0.0)
+    tween_progress: float = Field(default=0.0)
 
-    def move(self, dx, dy, current_map: Route):
+    @property
+    def grid_x(self) -> int:
+        return int(self.location.x // TILE_SIZE)
+
+    @property
+    def grid_y(self) -> int:
+        return int(self.location.y // TILE_SIZE)
+
+    def get_item_by_key(self, item_key: str) -> Items | None:
+        """Get an item by its unique key (e.g., 'poke_ball')."""
+        for item in self.items:
+            if item.key == item_key:
+                return item
+        return None
+
+    def remove_item_by_key(self, item_key: str) -> None:
+        """Remove an item by its unique key (e.g., 'poke_ball')."""
+        for item in self.items:
+            if item.key == item_key:
+                self.items.remove(item)
+                break
+
+    def move(self, dx: float, dy: float, current_map: Route) -> None:
         new_x = self.location.x + dx
         new_y = self.location.y + dy
         new_grid_x = int(new_x // TILE_SIZE)
@@ -242,13 +383,9 @@ class Player(BaseModel):
                     break
 
         if in_bounds and not_in_blocked and no_npc_collision and no_object_collision:
-            self.x = new_x
-            self.y = new_y
-            self.grid_x = new_grid_x
-            self.grid_y = new_grid_y
-            print(
-                f"Position updated: x={self.x}, y={self.y}, grid=({self.grid_x}, {self.grid_y})"
-            )
+            self.location.x = new_x
+            self.location.y = new_y
+            print(f"Position updated: x={self.location.x}, y={self.location.y}")
 
         else:
             # Determine specific block reason
@@ -267,6 +404,65 @@ class Player(BaseModel):
 
             # Trigger shake for visual feedback
             self.shake_active = True  # Flag for rendering to apply camera shake
+
+    def ensure_valid_position(self, current_route: Route) -> None:
+        """Ensure the player's position is valid within the route's map. If not, teleport to default spawn."""
+        tile_map = current_route.tiles.map
+        grid_x = self.grid_x
+        grid_y = self.grid_y
+
+        in_bounds = False
+        is_wall = False
+        if tile_map:
+            if 0 <= grid_y < len(tile_map):
+                row_len = len(tile_map[grid_y])
+                if 0 <= grid_x < row_len:
+                    in_bounds = True
+                    if tile_map[grid_y][grid_x] == "w":
+                        is_wall = True
+
+        if not in_bounds or is_wall:
+            # Set to default spawn point
+            default_spawn = current_route.spawn.get("default", Position(tx=0, ty=0))
+            self.location.x = default_spawn.tx * TILE_SIZE
+            self.location.y = default_spawn.ty * TILE_SIZE
+
+    def start_tween(
+        self, target_x: float, target_y: float, duration: int | None = None
+    ) -> None:
+        self.is_tweening = True
+        self.tween_start_time = pygame.time.get_ticks()
+        self.tween_duration = duration if duration is not None else self.tween_duration
+        self.tween_start_x = self.location.x
+        self.tween_start_y = self.location.y
+        self.tween_target_x = target_x
+        self.tween_target_y = target_y
+        self.tween_progress = 0.0
+
+    def update_tween(self, current_time: int) -> None:
+        if not self.is_tweening:
+            return
+
+        elapsed = current_time - self.tween_start_time
+        duration = max(1, self.tween_duration)
+        progress = min(1.0, elapsed / duration)
+        self.tween_progress = progress
+
+        self.location.x = (
+            self.tween_start_x + (self.tween_target_x - self.tween_start_x) * progress
+        )
+        self.location.y = (
+            self.tween_start_y + (self.tween_target_y - self.tween_start_y) * progress
+        )
+
+        if progress >= 1.0:
+            self.is_tweening = False
+            self.location.x = self.tween_target_x
+            self.location.y = self.tween_target_y
+
+    def cancel_tween(self) -> None:
+        self.is_tweening = False
+        self.tween_progress = 0.0
 
     @property
     def sprite(self):
@@ -306,3 +502,102 @@ class Player(BaseModel):
             self.boxed.append(creature)
         else:
             self.party.append(creature)
+
+    def evolve_creature_with_stone(
+        self, party_index: int, stone_key: str, creatures_data
+    ) -> bool:
+        """Evolve a creature in the party using an evolution stone."""
+        if not (0 <= party_index < len(self.party)):
+            return False
+
+        creature = self.party[party_index]
+        evolution_req = creature.can_evolve_with_stone(stone_key)
+
+        if not evolution_req:
+            return False
+
+        # Check if player has the stone
+        stone_item = self.get_item_by_key(stone_key)
+        if not stone_item or stone_item.quantity <= 0:
+            return False
+
+        # Get the evolved creature data
+        try:
+            evolved_creature_data = creatures_data.get_by_name(evolution_req.evolves_to)
+        except:
+            return False
+
+        # Create evolved creature
+        evolved_creature = PartyCreature(
+            creature=evolved_creature_data,
+            level=creature.level,
+            moves=creature.moves[:4],  # Keep current moves, limit to 4
+            hp=creature.hp,
+            damage=creature.damage,
+            attack=creature.attack,
+            defence=creature.defence,
+            special_attack=creature.special_attack,
+            special_defence=creature.special_defence,
+            speed=creature.speed,
+            shiny=creature.shiny,
+            experience=creature.experience,
+        )
+
+        # Replace the creature in party
+        self.party[party_index] = evolved_creature
+
+        # Consume the stone
+        stone_item.quantity -= 1
+        if stone_item.quantity <= 0:
+            self.remove_item_by_key(stone_key)
+
+        return True
+
+    def evolve_creature_at_level(self, party_index: int, creatures_data) -> bool:
+        """Evolve a creature in the party if it can evolve at its current level."""
+        if not (0 <= party_index < len(self.party)):
+            return False
+
+        creature = self.party[party_index]
+        evolution_req = creature.can_evolve_at_current_level()
+
+        if not evolution_req:
+            return False
+
+        # Get the evolved creature data
+        try:
+            evolved_creature_data = creatures_data.get_by_name(evolution_req.evolves_to)
+        except:
+            return False
+
+        # Create evolved creature
+        evolved_creature = PartyCreature(
+            creature=evolved_creature_data,
+            level=creature.level,
+            moves=creature.moves[:4],  # Keep current moves, limit to 4
+            hp=creature.hp,
+            damage=creature.damage,
+            attack=creature.attack,
+            defence=creature.defence,
+            special_attack=creature.special_attack,
+            special_defence=creature.special_defence,
+            speed=creature.speed,
+            shiny=creature.shiny,
+            experience=creature.experience,
+        )
+
+        # Replace the creature in party
+        self.party[party_index] = evolved_creature
+        return True
+
+    def check_for_level_evolutions(self, creatures_data) -> list[int]:
+        """Check all party creatures for level-based evolutions and return indices of creatures that can evolve."""
+        evolution_candidates = []
+        for i, creature in enumerate(self.party):
+            if creature.can_evolve_at_current_level():
+                evolution_candidates.append(i)
+        return evolution_candidates
+
+    def get_evolution_stones_in_inventory(self) -> list[Items]:
+        """Get all evolution stones in the player's inventory."""
+        return [item for item in self.items if item.type == ItemType.EVOLUTION]

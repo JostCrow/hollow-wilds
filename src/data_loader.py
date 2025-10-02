@@ -2,8 +2,8 @@ import json
 import os
 from typing import Any
 import random
-from .config import CREATURES_FILE, ROUTES_FILE
-from .models import Creature, CreaturesData, RoutesData
+from .config import CREATURES_FILE, ROUTES_FILE, MOVES_FILE
+from .models import Creature, CreaturesData, RoutesData, Move, MovesData
 
 
 def load_json(file_path: str) -> Any:
@@ -15,9 +15,11 @@ def load_json(file_path: str) -> Any:
 
 
 # Load global data (imported once in main)
+raw_moves = load_json(MOVES_FILE)
+moves_data = MovesData.model_validate(raw_moves)
+
 raw_creatures = load_json(CREATURES_FILE)
 creatures_data = CreaturesData.model_validate(raw_creatures)
-
 
 raw_routes = load_json(ROUTES_FILE)
 routes_data = RoutesData.model_validate(raw_routes)
@@ -62,3 +64,43 @@ def calculate_stats_based_on_level(
     sp_defense = int((2 * base_sp_defense + iv_sp_defense) * level / 100 + 5)
     speed = int((2 * base_speed + iv_speed) * level / 100 + 5)
     return (hp, attack, defense, sp_attack, sp_defense, speed)
+
+
+def generate_moves(creature: Creature, level: int) -> list[Move]:
+    def weighted_sample(population, weights, k):
+        selected = []
+        remaining = list(zip(population, weights))
+        while len(selected) < k and remaining:
+            total_weight = sum(w for _, w in remaining)
+            if total_weight == 0:
+                break
+            probs = [w / total_weight for _, w in remaining]
+            choice_idx = random.choices(range(len(remaining)), weights=probs)[0]
+            selected.append(remaining.pop(choice_idx)[0])
+        return selected
+
+    available_moves: list[Move] = []
+    weights: list[int] = []
+    for creature_move in creature.moveset:
+        if creature_move.level <= level:
+            try:
+                move_definition = moves_data.get_by_key(creature_move.move_key)
+            except Exception:
+                continue
+            move_instance = Move(
+                name=move_definition.name,
+                uses=move_definition.uses,
+                max_uses=move_definition.max_uses,
+                power=move_definition.power,
+                accuracy=move_definition.accuracy,
+                type=move_definition.type,
+                category=move_definition.category,
+                learned_at_level=creature_move.level,
+            )
+            available_moves.append(move_instance)
+            weights.append(creature_move.level)
+
+    if len(available_moves) <= 4:
+        return available_moves
+    else:
+        return weighted_sample(available_moves, weights, 4)

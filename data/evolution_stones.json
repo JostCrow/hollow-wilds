@@ -1,0 +1,72 @@
+[
+  {
+    "key": "fire_stone",
+    "name": "Fire Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It burns as red as ember."
+  },
+  {
+    "key": "water_stone",
+    "name": "Water Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It is a clear blue reminiscent of a lake."
+  },
+  {
+    "key": "leaf_stone",
+    "name": "Leaf Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It has a leaf pattern that seems to move."
+  },
+  {
+    "key": "thunder_stone",
+    "name": "Thunder Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It sparkles with electrical energy."
+  },
+  {
+    "key": "moon_stone",
+    "name": "Moon Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It glows with lunar energy."
+  },
+  {
+    "key": "sun_stone",
+    "name": "Sun Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It radiates warm solar energy."
+  },
+  {
+    "key": "light_stone",
+    "name": "Light Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It emits a brilliant, pure light."
+  },
+  {
+    "key": "dark_stone",
+    "name": "Dark Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It seems to absorb light around it."
+  },
+  {
+    "key": "earth_stone",
+    "name": "Earth Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It feels heavy and solid like bedrock."
+  },
+  {
+    "key": "ice_stone",
+    "name": "Ice Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It's cold to the touch and never melts."
+  }
+]

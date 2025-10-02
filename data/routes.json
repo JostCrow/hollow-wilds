@@ -68,7 +68,7 @@
           { "name": "Flamcub", "level": [2, 4], "chance": 40 },
           { "name": "Aquapup", "level": [2, 5], "chance": 35 },
           { "name": "Terraplant", "level": [3, 5], "chance": 25 },
-          { "name": "Mystryon", "level": [1, 1], "chance": 0.01 }
+          { "name": "Mystryon", "level": [1, 1], "chance": 0.0001 }
         ]
       },
       "objects": [
@@ -99,26 +99,26 @@
       "tileSize": 32,
       "tiles": {
         "map": [
-          "pppppppppppppeepppppppppppppppppppp",
-          "pgggggggggggggggggggggggggggggggggp",
-          "pggppppppppppppppppppppppppppppgggp",
-          "pggpggggggggggggggggggggggggggggpggp",
-          "pggppppppppppppppppppppppppppppgggp",
-          "pggpggggggggggggggggggggggggggggpggp",
-          "pggppppppppppppppppppppppppppppgggp",
-          "pggpggggggggggggggggggggggggggggpggp",
-          "pggppppppppppppppppppppppppppppgggp",
-          "pggpggggggggggggggggggggggggggggpggp",
-          "pggppppppppppppppppppppppppppppgggp",
-          "pggpggggggggggggggggggggggggggggpggp",
-          "pggppppppppppppppppppppppppppppgggp",
-          "pggpggggggggggggggggggggggggggggpggp",
-          "gpppggggppppppppppppppppppppppppppg",
-          "pggpggggggggggggggggggggggggggggpggp",
-          "pggppppppppppppppppppppppppppppgggp",
-          "pggpggggggggggggggggggggggggggggpggp",
-          "pggppppppppppppppppppppppppppppgggp",
-          "ppppppppppppppppppppppppppppppppppp"
+          "gggggggggggggeeggggggggggggggggggggg",
+          "gggggggggggggppggggggggggggggggggggg",
+          "gggggggggggggppggggggggggggggggggggg",
+          "gggggggggggggppppppppppppppppppggggg",
+          "gggggggggggggpgggggggggggggggppggggg",
+          "gggggggggggggpgggggggggggggggppggggg",
+          "ggggggppppppppgggggggggggggggppggggg",
+          "ggggggpggggggggggggggggggggggppggggg",
+          "ggggggpggggggggggggggggggggppppggggg",
+          "ggggggpggggggggggggggggggggppggggggg",
+          "ggggggpppppppggggggggggggggggggggggg",
+          "gggggggggggggggggggggggggggggggggggg",
+          "gggggggggggggggggggggggggggggggggggg",
+          "gggggggggggggggggggggggggggggggggggg",
+          "gggggggggggggggggggggggggggggggggggg",
+          "gggggggggggggggggggggggggggggggggggg",
+          "gggggggggggggggggggggggggggggggggggg",
+          "gggggggggggggggggggggggggggggggggggg",
+          "gggggggggggggggggggggggggggggggggggg",
+          "gggggggggggggggggggggggggggggggggggg"
         ],
         "legend": {
           "g": "grass",
@@ -138,7 +138,7 @@
       "exits": [
         {
           "id": "north-exit",
-          "area": { "tx": 14, "ty": 0, "w": 2, "h": 1 },
+          "area": { "tx": 13, "ty": 0, "w": 2, "h": 1 },
           "destination": "route-one",
           "spawnPoint": "from-willowfen-village"
         },
@@ -156,6 +156,62 @@
           "position": { "tx": 15, "ty": 5 },
           "sprite": "professor-oak",
           "dialogue": "Hello there! Welcome to the world of Pokemon!"
+        }
+      ],
+      "objects": [
+        {
+          "type": "healing-fountain",
+          "tx": 10,
+          "ty": 12,
+          "w": 2,
+          "h": 2,
+          "blocks": true,
+          "layer": "above"
+        },
+        {
+          "type": "tree",
+          "tx": 0,
+          "ty": 0,
+          "w": 13,
+          "h": 1,
+          "blocks": true,
+          "layer": "below"
+        },
+        {
+          "type": "tree",
+          "tx": 15,
+          "ty": 0,
+          "w": 21,
+          "h": 1,
+          "blocks": true,
+          "layer": "below"
+        },
+        {
+          "type": "tree",
+          "tx": 0,
+          "ty": 1,
+          "w": 1,
+          "h": 17,
+          "blocks": true,
+          "layer": "below"
+        },
+        {
+          "type": "tree",
+          "tx": 35,
+          "ty": 1,
+          "w": 1,
+          "h": 17,
+          "blocks": true,
+          "layer": "below"
+        },
+        {
+          "type": "tree",
+          "tx": 0,
+          "ty": 18,
+          "w": 37,
+          "h": 2,
+          "blocks": true,
+          "layer": "below"
         }
       ]
     },
@@ -338,7 +394,7 @@
       "exits": [
         {
           "id": "door",
-          "area": { "tx": 15, "ty": 19, "w": 1, "h": 1 },
+          "area": { "tx": 15, "ty": 18, "w": 1, "h": 1 },
           "destination": "willowfen-village",
           "spawnPoint": "from-home"
         }
