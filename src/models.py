@@ -1,10 +1,9 @@
-from enum import Enum
-import enum
 import os
-from pydantic import BaseModel, Field, RootModel
 import pygame
-
-from src.config import ASSETS_PATH, TILE_SIZE
+from enum import Enum
+from typing import List, Optional
+from pydantic import BaseModel, Field, RootModel
+from .config import ASSETS_PATH, TILE_SIZE
 
 
 class States(str, Enum):
@@ -55,6 +54,10 @@ class Object(BaseModel):
     h: int = Field(default=1, ge=1)
     blocks: bool = False
     layer: str = Field(default="below")  # e.g., "below", "above"
+    stretch: bool = Field(
+        default=False,
+        description="If true, use a single asset stretched to cover w x h tiles; otherwise render the tile per-tile.",
+    )
 
 
 class NPC(BaseModel):
@@ -317,6 +320,7 @@ class Player(BaseModel):
     tween_target_x: float = Field(default=0.0)
     tween_target_y: float = Field(default=0.0)
     tween_progress: float = Field(default=0.0)
+    animation_start_time: int = Field(default=0)
 
     @property
     def grid_x(self) -> int:
@@ -385,7 +389,22 @@ class Player(BaseModel):
         if in_bounds and not_in_blocked and no_npc_collision and no_object_collision:
             self.location.x = new_x
             self.location.y = new_y
+            # update movement timestamps used by the animation system
+            now = pygame.time.get_ticks()
+            self.last_move_time = now
+            # if animation_start_time not set, initialize it; otherwise keep ongoing animation start
+            if not self.animation_start_time:
+                self.animation_start_time = now
             print(f"Position updated: x={self.location.x}, y={self.location.y}")
+            # update facing based on movement delta (prefer horizontal movement)
+            if dx > 0:
+                self.facing = "right"
+            elif dx < 0:
+                self.facing = "left"
+            elif dy > 0:
+                self.facing = "down"
+            elif dy < 0:
+                self.facing = "up"
 
         else:
             # Determine specific block reason
@@ -466,36 +485,140 @@ class Player(BaseModel):
 
     @property
     def sprite(self):
-        if self.facing == "down":
-            sprite_name = f"{self.gender}-front.png"
-        elif self.facing == "up":
-            sprite_name = f"{self.gender}-back.png"
-        elif self.facing == "left":
-            sprite_name = f"{self.gender}-left.png"
-        elif self.facing == "right":
-            sprite_name = f"{self.gender}-right.png"
-        else:
-            sprite_name = f"{self.gender}-front.png"  # Default fallback
+        """
+        Return the current animation frame for the player.
+        Uses the assets in `assets/player/male/` for `idle`, `walk` and `run`.
+        Animation is driven by `last_move_time` and `animation_start_time` which are
+        updated when the player moves.
 
-        sprite_path = os.path.join(ASSETS_PATH, "player", sprite_name)
-        if os.path.exists(sprite_path):
-            loaded_img = pygame.image.load(sprite_path)
-            return pygame.transform.scale(loaded_img, (32, 48))
+        Sprite sheets are arranged as 4 rows:
+          row 0: facing up
+          row 1: facing left
+          row 2: facing down
+          row 3: facing right
+        each row contains the animation frames for that direction laid out horizontally.
+        """
+        # Use male sprites for player animations (per task request).
+        sprite_dir = os.path.join(ASSETS_PATH, "player", "male")
+
+        # Determine whether we're moving recently (consider movement within last 200ms as active)
+        now = pygame.time.get_ticks()
+        time_since_move = now - (self.last_move_time or 0)
+        moving = time_since_move < 200
+
+        # Choose action: idle / walk / run
+        # Simple heuristic: if moving and speed is high -> run, else walk. Otherwise idle.
+        is_running = self.speed >= 200
+        if moving and is_running:
+            action = "run"
+        elif moving:
+            action = "walk"
         else:
-            # Fallback: Try mirroring front for sides if missing
-            front_path = os.path.join(ASSETS_PATH, "player", f"{self.gender}-front.png")
-            if os.path.exists(front_path) and (self.facing in ["left", "right"]):
-                front_img = pygame.image.load(front_path)
-                scaled_front = pygame.transform.scale(front_img, (32, 48))
+            action = "idle"
+
+        sheet_path = os.path.join(sprite_dir, f"{action}.png")
+        try:
+            if os.path.exists(sheet_path):
+                sheet = pygame.image.load(sheet_path).convert_alpha()
+                # Default target frame size used elsewhere in code
+                target_w, target_h = 30, 49
+                sheet_w, sheet_h = sheet.get_width(), sheet.get_height()
+
+                # Determine frame height by splitting sheet into 4 rows
+                # If sheet height is smaller than expected, fall back to single-row behavior below
+                if sheet_h < 4:
+                    # Defensive: treat whole sheet as single-row animation
+                    rows = 1
+                    row_h = sheet_h
+                else:
+                    rows = 4
+                    row_h = sheet_h // rows
+
+                # Estimate frame count per row by dividing sheet width by an assumed frame width (target_w)
+                # This is robust to sheets where frame width differs from target: we'll compute actual frame_w
+                estimated_frame_count = max(1, sheet_w // target_w)
+                frame_w = max(1, sheet_w // estimated_frame_count)
+                frame_h = row_h
+                frame_count = 1
+
+                # Choose frame duration by action
+                if action == "idle":
+                    frame_count = 2
+                    frame_duration = 500
+                elif action == "walk":
+                    frame_count = 8
+                    frame_duration = 150
+                else:  # run
+                    frame_count = 8
+                    frame_duration = 80
+
+                # Ensure animation_start_time is initialized (resetting when changed could be added later)
+                if not self.animation_start_time:
+                    self.animation_start_time = now
+
+                elapsed = now - self.animation_start_time
+                # Protect division by zero
+                frame_index = 0
+                if frame_count > 0 and frame_duration > 0:
+                    frame_index = int((elapsed / frame_duration)) % frame_count
+
+                # Map facing to row index: up=0, left=1, down=2, right=3
+                direction_row = {"up": 0, "left": 1, "down": 2, "right": 3}
+                row_index = direction_row.get(self.facing, 2)
+
+                # If sheet has fewer rows than expected, clamp row_index
+                if rows == 1:
+                    row_index = 0
+                    frame_h = sheet_h
+                else:
+                    row_index = max(0, min(rows - 1, row_index))
+
+                # Compute frame rectangle and extract from the appropriate row
+
+                frame_x = (frame_index * 32) + (frame_index * 32) + 17
+                print(action)
+                print(
+                    "x",
+                    frame_index,
+                    frame_x,
+                    (frame_index * 32) + 17,
+                    frame_w,
+                )
+                frame_y = row_index * frame_h
+                print("y", row_index, frame_y)
+                frame_rect = pygame.Rect(frame_x, frame_y, frame_w, frame_h)
+                try:
+                    frame_surf = sheet.subsurface(frame_rect).copy()
+                except Exception as e:
+                    # If subsurface fails for any reason, fall back to entire sheet
+                    print(f"Failed to extract frame from sheet: {e}")
+                    frame_surf = sheet.copy()
+
+                # Scale to target size
+                frame_surf = pygame.transform.scale(frame_surf, (target_w, target_h))
+
+                # Do NOT flip horizontally: rows include left and right separately.
+                return frame_surf
+
+            # If the specific action sheet doesn't exist, fall back to older single-sprite behavior:
+            # try to load a gender-based single image in assets/player
+            sprite_name = f"{self.gender}-front.png"
+            sprite_path = os.path.join(ASSETS_PATH, "player", sprite_name)
+            if os.path.exists(sprite_path):
+                loaded_img = pygame.image.load(sprite_path)
+                scaled = pygame.transform.scale(loaded_img, (32, 48))
                 if self.facing == "left":
-                    return pygame.transform.flip(
-                        scaled_front, True, False
-                    )  # Horizontal flip
-                else:  # right
-                    return scaled_front
-            else:
-                # Ultimate fallback: Blue rectangle
-                return pygame.Surface((32, 48))
+                    return pygame.transform.flip(scaled, True, False)
+                return scaled
+
+        except Exception:
+            # Any error in loading/processing -> fall through to blue rectangle fallback below
+            pass
+
+        # Ultimate fallback: simple surface so rendering code won't crash
+        surf = pygame.Surface((32, 48))
+        surf.fill((64, 128, 255))
+        return surf
 
     def capture_creature(self, creature: PartyCreature):
         if len(self.party) == 6:

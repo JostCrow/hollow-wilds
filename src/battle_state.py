@@ -24,14 +24,32 @@ class BattlePhase(str, Enum):
 
 
 class BattleState:
-    """Tracks the current state of an ongoing battle."""
+    """Tracks the current state of an ongoing battle.
 
-    def __init__(self, wild_pokemon: PartyCreature, player_pokemon: PartyCreature):
+    Notes:
+    - `player_pokemon` may be omitted at construction time to force the
+      player to choose which Pokémon to send out when the battle begins.
+    - Internally we store the player's active Pokemon in `_player_pokemon`
+      and expose a `player_pokemon` property that returns a safe placeholder
+      when none has been selected yet so rendering code does not crash.
+    """
+
+    def __init__(
+        self, wild_pokemon: PartyCreature, player_pokemon: PartyCreature | None = None
+    ):
         self.wild_pokemon = wild_pokemon
-        self.player_pokemon = player_pokemon
+        # Store internal reference so we can provide a safe placeholder via the property
+        self._player_pokemon: PartyCreature | None = player_pokemon
+        # If no player_pokemon provided, we require an initial choice from the player
+        self.initial_choice_required: bool = player_pokemon is None
 
         # Battle phase tracking
-        self.phase = BattlePhase.MAIN_MENU
+        # If an initial choice is required, start in party selection mode
+        self.phase = (
+            BattlePhase.PARTY_SELECT
+            if self.initial_choice_required
+            else BattlePhase.MAIN_MENU
+        )
         self.selected_option = 0  # Index of currently selected option
 
         # Move selection
@@ -52,8 +70,60 @@ class BattleState:
         self.level_up_stats: dict[str, int] = {}
 
         # Switch tracking
-        self.force_switch = False  # True when player must switch due to faint
+        # If initial choice is required, force_switch is set so the UI will
+        # present the party selection and prevent escaping the selection.
+        self.force_switch = True if self.initial_choice_required else False
         self.pending_switch_index: Optional[int] = None
+
+    @property
+    def player_pokemon(self) -> PartyCreature:
+        """
+        Return the currently selected player Pokemon. If none has been selected yet
+        (e.g., at the very start of a battle where we want the player to choose),
+        return a minimal placeholder object so rendering and other logic that
+        accesses attributes like `.creature` or `.hp` do not fail.
+
+        The placeholder has:
+          - creature.name == "Unknown"
+          - creature.sprite == None
+          - hp == 1, damage == 1 (so HP ratio calculations behave)
+          - moves == []
+          - speed == 0
+        """
+        if self._player_pokemon is not None:
+            return self._player_pokemon
+
+        # Lazy import to avoid adding top-level dependency clutter
+        from types import SimpleNamespace
+
+        creature_placeholder = SimpleNamespace(name="Unknown", sprite=None)
+        placeholder = SimpleNamespace(
+            creature=creature_placeholder,
+            level=1,
+            hp=1,
+            damage=1,
+            moves=[],
+            speed=0,
+        )
+        return placeholder
+
+    @player_pokemon.setter
+    def player_pokemon(self, value: PartyCreature | None) -> None:
+        """
+        Set the active player Pokemon. If a real PartyCreature is provided,
+        clear the `initial_choice_required` and `force_switch` flags so normal
+        battle flow can continue.
+        """
+        self._player_pokemon = value
+        if value is not None:
+            # Player has selected a Pokemon to send out
+            self.initial_choice_required = False
+            # Unset forced switching if it was set for initial choice
+            self.force_switch = False
+            # If we were in the party selection phase solely for initial choice,
+            # move back to the main battle menu so the player can act
+            if self.phase == BattlePhase.PARTY_SELECT:
+                self.phase = BattlePhase.MAIN_MENU
 
     def reset_for_new_turn(self):
         """Reset state for a new turn."""

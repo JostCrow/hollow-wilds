@@ -193,6 +193,12 @@ def main():
                 elif event.type == pygame.KEYDOWN and event.key == pygame.K_d:
                     # Toggle debug mode
                     debug_mode = not debug_mode
+                elif event.type == pygame.KEYDOWN and event.key == pygame.K_s:
+                    # Save the game when 'S' is pressed
+                    from src.save_system import save_game
+                    save_game(player, current_route.key)
+                    battle_message = "Game saved!"
+                    message_timer = 2.0  # Show message for 2 seconds
                 elif (
                     event.type == pygame.KEYDOWN
                     and event.key == pygame.K_e
@@ -301,9 +307,12 @@ def main():
 
                 state = States.BATTLE
                 wild_pokemon = battle_trigger
-                # Initialize battle state
+                # Initialize battle state: do NOT auto-select the first party member.
+                # Pass None so the BattleState forces the player to choose an active Pokémon
+                # (this prevents sending out a fainted Pokémon by default).
                 if player.party:
-                    battle_state = BattleState(wild_pokemon, player.party[0])
+                    battle_state = BattleState(wild_pokemon, None)
+                    battle_state.selected_option = 0
                     # Set reset spawn point if not already set
                     if not player.reset_spawn_route:
                         player.reset_spawn_route = current_route.key

@@ -4,6 +4,113 @@
     "party": [
         {
             "creature": {
+                "name": "Hydracanis",
+                "sprite": "hydracanis.png",
+                "typing": [
+                    "Water"
+                ],
+                "base_stats": {
+                    "hp": 62,
+                    "attack": 62,
+                    "defense": 82,
+                    "sp_attack": 60,
+                    "sp_defense": 88,
+                    "speed": 81,
+                    "total": 435
+                },
+                "shiny_boost": {
+                    "stat": "sp_defense",
+                    "bonus": 10
+                },
+                "abilities": [
+                    "Swift Swim",
+                    "Water Veil"
+                ],
+                "moveset": [
+                    {
+                        "move_key": "water_gun",
+                        "level": 1
+                    },
+                    {
+                        "move_key": "bubble_beam",
+                        "level": 1
+                    },
+                    {
+                        "move_key": "aqua_tail",
+                        "level": 1
+                    },
+                    {
+                        "move_key": "surf",
+                        "level": 36
+                    },
+                    {
+                        "move_key": "hydro_pump",
+                        "level": 50
+                    }
+                ],
+                "evolves_to": "Poseidire",
+                "evolution_requirements": [
+                    {
+                        "type": "level",
+                        "level": 36,
+                        "stone": null,
+                        "evolves_to": "Poseidire"
+                    },
+                    {
+                        "type": "stone",
+                        "level": null,
+                        "stone": "water_stone",
+                        "evolves_to": "Poseidire"
+                    }
+                ],
+                "legendary": false,
+                "mythical": false
+            },
+            "level": 16,
+            "moves": [
+                {
+                    "name": "Water Gun",
+                    "uses": 25,
+                    "max_uses": 25,
+                    "power": 40,
+                    "accuracy": 100,
+                    "type": "Water",
+                    "category": "special",
+                    "learned_at_level": 1
+                },
+                {
+                    "name": "Bubble Beam",
+                    "uses": 20,
+                    "max_uses": 20,
+                    "power": 65,
+                    "accuracy": 100,
+                    "type": "Water",
+                    "category": "special",
+                    "learned_at_level": 1
+                },
+                {
+                    "name": "Aqua Tail",
+                    "uses": 10,
+                    "max_uses": 10,
+                    "power": 90,
+                    "accuracy": 90,
+                    "type": "Water",
+                    "category": "physical",
+                    "learned_at_level": 1
+                }
+            ],
+            "hp": 37,
+            "damage": 0,
+            "attack": 18,
+            "defence": 25,
+            "special_attack": 28,
+            "special_defence": 26,
+            "speed": 28,
+            "shiny": false,
+            "experience": 1106
+        },
+        {
+            "creature": {
                 "name": "Floradon",
                 "sprite": "floradon.png",
                 "typing": [
@@ -66,7 +173,7 @@
                 "legendary": false,
                 "mythical": false
             },
-            "level": 16,
+            "level": 17,
             "moves": [
                 {
                     "name": "Vine Whip",
@@ -99,15 +206,15 @@
                     "learned_at_level": null
                 }
             ],
-            "hp": 39,
+            "hp": 49,
             "damage": 0,
-            "attack": 20,
-            "defence": 24,
-            "special_attack": 31,
-            "special_defence": 32,
-            "speed": 20,
+            "attack": 39,
+            "defence": 41,
+            "special_attack": 25,
+            "special_defence": 29,
+            "speed": 29,
             "shiny": false,
-            "experience": 1248
+            "experience": 619
         },
         {
             "creature": {
@@ -161,7 +268,7 @@
                 "legendary": false,
                 "mythical": true
             },
-            "level": 10,
+            "level": 11,
             "moves": [
                 {
                     "name": "Light Beam",
@@ -194,122 +301,15 @@
                     "learned_at_level": null
                 }
             ],
-            "hp": 42,
+            "hp": 43,
             "damage": 0,
-            "attack": 37,
-            "defence": 34,
-            "special_attack": 26,
-            "special_defence": 30,
-            "speed": 25,
+            "attack": 40,
+            "defence": 36,
+            "special_attack": 29,
+            "special_defence": 32,
+            "speed": 28,
             "shiny": false,
-            "experience": 135
-        },
-        {
-            "creature": {
-                "name": "Aquapup",
-                "sprite": "aquapup.png",
-                "typing": [
-                    "Water"
-                ],
-                "base_stats": {
-                    "hp": 31,
-                    "attack": 41,
-                    "defense": 51,
-                    "sp_attack": 58,
-                    "sp_defense": 60,
-                    "speed": 69,
-                    "total": 310
-                },
-                "shiny_boost": {
-                    "stat": "defense",
-                    "bonus": 10
-                },
-                "abilities": [
-                    "Water Veil",
-                    "Swift Swim"
-                ],
-                "moveset": [
-                    {
-                        "move_key": "water_gun",
-                        "level": 1
-                    },
-                    {
-                        "move_key": "bubble_beam",
-                        "level": 1
-                    },
-                    {
-                        "move_key": "aqua_tail",
-                        "level": 1
-                    },
-                    {
-                        "move_key": "surf",
-                        "level": 36
-                    },
-                    {
-                        "move_key": "hydro_pump",
-                        "level": 50
-                    }
-                ],
-                "evolves_to": "Hydracanis",
-                "evolution_requirements": [
-                    {
-                        "type": "level",
-                        "level": 16,
-                        "stone": null,
-                        "evolves_to": "Hydracanis"
-                    },
-                    {
-                        "type": "stone",
-                        "level": null,
-                        "stone": "water_stone",
-                        "evolves_to": "Hydracanis"
-                    }
-                ],
-                "legendary": false,
-                "mythical": false
-            },
-            "level": 3,
-            "moves": [
-                {
-                    "name": "Water Gun",
-                    "uses": 25,
-                    "max_uses": 25,
-                    "power": 40,
-                    "accuracy": 100,
-                    "type": "Water",
-                    "category": "special",
-                    "learned_at_level": 1
-                },
-                {
-                    "name": "Bubble Beam",
-                    "uses": 20,
-                    "max_uses": 20,
-                    "power": 65,
-                    "accuracy": 100,
-                    "type": "Water",
-                    "category": "special",
-                    "learned_at_level": 1
-                },
-                {
-                    "name": "Aqua Tail",
-                    "uses": 10,
-                    "max_uses": 10,
-                    "power": 90,
-                    "accuracy": 90,
-                    "type": "Water",
-                    "category": "physical",
-                    "learned_at_level": 1
-                }
-            ],
-            "hp": 15,
-            "damage": 0,
-            "attack": 8,
-            "defence": 8,
-            "special_attack": 9,
-            "special_defence": 9,
-            "speed": 9,
-            "shiny": false,
-            "experience": 0
+            "experience": 965
         },
         {
             "creature": {
@@ -375,7 +375,7 @@
                 "legendary": false,
                 "mythical": false
             },
-            "level": 2,
+            "level": 7,
             "moves": [
                 {
                     "name": "Ember",
@@ -408,15 +408,15 @@
                     "learned_at_level": 1
                 }
             ],
-            "hp": 13,
+            "hp": 24,
             "damage": 0,
-            "attack": 7,
-            "defence": 6,
-            "special_attack": 7,
-            "special_defence": 7,
-            "speed": 7,
+            "attack": 11,
+            "defence": 11,
+            "special_attack": 13,
+            "special_defence": 12,
+            "speed": 14,
             "shiny": false,
-            "experience": 0
+            "experience": 359
         }
     ],
     "boxed": [],
@@ -554,7 +554,8 @@
                 "w": 20,
                 "h": 1,
                 "blocks": true,
-                "layer": "below"
+                "layer": "below",
+                "stretch": false
             },
             {
                 "type": "tall_grass",
@@ -563,132 +564,246 @@
                 "w": 20,
                 "h": 9,
                 "blocks": false,
-                "layer": "above"
+                "layer": "above",
+                "stretch": false
             }
         ],
         "npcs": null
     },
     "location": {
-        "x": 224.0,
-        "y": 576.0
+        "x": 640.0,
+        "y": 640.0
     },
     "wild_spawns": [
         {
-            "tx": 22,
-            "ty": 18,
+            "tx": 26,
+            "ty": 19,
             "creature": {
                 "creature": {
-                    "name": "Aquapup",
-                    "sprite": "aquapup.png",
+                    "name": "Flamcub",
+                    "sprite": "flamcub.png",
                     "typing": [
-                        "Water"
+                        "Fire"
                     ],
                     "base_stats": {
-                        "hp": 31,
-                        "attack": 41,
-                        "defense": 51,
-                        "sp_attack": 58,
-                        "sp_defense": 60,
-                        "speed": 69,
-                        "total": 310
+                        "hp": 46,
+                        "attack": 46,
+                        "defense": 41,
+                        "sp_attack": 61,
+                        "sp_defense": 49,
+                        "speed": 57,
+                        "total": 300
                     },
                     "shiny_boost": {
-                        "stat": "defense",
+                        "stat": "sp_defense",
                         "bonus": 10
                     },
                     "abilities": [
-                        "Water Veil",
-                        "Swift Swim"
+                        "Solar Power",
+                        "Flame Body"
                     ],
                     "moveset": [
                         {
-                            "move_key": "water_gun",
+                            "move_key": "ember",
                             "level": 1
                         },
                         {
-                            "move_key": "bubble_beam",
+                            "move_key": "flame_burst",
                             "level": 1
                         },
                         {
-                            "move_key": "aqua_tail",
+                            "move_key": "fire_fang",
                             "level": 1
                         },
                         {
-                            "move_key": "surf",
+                            "move_key": "heat_wave",
                             "level": 36
                         },
                         {
-                            "move_key": "hydro_pump",
+                            "move_key": "flare_blitz",
                             "level": 50
                         }
                     ],
-                    "evolves_to": "Hydracanis",
+                    "evolves_to": "Pyroarion",
                     "evolution_requirements": [
                         {
                             "type": "level",
                             "level": 16,
                             "stone": null,
-                            "evolves_to": "Hydracanis"
+                            "evolves_to": "Pyroarion"
                         },
                         {
                             "type": "stone",
                             "level": null,
-                            "stone": "water_stone",
-                            "evolves_to": "Hydracanis"
+                            "stone": "fire_stone",
+                            "evolves_to": "Pyroarion"
                         }
                     ],
                     "legendary": false,
                     "mythical": false
                 },
-                "level": 4,
+                "level": 2,
                 "moves": [
                     {
-                        "name": "Water Gun",
+                        "name": "Ember",
                         "uses": 25,
                         "max_uses": 25,
                         "power": 40,
                         "accuracy": 100,
-                        "type": "Water",
+                        "type": "Fire",
                         "category": "special",
                         "learned_at_level": 1
                     },
                     {
-                        "name": "Bubble Beam",
-                        "uses": 20,
-                        "max_uses": 20,
-                        "power": 65,
+                        "name": "Flame Burst",
+                        "uses": 15,
+                        "max_uses": 15,
+                        "power": 70,
                         "accuracy": 100,
-                        "type": "Water",
+                        "type": "Fire",
                         "category": "special",
                         "learned_at_level": 1
                     },
                     {
-                        "name": "Aqua Tail",
-                        "uses": 10,
-                        "max_uses": 10,
-                        "power": 90,
-                        "accuracy": 90,
-                        "type": "Water",
+                        "name": "Fire Fang",
+                        "uses": 15,
+                        "max_uses": 15,
+                        "power": 65,
+                        "accuracy": 95,
+                        "type": "Fire",
                         "category": "physical",
                         "learned_at_level": 1
                     }
                 ],
-                "hp": 17,
+                "hp": 14,
                 "damage": 0,
-                "attack": 9,
-                "defence": 9,
-                "special_attack": 10,
-                "special_defence": 10,
-                "speed": 11,
+                "attack": 7,
+                "defence": 6,
+                "special_attack": 7,
+                "special_defence": 7,
+                "speed": 7,
                 "shiny": false,
                 "experience": 0
             },
-            "spawn_time": 109512,
-            "duration": 9000
+            "spawn_time": 61603,
+            "duration": 14000
         },
         {
-            "tx": 14,
-            "ty": 10,
+            "tx": 19,
+            "ty": 19,
+            "creature": {
+                "creature": {
+                    "name": "Terraplant",
+                    "sprite": "terraplant.png",
+                    "typing": [
+                        "Grass"
+                    ],
+                    "base_stats": {
+                        "hp": 34,
+                        "attack": 46,
+                        "defense": 61,
+                        "sp_attack": 69,
+                        "sp_defense": 73,
+                        "speed": 37,
+                        "total": 320
+                    },
+                    "shiny_boost": {
+                        "stat": "sp_defense",
+                        "bonus": 10
+                    },
+                    "abilities": [
+                        "Thick Fat",
+                        "Overgrow"
+                    ],
+                    "moveset": [
+                        {
+                            "move_key": "vine_whip",
+                            "level": 1
+                        },
+                        {
+                            "move_key": "razor_leaf",
+                            "level": 1
+                        },
+                        {
+                            "move_key": "seed_bomb",
+                            "level": 1
+                        },
+                        {
+                            "move_key": "leaf_blade",
+                            "level": 36
+                        },
+                        {
+                            "move_key": "solar_beam",
+                            "level": 50
+                        }
+                    ],
+                    "evolves_to": "Floradon",
+                    "evolution_requirements": [
+                        {
+                            "type": "level",
+                            "level": 16,
+                            "stone": null,
+                            "evolves_to": "Floradon"
+                        },
+                        {
+                            "type": "stone",
+                            "level": null,
+                            "stone": "leaf_stone",
+                            "evolves_to": "Floradon"
+                        }
+                    ],
+                    "legendary": false,
+                    "mythical": false
+                },
+                "level": 5,
+                "moves": [
+                    {
+                        "name": "Vine Whip",
+                        "uses": 25,
+                        "max_uses": 25,
+                        "power": 45,
+                        "accuracy": 100,
+                        "type": "Grass",
+                        "category": "physical",
+                        "learned_at_level": 1
+                    },
+                    {
+                        "name": "Razor Leaf",
+                        "uses": 25,
+                        "max_uses": 25,
+                        "power": 55,
+                        "accuracy": 95,
+                        "type": "Grass",
+                        "category": "special",
+                        "learned_at_level": 1
+                    },
+                    {
+                        "name": "Seed Bomb",
+                        "uses": 15,
+                        "max_uses": 15,
+                        "power": 80,
+                        "accuracy": 100,
+                        "type": "Grass",
+                        "category": "physical",
+                        "learned_at_level": 1
+                    }
+                ],
+                "hp": 19,
+                "damage": 0,
+                "attack": 10,
+                "defence": 12,
+                "special_attack": 13,
+                "special_defence": 12,
+                "speed": 9,
+                "shiny": false,
+                "experience": 0
+            },
+            "spawn_time": 11315,
+            "duration": 7000
+        },
+        {
+            "tx": 10,
+            "ty": 24,
             "creature": {
                 "creature": {
                     "name": "Mystryon",
@@ -741,7 +856,7 @@
                     "legendary": false,
                     "mythical": true
                 },
-                "level": 1,
+                "level": 2,
                 "moves": [
                     {
                         "name": "Light Beam",
@@ -774,81 +889,81 @@
                         "learned_at_level": 1
                     }
                 ],
-                "hp": 13,
+                "hp": 16,
                 "damage": 0,
-                "attack": 7,
-                "defence": 8,
-                "special_attack": 7,
-                "special_defence": 7,
-                "speed": 7,
+                "attack": 11,
+                "defence": 11,
+                "special_attack": 8,
+                "special_defence": 10,
+                "speed": 8,
                 "shiny": false,
                 "experience": 0
             },
-            "spawn_time": 110393,
+            "spawn_time": 14604,
             "duration": 13000
         },
         {
-            "tx": 21,
-            "ty": 17,
+            "tx": 26,
+            "ty": 18,
             "creature": {
                 "creature": {
-                    "name": "Aquapup",
-                    "sprite": "aquapup.png",
+                    "name": "Flamcub",
+                    "sprite": "flamcub.png",
                     "typing": [
-                        "Water"
+                        "Fire"
                     ],
                     "base_stats": {
-                        "hp": 31,
-                        "attack": 41,
-                        "defense": 51,
-                        "sp_attack": 58,
-                        "sp_defense": 60,
-                        "speed": 69,
-                        "total": 310
+                        "hp": 46,
+                        "attack": 46,
+                        "defense": 41,
+                        "sp_attack": 61,
+                        "sp_defense": 49,
+                        "speed": 57,
+                        "total": 300
                     },
                     "shiny_boost": {
-                        "stat": "defense",
+                        "stat": "sp_defense",
                         "bonus": 10
                     },
                     "abilities": [
-                        "Water Veil",
-                        "Swift Swim"
+                        "Solar Power",
+                        "Flame Body"
                     ],
                     "moveset": [
                         {
-                            "move_key": "water_gun",
+                            "move_key": "ember",
                             "level": 1
                         },
                         {
-                            "move_key": "bubble_beam",
+                            "move_key": "flame_burst",
                             "level": 1
                         },
                         {
-                            "move_key": "aqua_tail",
+                            "move_key": "fire_fang",
                             "level": 1
                         },
                         {
-                            "move_key": "surf",
+                            "move_key": "heat_wave",
                             "level": 36
                         },
                         {
-                            "move_key": "hydro_pump",
+                            "move_key": "flare_blitz",
                             "level": 50
                         }
                     ],
-                    "evolves_to": "Hydracanis",
+                    "evolves_to": "Pyroarion",
                     "evolution_requirements": [
                         {
                             "type": "level",
                             "level": 16,
                             "stone": null,
-                            "evolves_to": "Hydracanis"
+                            "evolves_to": "Pyroarion"
                         },
                         {
                             "type": "stone",
                             "level": null,
-                            "stone": "water_stone",
-                            "evolves_to": "Hydracanis"
+                            "stone": "fire_stone",
+                            "evolves_to": "Pyroarion"
                         }
                     ],
                     "legendary": false,
@@ -857,165 +972,52 @@
                 "level": 2,
                 "moves": [
                     {
-                        "name": "Water Gun",
+                        "name": "Ember",
                         "uses": 25,
                         "max_uses": 25,
                         "power": 40,
                         "accuracy": 100,
-                        "type": "Water",
+                        "type": "Fire",
                         "category": "special",
                         "learned_at_level": 1
                     },
                     {
-                        "name": "Bubble Beam",
-                        "uses": 20,
-                        "max_uses": 20,
-                        "power": 65,
+                        "name": "Flame Burst",
+                        "uses": 15,
+                        "max_uses": 15,
+                        "power": 70,
                         "accuracy": 100,
-                        "type": "Water",
+                        "type": "Fire",
                         "category": "special",
                         "learned_at_level": 1
                     },
                     {
-                        "name": "Aqua Tail",
-                        "uses": 10,
-                        "max_uses": 10,
-                        "power": 90,
-                        "accuracy": 90,
-                        "type": "Water",
+                        "name": "Fire Fang",
+                        "uses": 15,
+                        "max_uses": 15,
+                        "power": 65,
+                        "accuracy": 95,
+                        "type": "Fire",
                         "category": "physical",
                         "learned_at_level": 1
                     }
                 ],
-                "hp": 13,
+                "hp": 14,
                 "damage": 0,
-                "attack": 6,
+                "attack": 7,
                 "defence": 7,
                 "special_attack": 7,
-                "special_defence": 7,
+                "special_defence": 6,
                 "speed": 7,
                 "shiny": false,
                 "experience": 0
             },
-            "spawn_time": 111210,
+            "spawn_time": 15132,
             "duration": 17000
-        },
-        {
-            "tx": 27,
-            "ty": 11,
-            "creature": {
-                "creature": {
-                    "name": "Aquapup",
-                    "sprite": "aquapup.png",
-                    "typing": [
-                        "Water"
-                    ],
-                    "base_stats": {
-                        "hp": 31,
-                        "attack": 41,
-                        "defense": 51,
-                        "sp_attack": 58,
-                        "sp_defense": 60,
-                        "speed": 69,
-                        "total": 310
-                    },
-                    "shiny_boost": {
-                        "stat": "defense",
-                        "bonus": 10
-                    },
-                    "abilities": [
-                        "Water Veil",
-                        "Swift Swim"
-                    ],
-                    "moveset": [
-                        {
-                            "move_key": "water_gun",
-                            "level": 1
-                        },
-                        {
-                            "move_key": "bubble_beam",
-                            "level": 1
-                        },
-                        {
-                            "move_key": "aqua_tail",
-                            "level": 1
-                        },
-                        {
-                            "move_key": "surf",
-                            "level": 36
-                        },
-                        {
-                            "move_key": "hydro_pump",
-                            "level": 50
-                        }
-                    ],
-                    "evolves_to": "Hydracanis",
-                    "evolution_requirements": [
-                        {
-                            "type": "level",
-                            "level": 16,
-                            "stone": null,
-                            "evolves_to": "Hydracanis"
-                        },
-                        {
-                            "type": "stone",
-                            "level": null,
-                            "stone": "water_stone",
-                            "evolves_to": "Hydracanis"
-                        }
-                    ],
-                    "legendary": false,
-                    "mythical": false
-                },
-                "level": 5,
-                "moves": [
-                    {
-                        "name": "Water Gun",
-                        "uses": 25,
-                        "max_uses": 25,
-                        "power": 40,
-                        "accuracy": 100,
-                        "type": "Water",
-                        "category": "special",
-                        "learned_at_level": 1
-                    },
-                    {
-                        "name": "Bubble Beam",
-                        "uses": 20,
-                        "max_uses": 20,
-                        "power": 65,
-                        "accuracy": 100,
-                        "type": "Water",
-                        "category": "special",
-                        "learned_at_level": 1
-                    },
-                    {
-                        "name": "Aqua Tail",
-                        "uses": 10,
-                        "max_uses": 10,
-                        "power": 90,
-                        "accuracy": 90,
-                        "type": "Water",
-                        "category": "physical",
-                        "learned_at_level": 1
-                    }
-                ],
-                "hp": 19,
-                "damage": 0,
-                "attack": 9,
-                "defence": 10,
-                "special_attack": 10,
-                "special_defence": 11,
-                "speed": 12,
-                "shiny": false,
-                "experience": 0
-            },
-            "spawn_time": 112635,
-            "duration": 10000
         }
     ],
-    "last_autosave": 111128,
-    "shake_timer": -22.1469999999995,
+    "last_autosave": 14094,
+    "shake_timer": -26.404999999999333,
     "shake_active": false,
     "facing": "right",
     "items": [
@@ -1031,12 +1033,13 @@
     "reset_spawn_route": "route-one",
     "reset_spawn_point": "default",
     "is_tweening": false,
-    "tween_start_time": 109848,
+    "tween_start_time": 14536,
     "tween_duration": 250,
-    "tween_start_x": 192.0,
-    "tween_start_y": 576.0,
-    "tween_target_x": 224.0,
-    "tween_target_y": 576.0,
+    "tween_start_x": 608.0,
+    "tween_start_y": 640.0,
+    "tween_target_x": 640.0,
+    "tween_target_y": 640.0,
     "tween_progress": 1.0,
+    "animation_start_time": 2288,
     "route_key": "route-one"
 }

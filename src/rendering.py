@@ -41,17 +41,48 @@ menu_bg_cache: dict[str, Surface | None] = {}
 
 def get_tile_surface(tile_key: str) -> Surface:
     """Get pre-scaled tile surface from cache."""
-    if tile_key not in tile_cache:
-        tile_path = os.path.join(ASSETS_PATH, "tiles", f"{tile_key}.png")
-        if os.path.exists(tile_path):
-            img = pygame.image.load(tile_path)
-            tile_cache[tile_key] = pygame.transform.scale(img, (TILE_SIZE, TILE_SIZE))
-        else:
-            # Fallback: Gray square
-            surf = pygame.Surface((TILE_SIZE, TILE_SIZE))
-            _ = surf.fill((128, 128, 128))
-            tile_cache[tile_key] = surf
-    return tile_cache[tile_key]
+    # For consistent randomization, we'll use a mapping of original keys to randomized keys
+    # This ensures the same tile always gets the same variant
+    if not hasattr(get_tile_surface, "random_mapping"):
+        get_tile_surface.random_mapping = {}
+    
+    # If this tile key has already been randomized, use the stored mapping
+    if tile_key in get_tile_surface.random_mapping:
+        cache_key = get_tile_surface.random_mapping[tile_key]
+    else:
+        # Initial randomization for tree and grass tiles
+        cache_key = tile_key
+        
+        # Only apply randomization for tree and grass tiles that don't already have -alt in the name
+        if tile_key in ["tree", "grass"] and not tile_key.endswith("-alt"):
+            # 35% chance to use the alt version
+            if random.random() < 0.35:
+                cache_key = f"{tile_key}-alt"
+        
+        # Store the mapping for future use
+        get_tile_surface.random_mapping[tile_key] = cache_key
+    
+    # Return from cache if already loaded
+    if cache_key in tile_cache:
+        return tile_cache[cache_key]
+    
+    # Load the tile
+    tile_path = os.path.join(ASSETS_PATH, "tiles", f"{cache_key}.png")
+    if os.path.exists(tile_path):
+        img = pygame.image.load(tile_path)
+        tile_cache[cache_key] = pygame.transform.scale(img, (TILE_SIZE, TILE_SIZE))
+    else:
+        # If alt version doesn't exist, fall back to the original key
+        if cache_key != tile_key:
+            # Update the mapping to use the original key
+            get_tile_surface.random_mapping[tile_key] = tile_key
+            return get_tile_surface(tile_key)
+        # Fallback: Gray square
+        surf = pygame.Surface((TILE_SIZE, TILE_SIZE))
+        _ = surf.fill((128, 128, 128))
+        tile_cache[cache_key] = surf
+    
+    return tile_cache[cache_key]
 
 
 def get_npc_sprite_surface(sprite_key: str) -> Surface:
@@ -305,7 +336,7 @@ def render_overworld(
         (player.location.x + TILE_SIZE // 2) - camera_x - 16
     )  # Center horizontally in tile
     player_screen_y = (
-        player.location.y + TILE_SIZE - camera_y - 48
+        player.location.y + TILE_SIZE - camera_y - 64
     )  # Bottom of tile minus sprite height
 
     # Check clamps for screen bounds clamping (only needed when camera is at map edge)
@@ -361,6 +392,32 @@ def render_overworld(
         h = obj.h
         obj_key = obj_type.replace("_", "-")
         obj_img = get_tile_surface(obj_key)
+
+        # If object requests stretching, render a single scaled image covering its tile area.
+        if getattr(obj, "stretch", False):
+            rect_left = tx
+            rect_top = ty
+            rect_w_px = w * TILE_SIZE
+            rect_h_px = h * TILE_SIZE
+            # Only render in this "below" pass if player's feet tile is NOT inside the object rect.
+            player_inside = (
+                rect_left <= player_tx < rect_left + w
+                and rect_top <= player_ty < rect_top + h
+            )
+            if not player_inside:
+                screen_x = rect_left * TILE_SIZE - camera_x
+                screen_y = rect_top * TILE_SIZE - camera_y
+                # Only blit if on screen (using rect size for bounds)
+                if (
+                    -rect_w_px <= screen_x <= SCREEN_WIDTH
+                    and -rect_h_px <= screen_y <= SCREEN_HEIGHT
+                ):
+                    scaled = pygame.transform.scale(obj_img, (rect_w_px, rect_h_px))
+                    _ = screen.blit(scaled, (screen_x, screen_y))
+            # If player is inside, skip here and let the "above player" pass render it.
+            continue
+
+        # Default behavior: render per-tile
         for dx in range(w):
             for dy in range(h):
                 obj_tx = tx + dx
@@ -390,8 +447,8 @@ def render_overworld(
             npc_screen_y = npc_y - camera_y
             # Only blit if on screen
             if (
-                -48 <= npc_screen_x <= SCREEN_WIDTH
-                and -48 <= npc_screen_y <= SCREEN_HEIGHT
+                -64 <= npc_screen_x <= SCREEN_WIDTH
+                and -64 <= npc_screen_y <= SCREEN_HEIGHT
             ):
                 _ = screen.blit(
                     npc_sprite, (npc_screen_x - 16, npc_screen_y - 24)
@@ -412,6 +469,30 @@ def render_overworld(
         h = obj.h
         obj_key = obj_type.replace("_", "-")
         obj_img = get_tile_surface(obj_key)
+
+        # If stretched, render here only if player's feet are inside the object's rect
+        if getattr(obj, "stretch", False):
+            rect_left = tx
+            rect_top = ty
+            rect_w_px = w * TILE_SIZE
+            rect_h_px = h * TILE_SIZE
+            player_inside = (
+                rect_left <= player_tx < rect_left + w
+                and rect_top <= player_ty < rect_top + h
+            )
+            if player_inside:
+                screen_x = rect_left * TILE_SIZE - camera_x
+                screen_y = rect_top * TILE_SIZE - camera_y
+                if (
+                    -rect_w_px <= screen_x <= SCREEN_WIDTH
+                    and -rect_h_px <= screen_y <= SCREEN_HEIGHT
+                ):
+                    scaled = pygame.transform.scale(obj_img, (rect_w_px, rect_h_px))
+                    _ = screen.blit(scaled, (screen_x, screen_y))
+            # otherwise nothing to do here for this stretched object
+            continue
+
+        # Default per-tile above-player rendering
         for dx in range(w):
             for dy in range(h):
                 obj_tx = tx + dx
@@ -795,12 +876,32 @@ def _render_party_selection(screen: Surface, battle_state: BattleState, player: 
     )
     _ = draw_text(screen, title, SCREEN_WIDTH // 2 - 120, 50, 20, BLACK)
 
-    # Show available party members
-    available_party = [
-        p
-        for p in player.party
-        if not is_fainted(p) and p != battle_state.player_pokemon
-    ]
+    # Decide whether to show full party (including fainted) or only available switches.
+    # When the battle requires an initial choice (battle_state.initial_choice_required)
+    # we show the entire party with indices so the player can pick which to send out.
+    show_all = getattr(battle_state, "initial_choice_required", False)
+
+    if show_all:
+        # Show every slot in the party (including fainted and empty slots)
+        available_party = player.party
+    else:
+        # Normal party selection: show only non-fainted and not the current active Pokemon
+        available_party = [
+            p
+            for p in player.party
+            if not is_fainted(p) and p != battle_state.player_pokemon
+        ]
+
+    if not available_party:
+        _ = draw_text(
+            screen,
+            "No available Pokemon to choose.",
+            SCREEN_WIDTH // 2 - 100,
+            120,
+            16,
+            BLACK,
+        )
+        return
 
     y_offset = 100
     for i, pokemon in enumerate(available_party):
@@ -808,12 +909,30 @@ def _render_party_selection(screen: Surface, battle_state: BattleState, player: 
         color = GREEN if i == battle_state.selected_option else WHITE
         _ = pygame.draw.rect(screen, color, (100, y, 400, 50), border_radius=4)
 
-        # Pokemon info
-        current_hp = max(0, pokemon.hp - pokemon.damage)
-        _ = draw_text(
-            screen, f"{pokemon.creature.name} Lv.{pokemon.level}", 120, y + 5, 16, BLACK
-        )
-        _ = draw_text(screen, f"HP: {current_hp}/{pokemon.hp}", 120, y + 25, 14, BLACK)
+        # Determine global party index for display (1-based). If pokemon appears multiple times,
+        # fallback to the display index.
+        try:
+            party_index = player.party.index(pokemon)
+        except Exception:
+            party_index = i
+
+        # Name line with index
+        name_label = f"{party_index + 1}. {pokemon.creature.name} Lv.{pokemon.level}"
+        # Mark the currently active Pokemon (if any)
+        if getattr(
+            battle_state, "_player_pokemon", None
+        ) is not None and pokemon == getattr(battle_state, "_player_pokemon"):
+            name_label += " (active)"
+        _ = draw_text(screen, name_label, 120, y + 5, 16, BLACK)
+
+        # HP / fainted line
+        if is_fainted(pokemon):
+            _ = draw_text(screen, "Fainted", 120, y + 25, 14, RED)
+        else:
+            current_hp = max(0, pokemon.hp - pokemon.damage)
+            _ = draw_text(
+                screen, f"HP: {current_hp}/{pokemon.hp}", 120, y + 25, 14, BLACK
+            )
 
 
 def _render_battle_results(screen: Surface, battle_state: BattleState):

@@ -9,29 +9,29 @@
       "tiles": {
         "map": [
           "gggggggggggggggggggeeggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
+          "gggggggggggggggggggppggggggggggggggg",
+          "ggggggggggggggggpppppggggggggggggggg",
+          "ggggggggggggggggpggggggggggggggggggg",
+          "ggggggggggggggggpggggggggggggggggggg",
+          "ggggggggggggggggpggggggggggggggggggg",
+          "ggggggggggggggggpggggggggggggggggggg",
+          "ggggggggggggggggpggggggggggggggggggg",
+          "ggggggggggggggggpggggggggggggggggggg",
+          "ggggggggggggggggpggggggggggggggggggg",
+          "ggggggggggggggggpggggggggggggggggggg",
+          "ggggggggggggggggpggggggggggggggggggg",
+          "ggggggggggggggggppppppppppppppppgggg",
+          "gggggggggggggggggggggggggggggggpgggg",
+          "gggggggggggggggggggggggggggggggpgggg",
+          "gggggggggpppppppppppppppppppppppgggg",
+          "gggggggggpgggggggggggggggggggggggggg",
+          "gggggggggpggggggggggggggppppppgggggg",
+          "gggggggggpggggggggggggggpggggpgggggg",
+          "gggggggggpggggggggggggggpggggpgggggg",
+          "gggggggggppppppppppppppppggggpgggggg",
+          "gggggggggggggggggggggggggggggpgggggg",
+          "gggggggggggggggggggpppppppppppgggggg",
+          "gggggggggggggggggggppggggggggggggggg",
           "gggggggggggggggggggeeggggggggggggggg"
         ],
         "legend": {
@@ -41,52 +41,160 @@
         }
       },
       "spawn": {
-        "default": { "tx": 20, "ty": 12 },
-        "from-willowfen-village": { "tx": 20, "ty": 23 },
-        "from-viridian-city": { "tx": 20, "ty": 1 }
+        "default": {
+          "tx": 20,
+          "ty": 12
+        },
+        "from-willowfen-village": {
+          "tx": 20,
+          "ty": 23
+        },
+        "from-viridian-city": {
+          "tx": 20,
+          "ty": 1
+        }
       },
       "boundaries": {
-        "walkable": [{ "tx": 0, "ty": 0, "w": 40, "h": 25 }],
+        "walkable": [
+          {
+            "tx": 0,
+            "ty": 0,
+            "w": 40,
+            "h": 25
+          }
+        ],
         "blocked": []
       },
       "exits": [
         {
           "id": "south-exit",
-          "area": { "tx": 19, "ty": 24, "w": 2, "h": 1 },
+          "area": {
+            "tx": 19,
+            "ty": 24,
+            "w": 2,
+            "h": 1
+          },
           "destination": "willowfen-village",
           "spawnPoint": "from-route-one"
         },
         {
           "id": "north-exit",
-          "area": { "tx": 19, "ty": 0, "w": 2, "h": 1 },
+          "area": {
+            "tx": 19,
+            "ty": 0,
+            "w": 2,
+            "h": 1
+          },
           "destination": "viridian-city",
           "spawnPoint": "from-route-one"
         }
       ],
       "creatures": {
         "grass": [
-          { "name": "Flamcub", "level": [2, 4], "chance": 40 },
-          { "name": "Aquapup", "level": [2, 5], "chance": 35 },
-          { "name": "Terraplant", "level": [3, 5], "chance": 25 },
-          { "name": "Mystryon", "level": [1, 1], "chance": 0.0001 }
+          {
+            "name": "Flamcub",
+            "level": [
+              2,
+              4
+            ],
+            "chance": 40
+          },
+          {
+            "name": "Aquapup",
+            "level": [
+              2,
+              5
+            ],
+            "chance": 35
+          },
+          {
+            "name": "Terraplant",
+            "level": [
+              3,
+              5
+            ],
+            "chance": 25
+          },
+          {
+            "name": "Mystryon",
+            "level": [
+              1,
+              5
+            ],
+            "chance": 0.0001
+          }
         ]
       },
       "objects": [
         {
-          "type": "tree",
-          "tx": 5,
-          "ty": 5,
-          "w": 20,
+          "type": "fence",
+          "tx": 10,
+          "ty": 16,
+          "w": 26,
           "h": 1,
           "blocks": true,
           "layer": "below"
         },
         {
+          "type": "tree",
+          "tx": 0,
+          "ty": 0,
+          "w": 19,
+          "h": 1,
+          "blocks": true,
+          "layer": "below"
+        },
+        {
+          "type": "tree",
+          "tx": 21,
+          "ty": 0,
+          "w": 15,
+          "h": 1,
+          "blocks": true,
+          "layer": "below"
+        },
+        {
+          "type": "tree",
+          "tx": 19,
+          "ty": 21,
+          "w": 10,
+          "h": 1,
+          "blocks": true,
+          "layer": "below"
+        },
+        {
+          "type": "tree",
+          "tx": 18,
+          "ty": 21,
+          "w": 1,
+          "h": 4,
+          "blocks": true,
+          "layer": "below"
+        },
+        {
+          "type": "tall_grass",
+          "tx": 25,
+          "ty": 18,
+          "w": 4,
+          "h": 3,
+          "blocks": false,
+          "layer": "above"
+        },
+        {
+          "type": "tall_grass",
+          "tx": 0,
+          "ty": 21,
+          "w": 18,
+          "h": 4,
+          "blocks": false,
+          "layer": "above"
+        },
+        {
           "type": "tall_grass",
           "tx": 10,
-          "ty": 10,
-          "w": 20,
-          "h": 9,
+          "ty": 17,
+          "w": 14,
+          "h": 3,
           "blocks": false,
           "layer": "above"
         }
@@ -127,24 +235,50 @@
         }
       },
       "spawn": {
-        "default": { "tx": 15, "ty": 10 },
-        "from-route-one": { "tx": 15, "ty": 1 },
-        "from-home": { "tx": 5, "ty": 10 }
+        "default": {
+          "tx": 15,
+          "ty": 10
+        },
+        "from-route-one": {
+          "tx": 15,
+          "ty": 1
+        },
+        "from-home": {
+          "tx": 5,
+          "ty": 10
+        }
       },
       "boundaries": {
-        "walkable": [{ "tx": 0, "ty": 0, "w": 30, "h": 20 }],
+        "walkable": [
+          {
+            "tx": 0,
+            "ty": 0,
+            "w": 30,
+            "h": 20
+          }
+        ],
         "blocked": []
       },
       "exits": [
         {
           "id": "north-exit",
-          "area": { "tx": 13, "ty": 0, "w": 2, "h": 1 },
+          "area": {
+            "tx": 13,
+            "ty": 0,
+            "w": 2,
+            "h": 1
+          },
           "destination": "route-one",
           "spawnPoint": "from-willowfen-village"
         },
         {
           "id": "home-entrance",
-          "area": { "tx": 5, "ty": 9, "w": 1, "h": 1 },
+          "area": {
+            "tx": 5,
+            "ty": 9,
+            "w": 1,
+            "h": 1
+          },
           "destination": "player-house",
           "spawnPoint": "from-outside"
         }
@@ -153,7 +287,10 @@
         {
           "id": "oak",
           "name": "Professor Oak",
-          "position": { "tx": 15, "ty": 5 },
+          "position": {
+            "tx": 15,
+            "ty": 5
+          },
           "sprite": "professor-oak",
           "dialogue": "Hello there! Welcome to the world of Pokemon!"
         }
@@ -166,7 +303,18 @@
           "w": 2,
           "h": 2,
           "blocks": true,
-          "layer": "above"
+          "layer": "above",
+          "stretch": true
+        },
+        {
+          "type": "house2",
+          "tx": 25,
+          "ty": 12,
+          "w": 4,
+          "h": 4,
+          "blocks": true,
+          "layer": "above",
+          "stretch": true
         },
         {
           "type": "tree",
@@ -251,31 +399,65 @@
         }
       },
       "spawn": {
-        "default": { "tx": 15, "ty": 10 },
-        "from-route-one": { "tx": 15, "ty": 18 },
-        "from-route-two": { "tx": 15, "ty": 1 },
-        "from-pokemon-center": { "tx": 10, "ty": 10 }
+        "default": {
+          "tx": 15,
+          "ty": 10
+        },
+        "from-route-one": {
+          "tx": 15,
+          "ty": 18
+        },
+        "from-route-two": {
+          "tx": 15,
+          "ty": 1
+        },
+        "from-pokemon-center": {
+          "tx": 10,
+          "ty": 10
+        }
       },
       "boundaries": {
-        "walkable": [{ "tx": 0, "ty": 0, "w": 30, "h": 20 }],
+        "walkable": [
+          {
+            "tx": 0,
+            "ty": 0,
+            "w": 30,
+            "h": 20
+          }
+        ],
         "blocked": []
       },
       "exits": [
         {
           "id": "south-exit",
-          "area": { "tx": 14, "ty": 19, "w": 2, "h": 1 },
+          "area": {
+            "tx": 14,
+            "ty": 19,
+            "w": 2,
+            "h": 1
+          },
           "destination": "route-one",
           "spawnPoint": "from-viridian-city"
         },
         {
           "id": "north-exit",
-          "area": { "tx": 14, "ty": 0, "w": 2, "h": 1 },
+          "area": {
+            "tx": 14,
+            "ty": 0,
+            "w": 2,
+            "h": 1
+          },
           "destination": "route-two",
           "spawnPoint": "from-viridian-city"
         },
         {
           "id": "pokemon-center-entrance",
-          "area": { "tx": 10, "ty": 9, "w": 1, "h": 1 },
+          "area": {
+            "tx": 10,
+            "ty": 9,
+            "w": 1,
+            "h": 1
+          },
           "destination": "pokemon-center",
           "spawnPoint": "from-outside"
         }
@@ -325,27 +507,73 @@
         }
       },
       "spawn": {
-        "default": { "tx": 20, "ty": 12 },
-        "from-viridian-city": { "tx": 20, "ty": 23 }
+        "default": {
+          "tx": 20,
+          "ty": 12
+        },
+        "from-viridian-city": {
+          "tx": 20,
+          "ty": 23
+        }
       },
       "boundaries": {
-        "walkable": [{ "tx": 0, "ty": 0, "w": 40, "h": 25 }],
+        "walkable": [
+          {
+            "tx": 0,
+            "ty": 0,
+            "w": 40,
+            "h": 25
+          }
+        ],
         "blocked": []
       },
       "exits": [
         {
           "id": "south-exit",
-          "area": { "tx": 19, "ty": 24, "w": 2, "h": 1 },
+          "area": {
+            "tx": 19,
+            "ty": 24,
+            "w": 2,
+            "h": 1
+          },
           "destination": "viridian-city",
           "spawnPoint": "from-route-two"
         }
       ],
       "creatures": {
         "grass": [
-          { "name": "Flamcub", "level": [4, 6], "chance": 25 },
-          { "name": "Aquapup", "level": [4, 7], "chance": 25 },
-          { "name": "Terraplant", "level": [5, 7], "chance": 35 },
-          { "name": "Mystryon", "level": [3, 3], "chance": 15 }
+          {
+            "name": "Flamcub",
+            "level": [
+              4,
+              6
+            ],
+            "chance": 25
+          },
+          {
+            "name": "Aquapup",
+            "level": [
+              4,
+              7
+            ],
+            "chance": 25
+          },
+          {
+            "name": "Terraplant",
+            "level": [
+              5,
+              7
+            ],
+            "chance": 35
+          },
+          {
+            "name": "Mystryon",
+            "level": [
+              3,
+              3
+            ],
+            "chance": 15
+          }
         ]
       }
     },
@@ -384,17 +612,35 @@
         }
       },
       "spawn": {
-        "default": { "tx": 15, "ty": 10 },
-        "from-outside": { "tx": 15, "ty": 18 }
+        "default": {
+          "tx": 15,
+          "ty": 10
+        },
+        "from-outside": {
+          "tx": 15,
+          "ty": 18
+        }
       },
       "boundaries": {
-        "walkable": [{ "tx": 0, "ty": 0, "w": 30, "h": 20 }],
+        "walkable": [
+          {
+            "tx": 0,
+            "ty": 0,
+            "w": 30,
+            "h": 20
+          }
+        ],
         "blocked": []
       },
       "exits": [
         {
           "id": "door",
-          "area": { "tx": 15, "ty": 18, "w": 1, "h": 1 },
+          "area": {
+            "tx": 15,
+            "ty": 18,
+            "w": 1,
+            "h": 1
+          },
           "destination": "willowfen-village",
           "spawnPoint": "from-home"
         }
@@ -436,17 +682,35 @@
         }
       },
       "spawn": {
-        "default": { "tx": 15, "ty": 10 },
-        "from-outside": { "tx": 15, "ty": 1 }
+        "default": {
+          "tx": 15,
+          "ty": 10
+        },
+        "from-outside": {
+          "tx": 15,
+          "ty": 1
+        }
       },
       "boundaries": {
-        "walkable": [{ "tx": 0, "ty": 0, "w": 30, "h": 20 }],
+        "walkable": [
+          {
+            "tx": 0,
+            "ty": 0,
+            "w": 30,
+            "h": 20
+          }
+        ],
         "blocked": []
       },
       "exits": [
         {
           "id": "door",
-          "area": { "tx": 15, "ty": 0, "w": 1, "h": 1 },
+          "area": {
+            "tx": 15,
+            "ty": 0,
+            "w": 1,
+            "h": 1
+          },
           "destination": "viridian-city",
           "spawnPoint": "from-pokemon-center"
         }
@@ -455,7 +719,10 @@
         {
           "id": "nurse-joy",
           "name": "Nurse Joy",
-          "position": { "tx": 15, "ty": 5 },
+          "position": {
+            "tx": 15,
+            "ty": 5
+          },
           "sprite": "nurse-joy",
           "dialogue": "Welcome to the Pokemon Center! We can heal your Pokemon here."
         }
@@ -463,24 +730,78 @@
     }
   ],
   "connections": {
-    "route-one": ["willowfen-village", "viridian-city"],
-    "willowfen-village": ["route-one", "player-house"],
-    "viridian-city": ["route-one", "route-two", "pokemon-center"],
-    "route-two": ["viridian-city"],
-    "player-house": ["willowfen-village"],
-    "pokemon-center": ["viridian-city"]
+    "route-one": [
+      "willowfen-village",
+      "viridian-city"
+    ],
+    "willowfen-village": [
+      "route-one",
+      "player-house"
+    ],
+    "viridian-city": [
+      "route-one",
+      "route-two",
+      "pokemon-center"
+    ],
+    "route-two": [
+      "viridian-city"
+    ],
+    "player-house": [
+      "willowfen-village"
+    ],
+    "pokemon-center": [
+      "viridian-city"
+    ]
   },
   "startingRoute": "willowfen-village",
   "playerConfig": {
     "walkSpeed": 150,
     "runSpeed": 250,
-    "spriteSize": { "width": 32, "height": 48 },
-    "collisionSize": { "width": 24, "height": 16 },
+    "spriteSize": {
+      "width": 32,
+      "height": 64
+    },
+    "collisionSize": {
+      "width": 24,
+      "height": 16
+    },
     "directions": {
-      "down": { "frame": 0, "walkFrames": [0, 1, 2, 1] },
-      "up": { "frame": 12, "walkFrames": [12, 13, 14, 13] },
-      "left": { "frame": 4, "walkFrames": [4, 5, 6, 5] },
-      "right": { "frame": 8, "walkFrames": [8, 9, 10, 9] }
+      "down": {
+        "frame": 0,
+        "walkFrames": [
+          0,
+          1,
+          2,
+          1
+        ]
+      },
+      "up": {
+        "frame": 12,
+        "walkFrames": [
+          12,
+          13,
+          14,
+          13
+        ]
+      },
+      "left": {
+        "frame": 4,
+        "walkFrames": [
+          4,
+          5,
+          6,
+          5
+        ]
+      },
+      "right": {
+        "frame": 8,
+        "walkFrames": [
+          8,
+          9,
+          10,
+          9
+        ]
+      }
     }
   }
 }

@@ -610,46 +610,168 @@ def _handle_party_selection(
     from src.battle_state import BattlePhase
     from src.battle import is_fainted, BattleResult
 
-    available_party = [
-        p
-        for p in player.party
-        if not is_fainted(p) and p != battle_state.player_pokemon
-    ]
+    # When the battle requires an initial choice we render the full party (all slots),
+    # but selection/navigation must skip fainted Pokemon. For normal in-battle switching
+    # we present only non-fainted and non-active party members.
+    initial_choice = getattr(battle_state, "initial_choice_required", False)
 
+    # The list used for rendering in the UI (rendering.py expects full party when initial_choice=True)
+    render_list = (
+        player.party
+        if initial_choice
+        else [
+            p
+            for p in player.party
+            if not is_fainted(p) and p != battle_state.player_pokemon
+        ]
+    )
+
+    # Ensure the selection index is valid and points to a selectable slot:
+    # - For initial_choice: selected_option indexes into player.party (render_list == player.party),
+    #   so if it points to a fainted slot, find the nearest non-fainted to highlight.
+    # - For normal switching: selected_option indexes into the filtered list; clamp it.
+    if initial_choice:
+        # If no party at all, just bail
+        if not player.party:
+            return States.BATTLE, player, "", 0.0, False
+
+        # Normalize selected_option to be within party bounds
+        if battle_state.selected_option < 0 or battle_state.selected_option >= len(
+            player.party
+        ):
+            # Pick first healthy index if available
+            first_healthy = next(
+                (i for i, p in enumerate(player.party) if not is_fainted(p)), 0
+            )
+            battle_state.selected_option = first_healthy
+
+        # If current selection is fainted, move to nearest non-fainted (search outward)
+        if is_fainted(player.party[battle_state.selected_option]):
+            n = len(player.party)
+            found = False
+            for offset in range(1, n):
+                forward = (battle_state.selected_option + offset) % n
+                backward = (battle_state.selected_option - offset) % n
+                if not is_fainted(player.party[forward]):
+                    battle_state.selected_option = forward
+                    found = True
+                    break
+                if not is_fainted(player.party[backward]):
+                    battle_state.selected_option = backward
+                    found = True
+                    break
+            # If none found, leave selection as-is (all fainted case)
+    else:
+        # Clamp selection index for the filtered list
+        if render_list:
+            battle_state.selected_option = max(
+                0, min(battle_state.selected_option, len(render_list) - 1)
+            )
+        else:
+            # No valid options to select
+            battle_state.selected_option = 0
+
+    # Event handling: move selection but skip fainted on navigation when initial_choice is True
     if event.key == pygame.K_ESCAPE:  # pyright: ignore[reportAny]
         if battle_state.force_switch:
             return States.BATTLE, player, "", 0.0, False  # Can't escape if forced
         battle_state.phase = BattlePhase.MAIN_MENU
         battle_state.selected_option = 0
     elif event.key == pygame.K_UP:  # pyright: ignore[reportAny]
-        battle_state.selected_option = max(0, battle_state.selected_option - 1)
         try:
             from src.audio import play_sfx
 
             play_sfx("move")
         except Exception:
             pass
+
+        if initial_choice:
+            # Find previous non-fainted index in full party
+            n = len(player.party)
+            if n:
+                start = battle_state.selected_option
+                for offset in range(1, n):
+                    idx = (start - offset) % n
+                    if not is_fainted(player.party[idx]):
+                        battle_state.selected_option = idx
+                        break
+        else:
+            battle_state.selected_option = max(0, battle_state.selected_option - 1)
     elif event.key == pygame.K_DOWN:  # pyright: ignore[reportAny]
-        battle_state.selected_option = min(
-            len(available_party) - 1, battle_state.selected_option + 1
-        )
         try:
             from src.audio import play_sfx
 
             play_sfx("move")
         except Exception:
             pass
+
+        if initial_choice:
+            # Find next non-fainted index in full party
+            n = len(player.party)
+            if n:
+                start = battle_state.selected_option
+                for offset in range(1, n):
+                    idx = (start + offset) % n
+                    if not is_fainted(player.party[idx]):
+                        battle_state.selected_option = idx
+                        break
+        else:
+            if render_list:
+                battle_state.selected_option = min(
+                    len(render_list) - 1, battle_state.selected_option + 1
+                )
+            else:
+                battle_state.selected_option = 0
     elif event.key == pygame.K_RETURN:  # pyright: ignore[reportAny]
-        if battle_state.selected_option < len(available_party):
+        # Determine the chosen Pokemon based on context
+        if initial_choice:
+            # selected_option indexes into the full party
+            if 0 <= battle_state.selected_option < len(player.party):
+                chosen = player.party[battle_state.selected_option]
+            else:
+                return States.BATTLE, player, "", 0.0, False
+
+            # Disallow selecting fainted Pokemon
+            if is_fainted(chosen):
+                try:
+                    from src.audio import play_sfx
+
+                    play_sfx("error")
+                except Exception:
+                    pass
+                return States.BATTLE, player, "", 0.0, False
+
+            # Valid initial send-out
             try:
                 from src.audio import play_sfx
 
                 play_sfx("confirm")
             except Exception:
                 pass
-            # Switch Pokemon
+
+            battle_state.player_pokemon = chosen
+            result = BattleResult()
+            result.add_message(f"Go, {chosen.creature.name}!")
+            battle_state.add_result(result)
+            battle_state.phase = BattlePhase.SHOWING_RESULTS
+            battle_state.force_switch = False
+            battle_state.initial_choice_required = False
+        else:
+            # selected_option indexes into the filtered render_list
+            if 0 <= battle_state.selected_option < len(render_list):
+                new_pokemon = render_list[battle_state.selected_option]
+            else:
+                return States.BATTLE, player, "", 0.0, False
+
+            try:
+                from src.audio import play_sfx
+
+                play_sfx("confirm")
+            except Exception:
+                pass
+
+            # Switch Pokemon during battle
             old_pokemon = battle_state.player_pokemon
-            new_pokemon = available_party[battle_state.selected_option]
             battle_state.player_pokemon = new_pokemon
 
             result = BattleResult()
@@ -703,7 +825,7 @@ def _handle_forced_switch(
     event: Event, battle_state: BattleState, player: Player
 ) -> tuple[States, Player, str, float, bool]:
     """Handle forced switching when player's Pokemon faints."""
-    from src.battle import is_fainted
+    from src.battle import is_fainted, BattleResult
 
     available_party = [p for p in player.party if not is_fainted(p)]
 
@@ -715,9 +837,21 @@ def _handle_forced_switch(
         )
     elif event.key == pygame.K_RETURN:  # pyright: ignore[reportAny]
         if battle_state.selected_option < len(available_party):
-            battle_state.player_pokemon = available_party[battle_state.selected_option]
+            new_pokemon = available_party[battle_state.selected_option]
+            battle_state.player_pokemon = new_pokemon
             battle_state.force_switch = False
-            battle_state.reset_for_new_turn()
+
+            # If this forced switch was actually the initial required choice (battle started without an active pokemon),
+            # add a simple send-out message and move to showing results so the player sees the Pokemon being sent out.
+            if getattr(battle_state, "initial_choice_required", False):
+                battle_state.initial_choice_required = False
+                result = BattleResult()
+                result.add_message(f"Go, {new_pokemon.creature.name}!")
+                battle_state.add_result(result)
+                battle_state.phase = BattlePhase.SHOWING_RESULTS
+            else:
+                # Normal forced switch flow during battle: reset for a new turn
+                battle_state.reset_for_new_turn()
 
     return States.BATTLE, player, "", 0.0, False
 
