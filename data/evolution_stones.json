@@ -68,5 +68,54 @@
     "quantity": 1,
     "type": "Evolution",
     "description": "A peculiar stone that makes certain species of creatures evolve. It's cold to the touch and never melts."
+  },
+  {
+    "key": "normal_stone",
+    "name": "Normal Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It has a simple, balanced energy."
+  },
+  {
+    "key": "ground_stone",
+    "name": "Ground Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It contains the power of the earth."
+  },
+  {
+    "key": "ghost_stone",
+    "name": "Ghost Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It seems to phase in and out of existence."
+  },
+  {
+    "key": "air_stone",
+    "name": "Air Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It feels light and carries the wind's energy."
+  },
+  {
+    "key": "poison_stone",
+    "name": "Poison Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It has a toxic aura and purple glow."
+  },
+  {
+    "key": "metal_stone",
+    "name": "Metal Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It's hard as steel and gleams like polished metal."
+  },
+  {
+    "key": "shadow_stone",
+    "name": "Shadow Stone",
+    "quantity": 1,
+    "type": "Evolution",
+    "description": "A peculiar stone that makes certain species of creatures evolve. It embodies the balance between light and darkness."
   }
 ]

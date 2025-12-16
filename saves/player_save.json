@@ -4,70 +4,116 @@
     "party": [
         {
             "creature": {
-                "name": "Hydracanis",
-                "sprite": "hydracanis.png",
+                "name": "Terrinoir",
+                "sprite": "terrinoir.png",
                 "typing": [
                     "Water"
                 ],
                 "base_stats": {
-                    "hp": 62,
-                    "attack": 62,
-                    "defense": 82,
-                    "sp_attack": 60,
-                    "sp_defense": 88,
-                    "speed": 81,
-                    "total": 435
+                    "hp": 75,
+                    "attack": 85,
+                    "defense": 80,
+                    "sp_attack": 55,
+                    "sp_defense": 55,
+                    "speed": 60,
+                    "total": 410
                 },
                 "shiny_boost": {
-                    "stat": "sp_defense",
+                    "stat": "attack",
                     "bonus": 10
                 },
                 "abilities": [
-                    "Swift Swim",
-                    "Water Veil"
+                    "Torrent",
+                    "Rough Skin"
                 ],
                 "moveset": [
+                    {
+                        "move_key": "tackle",
+                        "level": 1
+                    },
                     {
                         "move_key": "water_gun",
                         "level": 1
                     },
                     {
-                        "move_key": "bubble_beam",
-                        "level": 1
+                        "move_key": "focus_energy",
+                        "level": 5
+                    },
+                    {
+                        "move_key": "bite",
+                        "level": 9
+                    },
+                    {
+                        "move_key": "aqua_jet",
+                        "level": 13
+                    },
+                    {
+                        "move_key": "headbutt",
+                        "level": 18
                     },
                     {
                         "move_key": "aqua_tail",
-                        "level": 1
+                        "level": 24
+                    },
+                    {
+                        "move_key": "crunch",
+                        "level": 30
+                    },
+                    {
+                        "move_key": "iron_defense",
+                        "level": 34
                     },
                     {
                         "move_key": "surf",
-                        "level": 36
+                        "level": 38
+                    },
+                    {
+                        "move_key": "dark_pulse",
+                        "level": 44
+                    },
+                    {
+                        "move_key": "rain_dance",
+                        "level": 48
                     },
                     {
                         "move_key": "hydro_pump",
-                        "level": 50
+                        "level": 52
+                    },
+                    {
+                        "move_key": "abyss_ram",
+                        "level": 60
                     }
                 ],
-                "evolves_to": "Poseidire",
+                "evolves_to": "Duskuragon",
                 "evolution_requirements": [
                     {
                         "type": "level",
                         "level": 36,
                         "stone": null,
-                        "evolves_to": "Poseidire"
+                        "evolves_to": "Duskuragon"
                     },
                     {
                         "type": "stone",
                         "level": null,
                         "stone": "water_stone",
-                        "evolves_to": "Poseidire"
+                        "evolves_to": "Duskuragon"
                     }
                 ],
                 "legendary": false,
                 "mythical": false
             },
-            "level": 16,
+            "level": 5,
             "moves": [
+                {
+                    "name": "Tackle",
+                    "uses": 35,
+                    "max_uses": 35,
+                    "power": 40,
+                    "accuracy": 100,
+                    "type": "Normal",
+                    "category": "physical",
+                    "learned_at_level": 1
+                },
                 {
                     "name": "Water Gun",
                     "uses": 25,
@@ -79,188 +125,91 @@
                     "learned_at_level": 1
                 },
                 {
-                    "name": "Bubble Beam",
-                    "uses": 20,
-                    "max_uses": 20,
-                    "power": 65,
+                    "name": "Focus Energy",
+                    "uses": 30,
+                    "max_uses": 30,
+                    "power": 0,
                     "accuracy": 100,
-                    "type": "Water",
-                    "category": "special",
-                    "learned_at_level": 1
-                },
-                {
-                    "name": "Aqua Tail",
-                    "uses": 10,
-                    "max_uses": 10,
-                    "power": 90,
-                    "accuracy": 90,
-                    "type": "Water",
-                    "category": "physical",
-                    "learned_at_level": 1
+                    "type": "Normal",
+                    "category": "status",
+                    "learned_at_level": 5
                 }
             ],
-            "hp": 37,
+            "hp": 21,
             "damage": 0,
-            "attack": 18,
-            "defence": 25,
-            "special_attack": 28,
-            "special_defence": 26,
-            "speed": 28,
+            "attack": 12,
+            "defence": 10,
+            "special_attack": 9,
+            "special_defence": 10,
+            "speed": 9,
             "shiny": false,
-            "experience": 1106
+            "experience": 165
         },
         {
             "creature": {
-                "name": "Floradon",
-                "sprite": "floradon.png",
+                "name": "Eclipserion",
+                "sprite": "eclipserion.png",
                 "typing": [
-                    "Grass"
+                    "Ghost",
+                    "Dark"
                 ],
                 "base_stats": {
-                    "hp": 54,
-                    "attack": 98,
-                    "defense": 101,
-                    "sp_attack": 59,
-                    "sp_defense": 68,
-                    "speed": 70,
-                    "total": 450
+                    "hp": 120,
+                    "attack": 110,
+                    "defense": 110,
+                    "sp_attack": 150,
+                    "sp_defense": 150,
+                    "speed": 160,
+                    "total": 800
                 },
                 "shiny_boost": {
-                    "stat": "sp_defense",
+                    "stat": "speed",
                     "bonus": 10
                 },
                 "abilities": [
-                    "Chlorophyll",
-                    "Thick Fat"
+                    "Spectral Equilibrium",
+                    "Phase Shift"
                 ],
                 "moveset": [
                     {
-                        "move_key": "vine_whip",
+                        "move_key": "shadow_sneak",
                         "level": 1
                     },
                     {
-                        "move_key": "razor_leaf",
+                        "move_key": "dragon_pulse",
                         "level": 1
                     },
                     {
-                        "move_key": "seed_bomb",
-                        "level": 1
+                        "move_key": "focus_energy",
+                        "level": 5
                     },
                     {
-                        "move_key": "leaf_blade",
-                        "level": 36
+                        "move_key": "night_shade",
+                        "level": 10
                     },
                     {
-                        "move_key": "solar_beam",
+                        "move_key": "ancient_power",
+                        "level": 20
+                    },
+                    {
+                        "move_key": "dragon_dance",
+                        "level": 30
+                    },
+                    {
+                        "move_key": "spirit_break",
+                        "level": 40
+                    },
+                    {
+                        "move_key": "phantom_force",
                         "level": 50
-                    }
-                ],
-                "evolves_to": "Verdantitan",
-                "evolution_requirements": [
-                    {
-                        "type": "level",
-                        "level": 36,
-                        "stone": null,
-                        "evolves_to": "Verdantitan"
                     },
                     {
-                        "type": "stone",
-                        "level": null,
-                        "stone": "leaf_stone",
-                        "evolves_to": "Verdantitan"
-                    }
-                ],
-                "legendary": false,
-                "mythical": false
-            },
-            "level": 17,
-            "moves": [
-                {
-                    "name": "Vine Whip",
-                    "uses": 35,
-                    "max_uses": 35,
-                    "power": 40,
-                    "accuracy": 100,
-                    "type": "Grass",
-                    "category": "physical",
-                    "learned_at_level": null
-                },
-                {
-                    "name": "Razor Leaf",
-                    "uses": 35,
-                    "max_uses": 35,
-                    "power": 40,
-                    "accuracy": 100,
-                    "type": "Grass",
-                    "category": "special",
-                    "learned_at_level": null
-                },
-                {
-                    "name": "Seed Bomb",
-                    "uses": 35,
-                    "max_uses": 35,
-                    "power": 40,
-                    "accuracy": 100,
-                    "type": "Grass",
-                    "category": "physical",
-                    "learned_at_level": null
-                }
-            ],
-            "hp": 49,
-            "damage": 0,
-            "attack": 39,
-            "defence": 41,
-            "special_attack": 25,
-            "special_defence": 29,
-            "speed": 29,
-            "shiny": false,
-            "experience": 619
-        },
-        {
-            "creature": {
-                "name": "Mystryon",
-                "sprite": "mystryon.png",
-                "typing": [
-                    "Light Magic",
-                    "Dark Magic"
-                ],
-                "base_stats": {
-                    "hp": 99,
-                    "attack": 146,
-                    "defense": 141,
-                    "sp_attack": 96,
-                    "sp_defense": 119,
-                    "speed": 99,
-                    "total": 700
-                },
-                "shiny_boost": {
-                    "stat": "sp_attack",
-                    "bonus": 25
-                },
-                "abilities": [
-                    "Radiance",
-                    "Holy Guard"
-                ],
-                "moveset": [
-                    {
-                        "move_key": "light_beam",
-                        "level": 1
+                        "move_key": "dimension_collapse",
+                        "level": 60
                     },
                     {
-                        "move_key": "solar_flare",
-                        "level": 1
-                    },
-                    {
-                        "move_key": "holy_nova",
-                        "level": 1
-                    },
-                    {
-                        "move_key": "judgment_ray",
-                        "level": 36
-                    },
-                    {
-                        "move_key": "eternal_dawn",
-                        "level": 50
+                        "move_key": "eternal_eclipse",
+                        "level": 70
                     }
                 ],
                 "evolves_to": null,
@@ -268,166 +217,152 @@
                 "legendary": false,
                 "mythical": true
             },
-            "level": 11,
+            "level": 3,
             "moves": [
                 {
-                    "name": "Light Beam",
-                    "uses": 35,
-                    "max_uses": 35,
+                    "name": "Shadow Sneak",
+                    "uses": 30,
+                    "max_uses": 30,
                     "power": 40,
                     "accuracy": 100,
-                    "type": "Light Magic",
-                    "category": "special",
-                    "learned_at_level": null
+                    "type": "Ghost",
+                    "category": "physical",
+                    "learned_at_level": 1
                 },
                 {
-                    "name": "Solar Flare",
-                    "uses": 35,
-                    "max_uses": 35,
-                    "power": 40,
+                    "name": "Dragon Pulse",
+                    "uses": 10,
+                    "max_uses": 10,
+                    "power": 85,
                     "accuracy": 100,
-                    "type": "Light Magic",
+                    "type": "Dragon",
                     "category": "special",
-                    "learned_at_level": null
-                },
-                {
-                    "name": "Holy Nova",
-                    "uses": 35,
-                    "max_uses": 35,
-                    "power": 140,
-                    "accuracy": 100,
-                    "type": "Light Magic",
-                    "category": "special",
-                    "learned_at_level": null
+                    "learned_at_level": 1
                 }
             ],
-            "hp": 43,
+            "hp": 20,
             "damage": 0,
-            "attack": 40,
-            "defence": 36,
-            "special_attack": 29,
-            "special_defence": 32,
-            "speed": 28,
+            "attack": 12,
+            "defence": 11,
+            "special_attack": 14,
+            "special_defence": 14,
+            "speed": 15,
             "shiny": false,
-            "experience": 965
+            "experience": 36
         },
         {
             "creature": {
-                "name": "Flamcub",
-                "sprite": "flamcub.png",
+                "name": "Ignisrael",
+                "sprite": "ignisrael.png",
                 "typing": [
                     "Fire"
                 ],
                 "base_stats": {
-                    "hp": 46,
-                    "attack": 46,
-                    "defense": 41,
-                    "sp_attack": 61,
-                    "sp_defense": 49,
-                    "speed": 57,
-                    "total": 300
+                    "hp": 95,
+                    "attack": 145,
+                    "defense": 100,
+                    "sp_attack": 120,
+                    "sp_defense": 95,
+                    "speed": 90,
+                    "total": 645
                 },
-                "shiny_boost": {
-                    "stat": "sp_defense",
-                    "bonus": 10
-                },
+                "shiny_boost": null,
                 "abilities": [
-                    "Solar Power",
-                    "Flame Body"
+                    "Blazing Pride",
+                    "Intimidate"
                 ],
                 "moveset": [
                     {
-                        "move_key": "ember",
+                        "move_key": "flame_charge",
                         "level": 1
                     },
                     {
-                        "move_key": "flame_burst",
-                        "level": 1
+                        "move_key": "crunch",
+                        "level": 20
                     },
                     {
                         "move_key": "fire_fang",
-                        "level": 1
-                    },
-                    {
-                        "move_key": "heat_wave",
-                        "level": 36
+                        "level": 25
                     },
                     {
                         "move_key": "flare_blitz",
-                        "level": 50
-                    }
-                ],
-                "evolves_to": "Pyroarion",
-                "evolution_requirements": [
-                    {
-                        "type": "level",
-                        "level": 16,
-                        "stone": null,
-                        "evolves_to": "Pyroarion"
+                        "level": 40
                     },
                     {
-                        "type": "stone",
-                        "level": null,
-                        "stone": "fire_stone",
-                        "evolves_to": "Pyroarion"
+                        "move_key": "heat_wave",
+                        "level": 46
+                    },
+                    {
+                        "move_key": "inferno_roar",
+                        "level": 55
+                    },
+                    {
+                        "move_key": "overheat",
+                        "level": 60
+                    },
+                    {
+                        "move_key": "sacred_flame",
+                        "level": 68
                     }
                 ],
+                "evolves_to": null,
+                "evolution_requirements": [],
                 "legendary": false,
                 "mythical": false
             },
-            "level": 7,
+            "level": 11,
             "moves": [
                 {
-                    "name": "Ember",
-                    "uses": 25,
-                    "max_uses": 25,
+                    "name": "Tackle",
+                    "uses": 35,
+                    "max_uses": 35,
                     "power": 40,
                     "accuracy": 100,
-                    "type": "Fire",
-                    "category": "special",
-                    "learned_at_level": 1
-                },
-                {
-                    "name": "Flame Burst",
-                    "uses": 15,
-                    "max_uses": 15,
-                    "power": 70,
-                    "accuracy": 100,
-                    "type": "Fire",
-                    "category": "special",
-                    "learned_at_level": 1
-                },
-                {
-                    "name": "Fire Fang",
-                    "uses": 15,
-                    "max_uses": 15,
-                    "power": 65,
-                    "accuracy": 95,
-                    "type": "Fire",
+                    "type": "Normal",
                     "category": "physical",
                     "learned_at_level": 1
+                },
+                {
+                    "name": "Bite",
+                    "uses": 25,
+                    "max_uses": 25,
+                    "power": 60,
+                    "accuracy": 100,
+                    "type": "Dark",
+                    "category": "physical",
+                    "learned_at_level": 7
                 }
             ],
-            "hp": 24,
+            "hp": 44,
             "damage": 0,
-            "attack": 11,
-            "defence": 11,
-            "special_attack": 13,
-            "special_defence": 12,
-            "speed": 14,
+            "attack": 37,
+            "defence": 28,
+            "special_attack": 32,
+            "special_defence": 29,
+            "speed": 26,
             "shiny": false,
-            "experience": 359
+            "experience": 79
         }
     ],
     "boxed": [],
     "route": {
-        "key": "route-one",
-        "name": "Route 1",
-        "description": "A peaceful route with tall grass and wild Pokemon",
+        "key": "willowfen-village",
+        "name": "Willowfen Village",
+        "description": "A quiet town where winds tell tales of a world of Pokemon",
         "tileSize": 32,
         "tiles": {
             "map": [
-                "gggggggggggggggggggeeggggggggggggggg",
+                "gggggggggggggeeggggggggggggggggggggg",
+                "gggggggggggggppggggggggggggggggggggg",
+                "gggggggggggggppggggggggggggggggggggg",
+                "gggggggggggggppppppppppppppppppggggg",
+                "gggggggggggggpgggggggggggggggppggggg",
+                "gggggggggggggpgggggggggggggggppggggg",
+                "ggggggppppppppgggggggggggggggppggggg",
+                "ggggggpggggggggggggggggggggggppggggg",
+                "ggggggpggggggggggggggggggggppppggggg",
+                "ggggggpggggggggggggggggggggppggggggg",
+                "ggggggpppppppggggggggggggggggggggggg",
                 "gggggggggggggggggggggggggggggggggggg",
                 "gggggggggggggggggggggggggggggggggggg",
                 "gggggggggggggggggggggggggggggggggggg",
@@ -436,22 +371,7 @@
                 "gggggggggggggggggggggggggggggggggggg",
                 "gggggggggggggggggggggggggggggggggggg",
                 "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggggggggggggggggggg",
-                "gggggggggggggggggggeeggggggggggggggg"
+                "gggggggggggggggggggggggggggggggggggg"
             ],
             "legend": {
                 "g": "grass",
@@ -461,16 +381,16 @@
         },
         "spawn": {
             "default": {
-                "tx": 20,
-                "ty": 12
+                "tx": 15,
+                "ty": 10
             },
-            "from-willowfen-village": {
-                "tx": 20,
-                "ty": 23
-            },
-            "from-viridian-city": {
-                "tx": 20,
+            "from-route-one": {
+                "tx": 15,
                 "ty": 1
+            },
+            "from-home": {
+                "tx": 5,
+                "ty": 10
             }
         },
         "boundaries": {
@@ -478,242 +398,266 @@
                 {
                     "tx": 0,
                     "ty": 0,
-                    "w": 40,
-                    "h": 25
+                    "w": 30,
+                    "h": 20
                 }
             ],
             "blocked": []
         },
         "exits": [
             {
-                "id": "south-exit",
-                "area": {
-                    "tx": 19,
-                    "ty": 24,
-                    "w": 2,
-                    "h": 1
-                },
-                "destination": "willowfen-village",
-                "spawnPoint": "from-route-one"
-            },
-            {
                 "id": "north-exit",
                 "area": {
-                    "tx": 19,
+                    "tx": 13,
                     "ty": 0,
                     "w": 2,
                     "h": 1
                 },
-                "destination": "viridian-city",
-                "spawnPoint": "from-route-one"
+                "destination": "route-one",
+                "spawnPoint": "from-willowfen-village"
+            },
+            {
+                "id": "home-entrance",
+                "area": {
+                    "tx": 5,
+                    "ty": 9,
+                    "w": 1,
+                    "h": 1
+                },
+                "destination": "player-house",
+                "spawnPoint": "from-outside"
             }
         ],
         "background": null,
-        "battle": "route-one.png",
-        "creatures": {
-            "grass": [
-                {
-                    "name": "Flamcub",
-                    "level": [
-                        2,
-                        4
-                    ],
-                    "chance": 40.0
-                },
-                {
-                    "name": "Aquapup",
-                    "level": [
-                        2,
-                        5
-                    ],
-                    "chance": 35.0
-                },
-                {
-                    "name": "Terraplant",
-                    "level": [
-                        3,
-                        5
-                    ],
-                    "chance": 25.0
-                },
-                {
-                    "name": "Mystryon",
-                    "level": [
-                        1,
-                        1
-                    ],
-                    "chance": 0.01
-                }
-            ]
-        },
+        "battle": null,
+        "creatures": null,
         "objects": [
             {
+                "type": "healing-fountain",
+                "tx": 10,
+                "ty": 12,
+                "w": 2,
+                "h": 2,
+                "blocks": true,
+                "layer": "above",
+                "stretch": true
+            },
+            {
+                "type": "house2",
+                "tx": 25,
+                "ty": 12,
+                "w": 4,
+                "h": 4,
+                "blocks": true,
+                "layer": "above",
+                "stretch": true
+            },
+            {
                 "type": "tree",
-                "tx": 5,
-                "ty": 5,
-                "w": 20,
+                "tx": 0,
+                "ty": 0,
+                "w": 13,
                 "h": 1,
                 "blocks": true,
                 "layer": "below",
                 "stretch": false
             },
             {
-                "type": "tall_grass",
-                "tx": 10,
-                "ty": 10,
-                "w": 20,
-                "h": 9,
-                "blocks": false,
-                "layer": "above",
+                "type": "tree",
+                "tx": 15,
+                "ty": 0,
+                "w": 21,
+                "h": 1,
+                "blocks": true,
+                "layer": "below",
+                "stretch": false
+            },
+            {
+                "type": "tree",
+                "tx": 0,
+                "ty": 1,
+                "w": 1,
+                "h": 17,
+                "blocks": true,
+                "layer": "below",
+                "stretch": false
+            },
+            {
+                "type": "tree",
+                "tx": 35,
+                "ty": 1,
+                "w": 1,
+                "h": 17,
+                "blocks": true,
+                "layer": "below",
+                "stretch": false
+            },
+            {
+                "type": "tree",
+                "tx": 0,
+                "ty": 18,
+                "w": 37,
+                "h": 2,
+                "blocks": true,
+                "layer": "below",
                 "stretch": false
             }
         ],
-        "npcs": null
+        "npcs": [
+            {
+                "id": "oak",
+                "name": "Professor Oak",
+                "position": {
+                    "tx": 15,
+                    "ty": 5
+                },
+                "sprite": "professor-oak",
+                "dialogue": "Hello there! Welcome to the world of Pokemon!"
+            }
+        ]
     },
     "location": {
-        "x": 640.0,
-        "y": 640.0
+        "x": 418.048,
+        "y": 672.0
     },
     "wild_spawns": [
+        {
+            "tx": 11,
+            "ty": 23,
+            "creature": {
+                "creature": {
+                    "name": "Eclipserion",
+                    "sprite": "eclipserion.png",
+                    "typing": [
+                        "Ghost",
+                        "Dark"
+                    ],
+                    "base_stats": {
+                        "hp": 120,
+                        "attack": 110,
+                        "defense": 110,
+                        "sp_attack": 150,
+                        "sp_defense": 150,
+                        "speed": 160,
+                        "total": 800
+                    },
+                    "shiny_boost": {
+                        "stat": "speed",
+                        "bonus": 10
+                    },
+                    "abilities": [
+                        "Spectral Equilibrium",
+                        "Phase Shift"
+                    ],
+                    "moveset": [
+                        {
+                            "move_key": "shadow_sneak",
+                            "level": 1
+                        },
+                        {
+                            "move_key": "dragon_pulse",
+                            "level": 1
+                        },
+                        {
+                            "move_key": "focus_energy",
+                            "level": 5
+                        },
+                        {
+                            "move_key": "night_shade",
+                            "level": 10
+                        },
+                        {
+                            "move_key": "ancient_power",
+                            "level": 20
+                        },
+                        {
+                            "move_key": "dragon_dance",
+                            "level": 30
+                        },
+                        {
+                            "move_key": "spirit_break",
+                            "level": 40
+                        },
+                        {
+                            "move_key": "phantom_force",
+                            "level": 50
+                        },
+                        {
+                            "move_key": "dimension_collapse",
+                            "level": 60
+                        },
+                        {
+                            "move_key": "eternal_eclipse",
+                            "level": 70
+                        }
+                    ],
+                    "evolves_to": null,
+                    "evolution_requirements": [],
+                    "legendary": false,
+                    "mythical": true
+                },
+                "level": 1,
+                "moves": [
+                    {
+                        "name": "Shadow Sneak",
+                        "uses": 30,
+                        "max_uses": 30,
+                        "power": 40,
+                        "accuracy": 100,
+                        "type": "Ghost",
+                        "category": "physical",
+                        "learned_at_level": 1
+                    },
+                    {
+                        "name": "Dragon Pulse",
+                        "uses": 10,
+                        "max_uses": 10,
+                        "power": 85,
+                        "accuracy": 100,
+                        "type": "Dragon",
+                        "category": "special",
+                        "learned_at_level": 1
+                    }
+                ],
+                "hp": 13,
+                "damage": 0,
+                "attack": 7,
+                "defence": 7,
+                "special_attack": 8,
+                "special_defence": 8,
+                "speed": 8,
+                "shiny": false,
+                "experience": 0
+            },
+            "spawn_time": 50315,
+            "duration": 17000
+        },
         {
             "tx": 26,
             "ty": 19,
             "creature": {
                 "creature": {
-                    "name": "Flamcub",
-                    "sprite": "flamcub.png",
+                    "name": "Verdreep",
+                    "sprite": "verdreep.png",
                     "typing": [
-                        "Fire"
+                        "Plant"
                     ],
                     "base_stats": {
-                        "hp": 46,
-                        "attack": 46,
-                        "defense": 41,
-                        "sp_attack": 61,
-                        "sp_defense": 49,
-                        "speed": 57,
-                        "total": 300
+                        "hp": 50,
+                        "attack": 45,
+                        "defense": 45,
+                        "sp_attack": 60,
+                        "sp_defense": 55,
+                        "speed": 40,
+                        "total": 295
                     },
                     "shiny_boost": {
-                        "stat": "sp_defense",
-                        "bonus": 10
+                        "stat": "speed",
+                        "bonus": 20
                     },
                     "abilities": [
-                        "Solar Power",
-                        "Flame Body"
-                    ],
-                    "moveset": [
-                        {
-                            "move_key": "ember",
-                            "level": 1
-                        },
-                        {
-                            "move_key": "flame_burst",
-                            "level": 1
-                        },
-                        {
-                            "move_key": "fire_fang",
-                            "level": 1
-                        },
-                        {
-                            "move_key": "heat_wave",
-                            "level": 36
-                        },
-                        {
-                            "move_key": "flare_blitz",
-                            "level": 50
-                        }
-                    ],
-                    "evolves_to": "Pyroarion",
-                    "evolution_requirements": [
-                        {
-                            "type": "level",
-                            "level": 16,
-                            "stone": null,
-                            "evolves_to": "Pyroarion"
-                        },
-                        {
-                            "type": "stone",
-                            "level": null,
-                            "stone": "fire_stone",
-                            "evolves_to": "Pyroarion"
-                        }
-                    ],
-                    "legendary": false,
-                    "mythical": false
-                },
-                "level": 2,
-                "moves": [
-                    {
-                        "name": "Ember",
-                        "uses": 25,
-                        "max_uses": 25,
-                        "power": 40,
-                        "accuracy": 100,
-                        "type": "Fire",
-                        "category": "special",
-                        "learned_at_level": 1
-                    },
-                    {
-                        "name": "Flame Burst",
-                        "uses": 15,
-                        "max_uses": 15,
-                        "power": 70,
-                        "accuracy": 100,
-                        "type": "Fire",
-                        "category": "special",
-                        "learned_at_level": 1
-                    },
-                    {
-                        "name": "Fire Fang",
-                        "uses": 15,
-                        "max_uses": 15,
-                        "power": 65,
-                        "accuracy": 95,
-                        "type": "Fire",
-                        "category": "physical",
-                        "learned_at_level": 1
-                    }
-                ],
-                "hp": 14,
-                "damage": 0,
-                "attack": 7,
-                "defence": 6,
-                "special_attack": 7,
-                "special_defence": 7,
-                "speed": 7,
-                "shiny": false,
-                "experience": 0
-            },
-            "spawn_time": 61603,
-            "duration": 14000
-        },
-        {
-            "tx": 19,
-            "ty": 19,
-            "creature": {
-                "creature": {
-                    "name": "Terraplant",
-                    "sprite": "terraplant.png",
-                    "typing": [
-                        "Grass"
-                    ],
-                    "base_stats": {
-                        "hp": 34,
-                        "attack": 46,
-                        "defense": 61,
-                        "sp_attack": 69,
-                        "sp_defense": 73,
-                        "speed": 37,
-                        "total": 320
-                    },
-                    "shiny_boost": {
-                        "stat": "sp_defense",
-                        "bonus": 10
-                    },
-                    "abilities": [
-                        "Thick Fat",
-                        "Overgrow"
+                        "Overgrow",
+                        "Water Veil"
                     ],
                     "moveset": [
                         {
@@ -721,41 +665,77 @@
                             "level": 1
                         },
                         {
+                            "move_key": "astonish",
+                            "level": 1
+                        },
+                        {
+                            "move_key": "growth",
+                            "level": 6
+                        },
+                        {
                             "move_key": "razor_leaf",
-                            "level": 1
+                            "level": 10
                         },
                         {
-                            "move_key": "seed_bomb",
-                            "level": 1
+                            "move_key": "leech_seed",
+                            "level": 14
                         },
                         {
-                            "move_key": "leaf_blade",
+                            "move_key": "confuse_ray",
+                            "level": 18
+                        },
+                        {
+                            "move_key": "mega_drain",
+                            "level": 22
+                        },
+                        {
+                            "move_key": "shadow_sneak",
+                            "level": 26
+                        },
+                        {
+                            "move_key": "hex",
+                            "level": 30
+                        },
+                        {
+                            "move_key": "giga_drain",
                             "level": 36
                         },
                         {
-                            "move_key": "solar_beam",
+                            "move_key": "will_o_wisp",
+                            "level": 40
+                        },
+                        {
+                            "move_key": "energy_ball",
+                            "level": 45
+                        },
+                        {
+                            "move_key": "phantom_force",
                             "level": 50
+                        },
+                        {
+                            "move_key": "spirit_bloom",
+                            "level": 56
                         }
                     ],
-                    "evolves_to": "Floradon",
+                    "evolves_to": "Phantotter",
                     "evolution_requirements": [
                         {
                             "type": "level",
                             "level": 16,
                             "stone": null,
-                            "evolves_to": "Floradon"
+                            "evolves_to": "Phantotter"
                         },
                         {
                             "type": "stone",
                             "level": null,
                             "stone": "leaf_stone",
-                            "evolves_to": "Floradon"
+                            "evolves_to": "Phantotter"
                         }
                     ],
                     "legendary": false,
                     "mythical": false
                 },
-                "level": 5,
+                "level": 4,
                 "moves": [
                     {
                         "name": "Vine Whip",
@@ -768,278 +748,416 @@
                         "learned_at_level": 1
                     },
                     {
-                        "name": "Razor Leaf",
-                        "uses": 25,
-                        "max_uses": 25,
-                        "power": 55,
-                        "accuracy": 95,
-                        "type": "Grass",
-                        "category": "special",
-                        "learned_at_level": 1
-                    },
-                    {
-                        "name": "Seed Bomb",
+                        "name": "Astonish",
                         "uses": 15,
                         "max_uses": 15,
-                        "power": 80,
+                        "power": 30,
                         "accuracy": 100,
-                        "type": "Grass",
+                        "type": "Ghost",
                         "category": "physical",
                         "learned_at_level": 1
                     }
                 ],
-                "hp": 19,
+                "hp": 18,
                 "damage": 0,
-                "attack": 10,
-                "defence": 12,
-                "special_attack": 13,
-                "special_defence": 12,
-                "speed": 9,
+                "attack": 9,
+                "defence": 8,
+                "special_attack": 10,
+                "special_defence": 9,
+                "speed": 8,
                 "shiny": false,
                 "experience": 0
             },
-            "spawn_time": 11315,
-            "duration": 7000
+            "spawn_time": 56690,
+            "duration": 9000
         },
         {
-            "tx": 10,
+            "tx": 4,
             "ty": 24,
             "creature": {
                 "creature": {
-                    "name": "Mystryon",
-                    "sprite": "mystryon.png",
+                    "name": "Rivanos",
+                    "sprite": "rivanos.png",
                     "typing": [
-                        "Light Magic",
-                        "Dark Magic"
+                        "Water"
                     ],
                     "base_stats": {
-                        "hp": 99,
-                        "attack": 146,
-                        "defense": 141,
-                        "sp_attack": 96,
-                        "sp_defense": 119,
-                        "speed": 99,
-                        "total": 700
+                        "hp": 55,
+                        "attack": 60,
+                        "defense": 50,
+                        "sp_attack": 40,
+                        "sp_defense": 40,
+                        "speed": 40,
+                        "total": 290
                     },
                     "shiny_boost": {
-                        "stat": "sp_attack",
-                        "bonus": 25
+                        "stat": "attack",
+                        "bonus": 10
                     },
                     "abilities": [
-                        "Radiance",
-                        "Holy Guard"
+                        "Torrent",
+                        "Rock Head"
                     ],
                     "moveset": [
                         {
-                            "move_key": "light_beam",
+                            "move_key": "tackle",
                             "level": 1
                         },
                         {
-                            "move_key": "solar_flare",
+                            "move_key": "water_gun",
                             "level": 1
                         },
                         {
-                            "move_key": "holy_nova",
-                            "level": 1
+                            "move_key": "focus_energy",
+                            "level": 5
                         },
                         {
-                            "move_key": "judgment_ray",
-                            "level": 36
+                            "move_key": "bite",
+                            "level": 9
                         },
                         {
-                            "move_key": "eternal_dawn",
-                            "level": 50
+                            "move_key": "aqua_jet",
+                            "level": 13
+                        },
+                        {
+                            "move_key": "headbutt",
+                            "level": 18
+                        },
+                        {
+                            "move_key": "aqua_tail",
+                            "level": 24
+                        },
+                        {
+                            "move_key": "crunch",
+                            "level": 30
+                        },
+                        {
+                            "move_key": "iron_defense",
+                            "level": 34
+                        },
+                        {
+                            "move_key": "surf",
+                            "level": 38
+                        },
+                        {
+                            "move_key": "dark_pulse",
+                            "level": 44
+                        },
+                        {
+                            "move_key": "rain_dance",
+                            "level": 48
+                        },
+                        {
+                            "move_key": "hydro_pump",
+                            "level": 52
+                        },
+                        {
+                            "move_key": "abyss_ram",
+                            "level": 60
                         }
                     ],
-                    "evolves_to": null,
-                    "evolution_requirements": [],
+                    "evolves_to": "Terrinoir",
+                    "evolution_requirements": [
+                        {
+                            "type": "level",
+                            "level": 16,
+                            "stone": null,
+                            "evolves_to": "Terrinoir"
+                        },
+                        {
+                            "type": "stone",
+                            "level": null,
+                            "stone": "water_stone",
+                            "evolves_to": "Terrinoir"
+                        }
+                    ],
                     "legendary": false,
-                    "mythical": true
+                    "mythical": false
                 },
-                "level": 2,
+                "level": 3,
                 "moves": [
                     {
-                        "name": "Light Beam",
-                        "uses": 10,
-                        "max_uses": 10,
-                        "power": 80,
+                        "name": "Tackle",
+                        "uses": 35,
+                        "max_uses": 35,
+                        "power": 40,
                         "accuracy": 100,
-                        "type": "Fairy",
-                        "category": "special",
+                        "type": "Normal",
+                        "category": "physical",
                         "learned_at_level": 1
                     },
                     {
-                        "name": "Solar Flare",
-                        "uses": 5,
-                        "max_uses": 5,
-                        "power": 100,
-                        "accuracy": 95,
-                        "type": "Fire",
-                        "category": "special",
-                        "learned_at_level": 1
-                    },
-                    {
-                        "name": "Holy Nova",
-                        "uses": 10,
-                        "max_uses": 10,
-                        "power": 90,
+                        "name": "Water Gun",
+                        "uses": 25,
+                        "max_uses": 25,
+                        "power": 40,
                         "accuracy": 100,
-                        "type": "Fairy",
+                        "type": "Water",
                         "category": "special",
                         "learned_at_level": 1
                     }
                 ],
                 "hp": 16,
                 "damage": 0,
-                "attack": 11,
-                "defence": 11,
+                "attack": 8,
+                "defence": 8,
                 "special_attack": 8,
-                "special_defence": 10,
-                "speed": 8,
+                "special_defence": 7,
+                "speed": 7,
                 "shiny": false,
                 "experience": 0
             },
-            "spawn_time": 14604,
-            "duration": 13000
+            "spawn_time": 51306,
+            "duration": 11000
         },
         {
-            "tx": 26,
-            "ty": 18,
+            "tx": 8,
+            "ty": 24,
             "creature": {
                 "creature": {
-                    "name": "Flamcub",
-                    "sprite": "flamcub.png",
+                    "name": "Verdreep",
+                    "sprite": "verdreep.png",
                     "typing": [
-                        "Fire"
+                        "Plant"
                     ],
                     "base_stats": {
-                        "hp": 46,
-                        "attack": 46,
-                        "defense": 41,
-                        "sp_attack": 61,
-                        "sp_defense": 49,
-                        "speed": 57,
-                        "total": 300
+                        "hp": 50,
+                        "attack": 45,
+                        "defense": 45,
+                        "sp_attack": 60,
+                        "sp_defense": 55,
+                        "speed": 40,
+                        "total": 295
                     },
                     "shiny_boost": {
-                        "stat": "sp_defense",
-                        "bonus": 10
+                        "stat": "speed",
+                        "bonus": 20
                     },
                     "abilities": [
-                        "Solar Power",
-                        "Flame Body"
+                        "Overgrow",
+                        "Water Veil"
                     ],
                     "moveset": [
                         {
-                            "move_key": "ember",
+                            "move_key": "vine_whip",
                             "level": 1
                         },
                         {
-                            "move_key": "flame_burst",
+                            "move_key": "astonish",
                             "level": 1
                         },
                         {
-                            "move_key": "fire_fang",
-                            "level": 1
+                            "move_key": "growth",
+                            "level": 6
                         },
                         {
-                            "move_key": "heat_wave",
+                            "move_key": "razor_leaf",
+                            "level": 10
+                        },
+                        {
+                            "move_key": "leech_seed",
+                            "level": 14
+                        },
+                        {
+                            "move_key": "confuse_ray",
+                            "level": 18
+                        },
+                        {
+                            "move_key": "mega_drain",
+                            "level": 22
+                        },
+                        {
+                            "move_key": "shadow_sneak",
+                            "level": 26
+                        },
+                        {
+                            "move_key": "hex",
+                            "level": 30
+                        },
+                        {
+                            "move_key": "giga_drain",
                             "level": 36
                         },
                         {
-                            "move_key": "flare_blitz",
+                            "move_key": "will_o_wisp",
+                            "level": 40
+                        },
+                        {
+                            "move_key": "energy_ball",
+                            "level": 45
+                        },
+                        {
+                            "move_key": "phantom_force",
                             "level": 50
+                        },
+                        {
+                            "move_key": "spirit_bloom",
+                            "level": 56
                         }
                     ],
-                    "evolves_to": "Pyroarion",
+                    "evolves_to": "Phantotter",
                     "evolution_requirements": [
                         {
                             "type": "level",
                             "level": 16,
                             "stone": null,
-                            "evolves_to": "Pyroarion"
+                            "evolves_to": "Phantotter"
                         },
                         {
                             "type": "stone",
                             "level": null,
-                            "stone": "fire_stone",
-                            "evolves_to": "Pyroarion"
+                            "stone": "leaf_stone",
+                            "evolves_to": "Phantotter"
                         }
                     ],
                     "legendary": false,
                     "mythical": false
                 },
-                "level": 2,
+                "level": 3,
                 "moves": [
                     {
-                        "name": "Ember",
+                        "name": "Vine Whip",
                         "uses": 25,
                         "max_uses": 25,
-                        "power": 40,
+                        "power": 45,
                         "accuracy": 100,
-                        "type": "Fire",
-                        "category": "special",
+                        "type": "Grass",
+                        "category": "physical",
                         "learned_at_level": 1
                     },
                     {
-                        "name": "Flame Burst",
+                        "name": "Astonish",
                         "uses": 15,
                         "max_uses": 15,
-                        "power": 70,
+                        "power": 30,
                         "accuracy": 100,
-                        "type": "Fire",
-                        "category": "special",
-                        "learned_at_level": 1
-                    },
-                    {
-                        "name": "Fire Fang",
-                        "uses": 15,
-                        "max_uses": 15,
-                        "power": 65,
-                        "accuracy": 95,
-                        "type": "Fire",
+                        "type": "Ghost",
                         "category": "physical",
                         "learned_at_level": 1
                     }
                 ],
-                "hp": 14,
+                "hp": 16,
                 "damage": 0,
-                "attack": 7,
-                "defence": 7,
-                "special_attack": 7,
-                "special_defence": 6,
-                "speed": 7,
+                "attack": 8,
+                "defence": 8,
+                "special_attack": 8,
+                "special_defence": 8,
+                "speed": 8,
                 "shiny": false,
                 "experience": 0
             },
-            "spawn_time": 15132,
-            "duration": 17000
+            "spawn_time": 56006,
+            "duration": 9000
         }
     ],
-    "last_autosave": 14094,
-    "shake_timer": -26.404999999999333,
+    "last_autosave": 59870,
+    "shake_timer": -0.42300000000000004,
     "shake_active": false,
-    "facing": "right",
+    "facing": "left",
     "items": [
         {
-            "key": "poke_ball",
-            "name": "Poke Ball",
+            "key": "fire_stone",
+            "name": "Fire Stone",
             "quantity": 2,
+            "type": "Evolution",
+            "description": "A peculiar stone that makes certain species of creatures evolve. It burns as red as ember.",
+            "price": 0,
+            "sell_price": 0
+        },
+        {
+            "key": "water_stone",
+            "name": "Water Stone",
+            "quantity": 1,
+            "type": "Evolution",
+            "description": "A peculiar stone that makes certain species of creatures evolve. It is a clear blue reminiscent of a lake.",
+            "price": 0,
+            "sell_price": 0
+        },
+        {
+            "key": "leaf_stone",
+            "name": "Leaf Stone",
+            "quantity": 3,
+            "type": "Evolution",
+            "description": "A peculiar stone that makes certain species of creatures evolve. It has a leaf pattern that seems to move.",
+            "price": 0,
+            "sell_price": 0
+        },
+        {
+            "key": "earth_stone",
+            "name": "Earth Stone",
+            "quantity": 3,
+            "type": "Evolution",
+            "description": "A peculiar stone that makes certain species of creatures evolve. It feels heavy and solid like bedrock.",
+            "price": 0,
+            "sell_price": 0
+        },
+        {
+            "key": "light_stone",
+            "name": "Light Stone",
+            "quantity": 3,
+            "type": "Evolution",
+            "description": "A peculiar stone that makes certain species of creatures evolve. It emits a brilliant, pure light.",
+            "price": 0,
+            "sell_price": 0
+        },
+        {
+            "key": "dark_stone",
+            "name": "Dark Stone",
+            "quantity": 3,
+            "type": "Evolution",
+            "description": "A peculiar stone that makes certain species of creatures evolve. It seems to absorb light around it.",
+            "price": 0,
+            "sell_price": 0
+        },
+        {
+            "key": "moon_stone",
+            "name": "Moon Stone",
+            "quantity": 3,
+            "type": "Evolution",
+            "description": "A peculiar stone that makes certain species of creatures evolve. It glows with lunar energy.",
+            "price": 0,
+            "sell_price": 0
+        },
+        {
+            "key": "poke_ball",
+            "name": "Pok\u00e9 Ball",
+            "quantity": 21,
             "type": "Catching",
-            "description": "A ball used to catch wild Pok\u00e9mon."
+            "description": "A device for catching wild creatures. It's thrown like a ball at a creature to capture it.",
+            "price": 200,
+            "sell_price": 100
+        },
+        {
+            "key": "great_ball",
+            "name": "Great Ball",
+            "quantity": 6,
+            "type": "Catching",
+            "description": "A better-quality Ball with a higher catch rate than a Pok\u00e9 Ball.",
+            "price": 600,
+            "sell_price": 300
+        },
+        {
+            "key": "potion",
+            "name": "Potion",
+            "quantity": 6,
+            "type": "Catching",
+            "description": "A spray-type wound medicine for treating wounds. It restores the HP of one creature by 20 points.",
+            "price": 300,
+            "sell_price": 150
         }
     ],
+    "money": 400,
     "speed": 128,
     "reset_spawn_route": "route-one",
     "reset_spawn_point": "default",
-    "is_tweening": false,
-    "tween_start_time": 14536,
+    "is_tweening": true,
+    "tween_start_time": 61640,
     "tween_duration": 250,
-    "tween_start_x": 608.0,
-    "tween_start_y": 640.0,
-    "tween_target_x": 640.0,
-    "tween_target_y": 640.0,
-    "tween_progress": 1.0,
-    "animation_start_time": 2288,
+    "tween_start_x": 448.0,
+    "tween_start_y": 672.0,
+    "tween_target_x": 416.0,
+    "tween_target_y": 672.0,
+    "tween_progress": 0.936,
+    "animation_start_time": 7450,
     "route_key": "route-one"
 }

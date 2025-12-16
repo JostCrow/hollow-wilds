@@ -1,4411 +1,953 @@
 [
   {
-    "name": "Flamcub",
-    "sprite": "flamcub.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 46,
-      "attack": 46,
-      "defense": 41,
-      "sp_attack": 61,
-      "sp_defense": 49,
-      "speed": 57,
-      "total": 300
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Solar Power",
-      "Flame Body"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Pyroarion",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Pyroarion"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Pyroarion"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Pyroarion",
-    "sprite": "pyroarion.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 80,
-      "attack": 63,
-      "defense": 90,
-      "sp_attack": 86,
-      "sp_defense": 68,
-      "speed": 63,
-      "total": 450
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Blaze",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Inferlion",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Inferlion"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Inferlion"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Inferlion",
-    "sprite": "inferlion.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 107,
-      "attack": 100,
-      "defense": 85,
-      "sp_attack": 81,
-      "sp_defense": 97,
-      "speed": 130,
-      "total": 600
-    },
-    "shiny_boost": {
-      "stat": "attack",
-      "bonus": 20
-    },
-    "abilities": [
-      "Flame Body",
-      "Blaze"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      },
-      {
-        "move_key": "inferno_blast",
-        "level": 55
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Aquapup",
-    "sprite": "aquapup.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 31,
-      "attack": 41,
-      "defense": 51,
-      "sp_attack": 58,
-      "sp_defense": 60,
-      "speed": 69,
-      "total": 310
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Water Veil",
-      "Swift Swim"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Hydracanis",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Hydracanis"
-      },
-      {
-        "type": "stone",
-        "stone": "water_stone",
-        "evolves_to": "Hydracanis"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Hydracanis",
-    "sprite": "hydracanis.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 62,
-      "attack": 62,
-      "defense": 82,
-      "sp_attack": 60,
-      "sp_defense": 88,
-      "speed": 81,
-      "total": 435
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Swift Swim",
-      "Water Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Poseidire",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Poseidire"
-      },
-      {
-        "type": "stone",
-        "stone": "water_stone",
-        "evolves_to": "Poseidire"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Poseidire",
-    "sprite": "poseidire.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 104,
-      "attack": 80,
-      "defense": 151,
-      "sp_attack": 106,
-      "sp_defense": 77,
-      "speed": 82,
-      "total": 600
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 20
-    },
-    "abilities": [
-      "Swift Swim",
-      "Water Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      },
-      {
-        "move_key": "aqua_devastation",
-        "level": 60
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Terraplant",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
-    ],
-    "base_stats": {
-      "hp": 34,
-      "attack": 46,
-      "defense": 61,
-      "sp_attack": 69,
-      "sp_defense": 73,
-      "speed": 37,
-      "total": 320
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Thick Fat",
-      "Overgrow"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Floradon",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Floradon"
-      },
-      {
-        "type": "stone",
-        "stone": "leaf_stone",
-        "evolves_to": "Floradon"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Floradon",
-    "sprite": "floradon.png",
-    "typing": [
-      "Grass"
-    ],
-    "base_stats": {
-      "hp": 54,
-      "attack": 98,
-      "defense": 101,
-      "sp_attack": 59,
-      "sp_defense": 68,
-      "speed": 70,
-      "total": 450
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Chlorophyll",
-      "Thick Fat"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Verdantitan",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Verdantitan"
-      },
-      {
-        "type": "stone",
-        "stone": "leaf_stone",
-        "evolves_to": "Verdantitan"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Verdantitan",
-    "sprite": "verdantitan.png",
-    "typing": [
-      "Grass"
-    ],
-    "base_stats": {
-      "hp": 131,
-      "attack": 115,
-      "defense": 79,
-      "sp_attack": 120,
-      "sp_defense": 74,
-      "speed": 81,
-      "total": 600
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 20
-    },
-    "abilities": [
-      "Thick Fat",
-      "Chlorophyll"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Solaryon",
-    "sprite": "solaryon.png",
-    "typing": [
-      "Light Magic"
-    ],
-    "base_stats": {
-      "hp": 121,
-      "attack": 106,
-      "defense": 154,
-      "sp_attack": 171,
-      "sp_defense": 84,
-      "speed": 164,
-      "total": 800
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 30
-    },
-    "abilities": [
-      "Radiance",
-      "Holy Guard"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": true,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Lunaryon",
-    "sprite": "lunaryon.png",
-    "typing": [
-      "Dark Magic"
-    ],
-    "base_stats": {
-      "hp": 142,
-      "attack": 168,
-      "defense": 176,
-      "sp_attack": 146,
-      "sp_defense": 89,
-      "speed": 79,
-      "total": 800
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 30
-    },
-    "abilities": [
-      "Shadow Veil",
-      "Dark Aura"
-    ],
-    "moveset": [
-      {
-        "move_key": "shadow_claw",
-        "level": 1
-      },
-      {
-        "move_key": "night_slash",
-        "level": 1
-      },
-      {
-        "move_key": "dark_pulse",
-        "level": 1
-      },
-      {
-        "move_key": "abyssal_crush",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_eclipse",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": true,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Mystryon",
-    "sprite": "mystryon.png",
-    "typing": [
-      "Light Magic",
-      "Dark Magic"
-    ],
-    "base_stats": {
-      "hp": 99,
-      "attack": 146,
-      "defense": 141,
-      "sp_attack": 96,
-      "sp_defense": 119,
-      "speed": 99,
-      "total": 700
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 25
-    },
-    "abilities": [
-      "Radiance",
-      "Holy Guard"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": true,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Geocub",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Ground"
-    ],
-    "base_stats": {
-      "hp": 44,
-      "attack": 51,
-      "defense": 42,
-      "sp_attack": 65,
-      "sp_defense": 48,
-      "speed": 41,
-      "total": 291
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Sand Veil",
-      "Sturdy"
-    ],
-    "moveset": [
-      {
-        "move_key": "mud_slap",
-        "level": 1
-      },
-      {
-        "move_key": "rock_throw",
-        "level": 1
-      },
-      {
-        "move_key": "earthquake",
-        "level": 1
-      },
-      {
-        "move_key": "sandstorm",
-        "level": 36
-      },
-      {
-        "move_key": "gaia_crush",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Geoprime",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Geoprime"
-      },
-      {
-        "type": "stone",
-        "stone": "earth_stone",
-        "evolves_to": "Geoprime"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Geokit",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Ground"
-    ],
-    "base_stats": {
-      "hp": 78,
-      "attack": 42,
-      "defense": 53,
-      "sp_attack": 36,
-      "sp_defense": 40,
-      "speed": 37,
-      "total": 286
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 10
-    },
-    "abilities": [
-      "Earth Power",
-      "Sand Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "mud_slap",
-        "level": 1
-      },
-      {
-        "move_key": "rock_throw",
-        "level": 1
-      },
-      {
-        "move_key": "earthquake",
-        "level": 1
-      },
-      {
-        "move_key": "sandstorm",
-        "level": 36
-      },
-      {
-        "move_key": "gaia_crush",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Geoprime",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Geoprime"
-      },
-      {
-        "type": "stone",
-        "stone": "earth_stone",
-        "evolves_to": "Geoprime"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Geoprime",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Ground"
-    ],
-    "base_stats": {
-      "hp": 112,
-      "attack": 86,
-      "defense": 63,
-      "sp_attack": 67,
-      "sp_defense": 112,
-      "speed": 56,
-      "total": 496
-    },
-    "shiny_boost": {
-      "stat": "hp",
-      "bonus": 10
-    },
-    "abilities": [
-      "Sturdy",
-      "Earth Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "mud_slap",
-        "level": 1
-      },
-      {
-        "move_key": "rock_throw",
-        "level": 1
-      },
-      {
-        "move_key": "earthquake",
-        "level": 1
-      },
-      {
-        "move_key": "sandstorm",
-        "level": 36
-      },
-      {
-        "move_key": "gaia_crush",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Hydroling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 41,
-      "attack": 44,
-      "defense": 39,
-      "sp_attack": 55,
-      "sp_defense": 60,
-      "speed": 46,
-      "total": 285
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Torrent",
-      "Water Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Hydroon",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Hydroon"
-      },
-      {
-        "type": "stone",
-        "stone": "water_stone",
-        "evolves_to": "Hydroon"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Hydroon",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 75,
-      "attack": 60,
-      "defense": 55,
-      "sp_attack": 72,
-      "sp_defense": 87,
-      "speed": 95,
-      "total": 444
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 10
-    },
-    "abilities": [
-      "Swift Swim",
-      "Torrent"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Plainling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
-    "base_stats": {
-      "hp": 85,
-      "attack": 56,
-      "defense": 52,
-      "sp_attack": 76,
-      "sp_defense": 96,
-      "speed": 72,
-      "total": 437
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 10
-    },
-    "abilities": [
-      "Inner Focus",
-      "Run Away"
-    ],
-    "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Solling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
-    "base_stats": {
-      "hp": 59,
-      "attack": 91,
-      "defense": 49,
-      "sp_attack": 51,
-      "sp_defense": 72,
-      "speed": 65,
-      "total": 387
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Pressure",
-      "Radiance"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Marinling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 50,
-      "attack": 41,
-      "defense": 58,
-      "sp_attack": 63,
-      "sp_defense": 43,
-      "speed": 68,
-      "total": 323
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Torrent",
-      "Water Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Lumiling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
-    "base_stats": {
-      "hp": 60,
-      "attack": 61,
-      "defense": 41,
-      "sp_attack": 49,
-      "sp_defense": 47,
-      "speed": 58,
-      "total": 316
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Pressure",
-      "Radiance"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Lumion",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Lumion"
-      },
-      {
-        "type": "stone",
-        "stone": "light_stone",
-        "evolves_to": "Lumion"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Lumion",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
-    "base_stats": {
-      "hp": 141,
-      "attack": 116,
-      "defense": 65,
-      "sp_attack": 71,
-      "sp_defense": 93,
-      "speed": 63,
-      "total": 549
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Holy Guard",
-      "Pressure"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Emberling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 76,
-      "attack": 72,
-      "defense": 32,
-      "sp_attack": 46,
-      "sp_defense": 33,
-      "speed": 41,
-      "total": 300
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Flame Body",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Emberon",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Emberon"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Emberon"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Emberon",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 58,
-      "attack": 60,
-      "defense": 89,
-      "sp_attack": 88,
-      "sp_defense": 106,
-      "speed": 76,
-      "total": 477
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Solar Power",
-      "Flame Body"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Emberlord",
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Emberlord"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Emberlord"
-      }
-    ],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Emberlord",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 65,
-      "attack": 124,
-      "defense": 65,
-      "sp_attack": 124,
-      "sp_defense": 62,
-      "speed": 95,
-      "total": 535
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Flame Body",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "evolution_requirements": [],
-    "legendary": false,
-    "mythical": false
-  },
-  {
-    "name": "Plainling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
-    "base_stats": {
-      "hp": 39,
-      "attack": 57,
-      "defense": 38,
-      "sp_attack": 39,
-      "sp_defense": 69,
-      "speed": 67,
-      "total": 309
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 10
-    },
-    "abilities": [
-      "Inner Focus",
-      "Adaptability"
-    ],
-    "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": [
-      "Plainflare",
-      "Plainshade"
-    ],
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Plainflare",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
-    "base_stats": {
-      "hp": 67,
-      "attack": 84,
-      "defense": 77,
-      "sp_attack": 66,
-      "sp_defense": 99,
-      "speed": 131,
-      "total": 524
-    },
-    "shiny_boost": {
-      "stat": "attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Run Away",
-      "Inner Focus"
-    ],
-    "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Plainshade",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
-    "base_stats": {
-      "hp": 67,
-      "attack": 95,
-      "defense": 72,
-      "sp_attack": 92,
-      "sp_defense": 70,
-      "speed": 63,
-      "total": 459
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Run Away",
-      "Adaptability"
-    ],
-    "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Umbraling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Dark Magic"
-    ],
-    "base_stats": {
-      "hp": 82,
-      "attack": 75,
-      "defense": 68,
-      "sp_attack": 51,
-      "sp_defense": 96,
-      "speed": 75,
-      "total": 447
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Illusion",
-      "Dark Aura"
-    ],
-    "moveset": [
-      {
-        "move_key": "shadow_claw",
-        "level": 1
-      },
-      {
-        "move_key": "night_slash",
-        "level": 1
-      },
-      {
-        "move_key": "dark_pulse",
-        "level": 1
-      },
-      {
-        "move_key": "abyssal_crush",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_eclipse",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Pyrocub",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
+    "name": "Flarepib",
+    "sprite": "flarepib.png",
+    "typing": ["Fire"],
+    "description": "Flarepib’s throat sac glows like a dim lantern when it exhales warm air. It uses rhythmic croaks to generate sparks, keeping predators at bay.",
+    "appearance": "Small, red-orange tadpole with amber eyes and a translucent belly that flickers like a candle flame. Its back features three nub-like heat vents that puff out steam when it hops.",
+    "height": 0.4,
+    "weight": 6,
     "base_stats": {
       "hp": 45,
-      "attack": 71,
-      "defense": 39,
-      "sp_attack": 60,
-      "sp_defense": 61,
-      "speed": 44,
-      "total": 320
-    },
-    "shiny_boost": {
-      "stat": "attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Blaze",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Pyroprime",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Pyroprime"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Pyroprime"
-      }
-    ]
-  },
-  {
-    "name": "Pyrokit",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 30,
-      "attack": 54,
-      "defense": 52,
-      "sp_attack": 45,
-      "sp_defense": 61,
-      "speed": 39,
-      "total": 281
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Blaze",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Pyroprime",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Pyroprime"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Pyroprime"
-      }
-    ]
-  },
-  {
-    "name": "Pyroprime",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 67,
-      "attack": 88,
-      "defense": 97,
-      "sp_attack": 59,
-      "sp_defense": 110,
-      "speed": 119,
-      "total": 540
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Flame Body",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Lumiling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
-    "base_stats": {
-      "hp": 77,
-      "attack": 47,
-      "defense": 71,
-      "sp_attack": 37,
-      "sp_defense": 35,
-      "speed": 44,
-      "total": 311
-    },
-    "shiny_boost": {
-      "stat": "hp",
-      "bonus": 10
-    },
-    "abilities": [
-      "Radiance",
-      "Holy Guard"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": [
-      "Lumiflare",
-      "Lumishade"
-    ],
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Lumiflare",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
-    "base_stats": {
-      "hp": 55,
-      "attack": 68,
-      "defense": 98,
-      "sp_attack": 97,
-      "sp_defense": 79,
-      "speed": 68,
-      "total": 465
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Holy Guard",
-      "Radiance"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Lumishade",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
-    "base_stats": {
-      "hp": 91,
-      "attack": 55,
-      "defense": 65,
-      "sp_attack": 42,
-      "sp_defense": 99,
-      "speed": 63,
-      "total": 415
-    },
-    "shiny_boost": {
-      "stat": "attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Holy Guard",
-      "Radiance"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Cinderling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 48,
-      "attack": 47,
-      "defense": 55,
-      "sp_attack": 55,
-      "sp_defense": 46,
-      "speed": 73,
-      "total": 324
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 10
-    },
-    "abilities": [
-      "Flame Body",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Cinderon",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Cinderon"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Cinderon"
-      }
-    ]
-  },
-  {
-    "name": "Cinderon",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 104,
-      "attack": 59,
-      "defense": 99,
-      "sp_attack": 105,
-      "sp_defense": 81,
-      "speed": 66,
-      "total": 514
-    },
-    "shiny_boost": {
-      "stat": "attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Flame Body",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Aqualing",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 54,
-      "attack": 58,
-      "defense": 49,
-      "sp_attack": 67,
-      "sp_defense": 29,
-      "speed": 35,
-      "total": 292
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Water Veil",
-      "Torrent"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": [
-      "Aquaflare",
-      "Aquashade"
-    ],
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Aquaflare",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 85,
-      "attack": 82,
+      "attack": 45,
       "defense": 40,
-      "sp_attack": 58,
-      "sp_defense": 93,
-      "speed": 54,
-      "total": 412
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Water Veil",
-      "Torrent"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Aquashade",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 58,
-      "attack": 61,
-      "defense": 103,
-      "sp_attack": 59,
-      "sp_defense": 102,
-      "speed": 85,
-      "total": 468
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Water Veil",
-      "Torrent"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Blazeling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 75,
-      "attack": 64,
-      "defense": 58,
-      "sp_attack": 45,
-      "sp_defense": 74,
-      "speed": 74,
-      "total": 390
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Flame Body",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Auriling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
-    "base_stats": {
-      "hp": 42,
-      "attack": 44,
-      "defense": 60,
-      "sp_attack": 64,
-      "sp_defense": 57,
-      "speed": 47,
-      "total": 314
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Radiance",
-      "Holy Guard"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Aurion",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Aurion"
-      },
-      {
-        "type": "stone",
-        "stone": "light_stone",
-        "evolves_to": "Aurion"
-      }
-    ]
-  },
-  {
-    "name": "Aurion",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
-    "base_stats": {
-      "hp": 80,
-      "attack": 91,
-      "defense": 74,
-      "sp_attack": 52,
-      "sp_defense": 63,
-      "speed": 50,
-      "total": 410
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Radiance",
-      "Holy Guard"
-    ],
-    "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Peltling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
-    "base_stats": {
-      "hp": 77,
-      "attack": 33,
-      "defense": 56,
-      "sp_attack": 39,
-      "sp_defense": 54,
-      "speed": 39,
-      "total": 298
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 10
-    },
-    "abilities": [
-      "Run Away",
-      "Adaptability"
-    ],
-    "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Pelton",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Pelton"
-      },
-      {
-        "type": "stone",
-        "stone": "moon_stone",
-        "evolves_to": "Pelton"
-      }
-    ]
-  },
-  {
-    "name": "Pelton",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
-    "base_stats": {
-      "hp": 79,
-      "attack": 89,
-      "defense": 53,
-      "sp_attack": 51,
-      "sp_defense": 87,
-      "speed": 97,
-      "total": 456
-    },
-    "shiny_boost": {
-      "stat": "attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Inner Focus",
-      "Run Away"
-    ],
-    "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Peltlord",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Peltlord"
-      },
-      {
-        "type": "stone",
-        "stone": "moon_stone",
-        "evolves_to": "Peltlord"
-      }
-    ]
-  },
-  {
-    "name": "Peltlord",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
-    "base_stats": {
-      "hp": 105,
-      "attack": 67,
-      "defense": 93,
-      "sp_attack": 81,
-      "sp_defense": 122,
-      "speed": 70,
-      "total": 538
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 10
-    },
-    "abilities": [
-      "Inner Focus",
-      "Adaptability"
-    ],
-    "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Gritling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Ground"
-    ],
-    "base_stats": {
-      "hp": 48,
-      "attack": 38,
-      "defense": 48,
-      "sp_attack": 52,
-      "sp_defense": 63,
-      "speed": 66,
-      "total": 315
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Sand Veil",
-      "Sturdy"
-    ],
-    "moveset": [
-      {
-        "move_key": "mud_slap",
-        "level": 1
-      },
-      {
-        "move_key": "rock_throw",
-        "level": 1
-      },
-      {
-        "move_key": "earthquake",
-        "level": 1
-      },
-      {
-        "move_key": "sandstorm",
-        "level": 36
-      },
-      {
-        "move_key": "gaia_crush",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Griton",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Griton"
-      },
-      {
-        "type": "stone",
-        "stone": "earth_stone",
-        "evolves_to": "Griton"
-      }
-    ]
-  },
-  {
-    "name": "Griton",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Ground"
-    ],
-    "base_stats": {
-      "hp": 80,
-      "attack": 84,
-      "defense": 108,
-      "sp_attack": 48,
-      "sp_defense": 60,
-      "speed": 90,
-      "total": 470
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Sturdy",
-      "Earth Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "mud_slap",
-        "level": 1
-      },
-      {
-        "move_key": "rock_throw",
-        "level": 1
-      },
-      {
-        "move_key": "earthquake",
-        "level": 1
-      },
-      {
-        "move_key": "sandstorm",
-        "level": 36
-      },
-      {
-        "move_key": "gaia_crush",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Gritlord",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Gritlord"
-      },
-      {
-        "type": "stone",
-        "stone": "earth_stone",
-        "evolves_to": "Gritlord"
-      }
-    ]
-  },
-  {
-    "name": "Gritlord",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Ground"
-    ],
-    "base_stats": {
-      "hp": 71,
-      "attack": 63,
-      "defense": 78,
-      "sp_attack": 121,
-      "sp_defense": 152,
-      "speed": 63,
-      "total": 548
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Earth Power",
-      "Sand Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "mud_slap",
-        "level": 1
-      },
-      {
-        "move_key": "rock_throw",
-        "level": 1
-      },
-      {
-        "move_key": "earthquake",
-        "level": 1
-      },
-      {
-        "move_key": "sandstorm",
-        "level": 36
-      },
-      {
-        "move_key": "gaia_crush",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Rivuling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 66,
-      "attack": 65,
-      "defense": 82,
-      "sp_attack": 36,
-      "sp_defense": 56,
+      "sp_attack": 60,
+      "sp_defense": 50,
       "speed": 60,
-      "total": 365
+      "total": 300
     },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Water Veil",
-      "Swift Swim"
-    ],
+    "shiny_boost": { "stat": "sp_attack", "bonus": 10 },
+    "abilities": ["Blaze", "Flash Fire"],
     "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
+      { "move_key": "ember", "level": 1 },
+      { "move_key": "growl", "level": 1 },
+      { "move_key": "smokescreen", "level": 6 },
+      { "move_key": "fire_spin", "level": 10 },
+      { "move_key": "flame_charge", "level": 14 },
+      { "move_key": "quick_attack", "level": 16 },
+      { "move_key": "fire_fang", "level": 20 },
+      { "move_key": "sunny_day", "level": 24 },
+      { "move_key": "incinerate", "level": 28 },
+      { "move_key": "heat_wave", "level": 36 },
+      { "move_key": "solar_beam", "level": 42 },
+      { "move_key": "radiant_wave", "level": 48 },
+      { "move_key": "flare_blitz", "level": 55 },
+      { "move_key": "solar_chant", "level": 60 }
     ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Geoling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Ground"
-    ],
-    "base_stats": {
-      "hp": 65,
-      "attack": 34,
-      "defense": 46,
-      "sp_attack": 38,
-      "sp_defense": 63,
-      "speed": 56,
-      "total": 302
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Sturdy",
-      "Earth Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "mud_slap",
-        "level": 1
-      },
-      {
-        "move_key": "rock_throw",
-        "level": 1
-      },
-      {
-        "move_key": "earthquake",
-        "level": 1
-      },
-      {
-        "move_key": "sandstorm",
-        "level": 36
-      },
-      {
-        "move_key": "gaia_crush",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Geoon",
-    "legendary": false,
-    "mythical": false,
+    "evolves_to": "Lumacroak",
     "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Geoon"
-      },
-      {
-        "type": "stone",
-        "stone": "earth_stone",
-        "evolves_to": "Geoon"
-      }
-    ]
-  },
-  {
-    "name": "Geoon",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Ground"
-    ],
-    "base_stats": {
-      "hp": 98,
-      "attack": 44,
-      "defense": 104,
-      "sp_attack": 93,
-      "sp_defense": 60,
-      "speed": 59,
-      "total": 458
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Sturdy",
-      "Sand Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "mud_slap",
-        "level": 1
-      },
-      {
-        "move_key": "rock_throw",
-        "level": 1
-      },
-      {
-        "move_key": "earthquake",
-        "level": 1
-      },
-      {
-        "move_key": "sandstorm",
-        "level": 36
-      },
-      {
-        "move_key": "gaia_crush",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Geolord",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Geolord"
-      },
-      {
-        "type": "stone",
-        "stone": "earth_stone",
-        "evolves_to": "Geolord"
-      }
-    ]
-  },
-  {
-    "name": "Geolord",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Ground"
-    ],
-    "base_stats": {
-      "hp": 115,
-      "attack": 53,
-      "defense": 129,
-      "sp_attack": 91,
-      "sp_defense": 75,
-      "speed": 58,
-      "total": 521
-    },
-    "shiny_boost": {
-      "stat": "attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Sand Veil",
-      "Sturdy"
-    ],
-    "moveset": [
-      {
-        "move_key": "mud_slap",
-        "level": 1
-      },
-      {
-        "move_key": "rock_throw",
-        "level": 1
-      },
-      {
-        "move_key": "earthquake",
-        "level": 1
-      },
-      {
-        "move_key": "sandstorm",
-        "level": 36
-      },
-      {
-        "move_key": "gaia_crush",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Fleetling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
-    "base_stats": {
-      "hp": 55,
-      "attack": 56,
-      "defense": 47,
-      "sp_attack": 40,
-      "sp_defense": 54,
-      "speed": 37,
-      "total": 289
-    },
-    "shiny_boost": {
-      "stat": "hp",
-      "bonus": 10
-    },
-    "abilities": [
-      "Adaptability",
-      "Inner Focus"
-    ],
-    "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Fleeton",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Fleeton"
-      },
-      {
-        "type": "stone",
-        "stone": "moon_stone",
-        "evolves_to": "Fleeton"
-      }
-    ]
-  },
-  {
-    "name": "Fleeton",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
-    "base_stats": {
-      "hp": 89,
-      "attack": 76,
-      "defense": 93,
-      "sp_attack": 96,
-      "sp_defense": 59,
-      "speed": 110,
-      "total": 523
-    },
-    "shiny_boost": {
-      "stat": "hp",
-      "bonus": 10
-    },
-    "abilities": [
-      "Adaptability",
-      "Run Away"
-    ],
-    "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Mossling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
-    ],
-    "base_stats": {
-      "hp": 52,
-      "attack": 36,
-      "defense": 42,
-      "sp_attack": 58,
-      "sp_defense": 52,
-      "speed": 58,
-      "total": 298
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Overgrow",
-      "Chlorophyll"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": [
-      "Mossflare",
-      "Mossshade"
+      { "type": "level", "level": 16, "evolves_to": "Lumacroak" },
+      { "type": "stone", "stone": "fire_stone", "evolves_to": "Lumacroak" }
     ],
     "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
+    "mythical": false
   },
   {
-    "name": "Mossflare",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
-    ],
-    "base_stats": {
-      "hp": 65,
-      "attack": 67,
-      "defense": 81,
-      "sp_attack": 97,
-      "sp_defense": 78,
-      "speed": 43,
-      "total": 431
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Overgrow",
-      "Chlorophyll"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Mossshade",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
-    ],
-    "base_stats": {
-      "hp": 75,
-      "attack": 119,
-      "defense": 94,
-      "sp_attack": 69,
-      "sp_defense": 83,
-      "speed": 99,
-      "total": 539
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Thick Fat",
-      "Chlorophyll"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Ebonling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Dark Magic"
-    ],
-    "base_stats": {
-      "hp": 59,
-      "attack": 36,
-      "defense": 45,
-      "sp_attack": 74,
-      "sp_defense": 61,
-      "speed": 58,
-      "total": 333
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Illusion",
-      "Shadow Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "shadow_claw",
-        "level": 1
-      },
-      {
-        "move_key": "night_slash",
-        "level": 1
-      },
-      {
-        "move_key": "dark_pulse",
-        "level": 1
-      },
-      {
-        "move_key": "abyssal_crush",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_eclipse",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Ebonon",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Ebonon"
-      },
-      {
-        "type": "stone",
-        "stone": "dark_stone",
-        "evolves_to": "Ebonon"
-      }
-    ]
-  },
-  {
-    "name": "Ebonon",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Dark Magic"
-    ],
-    "base_stats": {
-      "hp": 139,
-      "attack": 67,
-      "defense": 93,
-      "sp_attack": 77,
-      "sp_defense": 67,
-      "speed": 92,
-      "total": 535
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Shadow Veil",
-      "Illusion"
-    ],
-    "moveset": [
-      {
-        "move_key": "shadow_claw",
-        "level": 1
-      },
-      {
-        "move_key": "night_slash",
-        "level": 1
-      },
-      {
-        "move_key": "dark_pulse",
-        "level": 1
-      },
-      {
-        "move_key": "abyssal_crush",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_eclipse",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Igniscub",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 30,
-      "attack": 50,
-      "defense": 58,
-      "sp_attack": 65,
-      "sp_defense": 66,
-      "speed": 34,
-      "total": 303
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Flame Body",
-      "Blaze"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Ignisprime",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Ignisprime"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Ignisprime"
-      }
-    ]
-  },
-  {
-    "name": "Igniskit",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 65,
-      "attack": 56,
-      "defense": 67,
-      "sp_attack": 29,
-      "sp_defense": 33,
-      "speed": 43,
-      "total": 293
-    },
-    "shiny_boost": {
-      "stat": "hp",
-      "bonus": 10
-    },
-    "abilities": [
-      "Blaze",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Ignisprime",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Ignisprime"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Ignisprime"
-      }
-    ]
-  },
-  {
-    "name": "Ignisprime",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 106,
-      "attack": 46,
-      "defense": 80,
-      "sp_attack": 74,
-      "sp_defense": 93,
-      "speed": 57,
-      "total": 456
-    },
-    "shiny_boost": {
-      "stat": "hp",
-      "bonus": 10
-    },
-    "abilities": [
-      "Blaze",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Rivuling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
+    "name": "Lumacroak",
+    "sprite": "lumacroak.png",
+    "typing": ["Fire"],
+    "description": "Lumacroak’s skin patterns absorb sunlight during the day and release it at night in the form of glowing streaks. It’s known to lead travelers out of jungles after dusk.",
+    "appearance": "A bipedal frog with smooth, copper-colored skin and luminous linear markings across its limbs. Its throat sac is crystalline and pulses with light in time with its heartbeat.",
+    "height": 0.9,
+    "weight": 18,
     "base_stats": {
       "hp": 60,
-      "attack": 52,
-      "defense": 49,
-      "sp_attack": 61,
-      "sp_defense": 44,
-      "speed": 36,
-      "total": 302
+      "attack": 55,
+      "defense": 55,
+      "sp_attack": 85,
+      "sp_defense": 65,
+      "speed": 80,
+      "total": 400
     },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Torrent",
-      "Water Veil"
-    ],
+    "shiny_boost": { "stat": "sp_attack", "bonus": 10 },
+    "abilities": ["Blaze", "Illuminate"],
     "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
+      { "move_key": "ember", "level": 1 },
+      { "move_key": "growl", "level": 1 },
+      { "move_key": "smokescreen", "level": 6 },
+      { "move_key": "fire_spin", "level": 10 },
+      { "move_key": "flame_charge", "level": 14 },
+      { "move_key": "quick_attack", "level": 16 },
+      { "move_key": "fire_fang", "level": 20 },
+      { "move_key": "sunny_day", "level": 24 },
+      { "move_key": "incinerate", "level": 28 },
+      { "move_key": "heat_wave", "level": 36 },
+      { "move_key": "solar_beam", "level": 42 },
+      { "move_key": "radiant_wave", "level": 48 },
+      { "move_key": "flare_blitz", "level": 55 },
+      { "move_key": "solar_chant", "level": 60 }
     ],
-    "evolves_to": [
-      "Rivuflare",
-      "Rivushade"
-    ],
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Rivuflare",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 63,
-      "attack": 123,
-      "defense": 85,
-      "sp_attack": 67,
-      "sp_defense": 121,
-      "speed": 85,
-      "total": 544
-    },
-    "shiny_boost": {
-      "stat": "speed",
-      "bonus": 10
-    },
-    "abilities": [
-      "Torrent",
-      "Water Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Rivushade",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Water"
-    ],
-    "base_stats": {
-      "hp": 94,
-      "attack": 57,
-      "defense": 54,
-      "sp_attack": 83,
-      "sp_defense": 50,
-      "speed": 101,
-      "total": 439
-    },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Swift Swim",
-      "Water Veil"
-    ],
-    "moveset": [
-      {
-        "move_key": "water_gun",
-        "level": 1
-      },
-      {
-        "move_key": "bubble_beam",
-        "level": 1
-      },
-      {
-        "move_key": "aqua_tail",
-        "level": 1
-      },
-      {
-        "move_key": "surf",
-        "level": 36
-      },
-      {
-        "move_key": "hydro_pump",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
-  },
-  {
-    "name": "Floraling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
-    ],
-    "base_stats": {
-      "hp": 64,
-      "attack": 59,
-      "defense": 57,
-      "sp_attack": 63,
-      "sp_defense": 45,
-      "speed": 29,
-      "total": 317
-    },
-    "shiny_boost": {
-      "stat": "hp",
-      "bonus": 10
-    },
-    "abilities": [
-      "Chlorophyll",
-      "Overgrow"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Floraon",
-    "legendary": false,
-    "mythical": false,
+    "evolves_to": "Solamphibos",
     "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Floraon"
-      },
-      {
-        "type": "stone",
-        "stone": "leaf_stone",
-        "evolves_to": "Floraon"
-      }
-    ]
-  },
-  {
-    "name": "Floraon",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
+      { "type": "level", "level": 36, "evolves_to": "Solamphibos" },
+      { "type": "stone", "stone": "fire_stone", "evolves_to": "Solamphibos" }
     ],
-    "base_stats": {
-      "hp": 67,
-      "attack": 83,
-      "defense": 76,
-      "sp_attack": 56,
-      "sp_defense": 82,
-      "speed": 88,
-      "total": 452
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Overgrow",
-      "Thick Fat"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Floralord",
     "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Floralord"
-      },
-      {
-        "type": "stone",
-        "stone": "leaf_stone",
-        "evolves_to": "Floralord"
-      }
-    ]
+    "mythical": false
   },
   {
-    "name": "Floralord",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
-    ],
+    "name": "Solamphibos",
+    "sprite": "solamphibos.png",
+    "typing": ["Fire", "Light"],
+    "description": "Said to embody dawn itself, Solamphibos releases purifying fire that cleanses toxicity from wetlands. Its croak echoes like singing bells, bringing calm wherever it roams.",
+    "appearance": "Elegant amphibian with golden-white skin, sun motifs across its arms and back, and gently glowing eyes. It stands tall like a sage, radiating warmth and light in soft pulses.",
+    "height": 1.5,
+    "weight": 42,
     "base_stats": {
-      "hp": 94,
-      "attack": 94,
-      "defense": 93,
-      "sp_attack": 80,
-      "sp_defense": 46,
-      "speed": 94,
-      "total": 501
+      "hp": 80,
+      "attack": 70,
+      "defense": 70,
+      "sp_attack": 115,
+      "sp_defense": 90,
+      "speed": 105,
+      "total": 530
     },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Chlorophyll",
-      "Thick Fat"
-    ],
+    "shiny_boost": { "stat": "sp_attack", "bonus": 20 },
+    "abilities": ["Solar Heart", "Radiant Surge"],
     "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
+      { "move_key": "ember", "level": 1 },
+      { "move_key": "growl", "level": 1 },
+      { "move_key": "smokescreen", "level": 6 },
+      { "move_key": "fire_spin", "level": 10 },
+      { "move_key": "flame_charge", "level": 14 },
+      { "move_key": "quick_attack", "level": 16 },
+      { "move_key": "fire_fang", "level": 20 },
+      { "move_key": "sunny_day", "level": 24 },
+      { "move_key": "incinerate", "level": 28 },
+      { "move_key": "heat_wave", "level": 36 },
+      { "move_key": "solar_beam", "level": 42 },
+      { "move_key": "radiant_wave", "level": 48 },
+      { "move_key": "flare_blitz", "level": 55 },
+      { "move_key": "solar_chant", "level": 60 }
     ],
-    "evolves_to": null,
     "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
+    "mythical": false
   },
   {
-    "name": "Thornling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
-    ],
-    "base_stats": {
-      "hp": 77,
-      "attack": 49,
-      "defense": 34,
-      "sp_attack": 68,
-      "sp_defense": 33,
-      "speed": 59,
-      "total": 320
-    },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Thick Fat",
-      "Overgrow"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Thornon",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Thornon"
-      },
-      {
-        "type": "stone",
-        "stone": "leaf_stone",
-        "evolves_to": "Thornon"
-      }
-    ]
-  },
-  {
-    "name": "Thornon",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
-    ],
+    "name": "Verdreep",
+    "sprite": "verdreep.png",
+    "typing": ["Plant"],
+    "description": "Verdreep hides in seaweed beds, pretending to be part of the kelp. It uses sticky vines to anchor itself against strong ocean currents.",
+    "appearance": "Otter-like creature wrapped in green-brown seaweed fur, with small leaf-like ears and curious blue eyes. Bubbles constantly trail from its paws.",
+    "height": 0.5,
+    "weight": 7,
     "base_stats": {
       "hp": 50,
-      "attack": 93,
-      "defense": 52,
-      "sp_attack": 86,
-      "sp_defense": 92,
-      "speed": 105,
-      "total": 478
+      "attack": 45,
+      "defense": 45,
+      "sp_attack": 60,
+      "sp_defense": 55,
+      "speed": 40,
+      "total": 295
     },
-    "shiny_boost": {
-      "stat": "attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Thick Fat",
-      "Overgrow"
-    ],
+    "shiny_boost": { "stat": "speed", "bonus": 20 },
+    "abilities": ["Overgrow", "Water Veil"],
     "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
+      { "move_key": "vine_whip", "level": 1 },
+      { "move_key": "astonish", "level": 1 },
+      { "move_key": "growth", "level": 6 },
+      { "move_key": "razor_leaf", "level": 10 },
+      { "move_key": "leech_seed", "level": 14 },
+      { "move_key": "confuse_ray", "level": 18 },
+      { "move_key": "mega_drain", "level": 22 },
+      { "move_key": "shadow_sneak", "level": 26 },
+      { "move_key": "hex", "level": 30 },
+      { "move_key": "giga_drain", "level": 36 },
+      { "move_key": "will_o_wisp", "level": 40 },
+      { "move_key": "energy_ball", "level": 45 },
+      { "move_key": "phantom_force", "level": 50 },
+      { "move_key": "spirit_bloom", "level": 56 }
     ],
-    "evolves_to": "Thornlord",
-    "legendary": false,
-    "mythical": false,
+    "evolves_to": "Phantotter",
     "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Thornlord"
-      },
-      {
-        "type": "stone",
-        "stone": "leaf_stone",
-        "evolves_to": "Thornlord"
-      }
-    ]
-  },
-  {
-    "name": "Thornlord",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Grass"
+      { "type": "level", "level": 16, "evolves_to": "Phantotter" },
+      { "type": "stone", "stone": "leaf_stone", "evolves_to": "Phantotter" }
     ],
-    "base_stats": {
-      "hp": 86,
-      "attack": 67,
-      "defense": 121,
-      "sp_attack": 69,
-      "sp_defense": 99,
-      "speed": 81,
-      "total": 523
-    },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Chlorophyll",
-      "Overgrow"
-    ],
-    "moveset": [
-      {
-        "move_key": "vine_whip",
-        "level": 1
-      },
-      {
-        "move_key": "razor_leaf",
-        "level": 1
-      },
-      {
-        "move_key": "seed_bomb",
-        "level": 1
-      },
-      {
-        "move_key": "leaf_blade",
-        "level": 36
-      },
-      {
-        "move_key": "solar_beam",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
     "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
+    "mythical": false
   },
   {
-    "name": "Scorchcub",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
+    "name": "Phantotter",
+    "sprite": "phantotter.png",
+    "typing": ["Plant", "Ghost"],
+    "description": "After shedding its mortal seaweed pelt, the spirit of the ocean claims it. Phantotter manipulates drifting kelp ghosts to mislead ships.",
+    "appearance": "Translucent green otter with faint spectral ripples flowing along its body. Its tail splits into ethereal strands resembling water plants waving in unseen tides.",
+    "height": 0.9,
+    "weight": 20,
     "base_stats": {
-      "hp": 36,
-      "attack": 60,
-      "defense": 69,
-      "sp_attack": 41,
-      "sp_defense": 53,
-      "speed": 42,
-      "total": 301
-    },
-    "shiny_boost": {
-      "stat": "attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Blaze",
-      "Flame Body"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": "Scorchprime",
-    "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Scorchprime"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Scorchprime"
-      }
-    ]
-  },
-  {
-    "name": "Scorchkit",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
-    ],
-    "base_stats": {
-      "hp": 63,
-      "attack": 36,
+      "hp": 70,
+      "attack": 55,
       "defense": 65,
-      "sp_attack": 66,
-      "sp_defense": 50,
-      "speed": 37,
-      "total": 317
+      "sp_attack": 75,
+      "sp_defense": 85,
+      "speed": 50,
+      "total": 400
     },
-    "shiny_boost": {
-      "stat": "hp",
-      "bonus": 10
-    },
-    "abilities": [
-      "Solar Power",
-      "Flame Body"
-    ],
+    "shiny_boost": { "stat": "speed", "bonus": 20 },
+    "abilities": ["Overgrow", "Cursed Body"],
     "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
+      { "move_key": "vine_whip", "level": 1 },
+      { "move_key": "astonish", "level": 1 },
+      { "move_key": "growth", "level": 6 },
+      { "move_key": "razor_leaf", "level": 10 },
+      { "move_key": "leech_seed", "level": 14 },
+      { "move_key": "confuse_ray", "level": 18 },
+      { "move_key": "mega_drain", "level": 22 },
+      { "move_key": "shadow_sneak", "level": 26 },
+      { "move_key": "hex", "level": 30 },
+      { "move_key": "giga_drain", "level": 36 },
+      { "move_key": "will_o_wisp", "level": 40 },
+      { "move_key": "energy_ball", "level": 45 },
+      { "move_key": "phantom_force", "level": 50 },
+      { "move_key": "spirit_bloom", "level": 56 }
     ],
-    "evolves_to": "Scorchprime",
-    "legendary": false,
-    "mythical": false,
+    "evolves_to": "Abyreedon",
     "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Scorchprime"
-      },
-      {
-        "type": "stone",
-        "stone": "fire_stone",
-        "evolves_to": "Scorchprime"
-      }
-    ]
-  },
-  {
-    "name": "Scorchprime",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Fire"
+      { "type": "level", "level": 36, "evolves_to": "Abyreedon" },
+      { "type": "stone", "stone": "leaf_stone", "evolves_to": "Abyreedon" }
     ],
-    "base_stats": {
-      "hp": 96,
-      "attack": 93,
-      "defense": 98,
-      "sp_attack": 48,
-      "sp_defense": 47,
-      "speed": 79,
-      "total": 461
-    },
-    "shiny_boost": {
-      "stat": "hp",
-      "bonus": 10
-    },
-    "abilities": [
-      "Flame Body",
-      "Solar Power"
-    ],
-    "moveset": [
-      {
-        "move_key": "ember",
-        "level": 1
-      },
-      {
-        "move_key": "flame_burst",
-        "level": 1
-      },
-      {
-        "move_key": "fire_fang",
-        "level": 1
-      },
-      {
-        "move_key": "heat_wave",
-        "level": 36
-      },
-      {
-        "move_key": "flare_blitz",
-        "level": 50
-      }
-    ],
-    "evolves_to": null,
     "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
+    "mythical": false
   },
   {
-    "name": "Radiling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
+    "name": "Abyreedon",
+    "sprite": "abyreedon.png",
+    "typing": ["Plant", "Ghost"],
+    "description": "Legends say Abyreedon guards drowned forests where spirits of lost sailors rest. It sings in haunting tones that cause wilting flowers to bloom one last time.",
+    "appearance": "Majestic, kelp-cloaked otter with a ghostly pale chest and bright emerald flames drifting between its paws. Its eyes resemble glowing pools of deep water.",
+    "height": 1.6,
+    "weight": 47,
     "base_stats": {
-      "hp": 49,
-      "attack": 52,
-      "defense": 56,
-      "sp_attack": 53,
+      "hp": 100,
+      "attack": 70,
+      "defense": 85,
+      "sp_attack": 95,
+      "sp_defense": 115,
+      "speed": 70,
+      "total": 535
+    },
+    "shiny_boost": { "stat": "speed", "bonus": 20 },
+    "abilities": ["Soul Bloom", "Damp"],
+    "moveset": [
+      { "move_key": "vine_whip", "level": 1 },
+      { "move_key": "astonish", "level": 1 },
+      { "move_key": "growth", "level": 6 },
+      { "move_key": "razor_leaf", "level": 10 },
+      { "move_key": "leech_seed", "level": 14 },
+      { "move_key": "confuse_ray", "level": 18 },
+      { "move_key": "mega_drain", "level": 22 },
+      { "move_key": "shadow_sneak", "level": 26 },
+      { "move_key": "hex", "level": 30 },
+      { "move_key": "giga_drain", "level": 36 },
+      { "move_key": "will_o_wisp", "level": 40 },
+      { "move_key": "energy_ball", "level": 45 },
+      { "move_key": "phantom_force", "level": 50 },
+      { "move_key": "spirit_bloom", "level": 56 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Rivanos",
+    "sprite": "rivanos.png",
+    "typing": ["Water"],
+    "description": "Rivanos loves testing its strength by headbutting coral and splashing the debris around. It’s playful but stubborn.",
+    "appearance": "A small blue dinosaur hatchling with a domed skull and bright white snout. Tiny fins line the sides of its tail, aiding fast swimming.",
+    "height": 0.6,
+    "weight": 14,
+    "base_stats": {
+      "hp": 55,
+      "attack": 60,
+      "defense": 50,
+      "sp_attack": 40,
+      "sp_defense": 40,
+      "speed": 40,
+      "total": 290
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 10 },
+    "abilities": ["Torrent", "Rock Head"],
+    "moveset": [
+      { "move_key": "tackle", "level": 1 },
+      { "move_key": "water_gun", "level": 1 },
+      { "move_key": "focus_energy", "level": 5 },
+      { "move_key": "bite", "level": 9 },
+      { "move_key": "aqua_jet", "level": 13 },
+      { "move_key": "headbutt", "level": 18 },
+      { "move_key": "aqua_tail", "level": 24 },
+      { "move_key": "crunch", "level": 30 },
+      { "move_key": "iron_defense", "level": 34 },
+      { "move_key": "surf", "level": 38 },
+      { "move_key": "dark_pulse", "level": 44 },
+      { "move_key": "rain_dance", "level": 48 },
+      { "move_key": "hydro_pump", "level": 52 },
+      { "move_key": "abyss_ram", "level": 60 }
+    ],
+    "evolves_to": "Terrinoir",
+    "evolution_requirements": [
+      { "type": "level", "level": 16, "evolves_to": "Terrinoir" },
+      { "type": "stone", "stone": "water_stone", "evolves_to": "Terrinoir" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Terrinoir",
+    "sprite": "terrinoir.png",
+    "typing": ["Water"],
+    "description": "Terrinoir’s skull is harder than granite. It uses it to carve underwater tunnels — sometimes as homes for smaller Pokémon...",
+    "appearance": "Grey-blue reptile with tough plating over its back and a sleek body. Its horns start to curve backward, decorated with algae-like streaks from deep-water battles.",
+    "height": 1.2,
+    "weight": 38,
+    "base_stats": {
+      "hp": 75,
+      "attack": 85,
+      "defense": 80,
+      "sp_attack": 55,
+      "sp_defense": 55,
+      "speed": 60,
+      "total": 410
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 10 },
+    "abilities": ["Torrent", "Rough Skin"],
+    "moveset": [
+      { "move_key": "tackle", "level": 1 },
+      { "move_key": "water_gun", "level": 1 },
+      { "move_key": "focus_energy", "level": 5 },
+      { "move_key": "bite", "level": 9 },
+      { "move_key": "aqua_jet", "level": 13 },
+      { "move_key": "headbutt", "level": 18 },
+      { "move_key": "aqua_tail", "level": 24 },
+      { "move_key": "crunch", "level": 30 },
+      { "move_key": "iron_defense", "level": 34 },
+      { "move_key": "surf", "level": 38 },
+      { "move_key": "dark_pulse", "level": 44 },
+      { "move_key": "rain_dance", "level": 48 },
+      { "move_key": "hydro_pump", "level": 52 },
+      { "move_key": "abyss_ram", "level": 60 }
+    ],
+    "evolves_to": "Duskuragon",
+    "evolution_requirements": [
+      { "type": "level", "level": 36, "evolves_to": "Duskuragon" },
+      { "type": "stone", "stone": "water_stone", "evolves_to": "Duskuragon" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Duskuragon",
+    "sprite": "duskuragon.png",
+    "typing": ["Water", "Dark"],
+    "description": "Duskuragon dominates the coastal abyss, ramming intruders with terrifying precision. Its body is wrapped in shadowy currents said to swallow light itself.",
+    "appearance": "Massive dinosaur-like creature with pitch-black horns, deep cerulean scales, and a faint dark shimmer. Its skull glows faintly blue from inner energy, like light seen through deep water.",
+    "height": 2.0,
+    "weight": 82,
+    "base_stats": {
+      "hp": 90,
+      "attack": 125,
+      "defense": 110,
+      "sp_attack": 70,
+      "sp_defense": 75,
+      "speed": 70,
+      "total": 540
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 10 },
+    "abilities": ["Abyssal Armor", "Intimidate"],
+    "moveset": [
+      { "move_key": "tackle", "level": 1 },
+      { "move_key": "water_gun", "level": 1 },
+      { "move_key": "focus_energy", "level": 5 },
+      { "move_key": "bite", "level": 9 },
+      { "move_key": "aqua_jet", "level": 13 },
+      { "move_key": "headbutt", "level": 18 },
+      { "move_key": "aqua_tail", "level": 24 },
+      { "move_key": "crunch", "level": 30 },
+      { "move_key": "iron_defense", "level": 34 },
+      { "move_key": "surf", "level": 38 },
+      { "move_key": "dark_pulse", "level": 44 },
+      { "move_key": "rain_dance", "level": 48 },
+      { "move_key": "hydro_pump", "level": 52 },
+      { "move_key": "abyss_ram", "level": 60 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Pupawn",
+    "sprite": "pupawn.png",
+    "typing": ["Normal"],
+    "description": "Pupawn is a timid puppy who dreams of becoming a guardian worthy of the elements. Its spirit changes when it forges a bond with one of nature's cores, molding its destiny into a fearsome beast.",
+    "appearance": "A small beige puppy with soft fur. Its eyes glimmer faintly, sometimes shifting hue in correspondence with unseen elemental forces.",
+    "height": 0.5,
+    "weight": 9.2,
+    "base_stats": {
+      "hp": 42,
+      "attack": 38,
+      "defense": 35,
+      "sp_attack": 30,
       "sp_defense": 35,
-      "speed": 38,
-      "total": 283
+      "speed": 40,
+      "total": 220
     },
-    "shiny_boost": {
-      "stat": "sp_defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Holy Guard",
-      "Pressure"
-    ],
+    "shiny_boost": { "stat": "speed", "bonus": 10 },
+    "abilities": ["Loyal Heart", "Adapt"],
     "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
+      { "move_key": "tackle", "level": 1 },
+      { "move_key": "howl", "level": 3 },
+      { "move_key": "bite", "level": 7 },
+      { "move_key": "focus_energy", "level": 10 },
+      { "move_key": "take_down", "level": 16 },
+      { "move_key": "play_rough", "level": 24 },
+      { "move_key": "growl", "level": 28 },
+      { "move_key": "double_edge", "level": 34 }
     ],
-    "evolves_to": "Radion",
-    "legendary": false,
-    "mythical": false,
+    "evolution_mechanic": "Evolves when bonded with elemental essence corresponding to a type or dual-type fusion stone.",
     "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Radion"
-      },
-      {
-        "type": "stone",
-        "stone": "light_stone",
-        "evolves_to": "Radion"
-      }
-    ]
+      { "type": "stone", "stone": "fire_stone", "evolves_to": "Ignisrael" },
+      { "type": "stone", "stone": "water_stone", "evolves_to": "Torrentis" },
+      { "type": "stone", "stone": "leaf_stone", "evolves_to": "Verdama" },
+      { "type": "stone", "stone": "normal_stone", "evolves_to": "Runaris" },
+      { "type": "stone", "stone": "dark_stone", "evolves_to": "Noctyros" },
+      { "type": "stone", "stone": "light_stone", "evolves_to": "Solarune" },
+      { "type": "stone", "stone": "ground_stone", "evolves_to": "Gravulor" },
+      { "type": "stone", "stone": "ghost_stone", "evolves_to": "Wraithound" },
+      { "type": "stone", "stone": "air_stone", "evolves_to": "Tempestral" },
+      { "type": "stone", "stone": "ice_stone", "evolves_to": "Cryovelis" },
+      { "type": "stone", "stone": "thunder_stone", "evolves_to": "Voltalis" },
+      { "type": "stone", "stone": "poison_stone", "evolves_to": "Venomaris" },
+      { "type": "stone", "stone": "metal_stone", "evolves_to": "Ferronyx" },
+      { "type": "stone", "stone": "shadow_stone", "evolves_to": "Eclipsera" }
+    ],
+    "legendary": false,
+    "mythical": false
   },
   {
-    "name": "Radion",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Light Magic"
-    ],
+    "name": "Ignisrael",
+    "sprite": "ignisrael.png",
+    "nickname": "Ignifang",
+    "typing": ["Fire"],
+    "description": "Forged in searing flame, Ignisrael burns with unmatched pride. When its howl echoes across mountains, even volcanoes answer. Known as the Sovereign Flame Hound, it embodies passion, destruction, and loyalty.",
+    "appearance": "A tall wolf with a crimson-gold mane of living fire, obsidian horns, and dark ash streaks along its legs. Flames leak from deep cracks in its fur.",
+    "height": 1.9,
+    "weight": 92.4,
     "base_stats": {
-      "hp": 92,
-      "attack": 53,
-      "defense": 59,
-      "sp_attack": 42,
-      "sp_defense": 86,
-      "speed": 76,
-      "total": 408
+      "hp": 95,
+      "attack": 145,
+      "defense": 100,
+      "sp_attack": 120,
+      "sp_defense": 95,
+      "speed": 90,
+      "total": 645
     },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Pressure",
-      "Radiance"
-    ],
+    "abilities": ["Blazing Pride", "Intimidate"],
     "moveset": [
-      {
-        "move_key": "light_beam",
-        "level": 1
-      },
-      {
-        "move_key": "solar_flare",
-        "level": 1
-      },
-      {
-        "move_key": "holy_nova",
-        "level": 1
-      },
-      {
-        "move_key": "judgment_ray",
-        "level": 36
-      },
-      {
-        "move_key": "eternal_dawn",
-        "level": 50
-      }
+      { "move_key": "flame_charge", "level": 1 },
+      { "move_key": "crunch", "level": 20 },
+      { "move_key": "fire_fang", "level": 25 },
+      { "move_key": "flare_blitz", "level": 40 },
+      { "move_key": "heat_wave", "level": 46 },
+      { "move_key": "inferno_roar", "level": 55 },
+      { "move_key": "overheat", "level": 60 },
+      { "move_key": "sacred_flame", "level": 68 }
     ],
-    "evolves_to": null,
     "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
+    "mythical": false
   },
   {
-    "name": "Swiftling",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
+    "name": "Torrentis",
+    "sprite": "torrentis.png",
+    "nickname": "Aquafang",
+    "typing": ["Water"],
+    "description": "Born from tidal storms, Torrentis patrols the oceans as a silent warden. When angered, whirlpools form in its wake. Its howl can calm the waves or tear ships apart.",
+    "appearance": "Streamlined blue wolf with a sleek fin mane. Its paws leave rippling water trails on the ground.",
+    "height": 1.6,
+    "weight": 78.1,
     "base_stats": {
-      "hp": 72,
-      "attack": 29,
-      "defense": 32,
-      "sp_attack": 52,
-      "sp_defense": 37,
-      "speed": 66,
-      "total": 288
+      "hp": 95,
+      "attack": 120,
+      "defense": 100,
+      "sp_attack": 90,
+      "sp_defense": 100,
+      "speed": 80,
+      "total": 585
     },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Adaptability",
-      "Inner Focus"
-    ],
+    "abilities": ["Torrent", "Waveclaw"],
     "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
+      { "move_key": "aqua_tail", "level": 1 },
+      { "move_key": "water_pulse", "level": 16 },
+      { "move_key": "surf", "level": 30 },
+      { "move_key": "crunch", "level": 35 },
+      { "move_key": "aqua_jet", "level": 42 },
+      { "move_key": "rain_dance", "level": 50 },
+      { "move_key": "tidal_fang", "level": 60 }
     ],
-    "evolves_to": "Swifton",
     "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 16,
-        "evolves_to": "Swifton"
-      },
-      {
-        "type": "stone",
-        "stone": "moon_stone",
-        "evolves_to": "Swifton"
-      }
-    ]
+    "mythical": false
   },
   {
-    "name": "Swifton",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
+    "name": "Verdama",
+    "sprite": "verdama.png",
+    "nickname": "Florafang",
+    "typing": ["Plant"],
+    "description": "Verdama dwells in ancient groves, its fur covered in flowering vines. When it howls, entire forests bloom in response. It is the guardian of balance in the wild.",
+    "appearance": "A moss-green wolf with leaves sprouting from its back and tail. Small flowers illuminate its path at night.",
+    "height": 1.7,
+    "weight": 84.0,
     "base_stats": {
-      "hp": 83,
-      "attack": 91,
-      "defense": 92,
-      "sp_attack": 83,
-      "sp_defense": 72,
-      "speed": 55,
-      "total": 476
+      "hp": 100,
+      "attack": 110,
+      "defense": 100,
+      "sp_attack": 95,
+      "sp_defense": 120,
+      "speed": 75,
+      "total": 600
     },
-    "shiny_boost": {
-      "stat": "sp_attack",
-      "bonus": 10
-    },
-    "abilities": [
-      "Run Away",
-      "Adaptability"
-    ],
+    "abilities": ["Overgrow", "Verdant Roar"],
     "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
+      { "move_key": "razor_leaf", "level": 1 },
+      { "move_key": "seed_bomb", "level": 20 },
+      { "move_key": "synthesis", "level": 30 },
+      { "move_key": "leaf_blade", "level": 42 },
+      { "move_key": "petal_dance", "level": 50 },
+      { "move_key": "bloom_strike", "level": 60 }
     ],
-    "evolves_to": "Swiftlord",
     "legendary": false,
-    "mythical": false,
-    "evolution_requirements": [
-      {
-        "type": "level",
-        "level": 36,
-        "evolves_to": "Swiftlord"
-      },
-      {
-        "type": "stone",
-        "stone": "moon_stone",
-        "evolves_to": "Swiftlord"
-      }
-    ]
+    "mythical": false
   },
   {
-    "name": "Swiftlord",
-    "sprite": "terraplant.png",
-    "typing": [
-      "Normal"
-    ],
+    "name": "Runaris",
+    "sprite": "runaris.png",
+    "nickname": "Runefang",
+    "typing": ["Normal"],
+    "description": "Runaris embodies adaptability. Its fur shimmers with subtle patterns resembling ancient runes. It channels the aura of all elements without truly belonging to any.",
+    "appearance": "A silver-gray wolf with multicolored runic etchings flowing across its body like living lines of code.",
+    "height": 1.5,
+    "weight": 79.5,
     "base_stats": {
-      "hp": 104,
-      "attack": 62,
-      "defense": 113,
-      "sp_attack": 73,
-      "sp_defense": 76,
-      "speed": 98,
-      "total": 526
+      "hp": 100,
+      "attack": 115,
+      "defense": 95,
+      "sp_attack": 90,
+      "sp_defense": 95,
+      "speed": 90,
+      "total": 585
     },
-    "shiny_boost": {
-      "stat": "defense",
-      "bonus": 10
-    },
-    "abilities": [
-      "Inner Focus",
-      "Run Away"
-    ],
+    "abilities": ["Adapt", "Balanced Heart"],
     "moveset": [
-      {
-        "move_key": "tackle",
-        "level": 1
-      },
-      {
-        "move_key": "quick_attack",
-        "level": 1
-      },
-      {
-        "move_key": "bite",
-        "level": 1
-      },
-      {
-        "move_key": "body_slam",
-        "level": 36
-      },
-      {
-        "move_key": "hyper_beam",
-        "level": 50
-      }
+      { "move_key": "quick_attack", "level": 1 },
+      { "move_key": "focus_energy", "level": 10 },
+      { "move_key": "bite", "level": 20 },
+      { "move_key": "hyper_fang", "level": 28 },
+      { "move_key": "safeguard", "level": 35 },
+      { "move_key": "runic_strike", "level": 50 },
+      { "move_key": "extreme_speed", "level": 60 }
     ],
-    "evolves_to": null,
     "legendary": false,
-    "mythical": false,
-    "evolution_requirements": []
+    "mythical": false
+  },
+  {
+    "name": "Noctyros",
+    "sprite": "noctyros.png",
+    "nickname": "Lunafang",
+    "typing": ["Dark"],
+    "description": "Noctyros stalks moonless nights, blending perfectly into shadow. Its breath steals warmth and light, leaving behind silence and dread. Feared as the omen of the eclipsed moon.",
+    "appearance": "A sleek black wolf with violet eyes and shadow-striped fur that seems to absorb light.",
+    "height": 1.8,
+    "weight": 86.5,
+    "base_stats": {
+      "hp": 85,
+      "attack": 140,
+      "defense": 95,
+      "sp_attack": 90,
+      "sp_defense": 100,
+      "speed": 85,
+      "total": 595
+    },
+    "abilities": ["Shadow Prowl", "Intimidate"],
+    "moveset": [
+      { "move_key": "bite", "level": 1 },
+      { "move_key": "night_slash", "level": 20 },
+      { "move_key": "feint_attack", "level": 28 },
+      { "move_key": "dark_pulse", "level": 40 },
+      { "move_key": "shadow_claw", "level": 48 },
+      { "move_key": "void_fang", "level": 58 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Solarune",
+    "sprite": "solarune.png",
+    "nickname": "Solfang",
+    "typing": ["Light"],
+    "description": "Solarune is a radiant guardian said to appear when dawn breaks after long wars. Its light erases corruption, and its howl heals the hearts of those nearby.",
+    "appearance": "Golden-white wolf wreathed in faint halo light. Its eyes burn like tiny suns.",
+    "height": 1.8,
+    "weight": 85.0,
+    "base_stats": {
+      "hp": 100,
+      "attack": 115,
+      "defense": 100,
+      "sp_attack": 110,
+      "sp_defense": 110,
+      "speed": 80,
+      "total": 615
+    },
+    "abilities": ["Radiant Guard", "Inspire"],
+    "moveset": [
+      { "move_key": "light_beam", "level": 1 },
+      { "move_key": "holy_roar", "level": 26 },
+      { "move_key": "heal_bell", "level": 34 },
+      { "move_key": "dazzling_gleam", "level": 42 },
+      { "move_key": "solar_guard", "level": 58 },
+      { "move_key": "light_of_judgment", "level": 66 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Gravulor",
+    "sprite": "gravulor.png",
+    "nickname": "Terrafang",
+    "typing": ["Ground"],
+    "description": "Gravulor’s steps shake the soil and awaken mountains. It builds dens in rocky caverns and protects them with natural barriers of stone and dust.",
+    "appearance": "Massive earth-toned wolf with thick armor plates and crystal claws.",
+    "height": 2.0,
+    "weight": 110.3,
+    "base_stats": {
+      "hp": 110,
+      "attack": 135,
+      "defense": 120,
+      "sp_attack": 70,
+      "sp_defense": 85,
+      "speed": 65,
+      "total": 585
+    },
+    "abilities": ["Sand Rush", "Earth Shatter"],
+    "moveset": [
+      { "move_key": "mud_slap", "level": 1 },
+      { "move_key": "stomp", "level": 14 },
+      { "move_key": "rock_slide", "level": 30 },
+      { "move_key": "bulldoze", "level": 38 },
+      { "move_key": "earthquake", "level": 48 },
+      { "move_key": "tectonic_howl", "level": 55 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Wraithound",
+    "sprite": "wraithound.png",
+    "nickname": "Phantomfang",
+    "typing": ["Ghost"],
+    "description": "Wraithound drifts at the boundary between life and death. Many believe it guides lost spirits to the afterlife, though its chilling eyes see both worlds at once.",
+    "appearance": "A translucent wolf whose body flickers like fading smoke. Its howl echoes as overlapping whispers.",
+    "height": 1.6,
+    "weight": 0,
+    "base_stats": {
+      "hp": 80,
+      "attack": 125,
+      "defense": 90,
+      "sp_attack": 120,
+      "sp_defense": 90,
+      "speed": 85,
+      "total": 590
+    },
+    "abilities": ["Spectral Step", "Cursed Howl"],
+    "moveset": [
+      { "move_key": "shadow_sneak", "level": 1 },
+      { "move_key": "hex", "level": 20 },
+      { "move_key": "phantom_force", "level": 30 },
+      { "move_key": "ominous_wind", "level": 38 },
+      { "move_key": "spirit_claw", "level": 56 },
+      { "move_key": "soul_drain", "level": 65 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Tempestral",
+    "sprite": "tempestral.png",
+    "nickname": "Skyfang",
+    "typing": ["Air"],
+    "description": "Tempestral races through storms faster than wind can chase its tail. Its mere passing births tornados; its presence clears the air itself.",
+    "appearance": "Feathered wolf with wispy wings of vapor and lightning eyes. Its paws barely touch the ground.",
+    "height": 1.7,
+    "weight": 61.2,
+    "base_stats": {
+      "hp": 80,
+      "attack": 100,
+      "defense": 75,
+      "sp_attack": 95,
+      "sp_defense": 85,
+      "speed": 145,
+      "total": 580
+    },
+    "abilities": ["Wind Rush", "Evasion Current"],
+    "moveset": [
+      { "move_key": "gust", "level": 1 },
+      { "move_key": "bite", "level": 10 },
+      { "move_key": "air_slash", "level": 25 },
+      { "move_key": "tailwind", "level": 34 },
+      { "move_key": "acrobatics", "level": 42 },
+      { "move_key": "sky_roar", "level": 53 },
+      { "move_key": "hurricane", "level": 60 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Cryovelis",
+    "sprite": "cryovelis.png",
+    "nickname": "Frostfang",
+    "typing": ["Ice"],
+    "description": "Born of glacial storms, Cryovelis howls across frozen plains. Though beautiful, its touch can halt hearts in an instant.",
+    "appearance": "Pale-blue fur shimmering with frost. Its breath releases snowflakes, and its eyes glow like frozen moons.",
+    "height": 1.6,
+    "weight": 72.8,
+    "base_stats": {
+      "hp": 85,
+      "attack": 95,
+      "defense": 70,
+      "sp_attack": 120,
+      "sp_defense": 80,
+      "speed": 125,
+      "total": 575
+    },
+    "abilities": ["Snow Cloak", "Frozen Heart"],
+    "moveset": [
+      { "move_key": "powder_snow", "level": 1 },
+      { "move_key": "bite", "level": 10 },
+      { "move_key": "ice_fang", "level": 20 },
+      { "move_key": "blizzard", "level": 36 },
+      { "move_key": "icy_wind", "level": 44 },
+      { "move_key": "hailstorm", "level": 50 },
+      { "move_key": "glacial_pride", "level": 60 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Voltalis",
+    "sprite": "voltalis.png",
+    "nickname": "Shockfang",
+    "typing": ["Electric"],
+    "description": "Voltalis runs faster than thunder and can turn entire fields into lightning webs. It stores energy in its fur for devastating discharges.",
+    "appearance": "A wolf of bright yellow fur streaked with jagged black patterns. Its tail sparks constantly.",
+    "height": 1.6,
+    "weight": 77.5,
+    "base_stats": {
+      "hp": 90,
+      "attack": 100,
+      "defense": 80,
+      "sp_attack": 120,
+      "sp_defense": 85,
+      "speed": 115,
+      "total": 590
+    },
+    "abilities": ["Static", "Overcharge"],
+    "moveset": [
+      { "move_key": "thunder_shock", "level": 1 },
+      { "move_key": "bite", "level": 12 },
+      { "move_key": "spark", "level": 22 },
+      { "move_key": "discharge", "level": 35 },
+      { "move_key": "wild_charge", "level": 42 },
+      { "move_key": "volt_howl", "level": 55 },
+      { "move_key": "thunder", "level": 62 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Venomaris",
+    "sprite": "venomaris.png",
+    "nickname": "Toxifang",
+    "typing": ["Toxic"],
+    "description": "Venomaris prowls swamps veiled in haze, its breath a miasma that wilts metal and bone alike. It strikes swiftly, letting poison finish what its fangs begin.",
+    "appearance": "A dark violet wolf with green luminescent veins pulsing under translucent skin. Toxic fumes trail from its snarling jaws.",
+    "height": 1.8,
+    "weight": 82.5,
+    "base_stats": {
+      "hp": 90,
+      "attack": 105,
+      "defense": 85,
+      "sp_attack": 110,
+      "sp_defense": 95,
+      "speed": 100,
+      "total": 585
+    },
+    "abilities": ["Poison Touch", "Toxic Surge"],
+    "moveset": [
+      { "move_key": "poison_fang", "level": 1 },
+      { "move_key": "acid_spray", "level": 15 },
+      { "move_key": "toxic_spikes", "level": 25 },
+      { "move_key": "sludge_bomb", "level": 38 },
+      { "move_key": "venom_bite", "level": 48 },
+      { "move_key": "corrosive_roar", "level": 60 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Ferronyx",
+    "sprite": "ferronyx.png",
+    "nickname": "Steelfang",
+    "typing": ["Metal"],
+    "description": "Ferronyx’s body is forged from living steel. It guards ancient ruins, its roar echoing like clashing blades. Even legends hesitate to strike it head‑on.",
+    "appearance": "A metallic wolf whose silver armor plates shift like interlocking gears. Its claws leave sparks with every step.",
+    "height": 1.9,
+    "weight": 128.7,
+    "base_stats": {
+      "hp": 100,
+      "attack": 115,
+      "defense": 130,
+      "sp_attack": 85,
+      "sp_defense": 110,
+      "speed": 65,
+      "total": 605
+    },
+    "abilities": ["Iron Barbs", "Gear Guard"],
+    "moveset": [
+      { "move_key": "metal_claw", "level": 1 },
+      { "move_key": "iron_defense", "level": 18 },
+      { "move_key": "flash_cannon", "level": 30 },
+      { "move_key": "steel_bite", "level": 42 },
+      { "move_key": "heavy_slam", "level": 50 },
+      { "move_key": "ferro_roar", "level": 60 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Eclipsera",
+    "sprite": "eclipsera.png",
+    "nickname": "Shadefang",
+    "typing": ["Dark", "Light"],
+    "description": "Eclipsera embodies the meeting of radiance and void. Its howl signals balance between creation and decay. For a fleeting instant, shadows and light obey its call.",
+    "appearance": "Half its body shines with golden fur, the other half draped in shifting shadow. A thin halo and dark crescent orbit above its head.",
+    "height": 1.8,
+    "weight": 84.2,
+    "base_stats": {
+      "hp": 100,
+      "attack": 130,
+      "defense": 95,
+      "sp_attack": 115,
+      "sp_defense": 105,
+      "speed": 85,
+      "total": 630
+    },
+    "abilities": ["Dual Eclipse", "Balance Break"],
+    "moveset": [
+      { "move_key": "dark_pulse", "level": 1 },
+      { "move_key": "light_beam", "level": 1 },
+      { "move_key": "holy_roar", "level": 26 },
+      { "move_key": "shadow_claw", "level": 32 },
+      { "move_key": "dazzling_gleam", "level": 42 },
+      { "move_key": "umbra_flash", "level": 56 }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+
+  {
+    "name": "Lumidrake",
+    "sprite": "lumidrake.png",
+    "typing": ["Light"],
+    "description": "Lumidrake channels the brilliance of dawn, bringing order and clarity where chaos reigns. Legends say its presence banishes all deceit and shadow.",
+    "appearance": "Sleek and radiant dragon with opalescent scales that refract light like stained glass. Its wings shimmer in gold and silver as if woven from sunlight.",
+    "height": 2.3,
+    "weight": 80,
+    "base_stats": {
+      "hp": 95,
+      "attack": 90,
+      "defense": 120,
+      "sp_attack": 120,
+      "sp_defense": 125,
+      "speed": 50,
+      "total": 700
+    },
+    "shiny_boost": { "stat": "sp_attack", "bonus": 10 },
+    "abilities": ["Solar Grace", "Light Veil"],
+    "moveset": [
+      { "move_key": "dragon_breath", "level": 1 },
+      { "move_key": "holy_light", "level": 1 },
+      { "move_key": "focus_energy", "level": 5 },
+      { "move_key": "flash_pulse", "level": 10 },
+      { "move_key": "mirror_coat", "level": 20 },
+      { "move_key": "dragon_pulse", "level": 30 },
+      { "move_key": "radiant_blast", "level": 40 },
+      { "move_key": "calm_mind", "level": 45 },
+      { "move_key": "solar_beam", "level": 55 },
+      { "move_key": "divine_roar", "level": 65 }
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "name": "Umbradrake",
+    "sprite": "umbradrake.png",
+    "typing": ["Dark"],
+    "description": "Umbradrake commands the endless night, consuming all luminance to reveal truth through absence. Together with Lumidrake, it keeps the balance of creation and collapse.",
+    "appearance": "A serpentine dragon cloaked in rippling shadow. Its scales look like broken shards of glass reflecting dim stars, and its red eyes cut through darkness.",
+    "height": 2.4,
+    "weight": 84,
+    "base_stats": {
+      "hp": 95,
+      "attack": 125,
+      "defense": 100,
+      "sp_attack": 90,
+      "sp_defense": 110,
+      "speed": 80,
+      "total": 700
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 10 },
+    "abilities": ["Eclipse Aura", "Shadow Pressure"],
+    "moveset": [
+      { "move_key": "dragon_breath", "level": 1 },
+      { "move_key": "dark_pulse", "level": 1 },
+      { "move_key": "focus_energy", "level": 5 },
+      { "move_key": "night_slash", "level": 10 },
+      { "move_key": "ominous_wind", "level": 20 },
+      { "move_key": "dragon_claw", "level": 30 },
+      { "move_key": "void_crash", "level": 40 },
+      { "move_key": "iron_defense", "level": 45 },
+      { "move_key": "crunch", "level": 55 },
+      { "move_key": "shadow_cataclysm", "level": 65 }
+    ],
+    "legendary": true,
+    "mythical": false
+  },
+  {
+    "name": "Eclipserion",
+    "sprite": "eclipserion.png",
+    "typing": ["Ghost", "Dark"],
+    "description": "Eclipserion is the embodiment of endings — the stillness between light and shadow. Said to arise when Lumidrake and Umbradrake vanish, it governs the cycle’s pause with infinite calm.",
+    "appearance": "A translucent dragon with a ring-like mane resembling an eclipse corona. Its body seems half-solid, phasing between physical and spectral states.",
+    "height": 3.0,
+    "weight": 70,
+    "base_stats": {
+      "hp": 120,
+      "attack": 110,
+      "defense": 110,
+      "sp_attack": 150,
+      "sp_defense": 150,
+      "speed": 160,
+      "total": 800
+    },
+    "shiny_boost": { "stat": "speed", "bonus": 10 },
+    "abilities": ["Spectral Equilibrium", "Phase Shift"],
+    "moveset": [
+      { "move_key": "shadow_sneak", "level": 1 },
+      { "move_key": "dragon_pulse", "level": 1 },
+      { "move_key": "focus_energy", "level": 5 },
+      { "move_key": "night_shade", "level": 10 },
+      { "move_key": "ancient_power", "level": 20 },
+      { "move_key": "dragon_dance", "level": 30 },
+      { "move_key": "spirit_break", "level": 40 },
+      { "move_key": "phantom_force", "level": 50 },
+      { "move_key": "dimension_collapse", "level": 60 },
+      { "move_key": "eternal_eclipse", "level": 70 }
+    ],
+    "legendary": false,
+    "mythical": true
   }
 ]

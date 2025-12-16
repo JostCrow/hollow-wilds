@@ -4,66 +4,79 @@
       "key": "route-one",
       "name": "Route 1",
       "description": "A peaceful route with tall grass and wild Pokemon",
-      "battle": "route-one.png",
-      "tileSize": 32,
-      "tiles": {
-        "map": [
-          "gggggggggggggggggggeeggggggggggggggg",
-          "gggggggggggggggggggppggggggggggggggg",
-          "ggggggggggggggggpppppggggggggggggggg",
-          "ggggggggggggggggpggggggggggggggggggg",
-          "ggggggggggggggggpggggggggggggggggggg",
-          "ggggggggggggggggpggggggggggggggggggg",
-          "ggggggggggggggggpggggggggggggggggggg",
-          "ggggggggggggggggpggggggggggggggggggg",
-          "ggggggggggggggggpggggggggggggggggggg",
-          "ggggggggggggggggpggggggggggggggggggg",
-          "ggggggggggggggggpggggggggggggggggggg",
-          "ggggggggggggggggpggggggggggggggggggg",
-          "ggggggggggggggggppppppppppppppppgggg",
-          "gggggggggggggggggggggggggggggggpgggg",
-          "gggggggggggggggggggggggggggggggpgggg",
-          "gggggggggpppppppppppppppppppppppgggg",
-          "gggggggggpgggggggggggggggggggggggggg",
-          "gggggggggpggggggggggggggppppppgggggg",
-          "gggggggggpggggggggggggggpggggpgggggg",
-          "gggggggggpggggggggggggggpggggpgggggg",
-          "gggggggggppppppppppppppppggggpgggggg",
-          "gggggggggggggggggggggggggggggpgggggg",
-          "gggggggggggggggggggpppppppppppgggggg",
-          "gggggggggggggggggggppggggggggggggggg",
-          "gggggggggggggggggggeeggggggggggggggg"
-        ],
-        "legend": {
-          "g": "grass",
-          "p": "path-full",
-          "e": "exit-path"
+      "background": "assets/aurelia/route-1.webp",
+      "collisions": [
+        {
+          "x": 0,
+          "y": 0,
+          "width": 160,
+          "height": 160,
+          "name": "tree-top-left"
+        },
+        {
+          "x": 0,
+          "y": 160,
+          "width": 64,
+          "height": 356,
+          "name": "tree-top-left"
+        },
+        {
+          "x": 912,
+          "y": 0,
+          "width": 112,
+          "height": 351,
+          "name": "tree-top-right"
+        },
+        {
+          "x": 0,
+          "y": 1048,
+          "width": 162,
+          "height": 491,
+          "name": "tree-bottom-left"
+        },
+        {
+          "x": 902,
+          "y": 1099,
+          "width": 122,
+          "height": 369,
+          "name": "tree-bottom-right"
+        },
+        {
+          "x": 919,
+          "y": 1492,
+          "width": 105,
+          "height": 44,
+          "name": "tree-bottom-right"
+        },
+        {
+          "x": 0,
+          "y": 548,
+          "width": 496,
+          "height": 42,
+          "name": "dirt-strip-left"
+        },
+        {
+          "x": 476,
+          "y": 831,
+          "width": 548,
+          "height": 46,
+          "name": "dirt-strip-right"
         }
-      },
+      ],
+      "battle": "grass.png",
       "spawn": {
         "default": {
-          "tx": 20,
-          "ty": 12
+          "tx": 840,
+          "ty": 1524
         },
         "from-willowfen-village": {
-          "tx": 20,
-          "ty": 23
+          "tx": 840,
+          "ty": 1524
         },
         "from-viridian-city": {
           "tx": 20,
           "ty": 1
         }
-      },
-      "boundaries": {
-        "walkable": [
-          {
-            "tx": 0,
-            "ty": 0,
-            "w": 40,
-            "h": 25
-          }
-        ],
-        "blocked": []
       },
       "exits": [
         {
@@ -92,7 +105,7 @@
       "creatures": {
         "grass": [
           {
-            "name": "Flamcub",
+            "name": "Rivanos",
             "level": [
               2,
               4
@@ -100,7 +113,7 @@
             "chance": 40
           },
           {
-            "name": "Aquapup",
+            "name": "Flarepib",
             "level": [
               2,
               5
@@ -108,7 +121,7 @@
             "chance": 35
           },
           {
-            "name": "Terraplant",
+            "name": "Verdreep",
             "level": [
               3,
               5
@@ -116,7 +129,31 @@
             "chance": 25
           },
           {
-            "name": "Mystryon",
+            "name": "Pupawn",
+            "level": [
+              3,
+              15
+            ],
+            "chance": 50
+          },
+          {
+            "name": "Lumidrake",
+            "level": [
+              1,
+              5
+            ],
+            "chance": 0.0001
+          },
+          {
+            "name": "Umbradrake",
+            "level": [
+              1,
+              5
+            ],
+            "chance": 0.0001
+          },
+          {
+            "name": "Eclipserion",
             "level": [
               1,
               5
@@ -124,175 +161,55 @@
             "chance": 0.0001
           }
         ]
-      },
-      "objects": [
-        {
-          "type": "fence",
-          "tx": 10,
-          "ty": 16,
-          "w": 26,
-          "h": 1,
-          "blocks": true,
-          "layer": "below"
-        },
-        {
-          "type": "tree",
-          "tx": 0,
-          "ty": 0,
-          "w": 19,
-          "h": 1,
-          "blocks": true,
-          "layer": "below"
-        },
-        {
-          "type": "tree",
-          "tx": 21,
-          "ty": 0,
-          "w": 15,
-          "h": 1,
-          "blocks": true,
-          "layer": "below"
-        },
-        {
-          "type": "tree",
-          "tx": 19,
-          "ty": 21,
-          "w": 10,
-          "h": 1,
-          "blocks": true,
-          "layer": "below"
-        },
-        {
-          "type": "tree",
-          "tx": 18,
-          "ty": 21,
-          "w": 1,
-          "h": 4,
-          "blocks": true,
-          "layer": "below"
-        },
-        {
-          "type": "tall_grass",
-          "tx": 25,
-          "ty": 18,
-          "w": 4,
-          "h": 3,
-          "blocks": false,
-          "layer": "above"
-        },
-        {
-          "type": "tall_grass",
-          "tx": 0,
-          "ty": 21,
-          "w": 18,
-          "h": 4,
-          "blocks": false,
-          "layer": "above"
-        },
-        {
-          "type": "tall_grass",
-          "tx": 10,
-          "ty": 17,
-          "w": 14,
-          "h": 3,
-          "blocks": false,
-          "layer": "above"
-        }
-      ]
+      }
     },
     {
       "key": "willowfen-village",
       "name": "Willowfen Village",
       "description": "A quiet town where winds tell tales of a world of Pokemon",
-      "tileSize": 32,
-      "tiles": {
-        "map": [
-          "gggggggggggggeeggggggggggggggggggggg",
-          "gggggggggggggppggggggggggggggggggggg",
-          "gggggggggggggppggggggggggggggggggggg",
-          "gggggggggggggppppppppppppppppppggggg",
-          "gggggggggggggpgggggggggggggggppggggg",
-          "gggggggggggggpgggggggggggggggppggggg",
-          "ggggggppppppppgggggggggggggggppggggg",
-          "ggggggpggggggggggggggggggggggppggggg",
-          "ggggggpggggggggggggggggggggppppggggg",
-          "ggggggpggggggggggggggggggggppggggggg",
-          "ggggggpppppppggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg",
-          "gggggggggggggggggggggggggggggggggggg"
-        ],
-        "legend": {
-          "g": "grass",
-          "p": "path-full",
-          "e": "exit-path"
+      "background": "assets/aurelia/willowfen-village.png",
+      "collisions": [
+        {
+          "x": 433,
+          "y": 338,
+          "width": 158,
+          "height": 188,
+          "name": "well"
         }
-      },
+      ],
       "spawn": {
         "default": {
-          "tx": 15,
-          "ty": 10
+          "tx": 400,
+          "ty": 496
         },
         "from-route-one": {
-          "tx": 15,
-          "ty": 1
-        },
-        "from-home": {
-          "tx": 5,
-          "ty": 10
+          "tx": 304,
+          "ty": 1024
         }
-      },
-      "boundaries": {
-        "walkable": [
-          {
-            "tx": 0,
-            "ty": 0,
-            "w": 30,
-            "h": 20
-          }
-        ],
-        "blocked": []
       },
       "exits": [
         {
           "id": "north-exit",
           "area": {
-            "tx": 13,
-            "ty": 0,
-            "w": 2,
-            "h": 1
+            "tx": 296,
+            "ty": 1024,
+            "w": 12,
+            "h": 10
           },
           "destination": "route-one",
           "spawnPoint": "from-willowfen-village"
-        },
-        {
-          "id": "home-entrance",
-          "area": {
-            "tx": 5,
-            "ty": 9,
-            "w": 1,
-            "h": 1
-          },
-          "destination": "player-house",
-          "spawnPoint": "from-outside"
         }
       ],
       "npcs": [
         {
-          "id": "oak",
-          "name": "Professor Oak",
+          "id": "vendor",
+          "name": "Item Vendor",
           "position": {
             "tx": 15,
             "ty": 5
           },
-          "sprite": "professor-oak",
-          "dialogue": "Hello there! Welcome to the world of Pokemon!"
+          "sprite": "male",
+          "dialogue": "Welcome! I have various items for sale. Press SPACE to browse my shop!"
         }
       ],
       "objects": [
@@ -305,61 +222,6 @@
           "blocks": true,
           "layer": "above",
           "stretch": true
-        },
-        {
-          "type": "house2",
-          "tx": 25,
-          "ty": 12,
-          "w": 4,
-          "h": 4,
-          "blocks": true,
-          "layer": "above",
-          "stretch": true
-        },
-        {
-          "type": "tree",
-          "tx": 0,
-          "ty": 0,
-          "w": 13,
-          "h": 1,
-          "blocks": true,
-          "layer": "below"
-        },
-        {
-          "type": "tree",
-          "tx": 15,
-          "ty": 0,
-          "w": 21,
-          "h": 1,
-          "blocks": true,
-          "layer": "below"
-        },
-        {
-          "type": "tree",
-          "tx": 0,
-          "ty": 1,
-          "w": 1,
-          "h": 17,
-          "blocks": true,
-          "layer": "below"
-        },
-        {
-          "type": "tree",
-          "tx": 35,
-          "ty": 1,
-          "w": 1,
-          "h": 17,
-          "blocks": true,
-          "layer": "below"
-        },
-        {
-          "type": "tree",
-          "tx": 0,
-          "ty": 18,
-          "w": 37,
-          "h": 2,
-          "blocks": true,
-          "layer": "below"
         }
       ]
     },
@@ -367,7 +229,8 @@
       "key": "viridian-city",
       "name": "Viridian City",
       "description": "A beautiful city that is enveloped by green year round",
-      "background": "viridian-city.png",
+      "background": "assets/aurelia/willowfen-village.png",
+      "battle": "grass.png",
       "tileSize": 32,
       "tiles": {
         "map": [
@@ -394,7 +257,7 @@
         ],
         "legend": {
           "g": "grass",
-          "p": "path",
+          "p": "path-full",
           "e": "exit-path"
         }
       },
@@ -470,7 +333,8 @@
       "key": "route-two",
       "name": "Route 2",
       "description": "A route north of Viridian City with denser forests and stronger wild Pokemon",
-      "background": "route-two.png",
+      "background": "assets/aurelia/route-1.webp",
+      "battle": "grass.png",
       "tileSize": 32,
       "tiles": {
         "map": [
@@ -581,6 +445,7 @@
       "key": "player-house",
       "name": "Player's House",
       "description": "Your cozy home in Willowfen Village",
+      "background": "assets/aurelia/willowfen-village.png",
       "tileSize": 32,
       "tiles": {
         "map": [
@@ -607,7 +472,7 @@
         ],
         "legend": {
           "p": "path-full",
-          "w": "wall",
+          "w": "path-full",
           "e": "exit-path"
         }
       },
@@ -651,6 +516,7 @@
       "key": "pokemon-center",
       "name": "Pokemon Center",
       "description": "A place to heal your Pokemon",
+      "background": "assets/aurelia/willowfen-village.png",
       "tileSize": 32,
       "tiles": {
         "map": [
@@ -677,7 +543,7 @@
         ],
         "legend": {
           "p": "path-full",
-          "w": "wall",
+          "w": "path-full",
           "e": "exit-path"
         }
       },

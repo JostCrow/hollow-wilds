@@ -185,7 +185,7 @@
     "max_uses": 25,
     "power": 55,
     "accuracy": 95,
-    "type": "Grass",
+    "type": "Plant",
     "category": "special"
   },
   "vine_whip": {
@@ -194,7 +194,7 @@
     "max_uses": 25,
     "power": 45,
     "accuracy": 100,
-    "type": "Grass",
+    "type": "Plant",
     "category": "physical"
   },
   "magical_leaf": {
@@ -203,7 +203,7 @@
     "max_uses": 20,
     "power": 60,
     "accuracy": 100,
-    "type": "Grass",
+    "type": "Plant",
     "category": "special"
   },
   "solar_beam": {
@@ -212,7 +212,7 @@
     "max_uses": 10,
     "power": 120,
     "accuracy": 100,
-    "type": "Grass",
+    "type": "Plant",
     "category": "special"
   },
   "leaf_storm": {
@@ -221,7 +221,7 @@
     "max_uses": 5,
     "power": 130,
     "accuracy": 90,
-    "type": "Grass",
+    "type": "Plant",
     "category": "special"
   },
   "energy_ball": {
@@ -230,7 +230,7 @@
     "max_uses": 10,
     "power": 90,
     "accuracy": 100,
-    "type": "Grass",
+    "type": "Plant",
     "category": "special"
   },
   "seed_bomb": {
@@ -239,7 +239,7 @@
     "max_uses": 15,
     "power": 80,
     "accuracy": 100,
-    "type": "Grass",
+    "type": "Plant",
     "category": "physical"
   },
   "thunder_shock": {
@@ -338,7 +338,7 @@
     "max_uses": 25,
     "power": 50,
     "accuracy": 100,
-    "type": "Fighting",
+    "type": "Normal",
     "category": "physical"
   },
   "brick_break": {
@@ -347,7 +347,7 @@
     "max_uses": 15,
     "power": 75,
     "accuracy": 100,
-    "type": "Fighting",
+    "type": "Normal",
     "category": "physical"
   },
   "close_combat": {
@@ -356,7 +356,7 @@
     "max_uses": 5,
     "power": 120,
     "accuracy": 100,
-    "type": "Fighting",
+    "type": "Normal",
     "category": "physical"
   },
   "focus_blast": {
@@ -365,7 +365,7 @@
     "max_uses": 5,
     "power": 120,
     "accuracy": 70,
-    "type": "Fighting",
+    "type": "Normal",
     "category": "special"
   },
   "poison_sting": {
@@ -374,7 +374,7 @@
     "max_uses": 35,
     "power": 15,
     "accuracy": 100,
-    "type": "Poison",
+    "type": "Toxic",
     "category": "physical"
   },
   "sludge_bomb": {
@@ -383,7 +383,7 @@
     "max_uses": 10,
     "power": 90,
     "accuracy": 100,
-    "type": "Poison",
+    "type": "Toxic",
     "category": "special"
   },
   "poison_jab": {
@@ -392,7 +392,7 @@
     "max_uses": 20,
     "power": 80,
     "accuracy": 100,
-    "type": "Poison",
+    "type": "Toxic",
     "category": "physical"
   },
   "earthquake": {
@@ -428,7 +428,7 @@
     "max_uses": 15,
     "power": 75,
     "accuracy": 95,
-    "type": "Flying",
+    "type": "Air",
     "category": "special"
   },
   "hurricane": {
@@ -437,7 +437,7 @@
     "max_uses": 10,
     "power": 110,
     "accuracy": 70,
-    "type": "Flying",
+    "type": "Air",
     "category": "special"
   },
   "aerial_ace": {
@@ -446,7 +446,7 @@
     "max_uses": 20,
     "power": 60,
     "accuracy": 100,
-    "type": "Flying",
+    "type": "Air",
     "category": "physical"
   },
   "psychic": {
@@ -455,7 +455,7 @@
     "max_uses": 10,
     "power": 90,
     "accuracy": 100,
-    "type": "Psychic",
+    "type": "Dark",
     "category": "special"
   },
   "psybeam": {
@@ -464,7 +464,7 @@
     "max_uses": 20,
     "power": 65,
     "accuracy": 100,
-    "type": "Psychic",
+    "type": "Dark",
     "category": "special"
   },
   "future_sight": {
@@ -473,7 +473,7 @@
     "max_uses": 10,
     "power": 120,
     "accuracy": 100,
-    "type": "Psychic",
+    "type": "Light",
     "category": "special"
   },
   "bug_bite": {
@@ -482,7 +482,7 @@
     "max_uses": 20,
     "power": 60,
     "accuracy": 100,
-    "type": "Bug",
+    "type": "Plant",
     "category": "physical"
   },
   "x_scissor": {
@@ -491,7 +491,7 @@
     "max_uses": 15,
     "power": 80,
     "accuracy": 100,
-    "type": "Bug",
+    "type": "Plant",
     "category": "physical"
   },
   "megahorn": {
@@ -500,7 +500,7 @@
     "max_uses": 10,
     "power": 120,
     "accuracy": 85,
-    "type": "Bug",
+    "type": "Plant",
     "category": "physical"
   },
   "rock_throw": {
@@ -509,7 +509,7 @@
     "max_uses": 15,
     "power": 50,
     "accuracy": 90,
-    "type": "Rock",
+    "type": "Ground",
     "category": "physical"
   },
   "rock_slide": {
@@ -518,7 +518,7 @@
     "max_uses": 10,
     "power": 75,
     "accuracy": 90,
-    "type": "Rock",
+    "type": "Ground",
     "category": "physical"
   },
   "stone_edge": {
@@ -527,7 +527,7 @@
     "max_uses": 5,
     "power": 100,
     "accuracy": 80,
-    "type": "Rock",
+    "type": "Ground",
     "category": "physical"
   },
   "shadow_ball": {
@@ -563,7 +563,7 @@
     "max_uses": 15,
     "power": 80,
     "accuracy": 100,
-    "type": "Dragon",
+    "type": "Dark",
     "category": "physical"
   },
   "dragon_pulse": {
@@ -572,7 +572,7 @@
     "max_uses": 10,
     "power": 85,
     "accuracy": 100,
-    "type": "Dragon",
+    "type": "Dark",
     "category": "special"
   },
   "outrage": {
@@ -581,7 +581,7 @@
     "max_uses": 10,
     "power": 120,
     "accuracy": 100,
-    "type": "Dragon",
+    "type": "Normal",
     "category": "physical"
   },
   "dark_pulse": {
@@ -617,7 +617,7 @@
     "max_uses": 15,
     "power": 100,
     "accuracy": 75,
-    "type": "Steel",
+    "type": "Metal",
     "category": "physical"
   },
   "steel_wing": {
@@ -626,7 +626,7 @@
     "max_uses": 25,
     "power": 70,
     "accuracy": 90,
-    "type": "Steel",
+    "type": "Metal",
     "category": "physical"
   },
   "flash_cannon": {
@@ -635,7 +635,7 @@
     "max_uses": 10,
     "power": 80,
     "accuracy": 100,
-    "type": "Steel",
+    "type": "Metal",
     "category": "special"
   },
   "moonblast": {
@@ -644,7 +644,7 @@
     "max_uses": 15,
     "power": 95,
     "accuracy": 100,
-    "type": "Fairy",
+    "type": "Light",
     "category": "special"
   },
   "dazzling_gleam": {
@@ -653,7 +653,7 @@
     "max_uses": 10,
     "power": 80,
     "accuracy": 100,
-    "type": "Fairy",
+    "type": "Light",
     "category": "special"
   },
   "play_rough": {
@@ -662,7 +662,7 @@
     "max_uses": 10,
     "power": 90,
     "accuracy": 90,
-    "type": "Fairy",
+    "type": "Light",
     "category": "physical"
   },
   "heal": {
@@ -689,7 +689,7 @@
     "max_uses": 10,
     "power": 0,
     "accuracy": 100,
-    "type": "Psychic",
+    "type": "Light",
     "category": "status"
   },
   "toxic": {
@@ -698,7 +698,7 @@
     "max_uses": 10,
     "power": 0,
     "accuracy": 90,
-    "type": "Poison",
+    "type": "Toxic",
     "category": "status"
   },
   "will_o_wisp": {
@@ -734,7 +734,7 @@
     "max_uses": 15,
     "power": 90,
     "accuracy": 100,
-    "type": "Grass",
+    "type": "Plant",
     "category": "physical"
   },
   "night_slash": {
@@ -761,7 +761,7 @@
     "max_uses": 10,
     "power": 0,
     "accuracy": 100,
-    "type": "Rock",
+    "type": "Ground",
     "category": "status"
   },
   "light_beam": {
@@ -770,7 +770,7 @@
     "max_uses": 10,
     "power": 80,
     "accuracy": 100,
-    "type": "Fairy",
+    "type": "Light",
     "category": "special"
   },
   "solar_flare": {
@@ -788,7 +788,7 @@
     "max_uses": 10,
     "power": 90,
     "accuracy": 100,
-    "type": "Fairy",
+    "type": "Light",
     "category": "special"
   },
   "judgment_ray": {
@@ -797,7 +797,7 @@
     "max_uses": 5,
     "power": 120,
     "accuracy": 85,
-    "type": "Fairy",
+    "type": "Light",
     "category": "special"
   },
   "eternal_dawn": {
@@ -806,7 +806,7 @@
     "max_uses": 5,
     "power": 140,
     "accuracy": 90,
-    "type": "Fairy",
+    "type": "Light",
     "category": "special"
   },
   "abyssal_crush": {
@@ -842,7 +842,7 @@
     "max_uses": 3,
     "power": 160,
     "accuracy": 85,
-    "type": "Dragon",
+    "type": "Ghost",
     "category": "special"
   },
   "mind_destroyer": {
@@ -851,7 +851,7 @@
     "max_uses": 5,
     "power": 135,
     "accuracy": 90,
-    "type": "Psychic",
+    "type": "Dark",
     "category": "special"
   },
   "steel_meteor": {
@@ -860,7 +860,7 @@
     "max_uses": 5,
     "power": 140,
     "accuracy": 80,
-    "type": "Steel",
+    "type": "Metal",
     "category": "physical"
   },
   "phantom_strike": {
@@ -888,6 +888,762 @@
     "power": 145,
     "accuracy": 85,
     "type": "Fire",
+    "category": "special"
+  },
+  "abyss_ram": {
+    "name": "Abyss Ram",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 100,
+    "accuracy": 90,
+    "type": "Dark",
+    "category": "physical"
+  },
+  "ancient_power": {
+    "name": "Ancient Power",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 60,
+    "accuracy": 100,
+    "type": "Ground",
+    "category": "special"
+  },
+  "aqua_jet": {
+    "name": "Aqua Jet",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 40,
+    "accuracy": 100,
+    "type": "Water",
+    "category": "physical"
+  },
+  "astonish": {
+    "name": "Astonish",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 30,
+    "accuracy": 100,
+    "type": "Ghost",
+    "category": "physical"
+  },
+  "calm_mind": {
+    "name": "Calm Mind",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "status"
+  },
+  "confuse_ray": {
+    "name": "Confuse Ray",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Ghost",
+    "category": "status"
+  },
+  "dimension_collapse": {
+    "name": "Dimension Collapse",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 120,
+    "accuracy": 85,
+    "type": "Dark",
+    "category": "special"
+  },
+  "divine_roar": {
+    "name": "Divine Roar",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "status"
+  },
+  "dragon_breath": {
+    "name": "Dragon Breath",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 60,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "special"
+  },
+  "dragon_dance": {
+    "name": "Dragon Dance",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "status"
+  },
+  "fire_spin": {
+    "name": "Fire Spin",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 35,
+    "accuracy": 85,
+    "type": "Fire",
+    "category": "special"
+  },
+  "flame_charge": {
+    "name": "Flame Charge",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 50,
+    "accuracy": 100,
+    "type": "Fire",
+    "category": "physical"
+  },
+  "flash_pulse": {
+    "name": "Flash Pulse",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 70,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "special"
+  },
+  "focus_energy": {
+    "name": "Focus Energy",
+    "uses": 30,
+    "max_uses": 30,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "status"
+  },
+  "giga_drain": {
+    "name": "Giga Drain",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 75,
+    "accuracy": 100,
+    "type": "Plant",
+    "category": "special"
+  },
+  "growl": {
+    "name": "Growl",
+    "uses": 40,
+    "max_uses": 40,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "status"
+  },
+  "growth": {
+    "name": "Growth",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "status"
+  },
+  "headbutt": {
+    "name": "Headbutt",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 70,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "physical"
+  },
+  "hex": {
+    "name": "Hex",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 65,
+    "accuracy": 100,
+    "type": "Ghost",
+    "category": "special"
+  },
+  "holy_light": {
+    "name": "Holy Light",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 80,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "special"
+  },
+  "incinerate": {
+    "name": "Incinerate",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 60,
+    "accuracy": 100,
+    "type": "Fire",
+    "category": "special"
+  },
+  "iron_defense": {
+    "name": "Iron Defense",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Metal",
+    "category": "status"
+  },
+  "leech_seed": {
+    "name": "Leech Seed",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 90,
+    "type": "Plant",
+    "category": "status"
+  },
+  "mega_drain": {
+    "name": "Mega Drain",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 40,
+    "accuracy": 100,
+    "type": "Plant",
+    "category": "special"
+  },
+  "mirror_coat": {
+    "name": "Mirror Coat",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "special"
+  },
+  "ominous_wind": {
+    "name": "Ominous Wind",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 60,
+    "accuracy": 100,
+    "type": "Ghost",
+    "category": "special"
+  },
+  "phantom_force": {
+    "name": "Phantom Force",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 90,
+    "accuracy": 100,
+    "type": "Ghost",
+    "category": "physical"
+  },
+  "radiant_blast": {
+    "name": "Radiant Blast",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 95,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "special"
+  },
+  "radiant_wave": {
+    "name": "Radiant Wave",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 75,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "special"
+  },
+  "rain_dance": {
+    "name": "Rain Dance",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Water",
+    "category": "status"
+  },
+  "shadow_cataclysm": {
+    "name": "Shadow Cataclysm",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 130,
+    "accuracy": 90,
+    "type": "Dark",
+    "category": "special"
+  },
+  "shadow_sneak": {
+    "name": "Shadow Sneak",
+    "uses": 30,
+    "max_uses": 30,
+    "power": 40,
+    "accuracy": 100,
+    "type": "Ghost",
+    "category": "physical"
+  },
+  "smokescreen": {
+    "name": "Smokescreen",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "status"
+  },
+  "solar_chant": {
+    "name": "Solar Chant",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "status"
+  },
+  "spirit_bloom": {
+    "name": "Spirit Bloom",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 85,
+    "accuracy": 100,
+    "type": "Plant",
+    "category": "special"
+  },
+  "spirit_break": {
+    "name": "Spirit Break",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 75,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "physical"
+  },
+  "sunny_day": {
+    "name": "Sunny Day",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Fire",
+    "category": "status"
+  },
+  "void_crash": {
+    "name": "Void Crash",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 110,
+    "accuracy": 85,
+    "type": "Dark",
+    "category": "physical"
+  },
+  "howl": {
+    "name": "Howl",
+    "uses": 40,
+    "max_uses": 40,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "status"
+  },
+  "take_down": {
+    "name": "Take Down",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 90,
+    "accuracy": 85,
+    "type": "Normal",
+    "category": "physical"
+  },
+  "double_edge": {
+    "name": "Double Edge",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 120,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "physical"
+  },
+  "inferno_roar": {
+    "name": "Inferno Roar",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Fire",
+    "category": "status"
+  },
+  "overheat": {
+    "name": "Overheat",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 130,
+    "accuracy": 90,
+    "type": "Fire",
+    "category": "special"
+  },
+  "sacred_flame": {
+    "name": "Sacred Flame",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 100,
+    "accuracy": 100,
+    "type": "Fire",
+    "category": "physical"
+  },
+  "tidal_fang": {
+    "name": "Tidal Fang",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 85,
+    "accuracy": 95,
+    "type": "Water",
+    "category": "physical"
+  },
+  "synthesis": {
+    "name": "Synthesis",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Plant",
+    "category": "status"
+  },
+  "petal_dance": {
+    "name": "Petal Dance",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 120,
+    "accuracy": 100,
+    "type": "Plant",
+    "category": "special"
+  },
+  "bloom_strike": {
+    "name": "Bloom Strike",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 90,
+    "accuracy": 100,
+    "type": "Plant",
+    "category": "physical"
+  },
+  "hyper_fang": {
+    "name": "Hyper Fang",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 80,
+    "accuracy": 90,
+    "type": "Normal",
+    "category": "physical"
+  },
+  "safeguard": {
+    "name": "Safeguard",
+    "uses": 25,
+    "max_uses": 25,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "status"
+  },
+  "runic_strike": {
+    "name": "Runic Strike",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 95,
+    "accuracy": 100,
+    "type": "Toxic",
+    "category": "physical"
+  },
+  "extreme_speed": {
+    "name": "Extreme Speed",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 80,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "physical"
+  },
+  "feint_attack": {
+    "name": "Feint Attack",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 60,
+    "accuracy": 100,
+    "type": "Dark",
+    "category": "physical"
+  },
+  "void_fang": {
+    "name": "Void Fang",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 75,
+    "accuracy": 95,
+    "type": "Dark",
+    "category": "physical"
+  },
+  "holy_roar": {
+    "name": "Holy Roar",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "status"
+  },
+  "heal_bell": {
+    "name": "Heal Bell",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "status"
+  },
+  "solar_guard": {
+    "name": "Solar Guard",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Light",
+    "category": "status"
+  },
+  "light_of_judgment": {
+    "name": "Light of Judgment",
+    "uses": 5,
+    "max_uses": 5,
+    "power": 140,
+    "accuracy": 90,
+    "type": "Light",
+    "category": "special"
+  },
+  "stomp": {
+    "name": "Stomp",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 65,
+    "accuracy": 100,
+    "type": "Normal",
+    "category": "physical"
+  },
+  "bulldoze": {
+    "name": "Bulldoze",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 60,
+    "accuracy": 100,
+    "type": "Ground",
+    "category": "physical"
+  },
+  "tectonic_howl": {
+    "name": "Tectonic Howl",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Ground",
+    "category": "status"
+  },
+  "spirit_claw": {
+    "name": "Spirit Claw",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 70,
+    "accuracy": 100,
+    "type": "Ghost",
+    "category": "physical"
+  },
+  "soul_drain": {
+    "name": "Soul Drain",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 75,
+    "accuracy": 100,
+    "type": "Ghost",
+    "category": "special"
+  },
+  "gust": {
+    "name": "Gust",
+    "uses": 35,
+    "max_uses": 35,
+    "power": 40,
+    "accuracy": 100,
+    "type": "Air",
+    "category": "special"
+  },
+  "tailwind": {
+    "name": "Tailwind",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Air",
+    "category": "status"
+  },
+  "acrobatics": {
+    "name": "Acrobatics",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 55,
+    "accuracy": 100,
+    "type": "Air",
+    "category": "physical"
+  },
+  "sky_roar": {
+    "name": "Sky Roar",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Air",
+    "category": "status"
+  },
+  "powder_snow": {
+    "name": "Powder Snow",
+    "uses": 25,
+    "max_uses": 25,
+    "power": 40,
+    "accuracy": 100,
+    "type": "Ice",
+    "category": "special"
+  },
+  "ice_fang": {
+    "name": "Ice Fang",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 65,
+    "accuracy": 95,
+    "type": "Ice",
+    "category": "physical"
+  },
+  "icy_wind": {
+    "name": "Icy Wind",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 55,
+    "accuracy": 95,
+    "type": "Ice",
+    "category": "special"
+  },
+  "hailstorm": {
+    "name": "Hailstorm",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Ice",
+    "category": "status"
+  },
+  "glacial_pride": {
+    "name": "Glacial Pride",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 90,
+    "accuracy": 100,
+    "type": "Ice",
+    "category": "special"
+  },
+  "wild_charge": {
+    "name": "Wild Charge",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 90,
+    "accuracy": 100,
+    "type": "Electric",
+    "category": "physical"
+  },
+  "volt_howl": {
+    "name": "Volt Howl",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Electric",
+    "category": "status"
+  },
+  "poison_fang": {
+    "name": "Poison Fang",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 65,
+    "accuracy": 95,
+    "type": "Toxic",
+    "category": "physical"
+  },
+  "acid_spray": {
+    "name": "Acid Spray",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 40,
+    "accuracy": 100,
+    "type": "Toxic",
+    "category": "special"
+  },
+  "toxic_spikes": {
+    "name": "Toxic Spikes",
+    "uses": 20,
+    "max_uses": 20,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Toxic",
+    "category": "status"
+  },
+  "venom_bite": {
+    "name": "Venom Bite",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 70,
+    "accuracy": 100,
+    "type": "Toxic",
+    "category": "physical"
+  },
+  "corrosive_roar": {
+    "name": "Corrosive Roar",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Toxic",
+    "category": "status"
+  },
+  "metal_claw": {
+    "name": "Metal Claw",
+    "uses": 35,
+    "max_uses": 35,
+    "power": 50,
+    "accuracy": 95,
+    "type": "Metal",
+    "category": "physical"
+  },
+  "steel_bite": {
+    "name": "Steel Bite",
+    "uses": 15,
+    "max_uses": 15,
+    "power": 75,
+    "accuracy": 95,
+    "type": "Metal",
+    "category": "physical"
+  },
+  "heavy_slam": {
+    "name": "Heavy Slam",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 80,
+    "accuracy": 100,
+    "type": "Metal",
+    "category": "physical"
+  },
+  "ferro_roar": {
+    "name": "Ferro Roar",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 0,
+    "accuracy": 100,
+    "type": "Metal",
+    "category": "status"
+  },
+  "umbra_flash": {
+    "name": "Umbra Flash",
+    "uses": 10,
+    "max_uses": 10,
+    "power": 85,
+    "accuracy": 100,
+    "type": "Dark",
     "category": "special"
   }
 }
