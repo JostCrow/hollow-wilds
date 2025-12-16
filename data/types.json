@@ -1,0 +1,266 @@
+{
+  "types": [
+    "Normal",
+    "Fire",
+    "Water",
+    "Ground",
+    "Air",
+    "Ice",
+    "Electric",
+    "Plant",
+    "Toxic",
+    "Metal",
+    "Light",
+    "Dark",
+    "Ghost"
+  ],
+  "data": {
+    "Normal": {
+      "attackCategory": "physical",
+      "defense": { "physical": 1, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 1,
+        "Water": 1,
+        "Ground": 1,
+        "Air": 1,
+        "Ice": 1,
+        "Electric": 1,
+        "Plant": 1,
+        "Toxic": 1,
+        "Metal": 1,
+        "Light": 1,
+        "Dark": 1,
+        "Ghost": 1
+      }
+    },
+    "Fire": {
+      "attackCategory": "special",
+      "defense": { "physical": 1, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 0.5,
+        "Water": 0.5,
+        "Ground": 1,
+        "Air": 1,
+        "Ice": 2,
+        "Electric": 1,
+        "Plant": 2,
+        "Toxic": 1,
+        "Metal": 2,
+        "Light": 1,
+        "Dark": 1,
+        "Ghost": 1
+      }
+    },
+    "Water": {
+      "attackCategory": "special",
+      "defense": { "physical": 1, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 2,
+        "Water": 0.5,
+        "Ground": 2,
+        "Air": 1,
+        "Ice": 2,
+        "Electric": 1,
+        "Plant": 0.5,
+        "Toxic": 1,
+        "Metal": 1,
+        "Light": 1,
+        "Dark": 1,
+        "Ghost": 1
+      }
+    },
+    "Ground": {
+      "attackCategory": "physical",
+      "defense": { "physical": 1, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 1,
+        "Water": 1,
+        "Ground": 0.5,
+        "Air": 0.5,
+        "Ice": 2,
+        "Electric": 2,
+        "Plant": 1,
+        "Toxic": 1,
+        "Metal": 2,
+        "Light": 1,
+        "Dark": 1,
+        "Ghost": 1
+      }
+    },
+    "Air": {
+      "attackCategory": "physical",
+      "defense": { "physical": 1, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 1,
+        "Water": 1,
+        "Ground": 2,
+        "Air": 0.5,
+        "Ice": 1,
+        "Electric": 0.5,
+        "Plant": 1,
+        "Toxic": 1,
+        "Metal": 0.5,
+        "Light": 1,
+        "Dark": 1,
+        "Ghost": 1
+      }
+    },
+    "Ice": {
+      "attackCategory": "special",
+      "defense": { "physical": 1.5, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 0.5,
+        "Water": 0.5,
+        "Ground": 1,
+        "Air": 2,
+        "Ice": 0.5,
+        "Electric": 1,
+        "Plant": 2,
+        "Toxic": 1,
+        "Metal": 1,
+        "Light": 1,
+        "Dark": 1,
+        "Ghost": 1
+      }
+    },
+    "Electric": {
+      "attackCategory": "special",
+      "defense": { "physical": 1, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 1,
+        "Water": 2,
+        "Ground": 0,
+        "Air": 2,
+        "Ice": 1,
+        "Electric": 0.5,
+        "Plant": 0.5,
+        "Toxic": 1,
+        "Metal": 1,
+        "Light": 1,
+        "Dark": 1,
+        "Ghost": 1
+      }
+    },
+    "Plant": {
+      "attackCategory": "physical",
+      "defense": { "physical": 1, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 0.5,
+        "Water": 2,
+        "Ground": 0.5,
+        "Air": 1,
+        "Ice": 1,
+        "Electric": 2,
+        "Plant": 0.5,
+        "Toxic": 0.5,
+        "Metal": 1,
+        "Light": 1,
+        "Dark": 1,
+        "Ghost": 1
+      }
+    },
+    "Toxic": {
+      "attackCategory": "special",
+      "defense": { "physical": 1, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 1,
+        "Water": 0.5,
+        "Ground": 1,
+        "Air": 1,
+        "Ice": 1,
+        "Electric": 1,
+        "Plant": 2,
+        "Toxic": 0.5,
+        "Metal": 1,
+        "Light": 0.5,
+        "Dark": 2,
+        "Ghost": 1
+      }
+    },
+    "Metal": {
+      "attackCategory": "physical",
+      "defense": { "physical": 0.5, "special": 1.5 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 0.5,
+        "Water": 1,
+        "Ground": 0.5,
+        "Air": 2,
+        "Ice": 1,
+        "Electric": 0.5,
+        "Plant": 1,
+        "Toxic": 2,
+        "Metal": 0.5,
+        "Light": 1,
+        "Dark": 1,
+        "Ghost": 1
+      }
+    },
+    "Light": {
+      "attackCategory": "special",
+      "defense": { "physical": 1, "special": 0.5 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 1,
+        "Water": 1,
+        "Ground": 1,
+        "Air": 1,
+        "Ice": 1,
+        "Electric": 1,
+        "Plant": 1,
+        "Toxic": 2,
+        "Metal": 1,
+        "Light": 0.5,
+        "Dark": 2,
+        "Ghost": 2
+      }
+    },
+    "Dark": {
+      "attackCategory": "special",
+      "defense": { "physical": 1, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 1,
+        "Water": 1,
+        "Ground": 1,
+        "Air": 1,
+        "Ice": 1,
+        "Electric": 1,
+        "Plant": 1,
+        "Toxic": 0.5,
+        "Metal": 1,
+        "Light": 2,
+        "Dark": 0.5,
+        "Ghost": 2
+      }
+    },
+    "Ghost": {
+      "attackCategory": "special",
+      "defense": { "physical": 0, "special": 1 },
+      "effectiveness": {
+        "Normal": 1,
+        "Fire": 1,
+        "Water": 1,
+        "Ground": 1,
+        "Air": 1,
+        "Ice": 1,
+        "Electric": 1,
+        "Plant": 1,
+        "Toxic": 0.5,
+        "Metal": 0,
+        "Light": 2,
+        "Dark": 2,
+        "Ghost": 0.5
+      }
+    }
+  }
+}

@@ -1,0 +1,640 @@
+{
+  "categories": {
+    "Catching": {
+      "description": "Items used to capture wild creatures",
+      "items": [
+        {
+          "key": "poke_ball",
+          "name": "Poké Ball",
+          "description": "A device for catching wild creatures. It's thrown like a ball at a creature to capture it.",
+          "effect": {
+            "type": "capture",
+            "catch_rate": 1.0,
+            "uses": 1
+          },
+          "price": 200,
+          "sell_price": 100,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "great_ball",
+          "name": "Great Ball",
+          "description": "A better-quality Ball with a higher catch rate than a Poké Ball.",
+          "effect": {
+            "type": "capture",
+            "catch_rate": 1.5,
+            "uses": 1
+          },
+          "price": 600,
+          "sell_price": 300,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "ultra_ball",
+          "name": "Ultra Ball",
+          "description": "An ultra-performance Ball with a higher catch rate than a Great Ball.",
+          "effect": {
+            "type": "capture",
+            "catch_rate": 2.0,
+            "uses": 1
+          },
+          "price": 1200,
+          "sell_price": 600,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "master_ball",
+          "name": "Master Ball",
+          "description": "The best Ball with the ultimate level of performance. It will catch any creature without fail.",
+          "effect": {
+            "type": "capture",
+            "catch_rate": 255.0,
+            "uses": 1
+          },
+          "price": 0,
+          "sell_price": 0,
+          "stackable": true,
+          "consumable": true,
+          "rare": true
+        }
+      ]
+    },
+    "Healing": {
+      "description": "Items used to restore health and cure status conditions",
+      "items": [
+        {
+          "key": "potion",
+          "name": "Potion",
+          "description": "A spray-type wound medicine for treating wounds. It restores the HP of one creature by 20 points.",
+          "effect": {
+            "type": "heal",
+            "hp_restore": 20,
+            "target": "single",
+            "uses": 1
+          },
+          "price": 300,
+          "sell_price": 150,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "super_potion",
+          "name": "Super Potion",
+          "description": "A spray-type wound medicine for treating wounds. It restores the HP of one creature by 60 points.",
+          "effect": {
+            "type": "heal",
+            "hp_restore": 60,
+            "target": "single",
+            "uses": 1
+          },
+          "price": 700,
+          "sell_price": 350,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "hyper_potion",
+          "name": "Hyper Potion",
+          "description": "A spray-type wound medicine for treating wounds. It restores the HP of one creature by 120 points.",
+          "effect": {
+            "type": "heal",
+            "hp_restore": 120,
+            "target": "single",
+            "uses": 1
+          },
+          "price": 1200,
+          "sell_price": 600,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "max_potion",
+          "name": "Max Potion",
+          "description": "A spray-type wound medicine for treating wounds. It fully restores the HP of one creature.",
+          "effect": {
+            "type": "heal",
+            "hp_restore": -1,
+            "target": "single",
+            "uses": 1
+          },
+          "price": 2500,
+          "sell_price": 1250,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "antidote",
+          "name": "Antidote",
+          "description": "A spray-type medicine. It lifts the effect of poison from one creature.",
+          "effect": {
+            "type": "cure_status",
+            "status": "poison",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 250,
+          "sell_price": 125,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "burn_heal",
+          "name": "Burn Heal",
+          "description": "A spray-type medicine. It heals the burn status condition of one creature.",
+          "effect": {
+            "type": "cure_status",
+            "status": "burn",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 250,
+          "sell_price": 125,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "ice_heal",
+          "name": "Ice Heal",
+          "description": "A spray-type medicine. It defrosts a creature that has been frozen solid.",
+          "effect": {
+            "type": "cure_status",
+            "status": "freeze",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 250,
+          "sell_price": 125,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "awakening",
+          "name": "Awakening",
+          "description": "A spray-type medicine. It awakens a creature from sleep.",
+          "effect": {
+            "type": "cure_status",
+            "status": "sleep",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 250,
+          "sell_price": 125,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "paralyze_heal",
+          "name": "Paralyze Heal",
+          "description": "A spray-type medicine. It eliminates paralysis from one creature.",
+          "effect": {
+            "type": "cure_status",
+            "status": "paralysis",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 250,
+          "sell_price": 125,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "full_restore",
+          "name": "Full Restore",
+          "description": "A medicine that fully restores the HP and heals any status problems of one creature.",
+          "effect": {
+            "type": "heal",
+            "hp_restore": -1,
+            "cure_all_status": true,
+            "target": "single",
+            "uses": 1
+          },
+          "price": 3000,
+          "sell_price": 1500,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "revive",
+          "name": "Revive",
+          "description": "A medicine that revives a fainted creature, restoring half of its maximum HP.",
+          "effect": {
+            "type": "heal",
+            "hp_restore_percent": 0.5,
+            "target": "single",
+            "uses": 1
+          },
+          "price": 1500,
+          "sell_price": 750,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "max_revive",
+          "name": "Max Revive",
+          "description": "A medicine that revives a fainted creature, fully restoring its HP.",
+          "effect": {
+            "type": "heal",
+            "hp_restore_percent": 1.0,
+            "target": "single",
+            "uses": 1
+          },
+          "price": 4000,
+          "sell_price": 2000,
+          "stackable": true,
+          "consumable": true
+        }
+      ]
+    },
+    "Evolution": {
+      "description": "Items that trigger creature evolution when used",
+      "items": [
+        {
+          "key": "fire_stone",
+          "name": "Fire Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It burns as red as ember.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Fire"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "water_stone",
+          "name": "Water Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It is a clear blue reminiscent of a lake.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Water"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "leaf_stone",
+          "name": "Leaf Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It has a leaf pattern that seems to move.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Plant"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "thunder_stone",
+          "name": "Thunder Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It sparkles with electrical energy.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Electric"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "light_stone",
+          "name": "Light Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It emits a brilliant, pure light.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Light"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "dark_stone",
+          "name": "Dark Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It seems to absorb light around it.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Dark"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "earth_stone",
+          "name": "Earth Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It feels heavy and solid like bedrock.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Ground"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "ice_stone",
+          "name": "Ice Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It's cold to the touch and never melts.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Ice"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "normal_stone",
+          "name": "Normal Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It has a simple, balanced energy.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Normal"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "ghost_stone",
+          "name": "Ghost Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It seems to phase in and out of existence.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Ghost"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "air_stone",
+          "name": "Air Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It feels light and carries the wind's energy.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Air"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "poison_stone",
+          "name": "Poison Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It has a toxic aura and purple glow.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Toxic"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "metal_stone",
+          "name": "Metal Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It's hard as steel and gleams like polished metal.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Metal"],
+            "uses": 1
+          },
+          "price": 2100,
+          "sell_price": 1050,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "shadow_stone",
+          "name": "Shadow Stone",
+          "description": "A peculiar stone that makes certain species of creatures evolve. It embodies the balance between light and darkness.",
+          "effect": {
+            "type": "evolution",
+            "trigger_types": ["Dark", "Light"],
+            "uses": 1
+          },
+          "price": 3000,
+          "sell_price": 1500,
+          "stackable": true,
+          "consumable": true,
+          "rare": true
+        }
+      ]
+    },
+    "Battle": {
+      "description": "Items used during battles to gain advantages",
+      "items": [
+        {
+          "key": "x_attack",
+          "name": "X Attack",
+          "description": "An item that sharply boosts the Attack stat of a creature in battle.",
+          "effect": {
+            "type": "stat_boost",
+            "stat": "attack",
+            "boost": 2,
+            "duration": "battle",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 500,
+          "sell_price": 250,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "x_defense",
+          "name": "X Defense",
+          "description": "An item that sharply boosts the Defense stat of a creature in battle.",
+          "effect": {
+            "type": "stat_boost",
+            "stat": "defense",
+            "boost": 2,
+            "duration": "battle",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 500,
+          "sell_price": 250,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "x_speed",
+          "name": "X Speed",
+          "description": "An item that sharply boosts the Speed stat of a creature in battle.",
+          "effect": {
+            "type": "stat_boost",
+            "stat": "speed",
+            "boost": 2,
+            "duration": "battle",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 500,
+          "sell_price": 250,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "x_sp_attack",
+          "name": "X Sp. Attack",
+          "description": "An item that sharply boosts the Special Attack stat of a creature in battle.",
+          "effect": {
+            "type": "stat_boost",
+            "stat": "sp_attack",
+            "boost": 2,
+            "duration": "battle",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 500,
+          "sell_price": 250,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "x_sp_defense",
+          "name": "X Sp. Defense",
+          "description": "An item that sharply boosts the Special Defense stat of a creature in battle.",
+          "effect": {
+            "type": "stat_boost",
+            "stat": "sp_defense",
+            "boost": 2,
+            "duration": "battle",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 500,
+          "sell_price": 250,
+          "stackable": true,
+          "consumable": true
+        }
+      ]
+    },
+    "Status": {
+      "description": "Items that cure or prevent status conditions",
+      "items": [
+        {
+          "key": "full_heal",
+          "name": "Full Heal",
+          "description": "A medicine that heals all the status problems of one creature.",
+          "effect": {
+            "type": "heal",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 600,
+          "sell_price": 300,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "lava_cookie",
+          "name": "Lava Cookie",
+          "description": "A popular snack in the Hoenn region. It heals all status problems of one creature.",
+          "effect": {
+            "type": "heal",
+            "target": "single",
+            "uses": 1
+          },
+          "price": 600,
+          "sell_price": 300,
+          "stackable": true,
+          "consumable": true
+        }
+      ]
+    },
+    "Miscellaneous": {
+      "description": "Various utility and special items",
+      "items": [
+        {
+          "key": "repel",
+          "name": "Repel",
+          "description": "A spray-type item that prevents weak wild creatures from appearing for 100 steps.",
+          "effect": {
+            "type": "repel",
+            "duration": 100,
+            "strength": "weak",
+            "uses": 1
+          },
+          "price": 350,
+          "sell_price": 175,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "super_repel",
+          "name": "Super Repel",
+          "description": "A spray-type item that prevents weak wild creatures from appearing for 200 steps.",
+          "effect": {
+            "type": "repel",
+            "duration": 200,
+            "strength": "medium",
+            "uses": 1
+          },
+          "price": 500,
+          "sell_price": 250,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "max_repel",
+          "name": "Max Repel",
+          "description": "A spray-type item that prevents weak wild creatures from appearing for 250 steps.",
+          "effect": {
+            "type": "repel",
+            "duration": 250,
+            "strength": "strong",
+            "uses": 1
+          },
+          "price": 700,
+          "sell_price": 350,
+          "stackable": true,
+          "consumable": true
+        },
+        {
+          "key": "escape_rope",
+          "name": "Escape Rope",
+          "description": "A long and durable rope. Use it to escape instantly from dungeons or caves.",
+          "effect": {
+            "type": "escape",
+            "uses": 1
+          },
+          "price": 550,
+          "sell_price": 275,
+          "stackable": true,
+          "consumable": true
+        }
+      ]
+    }
+  }
+}
