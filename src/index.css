@@ -121,3 +121,19 @@
         @apply bg-background text-foreground;
     }
 }
+
+@theme {
+    /* Define the animation utility */
+    --animate-float: float 3s ease-in-out infinite;
+
+    /* Define the keyframes */
+    @keyframes float {
+        0%,
+        100% {
+            transform: translateY(0);
+        }
+        50% {
+            transform: translateY(-20px);
+        }
+    }
+}

@@ -2,6 +2,7 @@ import React, { useEffect, useRef, useState } from "react";
 import { Routes, Route as RouteType, PlayerSave } from "@/types";
 import { usePlayerStore } from "@/stores/player-store";
 import { useWorldStore } from "@/stores/world-store";
+import { TileRenderer } from "@/components/ui/tile-renderer";
 
 interface OverworldProps {
   routes: Routes;
@@ -338,6 +339,24 @@ export const Overworld: React.FC<OverworldProps> = ({ routes, playerSave }) => {
       }
     }
 
+    // Check if tile-based route - block movement on tree tiles
+    if (currentRoute.tiles) {
+      const tileSize = currentRoute.tileSize || 32;
+      const tileX = Math.floor(feetX / tileSize);
+      const tileY = Math.floor(feetY / tileSize);
+      
+      if (tileY >= 0 && tileY < currentRoute.tiles.map.length &&
+          tileX >= 0 && tileX < currentRoute.tiles.map[tileY].length) {
+        const tileChar = currentRoute.tiles.map[tileY][tileX];
+        const tileType = currentRoute.tiles.legend[tileChar];
+        
+        // Block movement on tree tiles
+        if (tileType === 'tree') {
+          return true;
+        }
+      }
+    }
+
     return false;
   };
 
@@ -514,7 +533,7 @@ export const Overworld: React.FC<OverworldProps> = ({ routes, playerSave }) => {
     left: 0,
     width: worldSize.width || "100%",
     height: worldSize.height || "100%",
-    backgroundImage: currentRoute?.background
+    backgroundImage: currentRoute?.background && !currentRoute?.tiles
       ? `url("${resolveBackgroundPath(currentRoute.background)}")`
       : undefined,
     backgroundRepeat: "no-repeat",
@@ -562,6 +581,12 @@ export const Overworld: React.FC<OverworldProps> = ({ routes, playerSave }) => {
         className="relative overflow-hidden w-screen h-screen"
       >
         <div ref={worldRef} style={worldStyle}>
+          {currentRoute?.tiles && (
+            <TileRenderer 
+              tiles={currentRoute.tiles}
+              tileSize={currentRoute.tileSize || 32}
+            />
+          )}
           <div ref={playerRef} style={playerStyle} />
         </div>
         <div className="absolute top-4 left-4 bg-white/80 text-black text-xs px-3 py-2 rounded shadow">

@@ -517,8 +517,8 @@
         ]
     },
     "location": {
-        "x": 418.048,
-        "y": 672.0
+        "x": 640,
+        "y": 480
     },
     "wild_spawns": [
         {
@@ -1150,14 +1150,7 @@
     "speed": 128,
     "reset_spawn_route": "route-one",
     "reset_spawn_point": "default",
-    "is_tweening": true,
-    "tween_start_time": 61640,
-    "tween_duration": 250,
-    "tween_start_x": 448.0,
-    "tween_start_y": 672.0,
-    "tween_target_x": 416.0,
-    "tween_target_y": 672.0,
-    "tween_progress": 0.936,
+    "is_tweening": false,
     "animation_start_time": 7450,
-    "route_key": "route-one"
+    "route_key": "willowfen-village"
 }

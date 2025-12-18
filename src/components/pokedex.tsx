@@ -9,12 +9,9 @@ import { getTypeColorClass } from "@/lib/typeColors";
 import { Avatar, AvatarFallback, AvatarImage } from "./ui/avatar";
 import { Progress } from "./ui/progress";
 import { Tabs, TabsContent, TabsList, TabsTrigger } from "./ui/tabs";
-import {
-  Table,
-  TableBody,
-  TableCell,
-  TableRow,
-} from "./ui/table";
+import { Table, TableBody, TableCell, TableRow } from "./ui/table";
+import { Button } from "./ui/button";
+import { useSessionStore } from "@/stores/session-store";
 
 interface PokedexProps {
   playerPokedex?: Record<string, boolean>;
@@ -22,6 +19,7 @@ interface PokedexProps {
 }
 
 export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
+  const { setView } = useSessionStore();
   const [creatures, setCreatures] = useState<Creature[]>([]);
   const [moves, setMoves] = useState<MovesFile | null>(null);
   const [selectedIndex, setSelectedIndex] = useState<number>(0);
@@ -198,16 +196,224 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
     );
   };
 
+  type EvolutionNode = {
+    creature: Creature;
+    children: EvolutionNode[];
+    evolutionMethod?: string;
+  };
+
+  const buildEvolutionTree = (creatureName: string): EvolutionNode[] => {
+    const visited = new Set<string>();
+
+    const getEvolutionChildren = (
+      creature: Creature,
+    ): Array<{ creature: Creature; method: string }> => {
+      const children: Array<{ creature: Creature; method: string }> = [];
+
+      // Check evolves_to field
+      if (creature.evolves_to) {
+        const evoCreature = creatures.find(
+          (c) => c.name === creature.evolves_to,
+        );
+        if (evoCreature) {
+          const method = creature.evolution_requirements?.[0]
+            ? getEvolutionMethodText(creature.evolution_requirements[0])
+            : "→";
+          children.push({ creature: evoCreature, method });
+        }
+      }
+
+      // Check evolution_requirements (for split evolutions)
+      if (creature.evolution_requirements) {
+        for (const req of creature.evolution_requirements) {
+          const evoCreature = creatures.find((c) => c.name === req.evolves_to);
+          if (
+            evoCreature &&
+            !children.some((child) => child.creature.name === req.evolves_to)
+          ) {
+            children.push({
+              creature: evoCreature,
+              method: getEvolutionMethodText(req),
+            });
+          }
+        }
+      }
+
+      return children;
+    };
+
+    const buildTree = (creature: Creature): EvolutionNode => {
+      if (visited.has(creature.name)) {
+        return { creature, children: [] };
+      }
+      visited.add(creature.name);
+
+      const children = getEvolutionChildren(creature);
+
+      return {
+        creature,
+        children: children.map((child) => ({
+          ...buildTree(child.creature),
+          evolutionMethod: child.method,
+        })),
+      };
+    };
+
+    // Find all base creatures that lead to the target
+    const findBaseCreatures = (targetName: string): Creature[] => {
+      const bases: Creature[] = [];
+      const visited = new Set<string>();
+
+      const findParents = (name: string) => {
+        if (visited.has(name)) return;
+        visited.add(name);
+
+        const parents = creatures.filter(
+          (c) =>
+            c.evolves_to === name ||
+            c.evolution_requirements?.some((req) => req.evolves_to === name),
+        );
+
+        if (parents.length === 0) {
+          const creature = creatures.find((c) => c.name === name);
+          if (creature) bases.push(creature);
+        } else {
+          for (const parent of parents) {
+            findParents(parent.name);
+          }
+        }
+      };
+
+      findParents(targetName);
+      return bases;
+    };
+
+    const baseCreatures = findBaseCreatures(creatureName);
+    return baseCreatures.map((base) => buildTree(base));
+  };
+
+  const renderEvolutionTree = (
+    nodes: EvolutionNode[],
+    level: number = 0,
+  ): React.ReactElement => {
+    if (nodes.length === 0) return <></>;
+
+    if (nodes.length === 1) {
+      const node = nodes[0];
+      return (
+        <div key={node.creature.name} className="flex items-center gap-2">
+          <div
+            className={`flex flex-col items-center p-3 border rounded-lg cursor-pointer transition-all ${
+              selected && node.creature.name === selected.name
+                ? "border-primary bg-primary/10 scale-110"
+                : "border-border hover:border-primary hover:bg-muted"
+            }`}
+            onClick={() => {
+              const creatureIndex = creatures.findIndex(
+                (c) => c.name === node.creature.name,
+              );
+              if (creatureIndex !== -1) {
+                setSelectedIndex(creatureIndex);
+              }
+            }}
+          >
+            {node.creature.sprite && (
+              <img
+                src={`/assets/monster/${node.creature.sprite}`}
+                alt={node.creature.name}
+                className="w-16 h-16 object-contain"
+              />
+            )}
+            <div className="text-center mt-2">
+              <div className="font-medium text-sm">{node.creature.name}</div>
+              {node.creature.typing.map((type: string) => (
+                <Badge
+                  key={type}
+                  className={getTypeColorClass(type)}
+                  style={{ transform: "scale(0.7)", margin: "1px" }}
+                >
+                  {type}
+                </Badge>
+              ))}
+            </div>
+          </div>
+
+          {node.children.length > 0 && (
+            <div className="flex flex-col items-center">
+              <div className="w-8 h-0.5 bg-border"></div>
+              {node.children.length === 1 &&
+                node.children[0].evolutionMethod && (
+                  <div className="text-xs text-muted-foreground whitespace-nowrap bg-muted px-2 py-1 rounded border">
+                    {node.children[0].evolutionMethod}
+                  </div>
+                )}
+              <div className="w-8 h-0.5 bg-border"></div>
+            </div>
+          )}
+
+          {node.children.length > 0 && (
+            <div>
+              {node.children.length === 1 ? (
+                renderEvolutionTree(node.children, level + 1)
+              ) : (
+                <div className="flex flex-col gap-4">
+                  {node.children.map((child) => (
+                    <div
+                      key={child.creature.name}
+                      className="flex items-center gap-2"
+                    >
+                      <div className="flex flex-col items-center">
+                        <div className="w-8 h-0.5 bg-border"></div>
+                        {child.evolutionMethod && (
+                          <div className="text-xs text-muted-foreground whitespace-nowrap bg-muted px-2 py-1 rounded border">
+                            {child.evolutionMethod}
+                          </div>
+                        )}
+                        <div className="w-8 h-0.5 bg-border"></div>
+                      </div>
+                      {renderEvolutionTree([child], level + 1)}
+                    </div>
+                  ))}
+                </div>
+              )}
+            </div>
+          )}
+        </div>
+      );
+    }
+
+    // Multiple base creatures
+    return (
+      <div className="flex flex-col gap-4">
+        {nodes.map((node) => (
+          <div key={node.creature.name}>
+            {renderEvolutionTree([node], level)}
+          </div>
+        ))}
+      </div>
+    );
+  };
+
+  const getEvolutionMethodText = (req: any): string => {
+    if (req.type === "level" && req.level) {
+      return `Level ${req.level}`;
+    } else if (req.type === "stone" && req.stone) {
+      return `Use ${req.stone.replace("_", " ")}`;
+    }
+    return req.type;
+  };
+
   const renderEvolution = () => {
     if (!selected) return null;
 
-    const hasMechanic = Boolean(selected.evolution_mechanic);
-    const hasRequirements =
-      selected.evolution_requirements &&
-      selected.evolution_requirements.length > 0;
-    const hasDirectEvo = Boolean(selected.evolves_to);
+    const evolutionTrees = buildEvolutionTree(selected.name);
 
-    if (!hasMechanic && !hasRequirements && !hasDirectEvo) {
+    if (
+      evolutionTrees.length === 0 ||
+      (evolutionTrees.length === 1 &&
+        evolutionTrees[0].creature.name === selected.name &&
+        evolutionTrees[0].children.length === 0)
+    ) {
       return (
         <>
           <h3>Evolution</h3>
@@ -218,26 +424,10 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
 
     return (
       <>
-        <h3>Evolution</h3>
-        {hasDirectEvo && (
-          <p>
-            Evolves to: <strong>{selected.evolves_to}</strong>
-          </p>
-        )}
-        {hasMechanic && <p>Mechanic: {selected.evolution_mechanic}</p>}
-        {hasRequirements && (
-          <ul>
-            {selected.evolution_requirements!.map((req, i) => (
-              <li key={i}>
-                {req.type === "level" && req.level
-                  ? `Level ${req.level} → ${req.evolves_to}`
-                  : req.type === "stone" && req.stone
-                    ? `Use ${req.stone} → ${req.evolves_to}`
-                    : `${req.type} → ${req.evolves_to}`}
-              </li>
-            ))}
-          </ul>
-        )}
+        <h3>Evolution Chain</h3>
+        <div className="flex flex-wrap items-center justify-center gap-4 p-4">
+          {renderEvolutionTree(evolutionTrees)}
+        </div>
       </>
     );
   };
@@ -250,20 +440,22 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
     return (
       <>
         <h3>Base Stats</h3>
-        {statKeys.map((stat) => {
-          const value = selected.base_stats[stat.key];
-          const percentage = (value / maxStat) * 100;
-          return (
-            <div
-              key={stat.key}
-              className="grid grid-cols-[100px_500px] items-center"
-            >
-              <span className="text-sm">{stat.label}</span>
-              <Progress title={value.toString()} value={percentage} />
-            </div>
-          );
-        })}
-        <div className="grid grid-cols-[100px_500px] items-center">
+        <div className="grid gap-2">
+          {statKeys.map((stat) => {
+            const value = selected.base_stats[stat.key];
+            const percentage = (value / maxStat) * 100;
+            return (
+              <div
+                key={stat.key}
+                className="grid grid-cols-[100px_500px] gap-2 items-center"
+              >
+                <span className="text-sm">{stat.label}</span>
+                <Progress title={value.toString()} value={percentage} />
+              </div>
+            );
+          })}
+        </div>
+        <div className="grid grid-cols-[100px_500px] gap-2 items-center">
           <span>Total</span>
           <Progress
             title={selected.base_stats.total.toString()}
@@ -327,9 +519,19 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
     return (
       <div className="p-4 grid gap-4">
         {/* Header */}
-        <section className="flex gap-2">
+        <section className="flex gap-8 p-8 border rounded-lg">
+          <div className="flex flex-col items-end">
+            {selected.sprite && (
+              <img
+                src={`/assets/monster/${selected.sprite}`}
+                alt={selected.name}
+                loading="lazy"
+                className="w-40 animate-float"
+              />
+            )}
+          </div>
           <div className="grow flex flex-col gap-2">
-            <div className="flex w-full gap-2">
+            <div className="flex w-full gap-4">
               <h2 className="text-2xl">{selected.name}</h2>
               {selected.typing.map((type) => (
                 <Badge key={type} className={getTypeColorClass(type)}>
@@ -342,32 +544,62 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
                 {isCaught && <Badge>Caught</Badge>}
               </div>
             </div>
+            <div className="flex gap-4 text-sm">
+              <div className="flex gap-2 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="lucide lucide-ruler w-4 h-4 text-muted-foreground"
+                >
+                  <path d="M21.3 15.3a2.4 2.4 0 0 1 0 3.4l-2.6 2.6a2.4 2.4 0 0 1-3.4 0L2.7 8.7a2.41 2.41 0 0 1 0-3.4l2.6-2.6a2.41 2.41 0 0 1 3.4 0Z"></path>
+                  <path d="m14.5 12.5 2-2"></path>
+                  <path d="m11.5 9.5 2-2"></path>
+                  <path d="m8.5 6.5 2-2"></path>
+                  <path d="m17.5 15.5 2-2"></path>
+                </svg>
+                {selected.height}m
+              </div>
+              <div className="flex gap-2 items-center">
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  width="24"
+                  height="24"
+                  viewBox="0 0 24 24"
+                  fill="none"
+                  stroke="currentColor"
+                  stroke-width="2"
+                  stroke-linecap="round"
+                  stroke-linejoin="round"
+                  className="lucide lucide-weight w-4 h-4 text-muted-foreground"
+                >
+                  <circle cx="12" cy="5" r="3"></circle>
+                  <path d="M6.5 8a2 2 0 0 0-1.905 1.46L2.1 18.5A2 2 0 0 0 4 21h16a2 2 0 0 0 1.925-2.54L19.4 9.5A2 2 0 0 0 17.48 8Z"></path>
+                </svg>{" "}
+                {selected.weight}kg
+              </div>
+            </div>
             <p>{selected.description}</p>
             {selected.appearance && (
               <p className="text-muted-foreground text-sm">
                 {selected.appearance}
               </p>
             )}
-            <section>{renderAbilities()}</section>
-            <section>{renderBaseStats()}</section>
-          </div>
-          <div className="flex flex-col items-end">
-            <div>
-              <span>Ht: {selected.height} m</span>
-              <span>Wt: {selected.weight} kg</span>
-            </div>
-            {selected.sprite && (
-              <img
-                src={`/assets/monster/${selected.sprite}`}
-                alt={selected.name}
-                loading="lazy"
-                className="w-40"
-              />
-            )}
           </div>
         </section>
 
-        <Separator />
+        <section className="flex gap-8 p-8 border rounded-lg">
+          {renderAbilities()}
+        </section>
+        <section className="flex flex-col gap-8 p-8 border rounded-lg">
+          {renderBaseStats()}
+        </section>
 
         <Tabs defaultValue="evolutions">
           <TabsList>
@@ -390,11 +622,19 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
       <div className="grid grid-cols-[250px_1fr] border-0">
         {/* Left panel: list */}
         <aside className="max-h-screen border-r">
-          <header className="border-b p-2">
-            <h1 className="text-3xl">Pokédex</h1>
-            <p className="text-muted-foreground text-sm">
-              ↑/↓ to navigate, click to select, Esc to close.
-            </p>
+          <header className="border-b p-2 flex justify-between items-center">
+            <div>
+              <h1 className="text-3xl">Pokédex</h1>
+              <p className="text-muted-foreground text-sm">
+                ↑/↓ to navigate, click to select, Esc to close.
+              </p>
+            </div>
+            <Button
+              onClick={() => setView("main_menu")}
+              className="text-sm py-1"
+            >
+              Back
+            </Button>
           </header>
           <ScrollArea className="h-[calc(100vh-101px)]">
             {loading && <p>Loading creatures...</p>}
@@ -449,6 +689,9 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
                               {type}
                             </Badge>
                           ))}
+                        </div>
+                        <div className="text-xs text-muted-foreground mt-1">
+                          Total: {c.base_stats.total}
                         </div>
                       </div>
                     </ItemContent>

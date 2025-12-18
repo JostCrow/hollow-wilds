@@ -1,4 +1,5 @@
 import { z } from "zod";
+export { z };
 
 // Base types
 export const PokemonType = z.enum([
@@ -250,7 +251,7 @@ export const RouteSchema = z.object({
   name: z.string(),
   description: z.string(),
   battle: z.string().optional(),
-  background: z.string(),
+  background: z.string().optional(),
   collisions: z.array(CollisionSchema).optional(),
   spawn: SpawnPointsSchema,
   exits: z.array(ExitSchema),
@@ -258,7 +259,7 @@ export const RouteSchema = z.object({
   wildPokemon: CreatureEncountersSchema.optional(),
   npcs: z.array(NPCSchema).optional(),
   objects: z.array(MapObjectSchema).optional(),
-  tileSize: z.number().optional(),
+  tileSize: z.number().default(32),
   tiles: TileMapSchema.optional(),
   boundaries: BoundariesSchema.optional(),
 });
@@ -339,3 +340,17 @@ export const PlayerSaveSchema = z.object({
 });
 
 export type PlayerSave = z.infer<typeof PlayerSaveSchema>;
+
+export const TypeChartSchema = z.object({
+  types: z.array(z.string()),
+  data: z.record(z.string(), z.object({
+    attackCategory: z.enum(["physical", "special"]),
+    defense: z.object({
+      physical: z.number(),
+      special: z.number()
+    }),
+    effectiveness: z.record(z.string(), z.number())
+  }))
+});
+
+export type TypeChart = z.infer<typeof TypeChartSchema>;

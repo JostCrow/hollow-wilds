@@ -5,10 +5,12 @@ import { MainMenu } from "./components/main_menu";
 import { CharacterSelect } from "./components/character_select";
 import { InGameMenu } from "./components/in_game_menu";
 import { Pokedex } from "./components/pokedex";
+import { TypeChart } from "./components/type_chart";
 import { ThemeProvider } from "@/components/theme-provider";
 import { useSessionStore } from "@/stores/session-store";
 import { usePlayerStore } from "@/stores/player-store";
 import { useGameDataStore } from "@/stores/game-data-store";
+import { BattleScene } from "@/components/battle/battle-scene";
 
 function App() {
   const view = useSessionStore((state) => state.view);
@@ -121,6 +123,12 @@ function App() {
       content = (
         <Pokedex playerPokedex={playerSave?.pokedex} onClose={closePokedex} />
       );
+      break;
+    case "battle":
+      content = <BattleScene />;
+      break;
+    case "type_chart":
+      content = <TypeChart />;
       break;
     default:
       content = <MainMenu />;

@@ -8,6 +8,11 @@ import { Label } from "./ui/label";
 import { usePlayerStore } from "@/stores/player-store";
 import { useSessionStore } from "@/stores/session-store";
 
+import { useBattleStore } from "@/stores/battle-store";
+
+import { generateOpponent, createPokemon, calculateMaxHp, calculateStat, generateIVs } from "@/utils/battle-logic";
+
+// Placeholder for next step
 const STARTER_POKEMON = ["Flarepib", "Verdreep", "Rivanos"] as const;
 
 export function CharacterSelect() {
@@ -24,12 +29,31 @@ export function CharacterSelect() {
   const recordError = usePlayerStore((state) => state.recordError);
   const setView = useSessionStore((state) => state.setView);
 
+  // State for persistent IVs for the 3 starters
+  const [starterIVs, setStarterIVs] = useState<Record<string, any>>({});
+
   useEffect(() => {
     fetch("/data/creatures.json")
       .then((response) => response.json())
-      .then((data) => setCreaturesData(data))
+      .then((data) => {
+        setCreaturesData(data);
+        // Initialize IVs
+        const ivs: Record<string, any> = {};
+        STARTER_POKEMON.forEach(name => {
+          ivs[name] = generateIVs();
+        });
+        setStarterIVs(ivs);
+      })
       .catch((error) => console.error("Error loading creatures:", error));
   }, []);
+
+  const handleReroll = () => {
+    const newIVs: Record<string, any> = {};
+    STARTER_POKEMON.forEach(name => {
+      newIVs[name] = generateIVs();
+    });
+    setStarterIVs(newIVs);
+  };
 
   const starterCreatures = creaturesData.filter((creature: any) =>
     STARTER_POKEMON.includes(creature.name),
@@ -45,6 +69,8 @@ export function CharacterSelect() {
     setSelectedPokemon(pokemonName);
   };
 
+  const { startBattle } = useBattleStore(); // Import battle store
+
   const handleStartGame = () => {
     if (!selectedPokemon || !playerGender) return;
 
@@ -53,21 +79,9 @@ export function CharacterSelect() {
     );
     if (!selectedCreature) return;
 
-    const starterPokemon: PlayerCreature = {
-      id: crypto.randomUUID(),
-      name: selectedCreature.name,
-      species: selectedCreature.name,
-      level: 5,
-      experience: 0,
-      hp: selectedCreature.base_stats.hp,
-      maxHp: selectedCreature.base_stats.hp,
-      moves: selectedCreature.moveset
-        .filter((move) => move.level <= 5)
-        .slice(0, 4)
-        .map((move) => move.move_key),
-      ability: selectedCreature.abilities[0],
-      shiny: false,
-    };
+    // Use the specific IVs we generated
+    const ivs = starterIVs[selectedPokemon] || generateIVs();
+    const starterPokemon: PlayerCreature = createPokemon(selectedCreature.name, 5, ivs);
 
     const playerSave: PlayerSave = {
       version: "1.0.0",
@@ -90,7 +104,37 @@ export function CharacterSelect() {
 
     try {
       startNewGame(playerSave);
-      setView("overworld");
+
+      // Check if we are in Infinite Battle mode
+      // NOTE: We need a way to know if we came here for "Infinite Battle" or "New Game".
+      // Session store view state "character_select" implies both?
+      // We can check if "previous view" or passed prop?
+      // Or cleaner: MainMenu sets a flag in SessionStore `gameMode`.
+      // For now, let's assume if we are creating a character, we go to Overworld usually.
+      // But if user clicked "Infinite Battle", we probably want to skip overworld.
+      // Let's use `useSessionStore` to check a transient flag or just default to overworld.
+      // Actually, the user asked: "Allow us to choose the starter pokemon when we are starting. That will be Flarepib, Verdreep or Rivanos. We already have a starter selection screen available."
+      // This implies replacing the random starter logic in "Infinite Battle" with this screen.
+
+      const { gameMode } = useSessionStore.getState();
+
+      if (gameMode === "infinite_battle") {
+        // Initialize Battle
+        const battlePlayer: any = {
+          ...starterPokemon,
+          sprite: selectedCreature.sprite,
+          typing: selectedCreature.typing,
+          base_stats: selectedCreature.base_stats,
+          currentHp: starterPokemon.hp
+        };
+        const opponent = generateOpponent(5);
+
+        startBattle(battlePlayer, opponent);
+        setView("battle");
+      } else {
+        setView("overworld");
+      }
+
     } catch (error) {
       console.error("Failed to start new game:", error);
       recordError("Unable to start new game. Please try again.");
@@ -181,56 +225,68 @@ export function CharacterSelect() {
     <div className="min-h-screen bg-background flex flex-col justify-center items-center">
       <Card className="text-center">
         <CardHeader>
-          <CardTitle>Choose Your Starter Pokémon</CardTitle>
+          <div className="flex justify-between items-center px-4">
+            <CardTitle>Choose Your Starter Pokémon</CardTitle>
+            <Button
+              onClick={handleReroll}
+              variant="secondary"
+              size="sm"
+              className="ml-4"
+            >
+              🎲 Reroll Stats
+            </Button>
+          </div>
         </CardHeader>
         <CardContent>
           <div className="flex flex-row gap-4">
-            {starterCreatures.map((creature) => (
-              <div
-                key={creature.name}
-                onClick={() => handlePokemonSelection(creature.name)}
-                className={`rounded-lg w-80 p-4 cursor-pointer transition-all ${
-                  selectedPokemon === creature.name
+            {starterCreatures.map((creature) => {
+              const ivs = starterIVs[creature.name] || { hp: 15, attack: 15, defense: 15, sp_attack: 15, sp_defense: 15, speed: 15 };
+              return (
+                <div
+                  key={creature.name}
+                  onClick={() => handlePokemonSelection(creature.name)}
+                  className={`rounded-lg w-80 p-4 cursor-pointer transition-all ${selectedPokemon === creature.name
                     ? "ring-4 ring-blue-500 transform scale-105"
                     : "hover:scale-102"
-                }`}
-              >
-                <div className="flex justify-center mb-4">
-                  <img
-                    src={`/monster/${creature.sprite}`}
-                    alt={creature.name}
-                    className="w-32 h-32 object-contain"
-                  />
-                </div>
+                    }`}
+                >
+                  <div className="flex justify-center mb-4">
+                    <img
+                      src={`/monster/${creature.sprite}`}
+                      alt={creature.name}
+                      className="w-32 h-32 object-contain"
+                    />
+                  </div>
 
-                <h3 className="text-xl font-bold text-center mb-2">
-                  {creature.name}
-                </h3>
+                  <h3 className="text-xl font-bold text-center mb-2">
+                    {creature.name}
+                  </h3>
 
-                <div className="flex justify-center gap-2 mb-3">
-                  {creature.typing.map((type) => (
-                    <span
-                      key={type}
-                      className={`px-2 py-1 rounded text-xs font-semibold ${getTypeColor(type)}`}
-                    >
-                      {type}
-                    </span>
-                  ))}
-                </div>
+                  <div className="flex justify-center gap-2 mb-3">
+                    {creature.typing.map((type) => (
+                      <span
+                        key={type}
+                        className={`px-2 py-1 rounded text-xs font-semibold ${getTypeColor(type)}`}
+                      >
+                        {type}
+                      </span>
+                    ))}
+                  </div>
 
-                <div className="text-sm text-center">
-                  <p className="mb-2">{creature.description}</p>
-                  <div className="text-xs">
-                    <p>HP: {creature.base_stats.hp}</p>
-                    <p>Attack: {creature.base_stats.attack}</p>
-                    <p>Defense: {creature.base_stats.defense}</p>
-                    <p>Special Attack: {creature.base_stats.sp_attack}</p>
-                    <p>Special Defense: {creature.base_stats.sp_defense}</p>
-                    <p>Speed: {creature.base_stats.speed}</p>
+                  <div className="text-sm text-center">
+                    <p className="mb-2">{creature.description}</p>
+                    <div className="text-xs grid grid-cols-2 gap-x-2 gap-y-1">
+                      <p>HP: {calculateMaxHp(creature.base_stats.hp, 5, ivs.hp)}</p>
+                      <p>Atk: {calculateStat(creature.base_stats.attack, 5, ivs.attack)}</p>
+                      <p>Def: {calculateStat(creature.base_stats.defense, 5, ivs.defense)}</p>
+                      <p>Sp.Atk: {calculateStat(creature.base_stats.sp_attack, 5, ivs.sp_attack)}</p>
+                      <p>Sp.Def: {calculateStat(creature.base_stats.sp_defense, 5, ivs.sp_defense)}</p>
+                      <p>Spd: {calculateStat(creature.base_stats.speed, 5, ivs.speed)}</p>
+                    </div>
                   </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
           <div className="mt-10">
             <Button

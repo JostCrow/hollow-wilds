@@ -1,6 +1,6 @@
 import { create } from "zustand";
 import { persist, createJSONStorage } from "zustand/middleware";
-import { PlayerSave, PlayerSaveSchema } from "@/types";
+import { PlayerSave, PlayerSaveSchema, PlayerCreature } from "@/types";
 
 type ProgressUpdater = number | ((prev: number) => number);
 
@@ -12,6 +12,9 @@ type PlayerStoreState = {
   setPlayerSave: (save: PlayerSave | null) => void;
   updatePlayerPosition: (routeKey: string, x: number, y: number) => void;
   updatePlaytime: (updater: ProgressUpdater) => void;
+  healParty: () => void;
+  catchPokemon: (pokemon: any) => void; // Using any for now to avoid circular dependency, or import BattleCreature
+  updatePartyMember: (index: number, updates: Partial<PlayerCreature>) => void;
   clearSave: () => void;
   markHydrated: () => void;
   recordError: (message?: string) => void;
@@ -21,7 +24,7 @@ const storageAvailable = typeof window !== "undefined";
 
 export const usePlayerStore = create<PlayerStoreState>()(
   persist(
-    (set, get) => ({
+    (set) => ({
       playerSave: null,
       hydrated: !storageAvailable,
       error: undefined,
@@ -78,6 +81,88 @@ export const usePlayerStore = create<PlayerStoreState>()(
               ...state.playerSave,
               playtime: Math.max(0, nextPlaytime),
             },
+          };
+        });
+      },
+      healParty: () => {
+        set((state) => {
+          if (!state.playerSave) return state;
+
+          const healedParty = state.playerSave.party.map(p => ({
+            ...p,
+            hp: p.maxHp,
+            status: "",
+            // Reset move PP if we were tracking it in PlayerCreature,
+            // but currently PP is dynamic from moves.json or transient in BattleCreature.
+            // If we want persistent PP, we need to update PlayerCreature schema.
+            // For now, full heal restores HP and status.
+          }));
+
+          return {
+            ...state,
+            playerSave: {
+              ...state.playerSave,
+              party: healedParty
+            }
+          };
+        });
+      },
+      catchPokemon: (battleCreature) => {
+        set((state) => {
+          if (!state.playerSave) return state;
+
+          // Convert BattleCreature to PlayerCreature
+          const newPokemon: PlayerCreature = {
+            id: crypto.randomUUID(),
+            name: battleCreature.name,
+            species: battleCreature.species,
+            level: battleCreature.level,
+            experience: battleCreature.experience,
+            hp: battleCreature.hp,
+            maxHp: battleCreature.maxHp,
+            moves: battleCreature.moves,
+            ability: battleCreature.ability,
+            shiny: battleCreature.shiny,
+            status: battleCreature.status || "",
+            ivs: battleCreature.ivs,
+            evs: battleCreature.evs
+          };
+
+          const currentParty = state.playerSave.party;
+          const currentPC = state.playerSave.pc;
+
+          if (currentParty.length < 6) {
+            return {
+              ...state,
+              playerSave: {
+                ...state.playerSave,
+                party: [...currentParty, newPokemon]
+              }
+            };
+          } else {
+            return {
+              ...state,
+              playerSave: {
+                ...state.playerSave,
+                pc: [...currentPC, newPokemon]
+              }
+            };
+          }
+        });
+      },
+      updatePartyMember: (index, updates) => {
+        set((state) => {
+          if (!state.playerSave) return state;
+          const newParty = [...state.playerSave.party];
+          if (newParty[index]) {
+            newParty[index] = { ...newParty[index], ...updates };
+          }
+          return {
+            ...state,
+            playerSave: {
+              ...state.playerSave,
+              party: newParty
+            }
           };
         });
       },

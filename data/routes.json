@@ -4,77 +4,54 @@
       "key": "route-one",
       "name": "Route 1",
       "description": "A peaceful route with tall grass and wild Pokemon",
-      "background": "assets/aurelia/route-1.webp",
-      "collisions": [
-        {
-          "x": 0,
-          "y": 0,
-          "width": 160,
-          "height": 160,
-          "name": "tree-top-left"
-        },
-        {
-          "x": 0,
-          "y": 160,
-          "width": 64,
-          "height": 356,
-          "name": "tree-top-left"
-        },
-        {
-          "x": 912,
-          "y": 0,
-          "width": 112,
-          "height": 351,
-          "name": "tree-top-right"
-        },
-        {
-          "x": 0,
-          "y": 1048,
-          "width": 162,
-          "height": 491,
-          "name": "tree-bottom-left"
-        },
-        {
-          "x": 902,
-          "y": 1099,
-          "width": 122,
-          "height": 369,
-          "name": "tree-bottom-right"
-        },
-        {
-          "x": 919,
-          "y": 1492,
-          "width": 105,
-          "height": 44,
-          "name": "tree-bottom-right"
-        },
-        {
-          "x": 0,
-          "y": 548,
-          "width": 496,
-          "height": 42,
-          "name": "dirt-strip-left"
-        },
-        {
-          "x": 476,
-          "y": 831,
-          "width": 548,
-          "height": 46,
-          "name": "dirt-strip-right"
-        }
-      ],
       "battle": "grass.png",
+      "tileSize": 32,
+      "tiles": {
+        "map": [
+          "tttttttttttttttttttttttttttttttttttt",
+          "tttttttttttttttttttttttttttttttttttt",
+          "tttttttttttttttttttttttttttttttttttt",
+          "ttttgggggggggggggggggggggggttttttttt",
+          "ttttgggggggggggggggggggggggttttttttt",
+          "ttttgggggggggggggggggggggggttttttttt",
+          "ttttggppppppppppppppppppppgggttttttt",
+          "ttttggppppppppppppppppppppgggttttttt",
+          "ttttggppppppppppppppppppppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppppppppppppppppppppgggttttttt",
+          "ttttggppppppppppppppppppppgggttttttt",
+          "ttttggppppppppppppppppppppgggttttttt",
+          "ttttggppppppppppppppppppppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppggggggggggggggggppgggttttttt",
+          "ttttggppppppppppppppppppppgggttttttt",
+          "tteeeepppppppppppppppppppppgeeeeeett"
+        ],
+        "legend": {
+          "t": "tree",
+          "g": "grass",
+          "p": "path-full",
+          "e": "exit-path"
+        }
+      },
       "spawn": {
         "default": {
-          "tx": 840,
-          "ty": 1524
+          "tx": 19,
+          "ty": 22
         },
         "from-willowfen-village": {
-          "tx": 840,
-          "ty": 1524
+          "tx": 19,
+          "ty": 22
         },
         "from-viridian-city": {
-          "tx": 20,
+          "tx": 19,
           "ty": 1
         }
       },
@@ -167,34 +144,65 @@
       "key": "willowfen-village",
       "name": "Willowfen Village",
       "description": "A quiet town where winds tell tales of a world of Pokemon",
-      "background": "assets/aurelia/willowfen-village.png",
-      "collisions": [
-        {
-          "x": 433,
-          "y": 338,
-          "width": 158,
-          "height": 188,
-          "name": "well"
+      "tileSize": 32,
+      "tiles": {
+        "map": [
+          "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+          "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+          "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+          "hhhppppppppppppppppppppppppppppphhh",
+          "hhhppppppppppppppppppppppppppppphhh",
+          "hhpphhhhhhhhhhhhhhhhhhhhhhhhhhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhpphhpppppppppppppppppppppphhpphh",
+          "hhhpeeeeeeeeeeeeeeeeeeeeeeeeeehhh"
+        ],
+        "legend": {
+          "h": "house",
+          "p": "path-full",
+          "e": "exit-path"
         }
-      ],
+      },
       "spawn": {
         "default": {
-          "tx": 400,
-          "ty": 496
+          "tx": 20,
+          "ty": 15
         },
         "from-route-one": {
-          "tx": 304,
-          "ty": 1024
+          "tx": 20,
+          "ty": 29
         }
       },
       "exits": [
         {
           "id": "north-exit",
           "area": {
-            "tx": 296,
-            "ty": 1024,
-            "w": 12,
-            "h": 10
+            "tx": 19,
+            "ty": 30,
+            "w": 10,
+            "h": 1
           },
           "destination": "route-one",
           "spawnPoint": "from-willowfen-village"
@@ -268,11 +276,11 @@
         },
         "from-route-one": {
           "tx": 15,
-          "ty": 18
+          "ty": 17
         },
         "from-route-two": {
           "tx": 15,
-          "ty": 1
+          "ty": 2
         },
         "from-pokemon-center": {
           "tx": 10,

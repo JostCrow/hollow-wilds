@@ -5,15 +5,19 @@ export type GameView =
   | "character_select"
   | "overworld"
   | "in_game_menu"
-  | "pokedex";
+  | "pokedex"
+  | "battle"
+  | "type_chart";
 
 type ProgressUpdater = number | ((prev: number) => number);
 
 type SessionStoreState = {
   view: GameView;
+  gameMode: "new_game" | "infinite_battle";
   isBooting: boolean;
   loadingProgress: number;
   setView: (view: GameView) => void;
+  setGameMode: (mode: "new_game" | "infinite_battle") => void;
   setBooting: (value: boolean) => void;
   setLoadingProgress: (value: ProgressUpdater) => void;
   toggleInGameMenu: () => void;
@@ -24,9 +28,11 @@ type SessionStoreState = {
 
 export const useSessionStore = create<SessionStoreState>((set) => ({
   view: "main_menu",
+  gameMode: "new_game",
   isBooting: true,
   loadingProgress: 0,
   setView: (view) => set({ view }),
+  setGameMode: (gameMode) => set({ gameMode }),
   setBooting: (value) => set({ isBooting: value }),
   setLoadingProgress: (value) =>
     set((state) => ({
@@ -47,4 +53,3 @@ export const useSessionStore = create<SessionStoreState>((set) => ({
   closePokedex: () => set({ view: "in_game_menu" }),
   returnToMainMenu: () => set({ view: "main_menu" }),
 }));
-
