@@ -1,7 +1,7 @@
 {
   "compilerOptions": {
     "target": "ES2020",
-    "lib": ["ES2020", "DOM", "DOM.Iterable"],
+    "lib": ["ES2022", "DOM", "DOM.Iterable"],
     "module": "ESNext",
     "skipLibCheck": true,
     "moduleResolution": "bundler",
@@ -14,14 +14,14 @@
     "noUnusedLocals": true,
     "noUnusedParameters": true,
     "noFallthroughCasesInSwitch": true,
-    "baseUrl": ".",
     "paths": {
-      "@/*": ["src/*"],
-      "@/types/*": ["src/types/*"],
-      "@/data/*": ["src/data/*"],
-      "@/services/*": ["src/services/*"],
-      "@/systems/*": ["src/systems/*"]
-    }
+      "@/*": ["./src/*"],
+      "@/types/*": ["./src/types/*"],
+      "@/data/*": ["./src/data/*"],
+      "@/services/*": ["./src/services/*"],
+      "@/systems/*": ["./src/systems/*"]
+    },
+    "types": ["vite/client", "node"]
   },
   "include": ["src/**/*.ts", "src/**/*.tsx", "data/**/*.json"],
   "exclude": ["node_modules", "dist"]

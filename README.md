@@ -4,10 +4,10 @@ A playable, local browser adventure built around the existing 93 creatures, 183 
 
 ## Run
 
-Requires Node.js 22.6+ (Node 22.18+ recommended for the built-in TypeScript test runner).
+Requires Node.js 22.18+ or Node.js 24+. Dependency versions are pinned in `package-lock.json`.
 
 ```sh
-npm install
+npm ci
 npm run dev
 ```
 
@@ -17,6 +17,8 @@ Open **http://localhost:3003**. The app also runs as a static production build:
 npm run build
 npm run preview
 ```
+
+Typechecking and builds use TypeScript 7. ESLint uses the TypeScript 6 API through the compatibility alias recommended by [Microsoft](https://devblogs.microsoft.com/typescript/announcing-typescript-7-0/#running-side-by-side-with-typescript-6-0), so both tools can run together without conflicting compiler executables.
 
 ## Play
 

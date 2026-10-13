@@ -52,7 +52,7 @@ export const MoveSchema = z.object({
 
 export type Move = z.infer<typeof MoveSchema>;
 
-export const MovesFileSchema = z.record(MoveSchema);
+export const MovesFileSchema = z.record(z.string(), MoveSchema);
 export type MovesFile = z.infer<typeof MovesFileSchema>;
 
 // Creature-related types
@@ -155,7 +155,7 @@ export const ItemsSchema = z.object({
 export type Items = z.infer<typeof ItemsSchema>;
 
 // Type effectiveness
-export const TypeEffectivenessSchema = z.record(z.number());
+export const TypeEffectivenessSchema = z.record(z.string(), z.number());
 
 export const TypeDataSchema = z.object({
   attackCategory: MoveCategory,
@@ -168,7 +168,7 @@ export const TypeDataSchema = z.object({
 
 export const TypesSchema = z.object({
   types: z.array(PokemonType),
-  data: z.record(PokemonType, TypeDataSchema),
+  data: z.partialRecord(PokemonType, TypeDataSchema),
 });
 
 export type Types = z.infer<typeof TypesSchema>;
@@ -186,7 +186,7 @@ export const SpawnPointSchema = z.object({
   ty: z.number(),
 });
 
-export const SpawnPointsSchema = z.record(SpawnPointSchema);
+export const SpawnPointsSchema = z.record(z.string(), SpawnPointSchema);
 
 export const BoundarySchema = z.object({
   tx: z.number(),
@@ -268,7 +268,7 @@ export type Route = z.infer<typeof RouteSchema>;
 
 export const RoutesSchema = z.object({
   routes: z.array(RouteSchema),
-  connections: z.record(z.array(z.string())),
+  connections: z.record(z.string(), z.array(z.string())),
   startingRoute: z.string(),
   playerConfig: z.object({
     walkSpeed: z.number(),
@@ -282,6 +282,7 @@ export const RoutesSchema = z.object({
       height: z.number(),
     }),
     directions: z.record(
+      z.string(),
       z.object({
         frame: z.number(),
         walkFrames: z.array(z.number()),
@@ -315,8 +316,8 @@ export const PlayerCreatureSchema = z.object({
   moves: z.array(z.string()),
   ability: z.string(),
   nature: z.string().optional(),
-  ivs: z.record(StatName, z.number()).optional(),
-  evs: z.record(StatName, z.number()).optional(),
+  ivs: z.partialRecord(StatName, z.number()).optional(),
+  evs: z.partialRecord(StatName, z.number()).optional(),
   shiny: z.boolean().default(false),
   status: z.string().optional(),
 });
@@ -334,7 +335,7 @@ export const PlayerSaveSchema = z.object({
   party: z.array(PlayerCreatureSchema),
   pc: z.array(PlayerCreatureSchema),
   bag: z.record(z.string(), z.number()),
-  flags: z.record(z.boolean()),
+  flags: z.record(z.string(), z.boolean()),
   playtime: z.number(),
   pokedex: z.record(z.string(), z.boolean()),
 });

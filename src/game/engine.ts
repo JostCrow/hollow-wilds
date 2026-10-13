@@ -154,7 +154,7 @@ const companionSchema = z.object({
     .array(z.string().refine((k) => !!moves[k]))
     .min(1)
     .max(4),
-  pp: z.record(nonnegative),
+  pp: z.record(z.string(), nonnegative),
 });
 const names = z
   .array(z.string().refine((n) => !!species[n]))

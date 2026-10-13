@@ -13,17 +13,17 @@ export default defineConfig({
   plugins: [react(), tailwindcss()],
   resolve: {
     alias: {
-      "@": path.resolve(__dirname, "./src"),
-      "@/types": path.resolve(__dirname, "./src/types"),
-      "@/data": path.resolve(__dirname, "./src/data"),
-      "@/services": path.resolve(__dirname, "./src/services"),
-      "@/systems": path.resolve(__dirname, "./src/systems"),
+      "@": path.resolve(import.meta.dirname, "./src"),
+      "@/types": path.resolve(import.meta.dirname, "./src/types"),
+      "@/data": path.resolve(import.meta.dirname, "./src/data"),
+      "@/services": path.resolve(import.meta.dirname, "./src/services"),
+      "@/systems": path.resolve(import.meta.dirname, "./src/systems"),
     },
   },
   build: {
     outDir: "dist",
     sourcemap: true,
-    rollupOptions: {
+    rolldownOptions: {
       input: "./index.html",
     },
   },
