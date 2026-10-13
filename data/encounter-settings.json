@@ -1,0 +1,6 @@
+{
+  "shinyOdds": 2,
+  "alphaOdds": 20,
+  "alphaStatMultiplier": 1.2,
+  "fallbackShinyBonus": 10
+}

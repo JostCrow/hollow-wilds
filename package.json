@@ -1,16 +1,17 @@
 {
-  "name": "pokemon-browser",
+  "name": "the-hollow-wilds",
   "version": "1.0.0",
-  "description": "A Pokémon-inspired game built with Excalibur.js",
-  "main": "src/main.ts",
+  "description": "A browser creature-collecting adventure with explorable towns, routes, turn-based battles, and JSON saves",
+  "main": "src/main.tsx",
   "type": "module",
   "scripts": {
     "dev": "vite",
     "build": "tsc && vite build",
     "preview": "vite preview",
-    "lint": "eslint src --ext .ts,.tsx",
+    "lint": "eslint src/game src/App.tsx src/main.tsx",
     "typecheck": "tsc --noEmit",
-    "validate-data": "node scripts/validate-data.js"
+    "validate-data": "node --experimental-strip-types scripts/validate-data.ts",
+    "test": "node --experimental-strip-types --test src/game/*.test.ts"
   },
   "dependencies": {
     "@pixi/tilemap": "^5.0.2",
@@ -18,6 +19,7 @@
     "@radix-ui/react-label": "^2.1.8",
     "@radix-ui/react-progress": "^1.1.8",
     "@radix-ui/react-scroll-area": "^1.2.10",
+    "@radix-ui/react-select": "^2.2.6",
     "@radix-ui/react-separator": "^1.1.8",
     "@radix-ui/react-slot": "^1.2.4",
     "@radix-ui/react-tabs": "^1.1.13",
@@ -32,6 +34,7 @@
     "pixi.js": "^8.14.0",
     "react": "^19.2.0",
     "react-dom": "^19.2.0",
+    "react-router-dom": "^7.11.0",
     "tailwind-merge": "^3.3.1",
     "tailwindcli": "^2.0.0",
     "zod": "^3.25.76",

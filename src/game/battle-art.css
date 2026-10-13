@@ -1,0 +1,121 @@
+/* Painted scenery uses the original hollowing illustrations as its art reference. */
+.battle-overlay .battle-card {
+  background: #fff7e5;
+  border: 1px solid #a8956c;
+  border-radius: 22px;
+  box-shadow: 0 32px 100px #183b385c, 0 3px 0 #ffffff8c inset;
+}
+.battle-card .battle-topline {
+  color: #64563c;
+  background: linear-gradient(180deg, #fff9e9, #efe6ce);
+  border-color: #c0b28c;
+}
+.battle-card .battle-topline > span:last-child { color: #687d5f; }
+.battle-card .battle-field {
+  height: 410px;
+  isolation: isolate;
+  background: #799254;
+}
+.battle-card .battle-glade {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 70%;
+  pointer-events: none;
+}
+.battle-card .battle-info {
+  width: 236px;
+  background: linear-gradient(135deg, #fff8e8f7, #f1e6ccf5);
+  border: 1px solid #a2946d;
+  border-radius: 15px;
+  box-shadow: 0 3px 0 #594b3529, 0 7px 18px #332b2529;
+  backdrop-filter: blur(8px);
+}
+.battle-card .battle-info > div > span,
+.battle-card .battle-info > small { color: #627555; }
+.battle-card .enemy-info { top: 26px; left: 28px; }
+.battle-card .ally-info { bottom: 24px; right: 28px; }
+.battle-card .battle-enemy {
+  right: 17%;
+  top: auto;
+  bottom: 35%;
+  width: 196px;
+  height: 196px;
+  z-index: 2;
+}
+.battle-card .battle-ally {
+  left: 14%;
+  bottom: 5%;
+  width: 238px;
+  height: 238px;
+  z-index: 3;
+}
+.battle-card .battle-enemy img,
+.battle-card .battle-ally img {
+  object-position: center bottom;
+  object-fit: contain;
+  filter: drop-shadow(3px 7px 4px #292d2952);
+  transform-origin: 50% 93%;
+  animation: battle-breathe 2.6s ease-in-out infinite;
+}
+.battle-card .battle-ally img { scale: -1 1; transform: none; }
+.battle-card .is-attacking .battle-enemy img { animation: hit .45s ease; }
+.battle-card .is-attacking .battle-ally img { animation: lunge .35s ease; }
+@keyframes battle-breathe {
+  0%, 100% { transform: scaleY(1); }
+  50% { transform: scaleY(1.016); }
+}
+.battle-card .battle-bottom { border-color: #b8ab83; }
+.battle-card .battle-log {
+  background: linear-gradient(135deg, #f3ead5, #e9dfc2);
+  border-color: #c4b68d;
+}
+.battle-card .battle-log p { color: #829174; }
+.battle-card .battle-log p.recent { color: #526c47; }
+.battle-card .battle-log p:last-child { color: #3d5f38; }
+.battle-card .battle-prompt > span,
+.battle-card .move-button small,
+.battle-card .battle-tools small { color: #687f58; }
+.battle-card .move-button,
+.battle-card .switch-list button {
+  border-radius: 12px;
+  border-color: #b7ad87;
+  background: linear-gradient(145deg, #fffaee, #efe8d3);
+  box-shadow: 0 3px 0 #bccda366, 0 1px 0 #fff inset;
+  transition: background .15s, translate .15s, box-shadow .15s;
+}
+.battle-card .move-button:not(:disabled):hover,
+.battle-card .switch-list button:not(:disabled):hover {
+  background: linear-gradient(145deg, #fffef0, #e1eccd);
+  translate: 0 -2px;
+  box-shadow: 0 5px 0 #bccda366, 0 6px 12px #6c875719;
+}
+.battle-card .move-button:not(:disabled):active,
+.battle-card .switch-list button:not(:disabled):active { translate: 0 1px; box-shadow: 0 1px 0 #bccda366; }
+.battle-card .battle-tools button { color: #567244; }
+@media (max-width: 720px) {
+  .battle-overlay .battle-card { border-radius: 18px; }
+  .battle-card .battle-field { height: 350px; }
+  .battle-card .battle-glade { object-position: center 75%; }
+  .battle-card .battle-info { width: 160px; padding: 10px 12px; border-radius: 12px; }
+  .battle-card .enemy-info { top: 16px; left: 13px; }
+  .battle-card .ally-info { right: 13px; bottom: 19px; }
+  .battle-card .battle-enemy { width: 145px; height: 145px; right: 5%; top: auto; bottom: 36%; }
+  .battle-card .battle-ally { width: 172px; height: 172px; left: 4%; bottom: 6%; }
+}
+@media (max-width: 380px) {
+  .battle-card .battle-info { width: 148px; }
+  .battle-card .battle-enemy { width: 128px; height: 128px; right: 4%; }
+  .battle-card .battle-ally { width: 150px; height: 150px; left: 3%; }
+}
+@media (prefers-reduced-motion: reduce) {
+  .battle-card .battle-enemy img,
+  .battle-card .battle-ally img { animation: none !important; }
+  .battle-card .move-button,
+  .battle-card .switch-list button,
+  .battle-card .battle-enemy { transition: none; }
+  .battle-card .move-button:not(:disabled):hover,
+  .battle-card .switch-list button:not(:disabled):hover { translate: none; }
+}

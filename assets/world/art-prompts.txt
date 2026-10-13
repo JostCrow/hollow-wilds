@@ -1,0 +1,43 @@
+Built-in image_gen tool. Original hollowing PNGs were style references, not edit targets.
+Outputs: illustrated-world-v1.png, illustrated-props-v1.png, battle-glade-v1.png.
+Main atlas reference inputs: assets/monster/flarepib.png, verdreep.png, rivanos.png.
+Supplemental and battle inputs: the same three original creatures plus illustrated-world-v1.png.
+
+MAIN WORLD ATLAS
+Use case: style-transfer / illustration-story.
+Asset type: production game environment sprite atlas, one square transparent PNG, 4 columns by 4 rows, 16 isolated sprites in exact equal cells, no grid lines and no text.
+Input images are STYLE REFERENCES ONLY: Image 1 orange Flarepib, Image 2 olive leafy Verdreep, Image 3 blue Rivanos. Keep the actual original creature images intact; draw no creatures in the output.
+Primary request: create the world objects that belong to these EXACT hand-illustrated creature images. Match their confident warm brown/olive near-black ink outlines, detailed organic leaf shapes, rich colored hand painted shading, broad darker shade on lower/right surfaces, lightly textured fills and occasional small drawn highlights. They must look illustrated by the same artist as the references. This is NOT low-poly 3D, not flat vector icons, not chibi clay toys, not pixel art, and not hazy watercolor.
+Camera: consistent classic RPG raised top-down / three-quarter FRONT view, seeing a little of the tops but mostly the front; no diagonal isometric rotation. Light above-left.
+Layout: each sprite fully isolated with real transparent alpha, centered in its own equal square cell. All shapes and subtle contact shadows contained inside their cell, generous 15% clear margin. Ground contact centered at approximately 85% of each cell height. No sprite touches neighboring cells. No colored background, no checkerboard painted into image.
+Exactly these sprites, left-to-right row-by-row:
+Row 1: (1) lush rounded leafy oak with branching brown bark and individual olive green leaves; (2) deep green pine tree with layered pointed boughs and detailed trunk; (3) leafy orchard tree with warm orange fruit; (4) pine tree with softly shaded snow clumps on boughs.
+Row 2: (5) cozy cream-and-timber cottage with warm terracotta pitched tiled roof, little porch and green round-topped door; (6) matching HEALING cottage with dusty rose tiled roof and a small simple cream cross emblem above its arched front door; (7) matching shop cottage with blue teal tiled roof, cream timber walls, front windows and small planter; (8) cream timber windmill with four wooden canvas sails.
+Row 3: (9) group of three moss-covered warm gray rocks with defined ink outlines; (10) group of blue gray rocks and angular ice crystals; (11) small tuft of fern leaves, grass and pastel wildflowers with pointed leaves and defined ink; (12) cluster of red cap mushrooms with cream stems and cap spots.
+Row 4: (13) small round stone fountain, turquoise pool and carved center pedestal; (14) small ancient stone shrine with two mossy columns and little carved central stone; (15) small wooden boat with a single cream sail, ground-level isolated prop; (16) wooden park bench next to a tiny simple blank wooden trail sign.
+Quality: polished hand-illustrated RPG object sprites with dimensional shading, cohesive color and line weight throughout. Clean sharp silhouette readability at small scale but detailed art when enlarged. No letters, no watermark.
+
+SUPPLEMENTAL PROPS
+Use case: style-transfer / illustration-story. Asset type: transparent production RPG environment sprite atlas. A landscape PNG with EXACTLY 4 columns and 2 rows, 8 isolated object sprites, no grid lines and no text.
+Input images are STYLE REFERENCES ONLY: first the finished world atlas, then original Flarepib, Verdreep and Rivanos. Match the finished atlas's EXACT painted detailed organic illustration style, warm brown/olive dark ink outlines, rich dimensional cel/painterly shading, little hand-drawn material texture, light from upper-left. No characters or creatures. No edits to original references.
+All 8 sprites entirely within their equal-sized cells, centered, real transparent background, generous 15% transparent space separating cells; no overlapping neighboring cells. Classic RPG three-quarter FRONT view with a little top visible, not a diagonal rotated isometric tile. Keep subtle ground shadow close under object. No painted checkerboard or colored background.
+Left-to-right, row-by-row:
+Row 1:
+(1) small cozy cream canvas A-frame camping tent with warm timber poles and dark open front, leafy ground accents.
+(2) little rustic wooden orchard cart with two wheels and a few bright orange fruits.
+(3) upright cluster of blue turquoise crystalline shards with warm dark outline and shaded facets, some small stones and moss.
+(4) low wooden footbridge seen from mostly top down with a little front face: a LONG HORIZONTAL rectangular deck, short shallow timber rail along its far/top edge, individual brown planks. Walkable surface clearly visible. Very little vertical height; not side elevation, not a tall arched bridge, not water beneath it. Transparent outside the deck.
+Row 2:
+(5) small golden wrapped trail gift box with cream ribbon, dimensional shaded lid and little subtle highlight. Not a creature.
+(6) single rustic wooden trail direction sign, one blank horizontal arrow-shaped board on a wooden post, blank face with no letters.
+(7) small tuft of marsh reeds, long pointed green leaves with a few golden brown seed heads. Individual crisp leaf shapes match atlas.
+(8) small wooden park bench with a backrest and four legs, no sign attached.
+All hand-illustrated with the SAME line weight, coloration and shading quality as the environment atlas; no vector icons, no low-poly objects, no chibi clay, no pixel art. No text or watermark.
+
+BATTLE GLADE
+Use case: style-transfer / illustration-story. Asset type: landscape painted RPG battle background, wide 3:2 composition, no transparency.
+Input images are STYLE REFERENCES ONLY: the environment atlas first, then original orange Flarepib, olive leaf-furred Verdreep, blue Rivanos. Do not change or copy the creature subjects; NO characters, creatures, UI, text, or platforms in the output.
+Create a woodland glade that convincingly belongs to the exact same hand-illustrated world as the atlas and original creature images. Use the same warm brown/olive near-black confident ink contours, detailed pointed leaf clusters and shaded bark, rich colored painted fills, light subtle texture, broad dimensional shade and crisp drawn highlights. Match the atlas's organic illustrated trees, not geometric blobs. Not flat SVG/vector icons, not clay or low-poly 3D, not pixel art, not blurry watercolor.
+Composition for a playable battle scene: forest trees and large leafy shrubs frame the far left and far right. Background includes distant smaller trees with softer shading and a small patch of blue sky above. The lower TWO THIRDS are an open gently sloping grass clearing with low illustrated grass tufts, a few tiny cream wildflowers and a little earthy path edging. The center-left foreground and right midground are empty, unobstructed grassy places where existing creature cutout PNGs will stand. Ground plane is clearly visible in those areas. No concentric arena rings, no floating platforms, no stools, no painted creature shadows.
+Lighting: gentle warm sunlight from upper-left, consistent with the atlas. Lively natural woodland greens (olive, pine, leaf green), golden cream sunlight, warm brown soil and bark, a little blue sky. Comfortable clear daylight with defined illustrated forms and natural depth. The entire scene, including floor, has the same confident linework and hand-colored surface texture as the references.
+Production clean background only, no text, no labels, no watermark.

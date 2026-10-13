@@ -2408,6 +2408,633 @@
     "mythical": false
   },
   {
+    "name": "Snochi",
+    "sprite": "snochi.png",
+    "typing": ["Ice", "Normal"],
+    "description": "A small, timid creature that hides in thick snow. It uses its long ears to sense vibrations of approaching predators.",
+    "appearance": "A tiny, white rabbit-like Pokémon with fur that sparkles like fresh powder and large, blue-tipped ears.",
+    "height": 0.3,
+    "weight": 2.5,
+    "base_stats": {
+      "hp": 45,
+      "attack": 50,
+      "defense": 40,
+      "sp_attack": 40,
+      "sp_defense": 40,
+      "speed": 60,
+      "total": 275
+    },
+    "shiny_boost": { "stat": "speed", "bonus": 5 },
+    "abilities": ["Run Away", "Snow Cloak"],
+    "moveset": [
+      { "move_key": "tackle", "level": 1 },
+      { "move_key": "powder_snow", "level": 1 },
+      { "move_key": "double_team", "level": 12 }
+    ],
+    "evolution_mechanic": "Evolves when it reaches level 16 in cold environments.",
+    "evolution_requirements": [
+      { "type": "level", "level": 16, "evolves_to": "Snoven" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Snoven",
+    "sprite": "snoven.png",
+    "typing": ["Ice", "Normal"],
+    "description": "Snoven is the turning point of its line. Depending on the environment it trains in, it adapts its fur to either endure or strike.",
+    "appearance": "A medium-sized hare with thick, insulating ruffs of fur around its neck and paws that have developed small, sharp ice-claws.",
+    "height": 0.8,
+    "weight": 18,
+    "base_stats": {
+      "hp": 65,
+      "attack": 70,
+      "defense": 60,
+      "sp_attack": 60,
+      "sp_defense": 60,
+      "speed": 85,
+      "total": 400
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 10 },
+    "abilities": ["Adaptability", "Slush Rush"],
+    "moveset": [
+      { "move_key": "ice_shard", "level": 16 },
+      { "move_key": "quick_attack", "level": 20 },
+      { "move_key": "bite", "level": 25 }
+    ],
+    "evolution_mechanic": "Evolves at level 34. Path depends on environment conditions during evolution.",
+    "evolution_requirements": [
+      { "type": "level", "level": 34, "condition": "During Blizzard", "evolves_to": "Glacimal" },
+      { "type": "level", "level": 34, "condition": "Holding Metal Coat", "evolves_to": "Harefrost" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Glacimal",
+    "sprite": "glacimal.png",
+    "typing": ["Ice", "Ghost"],
+    "description": "When Snoven evolves in a blizzard, it loses its physical form to the wind, becoming a haunting spirit of the cold.",
+    "appearance": "A large, spectral white hare that appears to be made of swirling snow-mist. Its eyes glow with a chilling blue light.",
+    "height": 1.5,
+    "weight": 0.1,
+    "base_stats": {
+      "hp": 75,
+      "attack": 60,
+      "defense": 70,
+      "sp_attack": 125,
+      "sp_defense": 95,
+      "speed": 105,
+      "total": 530
+    },
+    "shiny_boost": { "stat": "sp_attack", "bonus": 15 },
+    "abilities": ["Snow Warning", "Infiltrator"],
+    "moveset": [
+      { "move_key": "shadow_ball", "level": 34 },
+      { "move_key": "blizzard", "level": 42 },
+      { "move_key": "destiny_bond", "level": 55 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Harefrost",
+    "sprite": "harefrost.png",
+    "typing": ["Ice", "Metal"],
+    "description": "By bonding with metallic ores, Snoven's fur becomes as hard as steel, turning it into a living battering ram.",
+    "appearance": "A muscular, armored hare. Its ears have become heavy metallic blades and its fur has a polished, silvery sheen.",
+    "height": 1.4,
+    "weight": 115,
+    "base_stats": {
+      "hp": 95,
+      "attack": 125,
+      "defense": 110,
+      "sp_attack": 50,
+      "sp_defense": 80,
+      "speed": 70,
+      "total": 530
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 15 },
+    "abilities": ["Iron Barbs", "Tough Claws"],
+    "moveset": [
+      { "move_key": "iron_head", "level": 34 },
+      { "move_key": "icicle_crash", "level": 42 },
+      { "move_key": "double_edge", "level": 50 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Sparkle",
+    "sprite": "sparkle.png",
+    "typing": ["Electric"],
+    "description": "A small spark of energy that lives in power lines. It is highly erratic and difficult to catch.",
+    "appearance": "A floating yellow mote of light with tiny, crackling electricity arms and a joyful face.",
+    "height": 0.2,
+    "weight": 0.1,
+    "base_stats": {
+      "hp": 40,
+      "attack": 30,
+      "defense": 30,
+      "sp_attack": 65,
+      "sp_defense": 45,
+      "speed": 80,
+      "total": 290
+    },
+    "shiny_boost": { "stat": "speed", "bonus": 10 },
+    "abilities": ["Static", "Levitate"],
+    "moveset": [
+      { "move_key": "thundershock", "level": 1 },
+      { "move_key": "charge", "level": 8 }
+    ],
+    "evolution_mechanic": "Evolves at level 20. Path depends on which stat is higher - Speed or Defense.",
+    "evolution_requirements": [
+      { "type": "level", "level": 20, "condition": "High Speed stat", "evolves_to": "Voltwing" },
+      { "type": "level", "level": 20, "condition": "High Defense stat", "evolves_to": "Currenshell" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Voltwing",
+    "sprite": "voltwing.png",
+    "typing": ["Electric", "Air"],
+    "description": "It uses its wings to generate massive amounts of static electricity as it flies through storm clouds.",
+    "appearance": "A sleek, bird-like creature made of yellow lightning with translucent, cloud-like wings.",
+    "height": 1.1,
+    "weight": 12,
+    "base_stats": {
+      "hp": 60,
+      "attack": 50,
+      "defense": 50,
+      "sp_attack": 95,
+      "sp_defense": 70,
+      "speed": 110,
+      "total": 435
+    },
+    "shiny_boost": { "stat": "speed", "bonus": 10 },
+    "abilities": ["Volt Absorb", "Aerilate"],
+    "moveset": [
+      { "move_key": "air_cutter", "level": 20 },
+      { "move_key": "discharge", "level": 28 }
+    ],
+    "evolution_mechanic": "Evolves when it reaches level 40 and masters storm magic.",
+    "evolution_requirements": [
+      { "type": "level", "level": 40, "evolves_to": "Stormlord" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Stormlord",
+    "sprite": "stormlord.png",
+    "typing": ["Electric", "Air"],
+    "description": "It commands the weather itself. A single beat of its wings can trigger a week-long thunderstorm.",
+    "appearance": "A massive, four-winged thunderbird with eyes that flash like lightning and a tail of dark storm clouds.",
+    "height": 3.8,
+    "weight": 95,
+    "base_stats": {
+      "hp": 85,
+      "attack": 70,
+      "defense": 75,
+      "sp_attack": 135,
+      "sp_defense": 95,
+      "speed": 125,
+      "total": 585
+    },
+    "shiny_boost": { "stat": "sp_attack", "bonus": 20 },
+    "abilities": ["Drizzle", "Pressure"],
+    "moveset": [
+      { "move_key": "thunder", "level": 40 },
+      { "move_key": "hurricane", "level": 50 },
+      { "move_key": "roost", "level": 60 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Currenshell",
+    "sprite": "currenshell.png",
+    "typing": ["Electric", "Metal"],
+    "description": "It has encased itself in a heavy copper shell that conducts its electrical energy efficiently.",
+    "appearance": "A tortoise-like Pokémon with a shell made of copper coils and a head that looks like a lightbulb.",
+    "height": 0.9,
+    "weight": 180,
+    "base_stats": {
+      "hp": 80,
+      "attack": 60,
+      "defense": 115,
+      "sp_attack": 85,
+      "sp_defense": 70,
+      "speed": 25,
+      "total": 435
+    },
+    "shiny_boost": { "stat": "defense", "bonus": 10 },
+    "abilities": ["Lightning Rod", "Filter"],
+    "moveset": [
+      { "move_key": "iron_defense", "level": 20 },
+      { "move_key": "parabolic_charge", "level": 28 }
+    ],
+    "evolution_mechanic": "Evolves when it reaches level 40 after storing sufficient electrical charge.",
+    "evolution_requirements": [
+      { "type": "level", "level": 40, "evolves_to": "Ohm-Titan" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Ohm-Titan",
+    "sprite": "ohmtitan.png",
+    "typing": ["Electric", "Metal"],
+    "description": "It acts as a living battery. Cities sometimes use Ohm-Titans to restart power grids after a collapse.",
+    "appearance": "A colossal, bipedal machine-like creature with massive Tesla coils on its back and a body of reinforced steel.",
+    "height": 4.2,
+    "weight": 850,
+    "base_stats": {
+      "hp": 110,
+      "attack": 90,
+      "defense": 140,
+      "sp_attack": 110,
+      "sp_defense": 105,
+      "speed": 30,
+      "total": 585
+    },
+    "shiny_boost": { "stat": "sp_defense", "bonus": 20 },
+    "abilities": ["Electric Surge", "Sturdy"],
+    "moveset": [
+      { "move_key": "zap_cannon", "level": 40 },
+      { "move_key": "flash_cannon", "level": 50 },
+      { "move_key": "magnetic_flux", "level": 60 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Glub",
+    "sprite": "glub.png",
+    "typing": ["Water"],
+    "description": "A simple fish Pokémon found in almost every body of water. It is the favorite food of many larger species.",
+    "appearance": "A round, blue fish with big, vacant eyes and a perpetually open mouth.",
+    "height": 0.4,
+    "weight": 5,
+    "base_stats": {
+      "hp": 50,
+      "attack": 45,
+      "defense": 45,
+      "sp_attack": 40,
+      "sp_defense": 40,
+      "speed": 50,
+      "total": 270
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 5 },
+    "abilities": ["Swift Swim", "Water Veil"],
+    "moveset": [
+      { "move_key": "water_gun", "level": 1 },
+      { "move_key": "splash", "level": 1 }
+    ],
+    "evolution_mechanic": "Evolves when it reaches level 20 and grows larger.",
+    "evolution_requirements": [
+      { "type": "level", "level": 20, "evolves_to": "Glub-Glub" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Glub-Glub",
+    "sprite": "glubglub.png",
+    "typing": ["Water"],
+    "description": "It has grown larger and more aggressive. It can swallow water and spit it out like a high-pressure jet.",
+    "appearance": "A larger, slightly grumpier fish with more defined fins and a sturdy jaw.",
+    "height": 1.2,
+    "weight": 35,
+    "base_stats": {
+      "hp": 75,
+      "attack": 70,
+      "defense": 70,
+      "sp_attack": 65,
+      "sp_defense": 65,
+      "speed": 65,
+      "total": 410
+    },
+    "shiny_boost": { "stat": "hp", "bonus": 10 },
+    "abilities": ["Intimidate", "Pressure"],
+    "moveset": [
+      { "move_key": "water_pulse", "level": 20 },
+      { "move_key": "crunch", "level": 25 }
+    ],
+    "evolution_mechanic": "Evolves at level 38. Path depends on environmental conditions - darkness or freezing temperatures.",
+    "evolution_requirements": [
+      { "type": "level", "level": 38, "condition": "At Night", "evolves_to": "Glub-Abyss" },
+      { "type": "level", "level": 38, "condition": "While Frozen", "evolves_to": "Glub-Arctic" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Glub-Abyss",
+    "sprite": "glubabyss.png",
+    "typing": ["Water", "Dark"],
+    "description": "An evolution found in the deepest trenches. It uses its bioluminescent teeth to lure in unsuspecting prey.",
+    "appearance": "A terrifying, deep-sea angler fish with pitch-black scales and a glowing red lure.",
+    "height": 2.5,
+    "weight": 140,
+    "base_stats": {
+      "hp": 95,
+      "attack": 125,
+      "defense": 80,
+      "sp_attack": 90,
+      "sp_defense": 80,
+      "speed": 70,
+      "total": 540
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 15 },
+    "abilities": ["Strong Jaw", "Dark Aura"],
+    "moveset": [
+      { "move_key": "night_slash", "level": 38 },
+      { "move_key": "liquidation", "level": 45 },
+      { "move_key": "dark_pulse", "level": 55 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Glub-Arctic",
+    "sprite": "glubarctic.png",
+    "typing": ["Water", "Ice"],
+    "description": "It has adapted to the freezing waters of the poles. Its body is so cold that the water around it turns to slush.",
+    "appearance": "A majestic, crystalline fish with fins that look like jagged icicles and scales that shimmer like frost.",
+    "height": 2.2,
+    "weight": 110,
+    "base_stats": {
+      "hp": 95,
+      "attack": 70,
+      "defense": 90,
+      "sp_attack": 125,
+      "sp_defense": 100,
+      "speed": 60,
+      "total": 540
+    },
+    "shiny_boost": { "stat": "sp_attack", "bonus": 15 },
+    "abilities": ["Ice Body", "Slush Rush"],
+    "moveset": [
+      { "move_key": "ice_beam", "level": 38 },
+      { "move_key": "hydro_pump", "level": 45 },
+      { "move_key": "blizzard", "level": 55 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Icipillar",
+    "sprite": "icipillar.png",
+    "typing": ["Ice", "Toxic"],
+    "description": "It feeds on frozen berries and concentrates their toxins into its hair-like spines.",
+    "appearance": "A fuzzy, light-blue caterpillar with purple poisonous spikes along its back.",
+    "height": 0.3,
+    "weight": 2,
+    "base_stats": {
+      "hp": 40,
+      "attack": 50,
+      "defense": 45,
+      "sp_attack": 40,
+      "sp_defense": 40,
+      "speed": 40,
+      "total": 255
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 5 },
+    "abilities": ["Poison Point", "Shield Dust"],
+    "moveset": [
+      { "move_key": "poison_sting", "level": 1 },
+      { "move_key": "powder_snow", "level": 1 }
+    ],
+    "evolution_mechanic": "Evolves when it reaches level 12 and forms an icy cocoon.",
+    "evolution_requirements": [
+      { "type": "level", "level": 12, "evolves_to": "Frostsalis" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Frostsalis",
+    "sprite": "frostsalis.png",
+    "typing": ["Ice", "Toxic"],
+    "description": "It hangs from the underside of frozen branches, waiting for the right temperature to emerge.",
+    "appearance": "A hard, translucent cocoon made of ice and purple venom. It is nearly impossible to break.",
+    "height": 0.6,
+    "weight": 15,
+    "base_stats": {
+      "hp": 55,
+      "attack": 40,
+      "defense": 105,
+      "sp_attack": 40,
+      "sp_defense": 105,
+      "speed": 20,
+      "total": 365
+    },
+    "shiny_boost": { "stat": "defense", "bonus": 10 },
+    "abilities": ["Shed Skin", "Filter"],
+    "moveset": [
+      { "move_key": "harden", "level": 12 },
+      { "move_key": "acid_armor", "level": 20 }
+    ],
+    "evolution_mechanic": "Evolves at level 30. Path depends on gender - females become graceful moths while males become venomous hunters.",
+    "evolution_requirements": [
+      { "type": "level", "level": 30, "condition": "Female", "evolves_to": "Moth-Frost" },
+      { "type": "level", "level": 30, "condition": "Male", "evolves_to": "Venom-Glaze" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Moth-Frost",
+    "sprite": "mothfrost.png",
+    "typing": ["Ice", "Air"],
+    "description": "A beautiful moth that spreads freezing scales from its wings. It can stop a waterfall just by flying over it.",
+    "appearance": "A delicate moth with enormous, snowflake-patterned wings and long, feathery antennae.",
+    "height": 1.4,
+    "weight": 8,
+    "base_stats": {
+      "hp": 70,
+      "attack": 50,
+      "defense": 65,
+      "sp_attack": 120,
+      "sp_defense": 110,
+      "speed": 100,
+      "total": 515
+    },
+    "shiny_boost": { "stat": "sp_attack", "bonus": 15 },
+    "abilities": ["Shield Dust", "Snow Cloak"],
+    "moveset": [
+      { "move_key": "quiver_dance", "level": 30 },
+      { "move_key": "ice_beam", "level": 35 },
+      { "move_key": "hurricane", "level": 45 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Venom-Glaze",
+    "sprite": "venomglaze.png",
+    "typing": ["Ice", "Toxic"],
+    "description": "Its wings are coated in a specialized neurotoxin that freezes the muscles of anything it touches.",
+    "appearance": "A sleek, predatory insect with sharp, needle-like wings and glowing purple veins.",
+    "height": 1.2,
+    "weight": 22,
+    "base_stats": {
+      "hp": 70,
+      "attack": 120,
+      "defense": 70,
+      "sp_attack": 65,
+      "sp_defense": 90,
+      "speed": 100,
+      "total": 515
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 15 },
+    "abilities": ["Compound Eyes", "Corrosion"],
+    "moveset": [
+      { "move_key": "poison_jab", "level": 30 },
+      { "move_key": "icicle_crash", "level": 35 },
+      { "move_key": "gunk_shot", "level": 45 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Petal",
+    "sprite": "petal.png",
+    "typing": ["Plant"],
+    "description": "It mimics a real flower to avoid being eaten. It smells like sweet nectar.",
+    "appearance": "A small green seedling with a single, large pink petal on its head like a hat.",
+    "height": 0.2,
+    "weight": 0.5,
+    "base_stats": {
+      "hp": 40,
+      "attack": 35,
+      "defense": 35,
+      "sp_attack": 65,
+      "sp_defense": 65,
+      "speed": 50,
+      "total": 300
+    },
+    "shiny_boost": { "stat": "sp_attack", "bonus": 5 },
+    "abilities": ["Chlorophyll", "Leaf Guard"],
+    "moveset": [
+      { "move_key": "absorb", "level": 1 },
+      { "move_key": "stun_spore", "level": 8 }
+    ],
+    "evolution_mechanic": "Evolves when it reaches level 18 and begins to bloom.",
+    "evolution_requirements": [
+      { "type": "level", "level": 18, "evolves_to": "Bloom-Bud" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Bloom-Bud",
+    "sprite": "bloombud.png",
+    "typing": ["Plant"],
+    "description": "Depending on the time of day it evolves, its bloom will either harness the sun or the moon.",
+    "appearance": "A slender plant with several tightly closed flower buds around its neck.",
+    "height": 0.9,
+    "weight": 12,
+    "base_stats": {
+      "hp": 60,
+      "attack": 55,
+      "defense": 55,
+      "sp_attack": 85,
+      "sp_defense": 85,
+      "speed": 75,
+      "total": 415
+    },
+    "shiny_boost": { "stat": "speed", "bonus": 10 },
+    "abilities": ["Natural Cure", "Solar Power"],
+    "moveset": [
+      { "move_key": "mega_drain", "level": 18 },
+      { "move_key": "sweet_scent", "level": 22 }
+    ],
+    "evolution_mechanic": "Evolves when exposed to a Sun Stone or Moon Stone, determining which celestial power it harnesses.",
+    "evolution_requirements": [
+      { "type": "stone", "stone": "sun_stone", "evolves_to": "Sun-Bather" },
+      { "type": "stone", "stone": "moon_stone", "evolves_to": "Moon-Dancer" }
+    ],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Sun-Bather",
+    "height": 1.8,
+    "sprite": "sunbather.png",
+    "typing": ["Plant", "Light"],
+    "description": "It absorbs sunlight with its massive petals, converting it into blinding beams of light.",
+    "appearance": "A tall, sun-flower like creature with glowing golden petals and a body of vibrant green vines.",
+    "weight": 45,
+    "base_stats": {
+      "hp": 80,
+      "attack": 70,
+      "defense": 70,
+      "sp_attack": 125,
+      "sp_defense": 105,
+      "speed": 90,
+      "total": 540
+    },
+    "shiny_boost": { "stat": "sp_attack", "bonus": 20 },
+    "abilities": ["Drought", "Solar Power"],
+    "moveset": [
+      { "move_key": "solar_beam", "level": 40 },
+      { "move_key": "photon_burst", "level": 50 },
+      { "move_key": "sunny_day", "level": 1 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
+    "name": "Moon-Dancer",
+    "sprite": "moondancer.png",
+    "typing": ["Plant", "Dark"],
+    "description": "It only blooms at night. Its fragrance is hypnotic and can put a whole village to sleep.",
+    "appearance": "A dark purple lily-like Pokémon with petals that glow with a faint, silvery lunar light.",
+    "height": 1.6,
+    "weight": 38,
+    "base_stats": {
+      "hp": 80,
+      "attack": 125,
+      "defense": 70,
+      "sp_attack": 70,
+      "sp_defense": 105,
+      "speed": 90,
+      "total": 540
+    },
+    "shiny_boost": { "stat": "attack", "bonus": 20 },
+    "abilities": ["Dark Aura", "Hypnotic Spores"],
+    "moveset": [
+      { "move_key": "night_slash", "level": 40 },
+      { "move_key": "spore", "level": 50 },
+      { "move_key": "leaf_blade", "level": 1 }
+    ],
+    "evolves_to": null,
+    "evolution_requirements": [],
+    "legendary": false,
+    "mythical": false
+  },
+  {
     "name": "Solarius",
     "sprite": "solarius.png",
     "typing": ["Light", "Fire"],

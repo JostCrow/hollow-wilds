@@ -8,7 +8,7 @@ export default defineConfig({
   base: "./",
   server: {
     port: 3003,
-    open: true,
+    open: false,
   },
   plugins: [react(), tailwindcss()],
   resolve: {
@@ -27,6 +27,5 @@ export default defineConfig({
       input: "./index.html",
     },
   },
-  assetsInclude: ["**/*.json"],
-  publicDir: "assets",
+  publicDir: "public",
 });

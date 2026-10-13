@@ -83,58 +83,37 @@
         "grass": [
           {
             "name": "Rivanos",
-            "level": [
-              2,
-              4
-            ],
+            "level": [2, 4],
             "chance": 40
           },
           {
             "name": "Flarepib",
-            "level": [
-              2,
-              5
-            ],
+            "level": [2, 5],
             "chance": 35
           },
           {
             "name": "Verdreep",
-            "level": [
-              3,
-              5
-            ],
+            "level": [3, 5],
             "chance": 25
           },
           {
             "name": "Pupawn",
-            "level": [
-              3,
-              15
-            ],
+            "level": [3, 15],
             "chance": 50
           },
           {
             "name": "Lumidrake",
-            "level": [
-              1,
-              5
-            ],
+            "level": [1, 5],
             "chance": 0.0001
           },
           {
             "name": "Umbradrake",
-            "level": [
-              1,
-              5
-            ],
+            "level": [1, 5],
             "chance": 0.0001
           },
           {
             "name": "Eclipserion",
-            "level": [
-              1,
-              5
-            ],
+            "level": [1, 5],
             "chance": 0.0001
           }
         ]
@@ -147,12 +126,12 @@
       "tileSize": 32,
       "tiles": {
         "map": [
-          "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-          "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
-          "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+          "tttttttttttttttttttttttttttttttttt",
+          "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
+          "hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhh",
           "hhhppppppppppppppppppppppppppppphhh",
           "hhhppppppppppppppppppppppppppppphhh",
-          "hhpphhhhhhhhhhhhhhhhhhhhhhhhhhpphh",
+          "hhpppppppppppppppppppppppppppppphh",
           "hhpphhpppppppppppppppppppppphhpphh",
           "hhpphhpppppppppppppppppppppphhpphh",
           "hhpphhpppppppppppppppppppppphhpphh",
@@ -177,12 +156,13 @@
           "hhpphhpppppppppppppppppppppphhpphh",
           "hhpphhpppppppppppppppppppppphhpphh",
           "hhpphhpppppppppppppppppppppphhpphh",
-          "hhhpeeeeeeeeeeeeeeeeeeeeeeeeeehhh"
+          "hhhpeeeeeeeeeeeeeeeeeeeeeeeeeeehhh"
         ],
         "legend": {
           "h": "house",
           "p": "path-full",
-          "e": "exit-path"
+          "e": "exit-path",
+          "t": "tree"
         }
       },
       "spawn": {
@@ -416,34 +396,22 @@
         "grass": [
           {
             "name": "Flamcub",
-            "level": [
-              4,
-              6
-            ],
+            "level": [4, 6],
             "chance": 25
           },
           {
             "name": "Aquapup",
-            "level": [
-              4,
-              7
-            ],
+            "level": [4, 7],
             "chance": 25
           },
           {
             "name": "Terraplant",
-            "level": [
-              5,
-              7
-            ],
+            "level": [5, 7],
             "chance": 35
           },
           {
             "name": "Mystryon",
-            "level": [
-              3,
-              3
-            ],
+            "level": [3, 3],
             "chance": 15
           }
         ]
@@ -604,32 +572,16 @@
     }
   ],
   "connections": {
-    "route-one": [
-      "willowfen-village",
-      "viridian-city"
-    ],
-    "willowfen-village": [
-      "route-one",
-      "player-house"
-    ],
-    "viridian-city": [
-      "route-one",
-      "route-two",
-      "pokemon-center"
-    ],
-    "route-two": [
-      "viridian-city"
-    ],
-    "player-house": [
-      "willowfen-village"
-    ],
-    "pokemon-center": [
-      "viridian-city"
-    ]
+    "route-one": ["willowfen-village", "viridian-city"],
+    "willowfen-village": ["route-one", "player-house"],
+    "viridian-city": ["route-one", "route-two", "pokemon-center"],
+    "route-two": ["viridian-city"],
+    "player-house": ["willowfen-village"],
+    "pokemon-center": ["viridian-city"]
   },
   "startingRoute": "willowfen-village",
   "playerConfig": {
-    "walkSpeed": 150,
+    "walkSpeed": 250,
     "runSpeed": 250,
     "spriteSize": {
       "width": 32,
@@ -642,39 +594,19 @@
     "directions": {
       "down": {
         "frame": 0,
-        "walkFrames": [
-          0,
-          1,
-          2,
-          1
-        ]
+        "walkFrames": [0, 1, 2, 1]
       },
       "up": {
         "frame": 12,
-        "walkFrames": [
-          12,
-          13,
-          14,
-          13
-        ]
+        "walkFrames": [12, 13, 14, 13]
       },
       "left": {
         "frame": 4,
-        "walkFrames": [
-          4,
-          5,
-          6,
-          5
-        ]
+        "walkFrames": [4, 5, 6, 5]
       },
       "right": {
         "frame": 8,
-        "walkFrames": [
-          8,
-          9,
-          10,
-          9
-        ]
+        "walkFrames": [8, 9, 10, 9]
       }
     }
   }

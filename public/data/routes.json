@@ -572,7 +572,7 @@
   },
   "startingRoute": "willowfen-village",
   "playerConfig": {
-    "walkSpeed": 150,
+    "walkSpeed": 250,
     "runSpeed": 250,
     "spriteSize": {
       "width": 32,

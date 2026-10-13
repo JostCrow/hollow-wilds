@@ -1,0 +1,50 @@
+/* The same warm paper, sage shadows and soft volume surround every illustration. */
+.wilds .world-frame {
+  border-color: #d0d9c4;
+  box-shadow: 0 2px 0 #e3e7d9, 0 12px 30px #344d3810;
+}
+.wilds .world-location,
+.wilds .world-footer {
+  background: linear-gradient(120deg, #fcfbf3, #f0f3e8);
+}
+.wilds .world-vignette {
+  background: linear-gradient(130deg, #fff4c415, transparent 45%, #30483608);
+  box-shadow: inset 0 0 65px #314b3620;
+}
+.wilds .creature-art {
+  image-rendering: auto;
+  filter: drop-shadow(2px 5px 3px #344a3018);
+}
+.wilds .starter-option,
+.wilds .species-card,
+.wilds .team-card {
+  background: linear-gradient(145deg, #fffdf4, #eef2e5);
+  border-color: #dce3d0;
+  box-shadow: inset 0 1px 0 #fffef9, 0 3px 0 #dde4d438, 0 6px 16px #334c3508;
+}
+.wilds .starter-option.selected {
+  background: linear-gradient(145deg, #f8fbe9, #e4edda);
+  border-color: #93ab7f;
+  box-shadow: inset 0 1px 0 #ffffef, 0 0 0 2px #9fb48a22, 0 6px 14px #354e3510;
+}
+.wilds .species-card .creature-art,
+.wilds .team-card > .creature-art,
+.wilds .starter-option > .creature-art {
+  background:
+    radial-gradient(ellipse at 50% 86%, #647e4924 0%, transparent 37%),
+    radial-gradient(ellipse at 40% 35%, #fff4cb66 0%, transparent 68%);
+}
+.wilds .detail-hero {
+  background:
+    radial-gradient(ellipse at 15% 25%, #fff3ce99, transparent 60%),
+    linear-gradient(135deg, #f6f7e9, #e9efdf);
+}
+.wilds .mini-companion,
+.wilds .nearby-creatures > button {
+  background: linear-gradient(135deg, #fcfdf5, #eef3e6);
+  box-shadow: inset 0 1px 0 #ffffffaa;
+}
+.wilds .mini-companion:hover:not(:disabled),
+.wilds .nearby-creatures > button:hover:not(:disabled) {
+  box-shadow: inset 0 1px 0 #ffffffaa, 0 4px 10px #314b3510;
+}
