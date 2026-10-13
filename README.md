@@ -34,6 +34,8 @@ npm run preview
 
 The world uses painted scenery sprites and the original illustrated player sprites, with a painted woodland background for battles. Environment artwork was generated using the original hollowing images as style references: dark illustrated contours, organic foliage, detailed materials, and dimensional colored shading. Trees, cottages, landmarks, bridges, and trail treasures are drawn from transparent sprite atlases, with depth ordering so characters can walk behind scenery. Original creature artwork is preserved across the overworld, battles, starter selection, team, and guide, including shiny and alpha forms.
 
+The player's original artwork has alternating leg, knee, and foot movement in all four directions. Steps follow distance travelled, speed up when running, and return to the original idle pose when stopped. Keyboard, touch, and click-to-walk movement share the same animation.
+
 Wild hollowings take short, smooth walks, turn as they move, and pause naturally. They avoid obstacles and each other, and pause near you or when clicked so you can approach and interact. Roaming pauses during battles, dialogue, and other screens. Reduced-motion settings keep roaming active with immediate position changes and no hopping.
 
 All images are bundled with the app, without external image requests or a 3D dependency. Static scenery is cached and refreshed when artwork finishes loading. Reduced-motion preferences disable ambient animation. Generated artwork and its exact prompts are in `assets/world/`.
