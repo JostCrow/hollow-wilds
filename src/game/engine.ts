@@ -16,6 +16,8 @@ import {
 } from "./world.ts";
 import type { Direction } from "./world.ts";
 
+import { gyms, champions, trainers, defeated, lockReason } from "./progression.ts";
+import type { Opponent, Progress } from "./progression.ts";
 import { effectiveBaseStat, traitLabel } from "./traits.ts";
 import type { Traits } from "./traits.ts";
 
@@ -29,7 +31,7 @@ export type Companion = Traits & {
   moves: string[];
   pp: Record<string, number>;
 };
-export type Save = {
+export type Save = Progress & {
   version: 2;
   trainer: string;
   party: Companion[];
@@ -54,6 +56,9 @@ export type Battle = {
   enemy: Companion;
   active: string;
   trainer: boolean;
+  opponent?: Opponent;
+  reserves: Companion[];
+  defeatedEnemies: number;
   turn: number;
   log: string[];
   outcome: "won" | "caught" | "fled" | "lost" | null;
@@ -126,6 +131,9 @@ export function newSave(starter: string, trainer: string): Save {
     collected: [],
     wins: 0,
     badge: false,
+    badges: [],
+    defeatedTrainers: [],
+    defeatedChampions: [],
     steps: 0,
     savedAt: new Date().toISOString(),
   };
@@ -195,6 +203,9 @@ const saveSchema = z.object({
   collected: z.array(z.string().max(60)).max(1000),
   wins: nonnegative,
   badge: z.boolean(),
+  badges: z.array(z.string().refine((id) => gyms.some((g) => g.id === id))).max(gyms.length).default([]),
+  defeatedTrainers: z.array(z.string().refine((id) => trainers.some((t) => t.id === id))).max(trainers.length).default([]),
+  defeatedChampions: z.array(z.string().refine((id) => champions.some((c) => c.id === id))).max(champions.length).default([]),
   steps: nonnegative,
   savedAt: z.string(),
 });
@@ -235,6 +246,9 @@ export function parseSave(input: unknown): Save {
       ...save.storage.map((c) => c.species),
     ]),
   ];
+  save.badges = [...new Set(save.badges)];
+  save.defeatedTrainers = [...new Set(save.defeatedTrainers)];
+  save.defeatedChampions = [...new Set(save.defeatedChampions)];
   save.seen = [...new Set([...save.seen, ...save.caught])];
   save.visited = [...new Set([...save.visited, save.zone])];
   return save.party.some((c) => c.hp > 0)
@@ -252,6 +266,8 @@ export function beginBattle(
     enemy: makeCompanion(name, level, undefined, traits),
     active: (save.party.find((c) => c.hp > 0) ?? save.party[0]).id,
     trainer,
+    reserves: [],
+    defeatedEnemies: 0,
     turn: 0,
     log: [
       trainer
@@ -263,8 +279,20 @@ export function beginBattle(
     conditions: {},
   };
 }
+export function beginTrainerBattle(save: Save, opponent: Opponent): Battle | null {
+  if (lockReason(opponent, save) || !save.party.some((c) => c.hp > 0)) return null;
+  const [first, ...rest] = opponent.team;
+  const battle = beginBattle(save, first.species, first.level, true);
+  battle.opponent = opponent;
+  battle.reserves = rest.map((c) => makeCompanion(c.species, c.level));
+  battle.log = [`${opponent.name} sends out ${first.species}! Defeat all ${opponent.team.length} companions to win.`];
+  return battle;
+}
 export function catchChance(enemy: Companion) {
-  return Math.min(0.94, 0.22 + (1 - enemy.hp / enemy.maxHp) * 0.73);
+  const rare = species[enemy.species].legendary || species[enemy.species].mythical;
+  return rare
+    ? 0.02 + (1 - enemy.hp / enemy.maxHp) * 0.16
+    : Math.min(0.94, 0.22 + (1 - enemy.hp / enemy.maxHp) * 0.73);
 }
 function awardXp(c: Companion, amount: number, log: string[]) {
   c.xp += amount;
@@ -283,7 +311,7 @@ function awardXp(c: Companion, amount: number, log: string[]) {
       c.species = evolution.evolves_to;
     }
     const nextHp = maxHp(c.species, c.level, c);
-    c.hp = Math.max(1, Math.min(nextHp, c.hp + nextHp - c.maxHp));
+    c.hp = c.hp > 0 ? Math.max(1, Math.min(nextHp, c.hp + nextHp - c.maxHp)) : 0;
     c.maxHp = nextHp;
     const keys = learnedMoves(c.species, c.level);
     for (const key of keys)
@@ -295,6 +323,7 @@ function awardXp(c: Companion, amount: number, log: string[]) {
     c.moves = keys;
     log.push(`${c.species} reached level ${c.level}!`);
   }
+  if (c.level === 100) c.xp = Math.min(c.xp, xpNeeded(100) - 1);
 }
 export function takeTurn(
   original: Save,
@@ -306,24 +335,34 @@ export function takeTurn(
     battle: Battle = structuredClone(originalBattle);
   if (battle.outcome) return { save, battle };
   let active = save.party.find((c) => c.id === battle.active)!;
-  const enemy = battle.enemy,
-    log: string[] = [];
+  let enemy = battle.enemy;
+  const log: string[] = [];
+  let enemyReplaced = false;
   const stage = (c: Companion) =>
     battle.stages[c.id] ??
     (battle.stages[c.id] = { attack: 1, defense: 1, accuracy: 1 });
   const finish = (outcome: Battle["outcome"]) => {
     battle.outcome = outcome;
     if (outcome === "won" || outcome === "caught") {
-      awardXp(active, enemy.level * (battle.trainer ? 32 : 15) + 25, log);
+      if (outcome === "caught") awardXp(active, enemy.level * 15 + 25, log);
       save.caught = [...new Set([...save.caught, active.species])];
       save.seen = [...new Set([...save.seen, active.species])];
       if (outcome === "won") {
         save.wins++;
-        const reward = battle.trainer ? 450 : 35 + enemy.level * 8;
+        const reward = battle.opponent
+          ? (defeated(battle.opponent, original) ? Math.floor(battle.opponent.reward / 2) : battle.opponent.reward)
+          : battle.trainer ? 450 : 35 + enemy.level * 8;
         save.money += reward;
         log.push(`You earned ${reward} coins.`);
       }
-      if (battle.trainer) {
+      if (battle.opponent && outcome === "won") {
+        const opponent = battle.opponent;
+        const key = opponent.kind === "gym" ? "badges" : opponent.kind === "champion" ? "defeatedChampions" : "defeatedTrainers";
+        save[key] = [...new Set([...save[key], opponent.id])];
+        if (opponent.kind === "gym") log.push(`You earned the ${opponent.badge} Badge! (${save.badges.length}/12)`);
+        if (opponent.kind === "champion") log.push(`You defeated ${opponent.name}! (${save.defeatedChampions.length}/3 champions)`);
+        if (save.badges.length === 12 && opponent.kind === "gym") log.push("All 12 badges earned! The Champion Halls are open.");
+      } else if (battle.trainer && !battle.opponent) {
         save.badge = true;
         log.push(
           "Elowen awards you the Wildflower Badge! The whole region is yours to explore.",
@@ -333,9 +372,22 @@ export function takeTurn(
   };
   const check = () => {
     if (enemy.hp <= 0) {
-      log.push(`${enemy.species} fainted. You won!`);
-      finish("won");
-      return true;
+      log.push(`${enemy.species} fainted.`);
+      awardXp(active, enemy.level * (battle.trainer ? 32 : 15) + 25, log);
+      save.caught = [...new Set([...save.caught, active.species])];
+      save.seen = [...new Set([...save.seen, active.species])];
+      battle.defeatedEnemies++;
+      const nextEnemy = battle.reserves.shift();
+      if (!nextEnemy) {
+        log.push("You won!");
+        finish("won");
+        return true;
+      }
+      enemy = nextEnemy;
+      battle.enemy = nextEnemy;
+      enemyReplaced = true;
+      save.seen = [...new Set([...save.seen, nextEnemy.species])];
+      log.push(`${battle.opponent?.name ?? "Your opponent"} sends out ${nextEnemy.species}!`);
     }
     if (active.hp <= 0) {
       log.push(`${active.species} fainted.`);
@@ -352,7 +404,7 @@ export function takeTurn(
       battle.active = next.id;
       log.push(`Go, ${next.species}!`);
     }
-    return false;
+    return enemyReplaced;
   };
   const attack = (attacker: Companion, defender: Companion, key: string) => {
     const move =
@@ -466,11 +518,11 @@ export function takeTurn(
   };
   if (action.type === "run") {
     if (battle.trainer) {
-      log.push("You leave the ranger challenge. Come back when you are ready.");
+      log.push("You concede the challenge. No prize or badge awarded. Come back when you are ready.");
     } else log.push("You slipped away safely.");
     finish("fled");
   } else if (action.type === "catch") {
-    if (battle.trainer || save.balls <= 0 || save.storage.length >= 1000)
+    if (battle.trainer || save.balls <= 0 || save.storage.length >= 1000 || ((species[enemy.species].legendary || species[enemy.species].mythical) && save.caught.includes(enemy.species)))
       return { save: original, battle: originalBattle };
     save.balls--;
     log.push("You threw a capture orb…");
@@ -480,6 +532,7 @@ export function takeTurn(
       if (save.party.length < 6) save.party.push(caught);
       else save.storage.push(caught);
       save.caught = [...new Set([...save.caught, enemy.species])];
+      save.seen = [...new Set([...save.seen, enemy.species])];
       log.push(
         `Gotcha! ${enemy.species} joined your ${save.party.length <= 6 && save.party.some((c) => c.id === caught.id) ? "team" : "storage"}.`,
       );
@@ -538,7 +591,7 @@ export function takeTurn(
     }
   }
   if (!battle.outcome && action.type !== "run") {
-    for (const c of [active, enemy])
+    for (const c of enemyReplaced ? [active] : [active, enemy])
       if (
         battle.conditions[c.id] === "poison" ||
         battle.conditions[c.id] === "burn"

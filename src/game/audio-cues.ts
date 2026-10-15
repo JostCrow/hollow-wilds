@@ -36,7 +36,7 @@ export function battleCues(
   else if (action.type === "potion") cues.push({ sound: "heal" });
   else if (action.type === "switch") cues.push({ sound: "switch" });
   else if (action.type === "run") cues.push({ sound: "escape" });
-  else cues.push({ sound: after.battle.enemy.hp < before.battle.enemy.hp ? "hit" : "status" });
+  else cues.push({ sound: (after.battle.defeatedEnemies > before.battle.defeatedEnemies || after.battle.enemy.hp < before.battle.enemy.hp) ? "hit" : "status" });
   if (after.save.party.some((c) => before.save.party.some((p) => p.id === c.id && p.hp > c.hp)))
     cues.push({ sound: "hit", delay: 0.22 });
   const outcome = after.battle.outcome;

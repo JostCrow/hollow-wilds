@@ -4,7 +4,7 @@
 html {
   margin: 0;
   min-width: 320px;
-  background: #fafaf6;
+  background: var(--ui-surface, #fafaf6);
 }
 body {
   margin: 0;
@@ -23,6 +23,6 @@ img {
   max-width: 100%;
 }
 ::selection {
-  background: #d9e6c8;
-  color: #3c5943;
+  background: var(--ui-soft, #d9e6c8);
+  color: var(--ui-text, #3c5943);
 }

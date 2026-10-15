@@ -136,7 +136,7 @@ export function createPokemon(speciesName: string, level: number, ivs?: any): Ba
 
     const template = creatures.find(c => c.name === speciesName);
     if (!template) {
-        throw new Error(`Creature ${speciesName} not found`);
+        throw new Error(`Hollowing ${speciesName} not found`);
     }
 
     const finalIVs = ivs || generateIVs();
@@ -170,7 +170,7 @@ export function generateOpponent(playerLevel: number): BattleCreature {
 
     // Get available creatures based on player level
     const availableCreatures = getAvailableCreaturesForLevel(creatures, playerLevel);
-    if (availableCreatures.length === 0) throw new Error("No available creatures for player level");
+    if (availableCreatures.length === 0) throw new Error("No available hollowings for player level");
 
     // Pick random creature from available ones
     const randomCreature = availableCreatures[Math.floor(Math.random() * availableCreatures.length)];

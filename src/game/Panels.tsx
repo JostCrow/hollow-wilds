@@ -1,5 +1,7 @@
 import { AudioSettingsCard } from "./AudioControls";
+import { AppearanceSettingsCard } from "./ThemeControls";
 import { useRef, useState } from "react";
+import { IslandMap } from "./IslandMap";
 import {
   ArrowRight,
   Check,
@@ -20,6 +22,7 @@ import {
 import { useAdventure } from "./store";
 import { TraitBadges, CreatureArt, CreatureTypes, HpBar } from "./ui";
 import { creatures, moves, evolutionStones, stoneByKey } from "./data";
+import { gyms, champions, leagueAt, lockReason, defeated } from "./progression";
 import type { Companion } from "./engine";
 import { xpNeeded, stoneEvolutions } from "./engine";
 import { encounterSettings, effectiveBaseStat, statKeys, statLabels, shinyDescription, traitLabel } from "./traits";
@@ -29,6 +32,8 @@ export const objectives = (s: {
   wins: number;
   visited: string[];
   badge: boolean;
+  badges: string[];
+  defeatedChampions: string[];
 }) => [
   {
     title: "Find your traveling companions",
@@ -43,8 +48,8 @@ export const objectives = (s: {
     total: 3,
   },
   {
-    title: "Follow the river to Larkspur",
-    detail: "Explore the woodland and cross the Reedwater bridge.",
+    title: "Find Ranger Elowen in Larkspur",
+    detail: "Follow Sunpetal Trail north through Mosswood Hollow.",
     progress: s.visited.includes("larkspur") ? 1 : 0,
     total: 1,
   },
@@ -54,6 +59,8 @@ export const objectives = (s: {
     progress: s.badge ? 1 : 0,
     total: 1,
   },
+  { title: "Complete the gym circuit", detail: "Earn 12 badges, starting at the Seedling Gym in Willowfen. Follow the league tracker below.", progress: s.badges.length, total: gyms.length },
+  { title: "Challenge the champions", detail: "Earn all 12 gym badges, then defeat Astra, Rowan, and Aurelia in order.", progress: s.defeatedChampions.length, total: champions.length },
 ];
 function StoneEvolution({ companion }: { companion: Companion }) {
   const { save, evolve } = useAdventure();
@@ -210,7 +217,7 @@ export function TeamPanel() {
             <CircleDot size={32} strokeWidth={1} />
             <h3>A friend you haven’t met yet.</h3>
             <p>
-              Find a wild creature, weaken it in battle, and use a capture orb.
+              Find a wild hollowing, weaken it in battle, and use a capture orb.
             </p>
           </div>
         )}
@@ -221,7 +228,7 @@ export function TeamPanel() {
         </h2>
         <p>
           Buy stones at any town shop for 300 coins each. Use them on compatible
-          companions above; bring stored creatures onto your team first.
+          companions above; bring stored hollowings onto your team first.
         </p>
         <div>
           {evolutionStones
@@ -238,7 +245,7 @@ export function TeamPanel() {
         )}
       </section>
       <div className="section-heading">
-        <h2>Creature storage</h2>
+        <h2>Hollowing storage</h2>
         <span>{save.storage.length} companions</span>
       </div>
       {save.storage.length ? (
@@ -291,13 +298,11 @@ export function MapPanel() {
   const { save, fastTravel } = useAdventure();
   const [query, setQuery] = useState("");
   const [category, setCategory] = useState("all");
-  const mapRef = useRef<HTMLDivElement>(null);
   const listed = zones.filter((z) =>
-    `${z.name} ${z.sanctuary?.species ?? ""}`.toLowerCase().includes(query.toLowerCase()) &&
+    `${z.name} ${z.sanctuary?.species ?? ""} ${leagueAt(z.id)?.badge ?? ""} ${leagueAt(z.id)?.name ?? ""}`.toLowerCase().includes(query.toLowerCase()) &&
     (category === "all" || (category === "towns" && isTown(z)) ||
       (category === "wild" && !isTown(z)) || (category === "sanctuaries" && z.sanctuary)),
   );
-  const locate = () => mapRef.current?.querySelector(".current")?.scrollIntoView({ block: "nearest", inline: "center", behavior: "smooth" });
   return (
     <div>
       <div className="page-heading">
@@ -313,79 +318,12 @@ export function MapPanel() {
           {save?.visited.length ?? 0} / {zones.length} discovered
         </span>
       </div>
-      <div className="map-toolbar">
-        <span>Scroll the map to explore the full region.</span>
-        <button className="secondary-button" onClick={locate} disabled={!save}>Locate me <Compass size={15} /></button>
-      </div>
-      <div className="region-map-scroll" ref={mapRef} tabIndex={0} role="region" aria-label="Scrollable regional map">
-      <div className="region-map expanded-region">
-        <div className="map-grid" />
-        <span className="map-watermark">THE HOLLOW WILDS</span>
-        <svg
-          viewBox="0 0 1000 540"
-          role="img"
-          preserveAspectRatio="none"
-          aria-label="Regional trail network with branching north, south, east, and west connections"
-        >
-          <path className="map-river" d="M620 -30 Q750 120 640 225 T700 550" />
-          {zones.flatMap((z) =>
-            z.exits
-              .filter((e) => z.id < e.target)
-              .map((exit) => {
-                const dest = zoneById(exit.target);
-                const path = `M${z.mapX * 10} ${z.mapY * 5.4} L${dest.mapX * 10} ${dest.mapY * 5.4}`;
-                return (
-                  <g key={`${z.id}-${dest.id}`}>
-                    <path className="map-route-shadow" d={path} />
-                    <path className="map-route" d={path} />
-                  </g>
-                );
-              }),
-          )}
-          {Array.from({ length: 28 }, (_, i) => {
-            const x = (i * 147 + 45) % 960,
-              y = (i * 97 + 52) % 490;
-            return (
-              <g key={i} transform={`translate(${x} ${y})`} opacity=".2">
-                <path d="M0 24 14 0 28 24Z" fill="#5b7e61" />
-                <path d="M3 35 14 13 25 35Z" fill="#5b7e61" />
-                <path d="M14 30v12" stroke="#5b7e61" strokeWidth="3" />
-              </g>
-            );
-          })}
-        </svg>
-        {zones.map((z) => (
-          <button
-            key={z.id}
-            className={`map-stop ${z.sanctuary ? "sanctuary-stop" : ""} ${save?.visited.includes(z.id) ? "visited" : ""} ${save?.zone === z.id ? "current" : ""}`}
-            style={{ left: `${z.mapX}%`, top: `${z.mapY}%` }}
-            disabled={!save?.visited.includes(z.id)}
-            onClick={() => fastTravel(z.id)}
-          >
-            <span>{z.sanctuary ? <Sparkles size={21} /> : isTown(z) ? <MapPin size={21} /> : <Leaf size={20} />}</span>
-            <strong>{z.name}</strong>
-            {z.sanctuary && <em>{z.sanctuary.species}</em>}
-            <small>
-              {save?.zone === z.id
-                ? "You are here"
-                : save?.visited.includes(z.id)
-                  ? "Click to travel"
-                  : `${z.width} × ${z.height} · Undiscovered`}
-            </small>
-          </button>
-        ))}
-        <span className="map-compass">
-          N<br />↑<br />
-          <small>W + E</small>
-          <br />S
-        </span>
-      </div>
-      </div>
+      <IslandMap />
       <div className="field-tip">
         <Compass size={20} />
         <p>
-          Follow the named signposts in any direction. Trails loop and branch,
-          so there is more than one way through the region. Use the local map’s
+          Walk the island circuit, take an inland shortcut, or follow a side trail
+          to a crater, hidden grove, or frozen lake. Use the local map’s
           arrows to walk toward an exit; discovered areas can be revisited here.
         </p>
       </div>
@@ -405,12 +343,11 @@ export function MapPanel() {
           <div key={z.id}>
             <span className="zone-index">{String(i + 1).padStart(2, "0")}</span>
             <div>
-              <h3>{z.name} {z.sanctuary && <span className="sanctuary-label">{z.sanctuary.category} · {z.sanctuary.species}</span>}</h3>
+              <h3>{z.name} {z.sanctuary && <span className="sanctuary-label">{z.sanctuary.category} · {z.sanctuary.species} · Lv. 80{save?.caught.includes(z.sanctuary.species) ? " · Caught permanently" : ""}</span>}</h3>
               <p>
                 {isTown(z)
-                  ? "Healing House · Supplies"
-                  : `Wild creatures · Levels ${z.level.join("–")}`}{" "}
-                · {z.width} × {z.height} tiles
+                  ? `Healing House · Supplies${leagueAt(z.id) ? ` · ${leagueAt(z.id)!.kind === "gym" ? `${leagueAt(z.id)!.badge} Gym` : leagueAt(z.id)!.name}` : ""}`
+                  : `Wild hollowings · Levels ${z.level.join("–")}`}
                 <span className="zone-connections">
                   {z.exits
                     .map((e) => `${e.direction}: ${zoneById(e.target).name}`)
@@ -429,6 +366,27 @@ export function MapPanel() {
     </div>
   );
 }
+function LeagueTracker() {
+  const { save, fastTravel } = useAdventure();
+  if (!save) return null;
+  return <section className="league-tracker" aria-label="Gym and champion progression">
+    <div className="section-heading"><h2>The badge circuit</h2><span>{save.badges.length}/12 badges · {save.defeatedChampions.length}/3 champions</span></div>
+    <p className="muted">Visit each gym’s purple-roofed hall in order. The first six test one type; later teams combine types. Earn all 12 badges to open the Champion Halls. Rematches pay half the original prize.</p>
+    <div className="league-grid">{[...gyms, ...champions].map((opponent, i) => {
+      const done = defeated(opponent, save), locked = lockReason(opponent, save);
+      return <article className={`league-card ${done ? "complete" : ""}`} key={opponent.id}>
+        <div className="section-heading"><span className="eyebrow">{opponent.kind === "gym" ? `GYM ${String(i + 1).padStart(2, "0")}` : "CHAMPION"}</span><span className="soft-badge">{done ? "✓ Defeated" : locked ? "Locked" : "Available"}</span></div>
+        <h3>{opponent.badge ? `${opponent.badge} Badge` : opponent.name}</h3>
+        <p>{opponent.kind === "gym" ? `${opponent.name} · ` : ""}{zoneById(opponent.zone).name}</p>
+        <small>{opponent.types.length ? opponent.types.join(" / ") : "Mixed team · no type specialty"} · Lv. {opponent.team[0].level}–{opponent.team.at(-1)!.level} · {opponent.team.length} companions</small>
+        <div className="league-team">{opponent.team.map((c, j) => <CreatureArt key={j} name={c.species} />)}</div>
+        <p className="league-requirement">{locked ?? (done ? "Open for a rematch." : `Win ${opponent.reward.toLocaleString()} coins${opponent.badge ? " and a badge" : ""}.`)}</p>
+        <button className="secondary-button" disabled={!save.visited.includes(opponent.zone)} onClick={() => fastTravel(opponent.zone)}>{save.visited.includes(opponent.zone) ? "Travel to town" : "Explore to discover"}<ArrowRight size={14} /></button>
+      </article>;
+    })}</div>
+    <div className="field-tip"><Sparkles size={20} /><p>Legendary and mythical guardians are level 80. Weaken them before throwing orbs; even at low HP they are difficult to catch. A captured guardian never respawns in this adventure. Fleeing or defeating one allows another attempt.</p></div>
+  </section>;
+}
 export function JournalPanel() {
   const save = useAdventure((s) => s.save);
   if (!save) return <StartPrompt />;
@@ -438,7 +396,7 @@ export function JournalPanel() {
         <div>
           <span className="eyebrow">YOUR FIELD JOURNAL</span>
           <h1>Small steps. A grand adventure.</h1>
-          <p>A record of the places, creatures, and moments along the way.</p>
+          <p>A record of the places, hollowings, and moments along the way.</p>
         </div>
         <Leaf size={32} strokeWidth={1.2} />
       </div>
@@ -454,7 +412,7 @@ export function JournalPanel() {
           <p>
             {save.badge
               ? "You earned your place among the rangers. Keep exploring, growing your team, and filling your field guide."
-              : "Set off from Willowfen, meet the creatures of the Hollow Wilds, and earn Ranger Elowen’s trust."}
+              : "Set off from Willowfen, meet the hollowings of the Hollow Wilds, and earn Ranger Elowen’s trust."}
           </p>
         </div>
         <span className="journal-chapter">01</span>
@@ -478,6 +436,7 @@ export function JournalPanel() {
           </div>
         ))}
       </div>
+      <LeagueTracker />
       <div className="journey-stats">
         {[
           [save.caught.length, "species registered"],
@@ -541,6 +500,7 @@ export function SettingsPanel() {
         <Settings size={30} strokeWidth={1.2} />
       </div>
       <div className="settings-grid">
+        <AppearanceSettingsCard />
         <AudioSettingsCard />
         <section className="settings-card">
           <SaveIcon size={25} />
@@ -638,7 +598,25 @@ export function SettingsPanel() {
               <dd>Click or tap the map</dd>
             </div>
             <div>
-              <dt>Open / close journal</dt>
+              <dt>World map</dt>
+              <dd>
+                <kbd>M</kbd>
+              </dd>
+            </div>
+            <div>
+              <dt>Hollowdex</dt>
+              <dd>
+                <kbd>H</kbd>
+              </dd>
+            </div>
+            <div>
+              <dt>My team</dt>
+              <dd>
+                <kbd>T</kbd>
+              </dd>
+            </div>
+            <div>
+              <dt>Back to Explore</dt>
               <dd>
                 <kbd>Esc</kbd>
               </dd>
@@ -652,7 +630,7 @@ export function SettingsPanel() {
         <section className="settings-card">
           <Sparkles size={25} />
           <h2>Shiny &amp; alpha encounters</h2>
-          <p>Shiny: 1 in {encounterSettings.shinyOdds} ({100 / encounterSettings.shinyOdds}%). Alpha: 1 in {encounterSettings.alphaOdds} ({100 / encounterSettings.alphaOdds}%). Each trait rolls independently when a wild creature appears.</p>
+          <p>Shiny: 1 in {encounterSettings.shinyOdds} ({100 / encounterSettings.shinyOdds}%). Alpha: 1 in {encounterSettings.alphaOdds} ({100 / encounterSettings.alphaOdds}%). Each trait rolls independently when a wild hollowing appears.</p>
           <p>Both traits: 1 in {encounterSettings.shinyOdds * encounterSettings.alphaOdds}. Shiny adds the species’ stat bonus (or +{encounterSettings.fallbackShinyBonus} to all base stats when none is listed). Alpha then adds {Math.round((encounterSettings.alphaStatMultiplier - 1) * 100)}% to every base stat. Traits stay through capture and evolution.</p>
           <small>Shiny odds are temporarily increased for testing.</small>
         </section>
@@ -661,7 +639,7 @@ export function SettingsPanel() {
           <h2>A world made to wander</h2>
           <p>
             The Hollow Wilds is a local, single-player adventure. Your
-            creatures, their types, base stats, learnsets, and moves come from
+            hollowings, their types, base stats, learnsets, and moves come from
             the original game JSON.
           </p>
           <p>

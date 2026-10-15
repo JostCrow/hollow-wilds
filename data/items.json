@@ -1,12 +1,12 @@
 {
   "categories": {
     "Catching": {
-      "description": "Items used to capture wild creatures",
+      "description": "Items used to capture wild hollowings",
       "items": [
         {
           "key": "poke_ball",
           "name": "Poké Ball",
-          "description": "A device for catching wild creatures. It's thrown like a ball at a creature to capture it.",
+          "description": "A device for catching wild hollowings. It's thrown like a ball at a hollowing to capture it.",
           "effect": {
             "type": "capture",
             "catch_rate": 1.0,
@@ -48,7 +48,7 @@
         {
           "key": "master_ball",
           "name": "Master Ball",
-          "description": "The best Ball with the ultimate level of performance. It will catch any creature without fail.",
+          "description": "The best Ball with the ultimate level of performance. It will catch any hollowing without fail.",
           "effect": {
             "type": "capture",
             "catch_rate": 255.0,
@@ -68,7 +68,7 @@
         {
           "key": "potion",
           "name": "Potion",
-          "description": "A spray-type wound medicine for treating wounds. It restores the HP of one creature by 20 points.",
+          "description": "A spray-type wound medicine for treating wounds. It restores the HP of one hollowing by 20 points.",
           "effect": {
             "type": "heal",
             "hp_restore": 20,
@@ -83,7 +83,7 @@
         {
           "key": "super_potion",
           "name": "Super Potion",
-          "description": "A spray-type wound medicine for treating wounds. It restores the HP of one creature by 60 points.",
+          "description": "A spray-type wound medicine for treating wounds. It restores the HP of one hollowing by 60 points.",
           "effect": {
             "type": "heal",
             "hp_restore": 60,
@@ -98,7 +98,7 @@
         {
           "key": "hyper_potion",
           "name": "Hyper Potion",
-          "description": "A spray-type wound medicine for treating wounds. It restores the HP of one creature by 120 points.",
+          "description": "A spray-type wound medicine for treating wounds. It restores the HP of one hollowing by 120 points.",
           "effect": {
             "type": "heal",
             "hp_restore": 120,
@@ -113,7 +113,7 @@
         {
           "key": "max_potion",
           "name": "Max Potion",
-          "description": "A spray-type wound medicine for treating wounds. It fully restores the HP of one creature.",
+          "description": "A spray-type wound medicine for treating wounds. It fully restores the HP of one hollowing.",
           "effect": {
             "type": "heal",
             "hp_restore": -1,
@@ -128,7 +128,7 @@
         {
           "key": "antidote",
           "name": "Antidote",
-          "description": "A spray-type medicine. It lifts the effect of poison from one creature.",
+          "description": "A spray-type medicine. It lifts the effect of poison from one hollowing.",
           "effect": {
             "type": "cure_status",
             "status": "poison",
@@ -143,7 +143,7 @@
         {
           "key": "burn_heal",
           "name": "Burn Heal",
-          "description": "A spray-type medicine. It heals the burn status condition of one creature.",
+          "description": "A spray-type medicine. It heals the burn status condition of one hollowing.",
           "effect": {
             "type": "cure_status",
             "status": "burn",
@@ -158,7 +158,7 @@
         {
           "key": "ice_heal",
           "name": "Ice Heal",
-          "description": "A spray-type medicine. It defrosts a creature that has been frozen solid.",
+          "description": "A spray-type medicine. It defrosts a hollowing that has been frozen solid.",
           "effect": {
             "type": "cure_status",
             "status": "freeze",
@@ -173,7 +173,7 @@
         {
           "key": "awakening",
           "name": "Awakening",
-          "description": "A spray-type medicine. It awakens a creature from sleep.",
+          "description": "A spray-type medicine. It awakens a hollowing from sleep.",
           "effect": {
             "type": "cure_status",
             "status": "sleep",
@@ -188,7 +188,7 @@
         {
           "key": "paralyze_heal",
           "name": "Paralyze Heal",
-          "description": "A spray-type medicine. It eliminates paralysis from one creature.",
+          "description": "A spray-type medicine. It eliminates paralysis from one hollowing.",
           "effect": {
             "type": "cure_status",
             "status": "paralysis",
@@ -203,7 +203,7 @@
         {
           "key": "full_restore",
           "name": "Full Restore",
-          "description": "A medicine that fully restores the HP and heals any status problems of one creature.",
+          "description": "A medicine that fully restores the HP and heals any status problems of one hollowing.",
           "effect": {
             "type": "heal",
             "hp_restore": -1,
@@ -219,7 +219,7 @@
         {
           "key": "revive",
           "name": "Revive",
-          "description": "A medicine that revives a fainted creature, restoring half of its maximum HP.",
+          "description": "A medicine that revives a fainted hollowing, restoring half of its maximum HP.",
           "effect": {
             "type": "heal",
             "hp_restore_percent": 0.5,
@@ -234,7 +234,7 @@
         {
           "key": "max_revive",
           "name": "Max Revive",
-          "description": "A medicine that revives a fainted creature, fully restoring its HP.",
+          "description": "A medicine that revives a fainted hollowing, fully restoring its HP.",
           "effect": {
             "type": "heal",
             "hp_restore_percent": 1.0,
@@ -249,12 +249,12 @@
       ]
     },
     "Evolution": {
-      "description": "Items that trigger creature evolution when used",
+      "description": "Items that trigger hollowing evolution when used",
       "items": [
         {
           "key": "fire_stone",
           "name": "Fire Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It burns as red as ember.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It burns as red as ember.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Fire"],
@@ -268,7 +268,7 @@
         {
           "key": "water_stone",
           "name": "Water Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It is a clear blue reminiscent of a lake.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It is a clear blue reminiscent of a lake.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Water"],
@@ -282,7 +282,7 @@
         {
           "key": "leaf_stone",
           "name": "Leaf Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It has a leaf pattern that seems to move.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It has a leaf pattern that seems to move.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Plant"],
@@ -296,7 +296,7 @@
         {
           "key": "thunder_stone",
           "name": "Thunder Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It sparkles with electrical energy.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It sparkles with electrical energy.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Electric"],
@@ -310,7 +310,7 @@
         {
           "key": "light_stone",
           "name": "Light Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It emits a brilliant, pure light.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It emits a brilliant, pure light.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Light"],
@@ -324,7 +324,7 @@
         {
           "key": "dark_stone",
           "name": "Dark Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It seems to absorb light around it.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It seems to absorb light around it.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Dark"],
@@ -338,7 +338,7 @@
         {
           "key": "earth_stone",
           "name": "Earth Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It feels heavy and solid like bedrock.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It feels heavy and solid like bedrock.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Ground"],
@@ -352,7 +352,7 @@
         {
           "key": "ice_stone",
           "name": "Ice Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It's cold to the touch and never melts.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It's cold to the touch and never melts.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Ice"],
@@ -366,7 +366,7 @@
         {
           "key": "normal_stone",
           "name": "Normal Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It has a simple, balanced energy.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It has a simple, balanced energy.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Normal"],
@@ -380,7 +380,7 @@
         {
           "key": "ghost_stone",
           "name": "Ghost Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It seems to phase in and out of existence.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It seems to phase in and out of existence.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Ghost"],
@@ -394,7 +394,7 @@
         {
           "key": "air_stone",
           "name": "Air Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It feels light and carries the wind's energy.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It feels light and carries the wind's energy.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Air"],
@@ -408,7 +408,7 @@
         {
           "key": "poison_stone",
           "name": "Poison Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It has a toxic aura and purple glow.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It has a toxic aura and purple glow.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Toxic"],
@@ -422,7 +422,7 @@
         {
           "key": "metal_stone",
           "name": "Metal Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It's hard as steel and gleams like polished metal.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It's hard as steel and gleams like polished metal.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Metal"],
@@ -436,7 +436,7 @@
         {
           "key": "shadow_stone",
           "name": "Shadow Stone",
-          "description": "A peculiar stone that makes certain species of creatures evolve. It embodies the balance between light and darkness.",
+          "description": "A peculiar stone that makes certain species of hollowings evolve. It embodies the balance between light and darkness.",
           "effect": {
             "type": "evolution",
             "trigger_types": ["Dark", "Light"],
@@ -456,7 +456,7 @@
         {
           "key": "x_attack",
           "name": "X Attack",
-          "description": "An item that sharply boosts the Attack stat of a creature in battle.",
+          "description": "An item that sharply boosts the Attack stat of a hollowing in battle.",
           "effect": {
             "type": "stat_boost",
             "stat": "attack",
@@ -473,7 +473,7 @@
         {
           "key": "x_defense",
           "name": "X Defense",
-          "description": "An item that sharply boosts the Defense stat of a creature in battle.",
+          "description": "An item that sharply boosts the Defense stat of a hollowing in battle.",
           "effect": {
             "type": "stat_boost",
             "stat": "defense",
@@ -490,7 +490,7 @@
         {
           "key": "x_speed",
           "name": "X Speed",
-          "description": "An item that sharply boosts the Speed stat of a creature in battle.",
+          "description": "An item that sharply boosts the Speed stat of a hollowing in battle.",
           "effect": {
             "type": "stat_boost",
             "stat": "speed",
@@ -507,7 +507,7 @@
         {
           "key": "x_sp_attack",
           "name": "X Sp. Attack",
-          "description": "An item that sharply boosts the Special Attack stat of a creature in battle.",
+          "description": "An item that sharply boosts the Special Attack stat of a hollowing in battle.",
           "effect": {
             "type": "stat_boost",
             "stat": "sp_attack",
@@ -524,7 +524,7 @@
         {
           "key": "x_sp_defense",
           "name": "X Sp. Defense",
-          "description": "An item that sharply boosts the Special Defense stat of a creature in battle.",
+          "description": "An item that sharply boosts the Special Defense stat of a hollowing in battle.",
           "effect": {
             "type": "stat_boost",
             "stat": "sp_defense",
@@ -546,7 +546,7 @@
         {
           "key": "full_heal",
           "name": "Full Heal",
-          "description": "A medicine that heals all the status problems of one creature.",
+          "description": "A medicine that heals all the status problems of one hollowing.",
           "effect": {
             "type": "heal",
             "target": "single",
@@ -560,7 +560,7 @@
         {
           "key": "lava_cookie",
           "name": "Lava Cookie",
-          "description": "A popular snack in the Hoenn region. It heals all status problems of one creature.",
+          "description": "A popular snack in the Hoenn region. It heals all status problems of one hollowing.",
           "effect": {
             "type": "heal",
             "target": "single",
@@ -579,7 +579,7 @@
         {
           "key": "repel",
           "name": "Repel",
-          "description": "A spray-type item that prevents weak wild creatures from appearing for 100 steps.",
+          "description": "A spray-type item that prevents weak wild hollowings from appearing for 100 steps.",
           "effect": {
             "type": "repel",
             "duration": 100,
@@ -594,7 +594,7 @@
         {
           "key": "super_repel",
           "name": "Super Repel",
-          "description": "A spray-type item that prevents weak wild creatures from appearing for 200 steps.",
+          "description": "A spray-type item that prevents weak wild hollowings from appearing for 200 steps.",
           "effect": {
             "type": "repel",
             "duration": 200,
@@ -609,7 +609,7 @@
         {
           "key": "max_repel",
           "name": "Max Repel",
-          "description": "A spray-type item that prevents weak wild creatures from appearing for 250 steps.",
+          "description": "A spray-type item that prevents weak wild hollowings from appearing for 250 steps.",
           "effect": {
             "type": "repel",
             "duration": 250,

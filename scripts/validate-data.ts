@@ -63,7 +63,7 @@ const missingArt = creatures.filter(
   (c) => !existsSync(new URL(`../assets/monster/${c.sprite}`, import.meta.url)),
 );
 console.log(
-  `${creatures.length} creatures · ${Object.keys(moves).length} moves · ${types.types.length} types · ${zones.length} connected areas`,
+  `${creatures.length} hollowings · ${Object.keys(moves).length} moves · ${types.types.length} types · ${zones.length} connected areas`,
 );
 if (missingMoves.length)
   console.warn(
@@ -71,7 +71,7 @@ if (missingMoves.length)
   );
 if (missingArt.length)
   console.warn(
-    `Art warning: ${missingArt.length} creatures use field-sketch placeholders: ${missingArt.map((c) => c.name).join(", ")}`,
+    `Art warning: ${missingArt.length} hollowings use field-sketch placeholders: ${missingArt.map((c) => c.name).join(", ")}`,
   );
 if (errors.length) {
   console.error(errors.join("\n"));

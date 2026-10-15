@@ -1,16 +1,16 @@
 /* Painted scenery uses the original hollowing illustrations as its art reference. */
 .battle-overlay .battle-card {
-  background: #fff7e5;
-  border: 1px solid #a8956c;
+  background: var(--ui-overlay, #fff7e5);
+  border: 1px solid var(--ui-border, #a8956c);
   border-radius: 22px;
-  box-shadow: 0 32px 100px #183b385c, 0 3px 0 #ffffff8c inset;
+  box-shadow: 0 32px 100px var(--ui-shadow, #183b385c), 0 3px 0 var(--ui-highlight, #ffffff8c) inset;
 }
 .battle-card .battle-topline {
-  color: #64563c;
-  background: linear-gradient(180deg, #fff9e9, #efe6ce);
-  border-color: #c0b28c;
+  color: var(--ui-text, #64563c);
+  background: linear-gradient(180deg, var(--ui-surface, #fff9e9), var(--ui-soft, #efe6ce));
+  border-color: var(--ui-border, #c0b28c);
 }
-.battle-card .battle-topline > span:last-child { color: #687d5f; }
+.battle-card .battle-topline > span:last-child { color: var(--ui-secondary, #687d5f); }
 .battle-card .battle-field {
   height: 410px;
   isolation: isolate;
@@ -67,34 +67,34 @@
   0%, 100% { transform: scaleY(1); }
   50% { transform: scaleY(1.016); }
 }
-.battle-card .battle-bottom { border-color: #b8ab83; }
+.battle-card .battle-bottom { border-color: var(--ui-border, #b8ab83); }
 .battle-card .battle-log {
-  background: linear-gradient(135deg, #f3ead5, #e9dfc2);
-  border-color: #c4b68d;
+  background: linear-gradient(135deg, var(--ui-soft, #f3ead5), var(--ui-soft, #e9dfc2));
+  border-color: var(--ui-border, #c4b68d);
 }
-.battle-card .battle-log p { color: #829174; }
-.battle-card .battle-log p.recent { color: #526c47; }
-.battle-card .battle-log p:last-child { color: #3d5f38; }
+.battle-card .battle-log p { color: var(--ui-secondary, #829174); }
+.battle-card .battle-log p.recent { color: var(--ui-text, #526c47); }
+.battle-card .battle-log p:last-child { color: var(--ui-text, #3d5f38); }
 .battle-card .battle-prompt > span,
 .battle-card .move-button small,
-.battle-card .battle-tools small { color: #687f58; }
+.battle-card .battle-tools small { color: var(--ui-secondary, #687f58); }
 .battle-card .move-button,
 .battle-card .switch-list button {
   border-radius: 12px;
-  border-color: #b7ad87;
-  background: linear-gradient(145deg, #fffaee, #efe8d3);
-  box-shadow: 0 3px 0 #bccda366, 0 1px 0 #fff inset;
+  border-color: var(--ui-border, #b7ad87);
+  background: linear-gradient(145deg, var(--ui-surface, #fffaee), var(--ui-soft, #efe8d3));
+  box-shadow: 0 3px 0 var(--ui-shadow, #bccda366), 0 1px 0 var(--ui-highlight, #fff) inset;
   transition: background .15s, translate .15s, box-shadow .15s;
 }
 .battle-card .move-button:not(:disabled):hover,
 .battle-card .switch-list button:not(:disabled):hover {
-  background: linear-gradient(145deg, #fffef0, #e1eccd);
+  background: linear-gradient(145deg, var(--ui-surface, #fffef0), var(--ui-soft, #e1eccd));
   translate: 0 -2px;
-  box-shadow: 0 5px 0 #bccda366, 0 6px 12px #6c875719;
+  box-shadow: 0 5px 0 var(--ui-shadow, #bccda366), 0 6px 12px var(--ui-shadow, #6c875719);
 }
 .battle-card .move-button:not(:disabled):active,
-.battle-card .switch-list button:not(:disabled):active { translate: 0 1px; box-shadow: 0 1px 0 #bccda366; }
-.battle-card .battle-tools button { color: #567244; }
+.battle-card .switch-list button:not(:disabled):active { translate: 0 1px; box-shadow: 0 1px 0 var(--ui-shadow, #bccda366); }
+.battle-card .battle-tools button { color: var(--ui-text, #567244); }
 @media (max-width: 720px) {
   .battle-overlay .battle-card { border-radius: 18px; }
   .battle-card .battle-field { height: 350px; }

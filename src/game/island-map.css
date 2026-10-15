@@ -1,0 +1,71 @@
+.island-toolbar { gap: 14px; }
+.island-map-controls { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.island-map-controls .secondary-button { min-height: 34px; padding: 7px 10px; font-size: 11px; }
+.island-map-controls > span { font-size: 11px; min-width: 36px; text-align: center; font-variant-numeric: tabular-nums; }
+.region-map-scroll.island-map-scroll { max-height: 850px; background: var(--ui-soft, #b6d7d6); }
+.region-map.island-map { height: auto; aspect-ratio: 1.1; min-width: 0; border: 0; border-radius: 0; background: #b6d7d6; }
+.island-map .map-watermark { z-index: 1; color: #557f80; font-size: 10px; letter-spacing: 3px; top: 24px; left: 28px; }
+.island-map .map-watermark > span { display: block; margin-top: 6px; font-size: 8px; letter-spacing: 2px; opacity: .7; }
+.island-route-edge { fill: none; stroke: #8d956b88; stroke-width: 8; stroke-linecap: round; }
+.island-route { fill: none; stroke: #faf0ce; stroke-width: 5; stroke-linecap: round; }
+.selected-island-route .island-route-edge { stroke: #607d51; stroke-width: 10; }
+.selected-island-route .island-route { stroke: #fff6d2; stroke-width: 5; }
+.island-terrain-labels text { fill: #6d8062; text-anchor: middle; font-family: Georgia, serif; font-size: 12px; letter-spacing: 2.5px; opacity: .7; }
+.island-terrain-labels .island-lake-label { fill: #4d7c80; font-size: 16px; font-style: italic; letter-spacing: 1px; }
+.island-terrain-labels .island-sea-label { fill: #477d86; font-size: 11px; letter-spacing: 2px; }
+.island-map .map-stop.island-stop { width: 18px; height: 18px; min-height: 0; padding: 0; gap: 0; z-index: 2; cursor: pointer; }
+.island-map .island-stop > span { flex-shrink: 0; width: 13px; height: 13px; border: 1.5px solid #7d9566; background: #eaf0d7; color: #698857; box-shadow: 0 0 0 2px #e7ebd29c; }
+.island-map .town-stop > span { width: 25px; height: 25px; border-width: 2px; border-color: #708760; background: #f6f4dc; color: #607e56; box-shadow: 0 0 0 3px #e6e9ceaa; }
+.island-map .sanctuary-stop > span { width: 23px; height: 23px; background: #f5e6b2; border-color: #a68a49; color: #8d6b2d; }
+.island-map .island-stop.visited > span { background: #839e6c; color: #fffcea; border-color: #fff9df; }
+.island-map .island-stop.current > span { background: #456940; color: #fffcea; box-shadow: 0 0 0 5px #567f4040; }
+.island-map .island-stop.selected > span { outline: 2px solid #607746; outline-offset: 4px; }
+.island-map .island-stop:focus-visible { outline: 2px solid #436b52; outline-offset: 7px; border-radius: 50%; }
+.island-map .island-stop strong { position: absolute; white-space: nowrap; margin: 0; font-size: 10px; font-weight: 600; line-height: 1.5; padding: 1px 4px; color: #4e6545; background: #f2f0d9e8; box-shadow: 0 1px 2px #63764516; pointer-events: none; }
+.island-map .label-west strong { right: calc(100% + 8px); top: 50%; transform: translateY(-50%); }
+.island-map .label-east strong { left: calc(100% + 8px); top: 50%; transform: translateY(-50%); }
+.island-map .label-north strong { bottom: calc(100% + 10px); left: 50%; transform: translateX(-50%); }
+.island-map .label-south strong { top: calc(100% + 10px); left: 50%; transform: translateX(-50%); }
+.island-map .wild-stop strong { display: none; }
+.island-map .island-stop:hover, .island-map .island-stop:focus-visible { z-index: 5; }
+.island-map .island-stop:hover strong, .island-map .island-stop:focus-visible strong, .island-map.show-place-names .wild-stop strong { display: block; }
+.island-map .map-compass { right: 30px; bottom: 30px; color: #557c7d; font-size: 20px; }
+.island-map-scale { position: absolute; left: 28px; bottom: 24px; font-size: 8px; letter-spacing: 1.5px; color: #5f8181; }
+.island-legend { display: flex; flex-wrap: wrap; align-items: center; gap: 12px 18px; padding: 15px 2px; font-size: 11px; color: var(--ui-secondary, #738367); }
+.island-legend > span { display: inline-flex; gap: 7px; align-items: center; }
+.island-legend > span:last-child { margin-left: auto; color: var(--ui-secondary, #87917b); }
+.island-legend i { display: inline-block; width: 12px; height: 12px; border-radius: 50%; border: 1px solid var(--ui-border, #7d9566); background: var(--ui-soft, #eaf0d7); }
+.island-legend .legend-town { border-width: 2px; background: var(--ui-soft, #f6f4dc); }
+.island-legend .legend-wild { width: 8px; height: 8px; }
+.island-legend .legend-sanctuary { border-color: var(--ui-border, #a68a49); background: var(--ui-soft, #f5e6b2); }
+.island-legend .legend-road { width: 19px; height: 5px; border: 1px solid var(--ui-border, #8d956b88); border-radius: 3px; background: var(--ui-soft, #faf0ce); }
+.island-place-detail { display: flex; justify-content: space-between; align-items: center; gap: 18px; padding: 18px 20px; border: 1px solid var(--ui-border, #dbe4cc); background: var(--ui-soft, #f6f7ed); border-radius: 10px; }
+.island-place-detail h3 { margin: 4px 0 6px; font-family: Georgia, serif; font-size: 21px; color: var(--ui-text, #506849); }
+.island-place-detail p { font-size: 12px; color: var(--ui-secondary, #809172); margin: 0 0 10px; text-transform: capitalize; }
+.island-place-detail > button { flex-shrink: 0; }
+.island-place-connections { display: flex; flex-wrap: wrap; gap: 6px; }
+.island-place-connections button { padding: 5px 8px; color: var(--ui-text, #536e4c); background: var(--ui-soft, #eaf0de); border: 1px solid var(--ui-border, #d5dfc6); border-radius: 5px; font-size: 11px; cursor: pointer; }
+@media (max-width: 720px) {
+  .region-map-scroll.island-map-scroll { max-height: 600px; }
+  .island-map .map-watermark { font-size: 8px; letter-spacing: 2px; }
+  .island-map .island-stop strong { font-size: 9px; }
+  .island-map .town-stop > span { width: 21px; height: 21px; }
+  .island-map .map-compass { font-size: 16px; }
+  .island-legend > span:last-child { margin-left: 0; width: 100%; }
+  .island-place-detail { align-items: flex-start; flex-direction: column; padding: 16px; }
+}
+@media (max-width: 520px) {
+  .island-map .town-stop > span { width: 16px; height: 16px; }
+  .island-map .town-stop > span > svg { width: 11px; height: 11px; }
+  .island-map .wild-stop > span { width: 8px; height: 8px; }
+  .island-map .wild-stop > span > svg { display: none; }
+  .island-map .sanctuary-stop > span { width: 15px; height: 15px; }
+  .island-map .sanctuary-stop > span > svg { display: block; width: 10px; height: 10px; }
+  .island-map .town-stop strong { display: none; }
+  .island-map .island-stop.selected strong, .island-map .island-stop:hover strong, .island-map .island-stop:focus-visible strong, .island-map.show-place-names .island-stop strong { display: block; }
+  .island-map .map-watermark { top: 12px; left: 12px; font-size: 6px; }
+  .island-map .map-watermark > span { font-size: 5px; }
+  .island-map-scale { left: 12px; bottom: 12px; font-size: 5px; }
+  .island-map .map-compass { right: 12px; bottom: 12px; font-size: 12px; }
+  .island-map .map-compass small { font-size: 7px; }
+}

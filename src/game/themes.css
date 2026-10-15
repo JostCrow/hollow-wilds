@@ -1,0 +1,76 @@
+/* Light mode keeps the original colors through the variables' local fallbacks. */
+:root.light { color-scheme: light; }
+:root.dark {
+  color-scheme: dark;
+  --ui-page: #111b17;
+  --ui-sidebar: #15211c;
+  --ui-surface: #1c2922;
+  --ui-soft: #25362b;
+  --ui-border: #3a4b3e;
+  --ui-text: #e4eddd;
+  --ui-secondary: #bacbb0;
+  --ui-muted: #9bad92;
+  --ui-accent: #b0ce9a;
+  --ui-primary: #a4c58f;
+  --ui-primary-hover: #bad5a8;
+  --ui-on-primary: #162613;
+  --ui-shadow: #00000038;
+  --ui-highlight: #c1dfae0a;
+  --ui-overlay: #060d09b8;
+  --ui-positive-surface: #293e2a;
+  --ui-warning-surface: #3a3224;
+  --ui-warning: #dec699;
+  --ui-danger-surface: #402c2b;
+  --ui-danger: #edb1a5;
+}
+/* The island and battle scenes retain their original palettes and native controls. */
+.wilds .island-map,
+.wilds .battle-field {
+  --ui-page: initial;
+  --ui-sidebar: initial;
+  --ui-surface: initial;
+  --ui-soft: initial;
+  --ui-border: initial;
+  --ui-text: initial;
+  --ui-secondary: initial;
+  --ui-muted: initial;
+  --ui-accent: initial;
+  --ui-primary: initial;
+  --ui-primary-hover: initial;
+  --ui-on-primary: initial;
+  --ui-shadow: initial;
+  --ui-highlight: initial;
+  --ui-overlay: initial;
+  --ui-positive-surface: initial;
+  --ui-warning-surface: initial;
+  --ui-warning: initial;
+  --ui-danger-surface: initial;
+  --ui-danger: initial;
+  --ink: #2d4538;
+  --muted: #899087;
+  color: #2d4538;
+  color-scheme: light;
+}
+.theme-toggle { flex-shrink: 0; }
+.theme-options { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; }
+.theme-option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  min-height: 88px;
+  padding: 14px 8px;
+  border: 1px solid var(--ui-border, #dbe3d0);
+  border-radius: 8px;
+  background: var(--ui-surface, #fcfdf8);
+  color: var(--ui-secondary, #738467);
+  font-size: 12px !important;
+}
+.theme-option.is-selected {
+  border-color: var(--ui-accent, #8da772);
+  background: var(--ui-soft, #eaf0df);
+  color: var(--ui-accent, #4e7147);
+  box-shadow: 0 0 0 1px var(--ui-accent, #8da772);
+}
+:root.dark ::selection { background: #465d3d; color: #f2f8e9; }

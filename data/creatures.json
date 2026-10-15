@@ -128,7 +128,7 @@
     "sprite": "verdreep.png",
     "typing": ["Plant"],
     "description": "Verdreep hides in seaweed beds, pretending to be part of the kelp. It uses sticky vines to anchor itself against strong ocean currents.",
-    "appearance": "Otter-like creature wrapped in green-brown seaweed fur, with small leaf-like ears and curious blue eyes. Bubbles constantly trail from its paws.",
+    "appearance": "Otter-like hollowing wrapped in green-brown seaweed fur, with small leaf-like ears and curious blue eyes. Bubbles constantly trail from its paws.",
     "height": 0.5,
     "weight": 7,
     "base_stats": {
@@ -338,7 +338,7 @@
     "sprite": "duskuragon.png",
     "typing": ["Water", "Dark"],
     "description": "Duskuragon dominates the coastal abyss, ramming intruders with terrifying precision. Its body is wrapped in shadowy currents said to swallow light itself.",
-    "appearance": "Massive dinosaur-like creature with pitch-black horns, deep cerulean scales, and a faint dark shimmer. Its skull glows faintly blue from inner energy, like light seen through deep water.",
+    "appearance": "Massive dinosaur-like hollowing with pitch-black horns, deep cerulean scales, and a faint dark shimmer. Its skull glows faintly blue from inner energy, like light seen through deep water.",
     "height": 2.0,
     "weight": 82,
     "base_stats": {
@@ -927,7 +927,7 @@
     "sprite": "nibbkit.png",
     "typing": ["Normal"],
     "description": "Nibbkit hoards crumbs and lost buttons in hidden pockets of fur. When startled, it freezes so perfectly it can pass for a plush toy.",
-    "appearance": "A kitten-like creature with oversized paws and a stitched-looking fur pattern. Its tail ends in a little puff shaped like a pom-pom.",
+    "appearance": "A kitten-like hollowing with oversized paws and a stitched-looking fur pattern. Its tail ends in a little puff shaped like a pom-pom.",
     "height": 0.4,
     "weight": 5.8,
     "base_stats": {
@@ -1264,7 +1264,7 @@
     "sprite": "noxling.png",
     "typing": ["Ghost", "Dark"],
     "description": "Noxling lurks in unlit corners and ‘drinks’ the silence there. It isn’t malicious—just curious about fear and how it changes people.",
-    "appearance": "A small shadow-creature with a candle-wick tail and pale dot eyes. Its body looks like folded cloth made of night.",
+    "appearance": "A small shadow-hollowing with a candle-wick tail and pale dot eyes. Its body looks like folded cloth made of night.",
     "height": 0.4,
     "weight": 3.3,
     "base_stats": {
@@ -1506,7 +1506,7 @@
     "sprite": "peblit.png",
     "typing": ["Ground"],
     "description": "Peblit rolls down hillsides to build momentum and escape danger. The minerals in its body determine its coloration.",
-    "appearance": "A small, round stone creature with stubby legs and curious pebble eyes. Cracks in its surface reveal a faint orange glow from its molten core.",
+    "appearance": "A small, round stone hollowing with stubby legs and curious pebble eyes. Cracks in its surface reveal a faint orange glow from its molten core.",
     "height": 0.3,
     "weight": 12,
     "base_stats": {
@@ -1541,7 +1541,7 @@
     "sprite": "boulrock.png",
     "typing": ["Ground"],
     "description": "Boulrock's body has hardened into dense granite. It guards mountain passes and will not move for anything short of an earthquake.",
-    "appearance": "A boulder-shaped creature with thick rocky limbs and glowing orange veins running through its body. Its face is stern and weathered.",
+    "appearance": "A boulder-shaped hollowing with thick rocky limbs and glowing orange veins running through its body. Its face is stern and weathered.",
     "height": 1.1,
     "weight": 180,
     "base_stats": {
@@ -1610,7 +1610,7 @@
     "name": "Frostling",
     "sprite": "frostling.png",
     "typing": ["Ice", "Ghost"],
-    "description": "Frostling is the spirit of a creature that perished in a blizzard. It seeks warmth but accidentally freezes anything it touches.",
+    "description": "Frostling is the spirit of a hollowing that perished in a blizzard. It seeks warmth but accidentally freezes anything it touches.",
     "appearance": "A small, wispy white spirit with icy blue eyes and frost crystals forming its translucent body. A sad expression is frozen on its face.",
     "height": 0.35,
     "weight": 1.5,
@@ -1713,7 +1713,7 @@
     "sprite": "shroombud.png",
     "typing": ["Plant", "Toxic"],
     "description": "Shroombud grows in dark, damp caves. It releases spores when startled that cause vivid hallucinations.",
-    "appearance": "A tiny mushroom creature with a spotted red and white cap. Two beady eyes peek out from under the cap, and small root-like feet allow it to waddle around.",
+    "appearance": "A tiny mushroom hollowing with a spotted red and white cap. Two beady eyes peek out from under the cap, and small root-like feet allow it to waddle around.",
     "height": 0.25,
     "weight": 3,
     "base_stats": {
@@ -1782,7 +1782,7 @@
     "sprite": "sporecrown.png",
     "typing": ["Plant", "Toxic"],
     "description": "Sporecrown is the apex of fungal evolution. Its cap resembles a king's crown, and entire ecosystems depend on its mycelium network for survival.",
-    "appearance": "A regal mushroom creature with a golden crown-shaped cap adorned with bioluminescent spots. Its body is thick and trunk-like, with smaller symbiotic fungi growing in patterns like royal robes.",
+    "appearance": "A regal mushroom hollowing with a golden crown-shaped cap adorned with bioluminescent spots. Its body is thick and trunk-like, with smaller symbiotic fungi growing in patterns like royal robes.",
     "height": 1.8,
     "weight": 85,
     "base_stats": {
@@ -1815,8 +1815,8 @@
     "name": "Whispling",
     "sprite": "whispling.png",
     "typing": ["Air", "Ghost"],
-    "description": "Whispling is born from the last breath of dying creatures. It drifts on wind currents, carrying faint memories of lives long past.",
-    "appearance": "A wispy, translucent creature that resembles a small cloud with two hollow eyes. Faint faces of the departed occasionally appear and fade within its misty form.",
+    "description": "Whispling is born from the last breath of dying hollowings. It drifts on wind currents, carrying faint memories of lives long past.",
+    "appearance": "A wispy, translucent hollowing that resembles a small cloud with two hollow eyes. Faint faces of the departed occasionally appear and fade within its misty form.",
     "height": 0.4,
     "weight": 0.3,
     "base_stats": {
@@ -1920,7 +1920,7 @@
     "sprite": "shadowpup.png",
     "typing": ["Dark"],
     "description": "Shadowpup lurks in the shadows of travelers, feeding on their fear. Despite its sinister nature, it's fiercely loyal to those who befriend it.",
-    "appearance": "A small, wolf-like creature made of living shadow. Only its glowing red eyes and white fangs are clearly visible. Wisps of darkness trail from its form.",
+    "appearance": "A small, wolf-like hollowing made of living shadow. Only its glowing red eyes and white fangs are clearly visible. Wisps of darkness trail from its form.",
     "height": 0.45,
     "weight": 8,
     "base_stats": {
@@ -2095,7 +2095,7 @@
     "sprite": "coglin.png",
     "typing": ["Metal"],
     "description": "Coglin was accidentally created when scrap metal gained sentience near a power plant. It constantly seeks spare parts to add to its body.",
-    "appearance": "A small, goblin-like creature made of mismatched gears, springs, and metal plates. Its eyes are old lightbulbs that flicker, and steam occasionally vents from its joints.",
+    "appearance": "A small, goblin-like hollowing made of mismatched gears, springs, and metal plates. Its eyes are old lightbulbs that flicker, and steam occasionally vents from its joints.",
     "height": 0.5,
     "weight": 22,
     "base_stats": {
@@ -2269,7 +2269,7 @@
     "sprite": "glacimite.png",
     "typing": ["Ice", "Metal"],
     "description": "Glacimite forms in frozen caves where iron deposits meet eternal ice. Its body is so cold that it can freeze water vapor into metal-hard crystals.",
-    "appearance": "A crystalline creature with a body of blue ice interlaced with silvery metal veins. Sharp icicles protrude from its back like spines, and frost constantly emanates from its core.",
+    "appearance": "A crystalline hollowing with a body of blue ice interlaced with silvery metal veins. Sharp icicles protrude from its back like spines, and frost constantly emanates from its core.",
     "height": 0.8,
     "weight": 65,
     "base_stats": {
@@ -2305,7 +2305,7 @@
     "sprite": "lumikid.png",
     "typing": ["Light", "Normal"],
     "description": "Lumikid appears to children who are lost or afraid, guiding them to safety with its gentle glow. It giggles with a sound like chiming bells.",
-    "appearance": "A small, cherubic creature with pale golden skin that radiates soft light. Its eyes are large and kind, and small wings of pure light flutter behind it. A halo-like glow crowns its head.",
+    "appearance": "A small, cherubic hollowing with pale golden skin that radiates soft light. Its eyes are large and kind, and small wings of pure light flutter behind it. A halo-like glow crowns its head.",
     "height": 0.4,
     "weight": 4,
     "base_stats": {
@@ -2375,8 +2375,8 @@
     "name": "Ironhide",
     "sprite": "ironhide.png",
     "typing": ["Metal", "Ground"],
-    "description": "Ironhide's shell is harder than diamond. It curls into a ball and rolls through mountains, carving tunnels that become homes for other creatures.",
-    "appearance": "A massive armadillo-like creature covered in overlapping plates of dark gray metal. Its claws are reinforced for digging, and its eyes peek out from narrow slits in its armored face.",
+    "description": "Ironhide's shell is harder than diamond. It curls into a ball and rolls through mountains, carving tunnels that become homes for other hollowings.",
+    "appearance": "A massive armadillo-like hollowing covered in overlapping plates of dark gray metal. Its claws are reinforced for digging, and its eyes peek out from narrow slits in its armored face.",
     "height": 1.6,
     "weight": 380,
     "base_stats": {
@@ -2411,7 +2411,7 @@
     "name": "Snochi",
     "sprite": "snochi.png",
     "typing": ["Ice", "Normal"],
-    "description": "A small, timid creature that hides in thick snow. It uses its long ears to sense vibrations of approaching predators.",
+    "description": "A small, timid hollowing that hides in thick snow. It uses its long ears to sense vibrations of approaching predators.",
     "appearance": "A tiny, white rabbit-like Pokémon with fur that sparkles like fresh powder and large, blue-tipped ears.",
     "height": 0.3,
     "weight": 2.5,
@@ -2564,7 +2564,7 @@
     "sprite": "voltwing.png",
     "typing": ["Electric", "Air"],
     "description": "It uses its wings to generate massive amounts of static electricity as it flies through storm clouds.",
-    "appearance": "A sleek, bird-like creature made of yellow lightning with translucent, cloud-like wings.",
+    "appearance": "A sleek, bird-like hollowing made of yellow lightning with translucent, cloud-like wings.",
     "height": 1.1,
     "weight": 12,
     "base_stats": {
@@ -2653,7 +2653,7 @@
     "sprite": "ohmtitan.png",
     "typing": ["Electric", "Metal"],
     "description": "It acts as a living battery. Cities sometimes use Ohm-Titans to restart power grids after a collapse.",
-    "appearance": "A colossal, bipedal machine-like creature with massive Tesla coils on its back and a body of reinforced steel.",
+    "appearance": "A colossal, bipedal machine-like hollowing with massive Tesla coils on its back and a body of reinforced steel.",
     "height": 4.2,
     "weight": 850,
     "base_stats": {
@@ -2982,7 +2982,7 @@
     "sprite": "sunbather.png",
     "typing": ["Plant", "Light"],
     "description": "It absorbs sunlight with its massive petals, converting it into blinding beams of light.",
-    "appearance": "A tall, sun-flower like creature with glowing golden petals and a body of vibrant green vines.",
+    "appearance": "A tall, sun-flower like hollowing with glowing golden petals and a body of vibrant green vines.",
     "weight": 45,
     "base_stats": {
       "hp": 80,
@@ -3039,7 +3039,7 @@
     "sprite": "solarius.png",
     "typing": ["Light", "Fire"],
     "description": "Solarius is said to be a fragment of the sun itself given form. It appears during solar eclipses, and ancient civilizations built temples to honor its radiance.",
-    "appearance": "A majestic phoenix-like creature with feathers of pure golden light and flames. A corona of solar fire surrounds its head like a crown, and its tail trails ribbons of plasma. Its eyes hold the intensity of a star.",
+    "appearance": "A majestic phoenix-like hollowing with feathers of pure golden light and flames. A corona of solar fire surrounds its head like a crown, and its tail trails ribbons of plasma. Its eyes hold the intensity of a star.",
     "height": 3.5,
     "weight": 0.1,
     "base_stats": {

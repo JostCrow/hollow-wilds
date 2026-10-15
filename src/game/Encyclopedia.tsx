@@ -63,6 +63,10 @@ export function Encyclopedia({
   mode: "bestiary" | "moves" | "types" | "stats";
 }) {
   const save = useAdventure((s) => s.save);
+  const discovered = useMemo(
+    () => new Set([...(save?.seen ?? []), ...(save?.caught ?? [])]),
+    [save?.seen, save?.caught],
+  );
   const [shiny, setShiny] = useState(false);
   const [alpha, setAlpha] = useState(false);
   const traits = { shiny, alpha };
@@ -75,13 +79,16 @@ export function Encyclopedia({
   const filtered = useMemo(
     () =>
       creatures.filter(
-        (c) =>
-          c.name.toLowerCase().includes(query.toLowerCase()) &&
+        (c) => {
+          if (mode === "bestiary" && !discovered.has(c.name))
+            return !query.trim() && type === "all" && !caughtOnly;
+          return c.name.toLowerCase().includes(query.trim().toLowerCase()) &&
           (type === "all" ||
             c.typing.includes(type as (typeof c.typing)[number])) &&
-          (!caughtOnly || save?.caught.includes(c.name)),
+          (!caughtOnly || save?.caught.includes(c.name));
+        },
       ),
-    [query, type, caughtOnly, save?.caught],
+    [query, type, caughtOnly, save?.caught, mode, discovered],
   );
   const sorted = useMemo(
     () =>
@@ -100,7 +107,8 @@ export function Encyclopedia({
       m.name.toLowerCase().includes(query.toLowerCase()) &&
       (type === "all" || m.type === type),
   );
-  const creature = selected ? species[selected] : null;
+  const creature = selected && (mode !== "bestiary" || discovered.has(selected))
+    ? species[selected] : null;
   return (
     <div className="reference-page">
       <div className="page-heading">
@@ -108,7 +116,7 @@ export function Encyclopedia({
           <span className="eyebrow">THE FIELD LIBRARY</span>
           <h1>
             {mode === "bestiary"
-              ? "Every creature has a story."
+              ? "Every hollowing has a story."
               : mode === "moves"
                 ? "A move for every moment."
                 : mode === "types"
@@ -117,7 +125,7 @@ export function Encyclopedia({
           </h1>
           <p>
             {mode === "bestiary"
-              ? `${creatures.length} creatures to discover. One world to call home.`
+              ? `${discovered.size} seen · ${save?.caught.length ?? 0} caught · ${creatures.length} hollowings to discover.`
               : mode === "moves"
                 ? `Explore all ${Object.keys(moves).length} moves from your game data.`
                 : mode === "types"
@@ -136,7 +144,7 @@ export function Encyclopedia({
               value={query}
               onChange={(e) => setQuery(e.target.value)}
               placeholder={
-                mode === "moves" ? "Find a move…" : "Find a creature…"
+                mode === "moves" ? "Find a move…" : "Find a hollowing…"
               }
             />
           </label>
@@ -155,7 +163,7 @@ export function Encyclopedia({
               className={`filter-toggle ${caughtOnly ? "selected" : ""}`}
               onClick={() => setCaughtOnly(!caughtOnly)}
             >
-              <Check size={15} /> Registered {save?.caught.length ?? 0}
+              <Check size={15} /> Caught {save?.caught.length ?? 0}
             </button>
           )}
           <span className="result-count">
@@ -164,7 +172,7 @@ export function Encyclopedia({
         </div>
       )}
       {(mode === "bestiary" || mode === "stats") && (
-        <div className="variant-preview" aria-label="Preview creature traits">
+        <div className="variant-preview" aria-label="Preview hollowing traits">
           <span>Preview forms</span>
           <label><input type="checkbox" checked={shiny} onChange={(e) => setShiny(e.target.checked)} /> Shiny</label>
           <label><input type="checkbox" checked={alpha} onChange={(e) => setAlpha(e.target.checked)} /> Alpha</label>
@@ -172,41 +180,59 @@ export function Encyclopedia({
         </div>
       )}
       {mode === "bestiary" && (
-        <div className="bestiary-grid">
-          {filtered.map((c) => (
-            <button
-              className="species-card"
-              key={c.name}
-              onClick={() => setSelected(c.name)}
-              style={
-                {
-                  "--creature-color": typeColors[c.typing[0]],
-                } as React.CSSProperties
-              }
-            >
-              <div className="species-number">
-                #{String(creatures.indexOf(c) + 1).padStart(3, "0")}
-                <span>
-                  {save?.caught.includes(c.name) ? (
-                    <Check size={15} />
-                  ) : c.legendary ? (
-                    <Sparkles size={15} />
-                  ) : (
-                    ""
-                  )}
-                </span>
-              </div>
-              <CreatureArt name={c.name} {...traits} />
-              <h3>{c.name}</h3>
-              <TraitBadges {...traits} />
-              <CreatureTypes name={c.name} />
-              <span className="species-habitat">
-                <MapPin size={12} aria-hidden="true" />
-                {locationSummary(c.name)}
-              </span>
-            </button>
-          ))}
-        </div>
+        <>
+          {!filtered.length && (
+            <div className="hollowdex-empty" role="status">
+              <BookOpen size={30} aria-hidden="true" />
+              <h2>No discovered hollowings match your filters.</h2>
+              <p>Try another name or type, or turn off the Caught filter.</p>
+            </div>
+          )}
+          <div className="bestiary-grid">
+            {filtered.map((c) => {
+              const number = String(creatures.indexOf(c) + 1).padStart(3, "0");
+              const caught = !!save?.caught.includes(c.name);
+              if (!discovered.has(c.name)) return (
+                <button className="species-card unseen" key={c.name} disabled
+                  aria-label={`Entry ${number} · Unseen hollowing`}>
+                  <div className="species-number">#{number}</div>
+                  <span className="species-placeholder" aria-hidden="true">?</span>
+                  <h3>Unknown hollowing</h3>
+                  <span className="species-discovery">Not seen yet</span>
+                </button>
+              );
+              return (
+                <button
+                  className={`species-card ${caught ? "caught" : "seen-only"}`}
+                  key={c.name}
+                  aria-label={`${c.name} · ${caught ? "Caught" : "Seen, not caught"}`}
+                  onClick={() => setSelected(c.name)}
+                  style={
+                    {
+                      "--creature-color": typeColors[c.typing[0]],
+                    } as React.CSSProperties
+                  }
+                >
+                  <div className="species-number">
+                    #{number}
+                    <span>
+                      {caught ? <Check size={15} /> : c.legendary ? <Sparkles size={15} /> : ""}
+                    </span>
+                  </div>
+                  <CreatureArt name={c.name} {...traits} />
+                  <h3>{c.name}</h3>
+                  <span className="species-discovery">{caught ? "Caught" : "Seen · Not caught"}</span>
+                  <TraitBadges {...traits} />
+                  <CreatureTypes name={c.name} />
+                  <span className="species-habitat">
+                    <MapPin size={12} aria-hidden="true" />
+                    {locationSummary(c.name)}
+                  </span>
+                </button>
+              );
+            })}
+          </div>
+        </>
       )}
       {mode === "moves" && (
         <div className="table-card">
@@ -246,7 +272,7 @@ export function Encyclopedia({
             <thead>
               <tr>
                 {[
-                  ["name", "Creature"],
+                  ["name", "Hollowing"],
                   ...Object.entries(statLabels),
                   ["total", "Total"],
                 ].map(([key, label]) => (
@@ -362,7 +388,7 @@ export function Encyclopedia({
             <Sparkles size={19} />
             <p>
               Two types? Multiply both matchups. A Fire move against a Plant /
-              Toxic creature uses Fire’s multiplier against each type.
+              Toxic hollowing uses Fire’s multiplier against each type.
             </p>
           </div>
         </>
@@ -378,7 +404,7 @@ export function Encyclopedia({
       {creature && (
         <div className="modal-backdrop" onClick={() => setSelected(null)}>
           <section
-            className="creature-detail modal-card"
+            className={`creature-detail modal-card ${mode === "bestiary" && !save?.caught.includes(creature.name) ? "seen-only" : ""}`}
             role="dialog"
             aria-modal="true"
             aria-label={`${creature.name} details`}
@@ -386,7 +412,7 @@ export function Encyclopedia({
           >
             <button
               className="close-button"
-              aria-label="Close creature details"
+              aria-label="Close hollowing details"
               onClick={() => setSelected(null)}
             >
               <X size={20} />
@@ -414,13 +440,13 @@ export function Encyclopedia({
                   <span>{creature.weight} kg</span>
                   <span>
                     {save?.caught.includes(creature.name)
-                      ? "Registered"
-                      : "Undiscovered"}
+                      ? "Caught"
+                      : discovered.has(creature.name) ? "Seen · Not caught" : "Undiscovered"}
                   </span>
                 </div>
                 {!hasSprite(creature.name) && (
                   <small className="muted">
-                    Field sketch · creature artwork not yet available
+                    Field sketch · hollowing artwork not yet available
                   </small>
                 )}
               </div>
@@ -428,7 +454,7 @@ export function Encyclopedia({
             <div className="detail-body">
               <section
                 className="detail-habitats"
-                aria-label="Where to find this creature"
+                aria-label="Where to find this hollowing"
               >
                 <div className="habitat-heading">
                   <h3>
@@ -467,16 +493,16 @@ export function Encyclopedia({
                       ))}
                     </ul>
                     <p>
-                      Look for roaming creatures in these areas. Different
-                      creatures appear as the local population refreshes.
+                      Look for roaming hollowings in these areas. Different
+                      hollowings appear as the local population refreshes.
                     </p>
                   </>
                 ) : (
                   <>
                     <p>
                       {starterNames.includes(creature.name)
-                        ? "Choose this creature as your starter when beginning an adventure. It does not appear in the wild."
-                        : "This creature does not appear in the wild in the current region."}
+                        ? "Choose this hollowing as your starter when beginning an adventure. It does not appear in the wild."
+                        : "This hollowing does not appear in the wild in the current region."}
                     </p>
                     {creatures.flatMap((parent) =>
                       (parent.evolution_requirements ?? [])
@@ -496,9 +522,10 @@ export function Encyclopedia({
                             Evolve{" "}
                             <button
                               className="text-button"
+                              disabled={mode === "bestiary" && !discovered.has(parent.name)}
                               onClick={() => setSelected(parent.name)}
                             >
-                              {parent.name}
+                              {mode === "bestiary" && !discovered.has(parent.name) ? "Unknown hollowing" : parent.name}
                             </button>{" "}
                             {e.type === "stone"
                               ? `using a ${stoneByKey[e.stone!].name} from a town shop.`
@@ -542,9 +569,10 @@ export function Encyclopedia({
                       <ArrowRight size={14} />
                       <button
                         className="text-button"
+                        disabled={mode === "bestiary" && !discovered.has(e.evolves_to)}
                         onClick={() => setSelected(e.evolves_to)}
                       >
-                        {e.evolves_to}
+                        {mode === "bestiary" && !discovered.has(e.evolves_to) ? "Unknown hollowing" : e.evolves_to}
                       </button>
                     </p>
                   ))

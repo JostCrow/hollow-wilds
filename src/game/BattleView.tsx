@@ -45,18 +45,18 @@ export function BattleView() {
       className="battle-overlay"
       role="dialog"
       aria-modal="true"
-      aria-label="Creature battle"
+      aria-label="Hollowing battle"
     >
       <div className="battle-card">
         <div className="battle-topline">
           <span>
             <Swords size={16} />
-            {battle.trainer ? "THE RANGER CHALLENGE" : "A WILD ENCOUNTER"}
+            {battle.opponent ? `${battle.opponent.kind.toUpperCase()} CHALLENGE` : battle.trainer ? "THE RANGER CHALLENGE" : "A WILD ENCOUNTER"}
           </span>
           <span>
             <AudioToggle />
             Turn {battle.turn + 1} <i />{" "}
-            {battle.trainer ? "Field test" : "Wild creature"}
+            {battle.opponent ? `${battle.opponent.name} · ${battle.reserves.length + (battle.enemy.hp > 0 ? 1 : 0)}/${battle.opponent.team.length} remaining` : battle.trainer ? "Field test" : "Wild hollowing"}
           </span>
         </div>
         <div className={`battle-field ${busy ? "is-attacking" : ""}`}>
@@ -123,7 +123,7 @@ export function BattleView() {
                 <h2>
                   {battle.outcome === "won"
                     ? battle.trainer
-                      ? "A ranger in the making."
+                      ? battle.opponent?.kind === "gym" ? `${battle.opponent.badge} Badge earned!` : battle.opponent?.kind === "champion" ? "A champion defeated!" : battle.opponent ? "Trainer defeated!" : "A ranger in the making."
                       : "That’s a little more experience."
                     : battle.outcome === "caught"
                       ? "A new friend for the journey."

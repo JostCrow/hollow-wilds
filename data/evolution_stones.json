@@ -4,118 +4,118 @@
     "name": "Fire Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It burns as red as ember."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It burns as red as ember."
   },
   {
     "key": "water_stone",
     "name": "Water Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It is a clear blue reminiscent of a lake."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It is a clear blue reminiscent of a lake."
   },
   {
     "key": "leaf_stone",
     "name": "Leaf Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It has a leaf pattern that seems to move."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It has a leaf pattern that seems to move."
   },
   {
     "key": "thunder_stone",
     "name": "Thunder Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It sparkles with electrical energy."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It sparkles with electrical energy."
   },
   {
     "key": "moon_stone",
     "name": "Moon Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It glows with lunar energy."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It glows with lunar energy."
   },
   {
     "key": "sun_stone",
     "name": "Sun Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It radiates warm solar energy."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It radiates warm solar energy."
   },
   {
     "key": "light_stone",
     "name": "Light Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It emits a brilliant, pure light."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It emits a brilliant, pure light."
   },
   {
     "key": "dark_stone",
     "name": "Dark Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It seems to absorb light around it."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It seems to absorb light around it."
   },
   {
     "key": "earth_stone",
     "name": "Earth Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It feels heavy and solid like bedrock."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It feels heavy and solid like bedrock."
   },
   {
     "key": "ice_stone",
     "name": "Ice Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It's cold to the touch and never melts."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It's cold to the touch and never melts."
   },
   {
     "key": "normal_stone",
     "name": "Normal Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It has a simple, balanced energy."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It has a simple, balanced energy."
   },
   {
     "key": "ground_stone",
     "name": "Ground Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It contains the power of the earth."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It contains the power of the earth."
   },
   {
     "key": "ghost_stone",
     "name": "Ghost Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It seems to phase in and out of existence."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It seems to phase in and out of existence."
   },
   {
     "key": "air_stone",
     "name": "Air Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It feels light and carries the wind's energy."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It feels light and carries the wind's energy."
   },
   {
     "key": "poison_stone",
     "name": "Poison Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It has a toxic aura and purple glow."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It has a toxic aura and purple glow."
   },
   {
     "key": "metal_stone",
     "name": "Metal Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It's hard as steel and gleams like polished metal."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It's hard as steel and gleams like polished metal."
   },
   {
     "key": "shadow_stone",
     "name": "Shadow Stone",
     "quantity": 1,
     "type": "Evolution",
-    "description": "A peculiar stone that makes certain species of creatures evolve. It embodies the balance between light and darkness."
+    "description": "A peculiar stone that makes certain species of hollowings evolve. It embodies the balance between light and darkness."
   }
 ]

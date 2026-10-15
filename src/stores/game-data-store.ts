@@ -37,7 +37,7 @@ export const useGameDataStore = create<GameDataStoreState>((set, get) => ({
             ]);
 
             if (!routesRes.ok) throw new Error(`Failed to load routes (${routesRes.status})`);
-            if (!creaturesRes.ok) throw new Error(`Failed to load creatures (${creaturesRes.status})`);
+            if (!creaturesRes.ok) throw new Error(`Failed to load hollowings (${creaturesRes.status})`);
             if (!movesRes.ok) throw new Error(`Failed to load moves (${movesRes.status})`);
             if (!typesRes.ok) throw new Error(`Failed to load types (${typesRes.status})`);
 

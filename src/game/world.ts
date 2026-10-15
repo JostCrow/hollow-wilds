@@ -1,4 +1,6 @@
 import worldData from "../../data/world.json" with { type: "json" };
+import { leagueAt } from "./progression.ts";
+import { species } from "./data.ts";
 import { rollTraits } from "./traits.ts";
 import type { Traits } from "./traits.ts";
 export type Point = { x: number; y: number };
@@ -19,7 +21,7 @@ export type Building = Point & {
   h: number;
   roof: string;
   name: string;
-  service: "heal" | "shop" | "home";
+  service: "heal" | "shop" | "home" | "gym" | "champion";
 };
 export type Person = Point & {
   id: string;
@@ -46,7 +48,11 @@ export type World = {
   width: number;
   height: number;
 };
-export const zones = worldData.zones as Zone[];
+export const zones: Zone[] = worldData.zones.map((zone) => {
+  const league = leagueAt(zone.id);
+  return { ...zone, buildings: zone.buildings.map((b) => league && b.service === "home"
+    ? { ...b, name: league.kind === "gym" ? `${league.badge!.toUpperCase()} GYM` : "CHAMPION HALL", service: league.kind as "gym" | "champion", roof: league.kind === "gym" ? "#8c79a6" : "#bd9949" } : b) } as Zone;
+});
 export const TILE = 32;
 export const directions: Direction[] = ["north", "east", "south", "west"];
 export const opposite: Record<Direction, Direction> = {
@@ -304,7 +310,7 @@ export function reachableTiles(world: World): Set<number> {
   return found;
 }
 export type Spawn = Point & Traits & { id: string; species: string; level: number };
-export function createSpawns(zoneId: string, cycle = 0, traitRng = Math.random): Spawn[] {
+export function createSpawns(zoneId: string, cycle = 0, traitRng = Math.random, caught: readonly string[] = []): Spawn[] {
   const w = getWorld(zoneId),
     rng = random(w.zone.seed + cycle * 37),
     guardian = w.zone.sanctuary?.species,
@@ -319,7 +325,7 @@ export function createSpawns(zoneId: string, cycle = 0, traitRng = Math.random):
         ? guardian
         : encounterPool[(i + cycle) % encounterPool.length],
       level:
-        w.zone.level[0] +
-        Math.floor(rng() * (w.zone.level[1] - w.zone.level[0] + 1)),
-    }));
+        (guardian && i === 0 ? 80 : w.zone.level[0] +
+        Math.floor(rng() * (w.zone.level[1] - w.zone.level[0] + 1))),
+    })).filter((spawn) => !(species[spawn.species].legendary || species[spawn.species].mythical) || !caught.includes(spawn.species));
 }

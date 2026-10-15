@@ -523,7 +523,7 @@ export function landscape(world: World): Landscape {
     const x = b.x * TILE, y = b.y * TILE, w = b.w * TILE, h = b.h * TILE;
     shadow(c, x + w / 2 + 13, y + h - 3, w * .65, 35, .28);
     const name: WorldArt = b.service === "heal" ? "healing" : b.service === "shop" ? "shop" : "cottage";
-    const image = illustratedItem(name, x + w / 2, y + h + 6, w + 24, h + 30);
+    const image = b.service === "gym" || b.service === "champion" ? null : illustratedItem(name, x + w / 2, y + h + 6, w + 24, h + 30);
     scenery.push(image ?? cachedItem(x - 8, y + h + 8, w + 24, h + 24, (ctx) => building(ctx, b)));
   }
   for (const mark of world.landmarks) {

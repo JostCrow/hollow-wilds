@@ -119,7 +119,7 @@ export function BattleScene() {
         battlePlayer.description = baseCreature.description;
         battlePlayer.base_stats = baseCreature.base_stats;
       } else {
-        console.warn("Base creature not found for:", activeMember.species);
+        console.warn("Base hollowing not found for:", activeMember.species);
       }
 
       console.log("Generating Opponent...");

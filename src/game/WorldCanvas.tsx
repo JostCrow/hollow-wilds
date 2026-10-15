@@ -17,6 +17,7 @@ import {
   zoneById,
 } from "./world";
 import type { Point, World } from "./world";
+import { trainers } from "./progression";
 import { SHINY_FILTER, traitLabel } from "./traits";
 import { spriteImage } from "./sprites";
 import { drawPerson, drawPickup, landscape } from "./world-renderer";
@@ -60,6 +61,7 @@ export function WorldCanvas() {
     interactAtEnd: false,
     target: null as Point | null,
     wildTargetId: null as string | null,
+    interactionTarget: undefined as string | undefined,
     wildPositions: new Map<string, { x: number; y: number; width: number; height: number }>(),
     camera: { x: 0, y: 0 },
     zoom: 1,
@@ -81,17 +83,11 @@ export function WorldCanvas() {
         save.y >= b.y + b.h &&
         save.y <= b.y + b.h + 2,
     );
-  const hint = nearbyWild
-    ? `Meet ${nearbyWild.species}`
-    : nearbyPerson
-      ? `Talk to ${nearbyPerson.name}`
-      : nearbyBuilding
-        ? nearbyBuilding.service === "heal"
-          ? "Heal your team"
-          : nearbyBuilding.service === "shop"
-            ? "Browse field supplies"
-            : "Visit Ranger’s Rest"
-        : null;
+  const hint = nearbyPerson ? `${nearbyPerson.role === "camper" ? "Challenge" : "Talk to"} ${nearbyPerson.name}`
+    : nearbyBuilding ? nearbyBuilding.service === "heal" ? "Heal your team"
+      : nearbyBuilding.service === "shop" ? "Browse field supplies"
+      : `Visit ${nearbyBuilding.name}`
+    : nearbyWild ? `Meet ${nearbyWild.species}` : null;
   useEffect(() => {
     const canvas = canvasRef.current!,
       host = containerRef.current!,
@@ -264,7 +260,7 @@ export function WorldCanvas() {
           lastStep = time;
         } else if (state.interactAtEnd) {
           state.interactAtEnd = false;
-          s.interact();
+          s.interact(state.interactionTarget);
           state.wildTargetId = null;
         }
       }
@@ -318,7 +314,15 @@ export function WorldCanvas() {
           ctx.beginPath(); ctx.ellipse(x, bubbleY, 7, 8, 0, 0, Math.PI * 2); ctx.fill();
           ctx.strokeStyle = "#b4b18a"; ctx.lineWidth = 1; ctx.stroke();
           ctx.font = "600 11px system-ui"; ctx.fillStyle = "#7b8059"; ctx.textAlign = "center";
-          ctx.fillText("!", x, bubbleY + 4);
+          const trainer = trainers.find((t) => t.zone === world.zone.id && t.id === `trainer-${world.zone.id}-${n.id}`);
+          ctx.fillText(trainer ? "⚔" : "!", x, bubbleY + 4);
+          if (trainer && Math.abs(n.x - sx) + Math.abs(n.y - sy) < 6) {
+            const text = `${n.name} · Lv.${trainer.team.at(-1)!.level}`;
+            ctx.font = "600 9px system-ui";
+            const width = ctx.measureText(text).width + 14;
+            ctx.fillStyle = "#fcf7e7ed"; ctx.beginPath(); ctx.roundRect(x - width / 2, bubbleY - 27, width, 17, 6); ctx.fill();
+            ctx.fillStyle = "#675a78"; ctx.fillText(text, x, bubbleY - 15);
+          }
         });
       }
       for (const wild of s.spawns) {
@@ -503,6 +507,8 @@ export function WorldCanvas() {
     state.path = path;
     state.target = dest;
     state.wildTargetId = clickedWild?.id ?? null;
+    state.interactionTarget = clickedWild ? `wild:${clickedWild.id}` : building ? `building:${building.name}`
+      : world.npcs.some((n) => n.x === target.x && n.y === target.y) ? `npc:${world.npcs.find((n) => n.x === target.x && n.y === target.y)!.id}` : undefined;
     state.interactAtEnd =
       !!(building || entity) &&
       (path.length > 0 || (dest.x === s.save.x && dest.y === s.save.y));
@@ -577,9 +583,7 @@ export function WorldCanvas() {
             );
           })}
         </div>
-        <span>
-          {world.width} × {world.height} · LOCAL MAP
-        </span>
+        <span>LOCAL MAP</span>
       </div>
       {hint && (
         <button

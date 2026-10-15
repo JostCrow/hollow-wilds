@@ -39,22 +39,30 @@ import {
 } from "./game/Panels";
 import { TraitBadges, CreatureArt, CreatureTypes, HpBar } from "./game/ui";
 import { zoneById, isTown } from "./game/world";
+import { opponentById } from "./game/progression";
 import { evolutionStones } from "./game/data";
 import { useGameAudio } from "./game/useGameAudio";
 import { AudioToggle } from "./game/AudioControls";
+import { ThemeToggle } from "./game/ThemeControls";
 import "./game/adventure.css";
 import "./game/illustration.css";
+import "./game/themes.css";
 
 const navigation = [
   { key: "adventure", name: "Explore", icon: Compass },
   { key: "team", name: "My team", icon: Users },
   { key: "journal", name: "Field journal", icon: Feather },
   { key: "map", name: "World map", icon: MapIcon },
-  { key: "bestiary", name: "Creature guide", icon: BookOpen },
+  { key: "bestiary", name: "Hollowdex", icon: BookOpen },
   { key: "moves", name: "Move library", icon: Swords },
   { key: "types", name: "Type chart", icon: Shield },
   { key: "stats", name: "Base stats", icon: BarChart3 },
 ] as const;
+const keyboardPanels: Partial<Record<string, Panel>> = {
+  m: "map",
+  h: "bestiary",
+  t: "team",
+};
 const pathPanels: Record<string, Panel> = {
   "/": "adventure",
   "/team": "team",
@@ -200,7 +208,7 @@ function Explore() {
                 <p>
                   {isTown(zone)
                     ? "The pink-roofed Healing House restores your team for free. Click its front door to visit."
-                    : "Use the local map’s arrow markers to follow an exit. Take the side paths to find creatures, landmarks, and trail treasures."}
+                    : "Use the local map’s arrow markers to follow an exit. Take the side paths to find hollowings, landmarks, and trail treasures."}
                 </p>
               </div>
             </div>
@@ -361,20 +369,26 @@ export default function App() {
   }, [notice]);
   useEffect(() => {
     const key = (e: KeyboardEvent) => {
-      if (e.key !== "Escape") return;
+      if (e.defaultPrevented || e.repeat || e.isComposing || e.metaKey || e.ctrlKey || e.altKey)
+        return;
       const s = useAdventure.getState();
       if (s.battle) return;
-      if (document.querySelector(".creature-detail")) {
-        (
-          document.querySelector(
-            ".creature-detail .close-button",
-          ) as HTMLButtonElement
-        )?.click();
+      if (e.key === "Escape") {
+        e.preventDefault();
+        if (s.dialog) s.dismiss();
+        s.setPanel("adventure");
+        setMobileNav(false);
         return;
       }
-      if (s.dialog) s.dismiss();
-      else if (s.save)
-        s.setPanel(s.panel === "adventure" ? "journal" : "adventure");
+      if (s.dialog || (e.target instanceof HTMLElement &&
+        (e.target.isContentEditable || e.target.closest("input, textarea, select, [role='textbox']"))))
+        return;
+      const destination = keyboardPanels[e.key.toLowerCase()];
+      if (destination) {
+        e.preventDefault();
+        s.setPanel(destination);
+        setMobileNav(false);
+      }
     };
     window.addEventListener("keydown", key);
     return () => window.removeEventListener("keydown", key);
@@ -412,6 +426,7 @@ export default function App() {
               )}
               <button
                 className={`nav-item ${panel === item.key ? "active" : ""}`}
+                aria-keyshortcuts={item.key === "adventure" ? "Escape" : Object.keys(keyboardPanels).find((key) => keyboardPanels[key] === item.key)}
                 onClick={() => {
                   setPanel(item.key);
                   setMobileNav(false);
@@ -478,6 +493,7 @@ export default function App() {
             </span>
           </div>
           <div className="topbar-right">
+            <ThemeToggle />
             <AudioToggle />
             <span
               className={`autosave-label ${saveError ? "save-failed" : ""}`}
@@ -523,7 +539,7 @@ export default function App() {
         </main>
         <footer className="app-footer">
           <span>
-            THE HOLLOW WILDS <i>·</i> A creature-collecting adventure
+            THE HOLLOW WILDS <i>·</i> A hollowing-collecting adventure
           </span>
           <span>
             Stay curious. Wander often. <Leaf size={12} />
@@ -558,6 +574,11 @@ export default function App() {
             <span className="eyebrow">A MOMENT ON THE TRAIL</span>
             <h2 id="dialog-title">{dialog.title}</h2>
             <p>{dialog.text}</p>
+            {dialog.opponentId && <div className="opponent-preview">
+              {opponentById(dialog.opponentId)?.team.map((c, i) => <div key={i}>
+                <CreatureArt name={c.species} /><strong>{c.species}</strong><small>Lv. {c.level}</small>
+              </div>)}
+            </div>}
             {dialog.kind === "shop" && (
               <div className="shop-items">
                 <button
@@ -616,9 +637,9 @@ export default function App() {
             )}
             <button
               className="primary-button"
-              onClick={dialog.kind === "ranger" ? challenge : dismiss}
+              onClick={dialog.kind === "ranger" || dialog.kind === "opponent" ? challenge : dismiss}
             >
-              {dialog.kind === "ranger"
+              {dialog.kind === "ranger" || dialog.kind === "opponent"
                 ? "Take the challenge"
                 : "Back to exploring"}
               <ArrowRight size={16} />

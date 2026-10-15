@@ -4,7 +4,7 @@
     {
       "id": "willowfen",
       "name": "Willowfen Village",
-      "subtitle": "Home paths \u00b7 The orchard lies north",
+      "subtitle": "North to Sunpetal Trail \u00b7 South to Rosepetal Walk \u00b7 West to Bramble Orchard",
       "kind": "town",
       "width": 40,
       "height": 28,
@@ -18,38 +18,38 @@
         "Twigglo",
         "Puddlop"
       ],
-      "mapX": 5.0,
-      "mapY": 31.0,
+      "mapX": 21.6,
+      "mapY": 64.8,
       "spawn": {
         "x": 20,
         "y": 15
       },
       "exits": [
         {
-          "direction": "east",
-          "target": "sunpetal",
-          "at": 14
-        },
-        {
           "direction": "north",
-          "target": "bramble",
+          "target": "sunpetal",
           "at": 20
         },
         {
           "direction": "south",
-          "target": "cinder-crossing",
+          "target": "rosepetal-walk",
           "at": 20
+        },
+        {
+          "direction": "west",
+          "target": "bramble",
+          "at": 14
         }
       ],
       "trails": [
         {
           "points": [
             [
-              0,
+              3,
               14
             ],
             [
-              39,
+              36,
               14
             ]
           ],
@@ -59,7 +59,7 @@
           "points": [
             [
               20,
-              0
+              3
             ],
             [
               20,
@@ -115,7 +115,50 @@
             ],
             [
               20,
+              24
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
+              0
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
               27
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
+              14
+            ],
+            [
+              0,
+              14
             ]
           ],
           "width": 3
@@ -172,7 +215,7 @@
           "x": 17,
           "y": 12,
           "color": "#d9bf84",
-          "dialogue": "Welcome! Head east for Sunpetal Trail, or north into Bramble Orchard. The paths form a loop through Mosswood. Register three species, win three battles, then meet Ranger Elowen in Larkspur."
+          "dialogue": "Welcome! Head north for Sunpetal Trail and Mosswood Hollow, or west into Bramble Orchard. The island circuit will bring you home again. Register three species, win three battles, then meet Ranger Elowen in Larkspur."
         }
       ],
       "buildings": [
@@ -208,7 +251,7 @@
     {
       "id": "sunpetal",
       "name": "Sunpetal Trail",
-      "subtitle": "Flower meadows \u00b7 A fork beneath the old oak",
+      "subtitle": "South to Willowfen Village \u00b7 North to Mosswood Hollow",
       "kind": "meadow",
       "width": 58,
       "height": 34,
@@ -225,39 +268,29 @@
         "Cindlark",
         "Shroombud"
       ],
-      "mapX": 16.25,
-      "mapY": 31.0,
+      "mapX": 19.7,
+      "mapY": 58.9,
       "spawn": {
         "x": 24,
         "y": 22
       },
       "exits": [
         {
-          "direction": "west",
+          "direction": "south",
           "target": "willowfen",
-          "at": 24
+          "at": 29
         },
         {
           "direction": "north",
           "target": "mosswood",
           "at": 39
-        },
-        {
-          "direction": "east",
-          "target": "reedwater",
-          "at": 10
-        },
-        {
-          "direction": "south",
-          "target": "rosewood-trail",
-          "at": 29
         }
       ],
       "trails": [
         {
           "points": [
             [
-              0,
+              3,
               24
             ],
             [
@@ -277,7 +310,7 @@
               10
             ],
             [
-              57,
+              54,
               10
             ]
           ],
@@ -291,7 +324,7 @@
             ],
             [
               39,
-              0
+              3
             ]
           ],
           "width": 3
@@ -342,7 +375,53 @@
             ],
             [
               29,
+              30
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              22
+            ],
+            [
+              29,
+              22
+            ],
+            [
+              29,
               33
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              22
+            ],
+            [
+              24,
+              20
+            ],
+            [
+              30,
+              20
+            ],
+            [
+              30,
+              10
+            ],
+            [
+              39,
+              10
+            ],
+            [
+              39,
+              0
             ]
           ],
           "width": 3
@@ -460,7 +539,7 @@
     {
       "id": "mosswood",
       "name": "Mosswood Hollow",
-      "subtitle": "Deep forest \u00b7 Winding paths between four clearings",
+      "subtitle": "South to Sunpetal Trail \u00b7 North to Larkspur Town",
       "kind": "forest",
       "width": 36,
       "height": 60,
@@ -476,8 +555,8 @@
         "Glimmoth",
         "Verdreep"
       ],
-      "mapX": 16.25,
-      "mapY": 18.5,
+      "mapX": 19.5,
+      "mapY": 52.9,
       "spawn": {
         "x": 18,
         "y": 33
@@ -490,18 +569,8 @@
         },
         {
           "direction": "north",
-          "target": "moonwell",
-          "at": 25
-        },
-        {
-          "direction": "west",
-          "target": "bramble",
-          "at": 34
-        },
-        {
-          "direction": "east",
           "target": "larkspur",
-          "at": 20
+          "at": 25
         }
       ],
       "trails": [
@@ -509,7 +578,7 @@
           "points": [
             [
               11,
-              59
+              56
             ],
             [
               11,
@@ -537,7 +606,7 @@
             ],
             [
               25,
-              0
+              3
             ]
           ],
           "width": 2
@@ -545,7 +614,7 @@
         {
           "points": [
             [
-              0,
+              3,
               34
             ],
             [
@@ -562,7 +631,7 @@
               20
             ],
             [
-              35,
+              32,
               20
             ]
           ],
@@ -609,6 +678,56 @@
             ]
           ],
           "width": 1
+        },
+        {
+          "points": [
+            [
+              18,
+              33
+            ],
+            [
+              23,
+              33
+            ],
+            [
+              23,
+              46
+            ],
+            [
+              11,
+              46
+            ],
+            [
+              11,
+              59
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              18,
+              33
+            ],
+            [
+              14,
+              33
+            ],
+            [
+              14,
+              20
+            ],
+            [
+              25,
+              20
+            ],
+            [
+              25,
+              0
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -743,7 +862,7 @@
     {
       "id": "reedwater",
       "name": "Reedwater Crossing",
-      "subtitle": "River delta \u00b7 Islands, boardwalks, and a fishing camp",
+      "subtitle": "South to Windmill Downs \u00b7 North to Tidemere Harbor",
       "kind": "river",
       "width": 66,
       "height": 38,
@@ -759,39 +878,29 @@
         "Peblit",
         "Volteel"
       ],
-      "mapX": 27.5,
-      "mapY": 31.0,
+      "mapX": 22.7,
+      "mapY": 36.0,
       "spawn": {
         "x": 31,
         "y": 25
       },
       "exits": [
         {
-          "direction": "west",
-          "target": "sunpetal",
-          "at": 12
-        },
-        {
-          "direction": "east",
-          "target": "tidemere",
-          "at": 28
+          "direction": "south",
+          "target": "windmill",
+          "at": 33
         },
         {
           "direction": "north",
-          "target": "larkspur",
+          "target": "tidemere",
           "at": 48
-        },
-        {
-          "direction": "south",
-          "target": "silver-reeds",
-          "at": 33
         }
       ],
       "trails": [
         {
           "points": [
             [
-              0,
+              3,
               12
             ],
             [
@@ -811,7 +920,7 @@
               28
             ],
             [
-              65,
+              62,
               28
             ]
           ],
@@ -829,7 +938,7 @@
             ],
             [
               48,
-              0
+              3
             ]
           ],
           "width": 3
@@ -888,10 +997,48 @@
             ],
             [
               33,
-              37
+              34
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              31,
+              25
+            ],
+            [
+              31,
+              32
+            ],
+            [
+              33,
+              32
+            ],
+            [
+              33,
+              37
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              31,
+              25
+            ],
+            [
+              48,
+              25
+            ],
+            [
+              48,
+              0
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -1026,7 +1173,7 @@
           "x": 32,
           "y": 26,
           "color": "#b77864",
-          "dialogue": "The northern bridge leads to Larkspur. Keep east for the coast at Tidemere. Try the little island loop for water creatures; both boardwalks reconnect with the main trail."
+          "dialogue": "The northern bridge leads to Larkspur. Keep east for the coast at Tidemere. Try the little island loop for water hollowings; both boardwalks reconnect with the main trail."
         }
       ],
       "buildings": []
@@ -1034,7 +1181,7 @@
     {
       "id": "larkspur",
       "name": "Larkspur Town",
-      "subtitle": "Ranger crossroads \u00b7 A plaza with four ways onward",
+      "subtitle": "South to Mosswood Hollow \u00b7 North to Windmill Downs \u00b7 West to Moonwell Glade \u00b7 East to Fiddlehead Woods",
       "kind": "town",
       "width": 44,
       "height": 38,
@@ -1048,31 +1195,31 @@
         "Glimmoth",
         "Tindertail"
       ],
-      "mapX": 27.5,
-      "mapY": 18.5,
+      "mapX": 20.0,
+      "mapY": 47.1,
       "spawn": {
         "x": 22,
         "y": 21
       },
       "exits": [
         {
-          "direction": "west",
-          "target": "mosswood",
-          "at": 19
-        },
-        {
           "direction": "south",
-          "target": "reedwater",
+          "target": "mosswood",
           "at": 14
         },
         {
           "direction": "north",
-          "target": "amberrise",
+          "target": "windmill",
           "at": 29
         },
         {
+          "direction": "west",
+          "target": "moonwell",
+          "at": 19
+        },
+        {
           "direction": "east",
-          "target": "windmill",
+          "target": "fiddlehead-woods",
           "at": 25
         }
       ],
@@ -1080,7 +1227,7 @@
         {
           "points": [
             [
-              0,
+              3,
               19
             ],
             [
@@ -1092,7 +1239,7 @@
               25
             ],
             [
-              43,
+              40,
               25
             ]
           ],
@@ -1102,7 +1249,7 @@
           "points": [
             [
               14,
-              37
+              34
             ],
             [
               14,
@@ -1119,7 +1266,7 @@
           "points": [
             [
               29,
-              0
+              3
             ],
             [
               29,
@@ -1191,6 +1338,114 @@
             ]
           ],
           "width": 2
+        },
+        {
+          "points": [
+            [
+              22,
+              21
+            ],
+            [
+              22,
+              25
+            ],
+            [
+              14,
+              25
+            ],
+            [
+              14,
+              37
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              22,
+              21
+            ],
+            [
+              22,
+              19
+            ],
+            [
+              29,
+              19
+            ],
+            [
+              29,
+              12
+            ],
+            [
+              27,
+              12
+            ],
+            [
+              27,
+              4
+            ],
+            [
+              29,
+              4
+            ],
+            [
+              29,
+              0
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              22,
+              21
+            ],
+            [
+              22,
+              19
+            ],
+            [
+              0,
+              19
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              22,
+              21
+            ],
+            [
+              22,
+              25
+            ],
+            [
+              27,
+              25
+            ],
+            [
+              27,
+              24
+            ],
+            [
+              35,
+              24
+            ],
+            [
+              35,
+              25
+            ],
+            [
+              43,
+              25
+            ]
+          ],
+          "width": 3
         }
       ],
       "terrain": [
@@ -1303,7 +1558,7 @@
     {
       "id": "bramble",
       "name": "Bramble Orchard",
-      "subtitle": "Orchard lane \u00b7 An easy detour through the fruit trees",
+      "subtitle": "East to Willowfen Village \u00b7 North to Blooming Thicket",
       "kind": "orchard",
       "width": 28,
       "height": 42,
@@ -1319,26 +1574,21 @@
         "Tindertail",
         "Shroombud"
       ],
-      "mapX": 5.0,
-      "mapY": 18.5,
+      "mapX": 13,
+      "mapY": 68,
       "spawn": {
         "x": 12,
         "y": 24
       },
       "exits": [
         {
-          "direction": "south",
-          "target": "willowfen",
-          "at": 8
-        },
-        {
           "direction": "east",
-          "target": "mosswood",
+          "target": "willowfen",
           "at": 10
         },
         {
           "direction": "north",
-          "target": "cedar-stair",
+          "target": "blooming-thicket",
           "at": 14
         }
       ],
@@ -1347,7 +1597,7 @@
           "points": [
             [
               8,
-              41
+              38
             ],
             [
               8,
@@ -1362,7 +1612,7 @@
               10
             ],
             [
-              27,
+              24,
               10
             ]
           ],
@@ -1423,10 +1673,48 @@
             ],
             [
               14,
-              0
+              3
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              12,
+              24
+            ],
+            [
+              14,
+              24
+            ],
+            [
+              14,
+              10
+            ],
+            [
+              27,
+              10
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              12,
+              24
+            ],
+            [
+              14,
+              24
+            ],
+            [
+              14,
+              0
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -1517,7 +1805,7 @@
     {
       "id": "moonwell",
       "name": "Moonwell Glade",
-      "subtitle": "Hidden sanctuary \u00b7 A short walk around the still lake",
+      "subtitle": "East to Larkspur Town",
       "kind": "glade",
       "width": 26,
       "height": 24,
@@ -1532,26 +1820,16 @@
         "Frostling",
         "Lumikid"
       ],
-      "mapX": 16.25,
-      "mapY": 6.0,
+      "mapX": 11,
+      "mapY": 44,
       "spawn": {
         "x": 13,
         "y": 19
       },
       "exits": [
         {
-          "direction": "south",
-          "target": "mosswood",
-          "at": 13
-        },
-        {
           "direction": "east",
-          "target": "amberrise",
-          "at": 12
-        },
-        {
-          "direction": "west",
-          "target": "cedar-stair",
+          "target": "larkspur",
           "at": 12
         }
       ],
@@ -1560,7 +1838,7 @@
           "points": [
             [
               13,
-              23
+              20
             ],
             [
               13,
@@ -1609,7 +1887,7 @@
               19
             ],
             [
-              25,
+              22,
               12
             ]
           ],
@@ -1622,11 +1900,40 @@
               19
             ],
             [
-              0,
+              3,
               12
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              13,
+              19
+            ],
+            [
+              17,
+              19
+            ],
+            [
+              17,
+              18
+            ],
+            [
+              20,
+              18
+            ],
+            [
+              20,
+              12
+            ],
+            [
+              25,
+              12
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -1715,7 +2022,7 @@
     {
       "id": "amberrise",
       "name": "Amberrise Bluffs",
-      "subtitle": "Highland trail \u00b7 Switchbacks above an amber ravine",
+      "subtitle": "North to Petalwind Meadow \u00b7 South to Ashen Switchbacks \u00b7 West to Windchime Ridge",
       "kind": "highland",
       "width": 60,
       "height": 48,
@@ -1731,26 +2038,26 @@
         "Cindlark",
         "Ironhide"
       ],
-      "mapX": 27.5,
-      "mapY": 6.0,
+      "mapX": 62,
+      "mapY": 46,
       "spawn": {
         "x": 20,
         "y": 37
       },
       "exits": [
         {
+          "direction": "north",
+          "target": "petalwind-meadow",
+          "at": 30
+        },
+        {
           "direction": "south",
-          "target": "larkspur",
+          "target": "ashen-switchbacks",
           "at": 12
         },
         {
-          "direction": "east",
-          "target": "frostpass",
-          "at": 10
-        },
-        {
           "direction": "west",
-          "target": "moonwell",
+          "target": "windchime-ridge",
           "at": 24
         }
       ],
@@ -1759,7 +2066,7 @@
           "points": [
             [
               12,
-              47
+              44
             ],
             [
               12,
@@ -1790,7 +2097,7 @@
               10
             ],
             [
-              59,
+              56,
               10
             ]
           ],
@@ -1841,11 +2148,78 @@
               37
             ],
             [
-              0,
+              3,
               24
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              37
+            ],
+            [
+              20,
+              28
+            ],
+            [
+              17,
+              28
+            ],
+            [
+              17,
+              17
+            ],
+            [
+              30,
+              17
+            ],
+            [
+              30,
+              0
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              20,
+              37
+            ],
+            [
+              12,
+              37
+            ],
+            [
+              12,
+              47
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              20,
+              37
+            ],
+            [
+              3,
+              37
+            ],
+            [
+              3,
+              24
+            ],
+            [
+              0,
+              24
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -1980,7 +2354,7 @@
     {
       "id": "frostpass",
       "name": "Frostglass Pass",
-      "subtitle": "Snowbound gorge \u00b7 The long descent to the windmills",
+      "subtitle": "North to Snowbell \u00b7 South to Frostglass Lake",
       "kind": "snow",
       "width": 30,
       "height": 64,
@@ -1996,34 +2370,29 @@
         "Harefrost",
         "Cryovelis"
       ],
-      "mapX": 38.75,
-      "mapY": 6.0,
+      "mapX": 69,
+      "mapY": 82,
       "spawn": {
         "x": 17,
         "y": 31
       },
       "exits": [
         {
-          "direction": "west",
-          "target": "amberrise",
-          "at": 9
+          "direction": "north",
+          "target": "snowbell",
+          "at": 15
         },
         {
           "direction": "south",
-          "target": "windmill",
+          "target": "frostglass-lake",
           "at": 20
-        },
-        {
-          "direction": "east",
-          "target": "cedarwick",
-          "at": 32
         }
       ],
       "trails": [
         {
           "points": [
             [
-              0,
+              3,
               9
             ],
             [
@@ -2064,7 +2433,7 @@
             ],
             [
               20,
-              63
+              60
             ]
           ],
           "width": 2
@@ -2110,11 +2479,73 @@
               31
             ],
             [
-              29,
+              26,
               32
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              17,
+              31
+            ],
+            [
+              25,
+              31
+            ],
+            [
+              25,
+              21
+            ],
+            [
+              19,
+              21
+            ],
+            [
+              19,
+              9
+            ],
+            [
+              15,
+              9
+            ],
+            [
+              15,
+              0
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              17,
+              31
+            ],
+            [
+              17,
+              38
+            ],
+            [
+              22,
+              38
+            ],
+            [
+              22,
+              50
+            ],
+            [
+              20,
+              50
+            ],
+            [
+              20,
+              63
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -2241,7 +2672,7 @@
     {
       "id": "windmill",
       "name": "Windmill Downs",
-      "subtitle": "Open uplands \u00b7 A figure-eight around the windmills",
+      "subtitle": "South to Larkspur Town \u00b7 North to Reedwater Crossing",
       "kind": "meadow",
       "width": 50,
       "height": 30,
@@ -2257,43 +2688,33 @@
         "Glimmoth",
         "Tempestral"
       ],
-      "mapX": 38.75,
-      "mapY": 18.5,
+      "mapX": 21.0,
+      "mapY": 41.5,
       "spawn": {
         "x": 23,
         "y": 16
       },
       "exits": [
         {
-          "direction": "west",
+          "direction": "south",
           "target": "larkspur",
-          "at": 15
+          "at": 35
         },
         {
           "direction": "north",
-          "target": "frostpass",
+          "target": "reedwater",
           "at": 35
-        },
-        {
-          "direction": "south",
-          "target": "tidemere",
-          "at": 35
-        },
-        {
-          "direction": "east",
-          "target": "sunstone-ascent",
-          "at": 15
         }
       ],
       "trails": [
         {
           "points": [
             [
-              0,
+              3,
               15
             ],
             [
-              49,
+              46,
               15
             ]
           ],
@@ -2315,7 +2736,7 @@
             ],
             [
               35,
-              29
+              26
             ]
           ],
           "width": 2
@@ -2349,7 +2770,7 @@
             ],
             [
               35,
-              0
+              3
             ]
           ],
           "width": 3
@@ -2378,8 +2799,62 @@
               16
             ],
             [
-              49,
+              46,
               15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              23,
+              16
+            ],
+            [
+              29,
+              16
+            ],
+            [
+              29,
+              15
+            ],
+            [
+              31,
+              15
+            ],
+            [
+              31,
+              16
+            ],
+            [
+              35,
+              16
+            ],
+            [
+              35,
+              29
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              23,
+              16
+            ],
+            [
+              23,
+              15
+            ],
+            [
+              35,
+              15
+            ],
+            [
+              35,
+              0
             ]
           ],
           "width": 3
@@ -2477,7 +2952,7 @@
           "x": 30,
           "y": 16,
           "color": "#b77864",
-          "dialogue": "Both windmill paths circle back here. North climbs to Frostglass Pass, south descends to Tidemere, and west leads into Larkspur. The wind brings unusual air creatures."
+          "dialogue": "Both windmill paths circle back here. North climbs to Frostglass Pass, south descends to Tidemere, and west leads into Larkspur. The wind brings unusual air hollowings."
         }
       ],
       "buildings": []
@@ -2485,7 +2960,7 @@
     {
       "id": "tidemere",
       "name": "Tidemere Harbor",
-      "subtitle": "Coastal town \u00b7 A harbor walk and a crescent beach",
+      "subtitle": "South to Reedwater Crossing \u00b7 North to Juniper Walk",
       "kind": "coast",
       "width": 46,
       "height": 26,
@@ -2501,39 +2976,29 @@
         "Puddlop",
         "Reedmollusk"
       ],
-      "mapX": 38.75,
-      "mapY": 31.0,
+      "mapX": 25.6,
+      "mapY": 30.9,
       "spawn": {
         "x": 22,
         "y": 13
       },
       "exits": [
         {
-          "direction": "west",
+          "direction": "south",
           "target": "reedwater",
-          "at": 12
+          "at": 23
         },
         {
           "direction": "north",
-          "target": "windmill",
+          "target": "juniper-walk",
           "at": 32
-        },
-        {
-          "direction": "east",
-          "target": "copperleaf",
-          "at": 13
-        },
-        {
-          "direction": "south",
-          "target": "fernway",
-          "at": 23
         }
       ],
       "trails": [
         {
           "points": [
             [
-              0,
+              3,
               12
             ],
             [
@@ -2542,7 +3007,7 @@
             ],
             [
               32,
-              0
+              3
             ]
           ],
           "width": 3
@@ -2618,7 +3083,7 @@
               13
             ],
             [
-              45,
+              42,
               13
             ]
           ],
@@ -2632,7 +3097,49 @@
             ],
             [
               23,
+              22
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              22,
+              13
+            ],
+            [
+              22,
+              20
+            ],
+            [
+              23,
+              20
+            ],
+            [
+              23,
               25
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              22,
+              13
+            ],
+            [
+              22,
+              12
+            ],
+            [
+              32,
+              12
+            ],
+            [
+              32,
+              0
             ]
           ],
           "width": 3
@@ -2756,7 +3263,7 @@
     {
       "id": "cedar-stair",
       "name": "Cedar Stair",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "West to Cedarwick \u00b7 East to Fernhollow",
       "kind": "forest",
       "width": 64,
       "height": 42,
@@ -2773,22 +3280,22 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 5.0,
-      "mapY": 6.0,
+      "mapX": 40.1,
+      "mapY": 20.7,
       "spawn": {
         "x": 32,
         "y": 21
       },
       "exits": [
         {
-          "direction": "east",
-          "target": "moonwell",
+          "direction": "west",
+          "target": "cedarwick",
           "at": 21
         },
         {
-          "direction": "south",
-          "target": "bramble",
-          "at": 32
+          "direction": "east",
+          "target": "fernhollow",
+          "at": 21
         }
       ],
       "trails": [
@@ -2832,7 +3339,7 @@
               21
             ],
             [
-              63,
+              60,
               21
             ]
           ],
@@ -2846,10 +3353,36 @@
             ],
             [
               32,
-              41
+              38
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              0,
+              21
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              63,
+              21
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -2934,7 +3467,7 @@
     {
       "id": "cedarwick",
       "name": "Cedarwick",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "South to Juniper Walk \u00b7 East to Cedar Stair",
       "kind": "town",
       "width": 40,
       "height": 30,
@@ -2944,27 +3477,22 @@
         20
       ],
       "encounters": [],
-      "mapX": 50.0,
-      "mapY": 6.0,
+      "mapX": 34.7,
+      "mapY": 23.3,
       "spawn": {
         "x": 20,
         "y": 15
       },
       "exits": [
         {
-          "direction": "west",
-          "target": "frostpass",
-          "at": 15
+          "direction": "south",
+          "target": "juniper-walk",
+          "at": 20
         },
         {
           "direction": "east",
-          "target": "juniper-walk",
+          "target": "cedar-stair",
           "at": 15
-        },
-        {
-          "direction": "south",
-          "target": "sunstone-ascent",
-          "at": 20
         }
       ],
       "trails": [
@@ -3008,7 +3536,7 @@
               15
             ],
             [
-              0,
+              3,
               15
             ]
           ],
@@ -3021,8 +3549,21 @@
               15
             ],
             [
-              39,
+              36,
               15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
+              26
             ]
           ],
           "width": 3
@@ -3036,6 +3577,19 @@
             [
               20,
               29
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              39,
+              15
             ]
           ],
           "width": 3
@@ -3122,7 +3676,7 @@
     {
       "id": "juniper-walk",
       "name": "Juniper Walk",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "South to Tidemere Harbor \u00b7 North to Cedarwick \u00b7 East to Evergreen Reach",
       "kind": "forest",
       "width": 48,
       "height": 36,
@@ -3139,27 +3693,27 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 61.25,
-      "mapY": 6.0,
+      "mapX": 29.7,
+      "mapY": 26.6,
       "spawn": {
         "x": 24,
         "y": 18
       },
       "exits": [
         {
-          "direction": "west",
+          "direction": "south",
+          "target": "tidemere",
+          "at": 24
+        },
+        {
+          "direction": "north",
           "target": "cedarwick",
-          "at": 18
+          "at": 24
         },
         {
           "direction": "east",
-          "target": "dawnspire",
+          "target": "evergreen-reach",
           "at": 18
-        },
-        {
-          "direction": "south",
-          "target": "golden-caldera",
-          "at": 24
         }
       ],
       "trails": [
@@ -3203,7 +3757,7 @@
               18
             ],
             [
-              0,
+              3,
               18
             ]
           ],
@@ -3216,8 +3770,21 @@
               18
             ],
             [
-              47,
+              44,
               18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              24,
+              32
             ]
           ],
           "width": 3
@@ -3233,7 +3800,33 @@
               35
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              24,
+              0
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              47,
+              18
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -3318,7 +3911,7 @@
     {
       "id": "dawnspire",
       "name": "Dawnspire",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "West to Dawnflower Fields \u00b7 East to Emberstead \u00b7 North to Sunstone Ascent",
       "kind": "town",
       "width": 56,
       "height": 42,
@@ -3328,8 +3921,8 @@
         24
       ],
       "encounters": [],
-      "mapX": 72.5,
-      "mapY": 6.0,
+      "mapX": 64.1,
+      "mapY": 21.4,
       "spawn": {
         "x": 28,
         "y": 21
@@ -3337,17 +3930,17 @@
       "exits": [
         {
           "direction": "west",
-          "target": "juniper-walk",
-          "at": 21
-        },
-        {
-          "direction": "east",
           "target": "dawnflower-fields",
           "at": 21
         },
         {
-          "direction": "south",
-          "target": "clover-downs",
+          "direction": "east",
+          "target": "emberstead",
+          "at": 21
+        },
+        {
+          "direction": "north",
+          "target": "sunstone-ascent",
           "at": 28
         }
       ],
@@ -3392,6 +3985,45 @@
               21
             ],
             [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              52,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              28,
+              38
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
               0,
               21
             ]
@@ -3419,7 +4051,7 @@
             ],
             [
               28,
-              41
+              0
             ]
           ],
           "width": 3
@@ -3506,7 +4138,7 @@
     {
       "id": "dawnflower-fields",
       "name": "Dawnflower Fields",
-      "subtitle": "Open grasslands \u00b7 Flowers on the breeze",
+      "subtitle": "West to Fernway \u00b7 East to Dawnspire",
       "kind": "meadow",
       "width": 64,
       "height": 30,
@@ -3523,8 +4155,8 @@
         "Tindertail",
         "Cindlark"
       ],
-      "mapX": 83.75,
-      "mapY": 6.0,
+      "mapX": 58.4,
+      "mapY": 18.6,
       "spawn": {
         "x": 32,
         "y": 15
@@ -3532,18 +4164,13 @@
       "exits": [
         {
           "direction": "west",
-          "target": "dawnspire",
+          "target": "fernway",
           "at": 15
         },
         {
           "direction": "east",
-          "target": "sunfire-sanctum",
+          "target": "dawnspire",
           "at": 15
-        },
-        {
-          "direction": "south",
-          "target": "copperwood",
-          "at": 32
         }
       ],
       "trails": [
@@ -3587,6 +4214,45 @@
               15
             ],
             [
+              3,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              60,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              32,
+              26
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
               0,
               15
             ]
@@ -3602,19 +4268,6 @@
             [
               63,
               15
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              32,
-              15
-            ],
-            [
-              32,
-              29
             ]
           ],
           "width": 3
@@ -3702,7 +4355,7 @@
     {
       "id": "sunfire-sanctum",
       "name": "Sunfire Sanctum",
-      "subtitle": "Solarius habitat \u00b7 Follow the guardian trail",
+      "subtitle": "West to Golden Caldera",
       "kind": "highland",
       "width": 40,
       "height": 36,
@@ -3718,8 +4371,8 @@
         "Coglin",
         "Embercub"
       ],
-      "mapX": 95.0,
-      "mapY": 6.0,
+      "mapX": 82,
+      "mapY": 10,
       "spawn": {
         "x": 20,
         "y": 18
@@ -3727,13 +4380,8 @@
       "exits": [
         {
           "direction": "west",
-          "target": "dawnflower-fields",
+          "target": "golden-caldera",
           "at": 18
-        },
-        {
-          "direction": "south",
-          "target": "mirror-marsh",
-          "at": 20
         }
       ],
       "trails": [
@@ -3781,7 +4429,7 @@
               18
             ],
             [
-              0,
+              3,
               18
             ]
           ],
@@ -3795,10 +4443,23 @@
             ],
             [
               20,
-              35
+              32
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              0,
+              18
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -3893,7 +4554,7 @@
     {
       "id": "sunstone-ascent",
       "name": "Sunstone Ascent",
-      "subtitle": "Stone ridges \u00b7 Winding mountain trails",
+      "subtitle": "South to Dawnspire \u00b7 East to Golden Caldera",
       "kind": "highland",
       "width": 48,
       "height": 42,
@@ -3910,32 +4571,22 @@
         "Ferrimaw",
         "Ironhide"
       ],
-      "mapX": 50.0,
-      "mapY": 18.5,
+      "mapX": 69,
+      "mapY": 16,
       "spawn": {
         "x": 24,
         "y": 21
       },
       "exits": [
         {
-          "direction": "west",
-          "target": "windmill",
-          "at": 21
-        },
-        {
-          "direction": "north",
-          "target": "cedarwick",
+          "direction": "south",
+          "target": "dawnspire",
           "at": 24
         },
         {
           "direction": "east",
           "target": "golden-caldera",
           "at": 21
-        },
-        {
-          "direction": "south",
-          "target": "copperleaf",
-          "at": 24
         }
       ],
       "trails": [
@@ -3983,7 +4634,7 @@
               21
             ],
             [
-              0,
+              3,
               21
             ]
           ],
@@ -3997,7 +4648,7 @@
             ],
             [
               24,
-              0
+              3
             ]
           ],
           "width": 3
@@ -4009,8 +4660,21 @@
               21
             ],
             [
-              47,
+              44,
               21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              24,
+              38
             ]
           ],
           "width": 3
@@ -4026,7 +4690,20 @@
               41
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              47,
+              21
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -4111,7 +4788,7 @@
     {
       "id": "golden-caldera",
       "name": "Golden Caldera",
-      "subtitle": "Stone ridges \u00b7 Winding mountain trails",
+      "subtitle": "West to Sunstone Ascent \u00b7 East to Sunfire Sanctum",
       "kind": "highland",
       "width": 56,
       "height": 30,
@@ -4128,18 +4805,13 @@
         "Ferrimaw",
         "Ironhide"
       ],
-      "mapX": 61.25,
-      "mapY": 18.5,
+      "mapX": 75,
+      "mapY": 12,
       "spawn": {
         "x": 28,
         "y": 15
       },
       "exits": [
-        {
-          "direction": "north",
-          "target": "juniper-walk",
-          "at": 28
-        },
         {
           "direction": "west",
           "target": "sunstone-ascent",
@@ -4147,13 +4819,8 @@
         },
         {
           "direction": "east",
-          "target": "clover-downs",
+          "target": "sunfire-sanctum",
           "at": 15
-        },
-        {
-          "direction": "south",
-          "target": "glasswater-banks",
-          "at": 28
         }
       ],
       "trails": [
@@ -4202,7 +4869,46 @@
             ],
             [
               28,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              3,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              52,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              28,
+              26
             ]
           ],
           "width": 3
@@ -4218,7 +4924,7 @@
               15
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -4231,20 +4937,7 @@
               15
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              28,
-              15
-            ],
-            [
-              28,
-              29
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -4329,7 +5022,7 @@
     {
       "id": "clover-downs",
       "name": "Clover Downs",
-      "subtitle": "Open grasslands \u00b7 Flowers on the breeze",
+      "subtitle": "West to Mushroom Basin \u00b7 North to Fernspring \u00b7 East to Petalwind Meadow",
       "kind": "meadow",
       "width": 64,
       "height": 36,
@@ -4346,32 +5039,27 @@
         "Tindertail",
         "Cindlark"
       ],
-      "mapX": 72.5,
-      "mapY": 18.5,
+      "mapX": 47,
+      "mapY": 37,
       "spawn": {
         "x": 32,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "dawnspire",
-          "at": 32
+          "direction": "west",
+          "target": "mushroom-basin",
+          "at": 18
         },
         {
-          "direction": "west",
-          "target": "golden-caldera",
-          "at": 18
+          "direction": "north",
+          "target": "fernspring",
+          "at": 32
         },
         {
           "direction": "east",
-          "target": "copperwood",
+          "target": "petalwind-meadow",
           "at": 18
-        },
-        {
-          "direction": "south",
-          "target": "glassharbor",
-          "at": 32
         }
       ],
       "trails": [
@@ -4416,7 +5104,46 @@
             ],
             [
               32,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              60,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              32,
+              32
             ]
           ],
           "width": 3
@@ -4441,8 +5168,8 @@
               18
             ],
             [
-              63,
-              18
+              32,
+              0
             ]
           ],
           "width": 3
@@ -4454,8 +5181,8 @@
               18
             ],
             [
-              32,
-              35
+              63,
+              18
             ]
           ],
           "width": 3
@@ -4543,7 +5270,7 @@
     {
       "id": "copperwood",
       "name": "Copperwood",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "North to Emberstead \u00b7 South to Copperleaf",
       "kind": "forest",
       "width": 40,
       "height": 42,
@@ -4560,8 +5287,8 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 83.75,
-      "mapY": 18.5,
+      "mapX": 72.1,
+      "mapY": 30.2,
       "spawn": {
         "x": 20,
         "y": 21
@@ -4569,22 +5296,12 @@
       "exits": [
         {
           "direction": "north",
-          "target": "dawnflower-fields",
+          "target": "emberstead",
           "at": 20
         },
         {
-          "direction": "west",
-          "target": "clover-downs",
-          "at": 21
-        },
-        {
-          "direction": "east",
-          "target": "mirror-marsh",
-          "at": 21
-        },
-        {
           "direction": "south",
-          "target": "starfall-approach",
+          "target": "copperleaf",
           "at": 20
         }
       ],
@@ -4630,36 +5347,62 @@
             ],
             [
               20,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              36,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              20,
+              38
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              20,
               0
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              21
-            ],
-            [
-              0,
-              21
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              21
-            ],
-            [
-              39,
-              21
-            ]
-          ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -4672,7 +5415,7 @@
               41
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -4757,7 +5500,7 @@
     {
       "id": "mirror-marsh",
       "name": "Mirror Marsh",
-      "subtitle": "River country \u00b7 Islands linked by bridges",
+      "subtitle": "West to Glasswater Banks \u00b7 East to Rosewater Delta",
       "kind": "wetland",
       "width": 48,
       "height": 30,
@@ -4774,27 +5517,22 @@
         "Mitelet",
         "Reedmollusk"
       ],
-      "mapX": 95.0,
-      "mapY": 18.5,
+      "mapX": 86,
+      "mapY": 36,
       "spawn": {
         "x": 24,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "sunfire-sanctum",
-          "at": 24
-        },
-        {
           "direction": "west",
-          "target": "copperwood",
+          "target": "glasswater-banks",
           "at": 15
         },
         {
-          "direction": "south",
-          "target": "starfall",
-          "at": 24
+          "direction": "east",
+          "target": "rosewater-delta",
+          "at": 15
         }
       ],
       "trails": [
@@ -4839,7 +5577,33 @@
             ],
             [
               24,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              15
+            ],
+            [
+              3,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              15
+            ],
+            [
+              24,
+              26
             ]
           ],
           "width": 3
@@ -4855,7 +5619,7 @@
               15
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -4865,10 +5629,22 @@
             ],
             [
               24,
-              29
+              9
+            ],
+            [
+              39,
+              9
+            ],
+            [
+              39,
+              15
+            ],
+            [
+              47,
+              15
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -4953,7 +5729,7 @@
     {
       "id": "copperleaf",
       "name": "Copperleaf",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "North to Copperwood \u00b7 South to Glasswater Banks \u00b7 West to Petalwind Meadow",
       "kind": "town",
       "width": 56,
       "height": 36,
@@ -4963,32 +5739,27 @@
         24
       ],
       "encounters": [],
-      "mapX": 50.0,
-      "mapY": 31.0,
+      "mapX": 75.3,
+      "mapY": 34.8,
       "spawn": {
         "x": 28,
         "y": 18
       },
       "exits": [
         {
-          "direction": "west",
-          "target": "tidemere",
-          "at": 18
-        },
-        {
           "direction": "north",
-          "target": "sunstone-ascent",
+          "target": "copperwood",
           "at": 28
-        },
-        {
-          "direction": "east",
-          "target": "glasswater-banks",
-          "at": 18
         },
         {
           "direction": "south",
-          "target": "fiddlehead-woods",
+          "target": "glasswater-banks",
           "at": 28
+        },
+        {
+          "direction": "west",
+          "target": "petalwind-meadow",
+          "at": 18
         }
       ],
       "trails": [
@@ -5032,8 +5803,47 @@
               18
             ],
             [
-              0,
+              3,
               18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              28,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              52,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              28,
+              32
             ]
           ],
           "width": 3
@@ -5058,8 +5868,8 @@
               18
             ],
             [
-              55,
-              18
+              28,
+              35
             ]
           ],
           "width": 3
@@ -5071,8 +5881,8 @@
               18
             ],
             [
-              28,
-              35
+              0,
+              18
             ]
           ],
           "width": 3
@@ -5159,7 +5969,7 @@
     {
       "id": "glasswater-banks",
       "name": "Glasswater Banks",
-      "subtitle": "River country \u00b7 Islands linked by bridges",
+      "subtitle": "North to Copperleaf \u00b7 South to Glassharbor \u00b7 East to Mirror Marsh",
       "kind": "wetland",
       "width": 64,
       "height": 42,
@@ -5176,8 +5986,8 @@
         "Mitelet",
         "Reedmollusk"
       ],
-      "mapX": 61.25,
-      "mapY": 31.0,
+      "mapX": 78.5,
+      "mapY": 39.7,
       "spawn": {
         "x": 32,
         "y": 21
@@ -5185,23 +5995,18 @@
       "exits": [
         {
           "direction": "north",
-          "target": "golden-caldera",
-          "at": 32
-        },
-        {
-          "direction": "west",
           "target": "copperleaf",
-          "at": 21
-        },
-        {
-          "direction": "east",
-          "target": "glassharbor",
-          "at": 21
+          "at": 32
         },
         {
           "direction": "south",
-          "target": "mushroom-basin",
+          "target": "glassharbor",
           "at": 32
+        },
+        {
+          "direction": "east",
+          "target": "mirror-marsh",
+          "at": 21
         }
       ],
       "trails": [
@@ -5246,36 +6051,62 @@
             ],
             [
               32,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              60,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              32,
+              38
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              32,
               0
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              32,
-              21
-            ],
-            [
-              0,
-              21
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              32,
-              21
-            ],
-            [
-              63,
-              21
-            ]
-          ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -5288,7 +6119,20 @@
               41
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              63,
+              21
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -5373,7 +6217,7 @@
     {
       "id": "glassharbor",
       "name": "Glassharbor",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "North to Glasswater Banks \u00b7 South to Starfall Approach",
       "kind": "town",
       "width": 40,
       "height": 30,
@@ -5383,8 +6227,8 @@
         28
       ],
       "encounters": [],
-      "mapX": 72.5,
-      "mapY": 31.0,
+      "mapX": 80.9,
+      "mapY": 45.1,
       "spawn": {
         "x": 20,
         "y": 15
@@ -5392,22 +6236,12 @@
       "exits": [
         {
           "direction": "north",
-          "target": "clover-downs",
+          "target": "glasswater-banks",
           "at": 20
         },
         {
-          "direction": "west",
-          "target": "glasswater-banks",
-          "at": 15
-        },
-        {
-          "direction": "east",
-          "target": "starfall-approach",
-          "at": 15
-        },
-        {
           "direction": "south",
-          "target": "ashen-switchbacks",
+          "target": "starfall-approach",
           "at": 20
         }
       ],
@@ -5453,33 +6287,59 @@
             ],
             [
               20,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              3,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              36,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
+              26
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
               0
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              15
-            ],
-            [
-              0,
-              15
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              15
-            ],
-            [
-              39,
-              15
             ]
           ],
           "width": 3
@@ -5579,7 +6439,7 @@
     {
       "id": "starfall-approach",
       "name": "Starfall Approach",
-      "subtitle": "Quiet glades \u00b7 Light between ancient trees",
+      "subtitle": "North to Glassharbor \u00b7 South to Starfall",
       "kind": "glade",
       "width": 48,
       "height": 36,
@@ -5596,8 +6456,8 @@
         "Whispling",
         "Radianthra"
       ],
-      "mapX": 83.75,
-      "mapY": 31.0,
+      "mapX": 81.9,
+      "mapY": 51.0,
       "spawn": {
         "x": 24,
         "y": 18
@@ -5605,22 +6465,12 @@
       "exits": [
         {
           "direction": "north",
-          "target": "copperwood",
+          "target": "glassharbor",
           "at": 24
         },
         {
-          "direction": "west",
-          "target": "glassharbor",
-          "at": 18
-        },
-        {
-          "direction": "east",
-          "target": "starfall",
-          "at": 18
-        },
-        {
           "direction": "south",
-          "target": "coalbank-ravine",
+          "target": "starfall",
           "at": 24
         }
       ],
@@ -5666,36 +6516,62 @@
             ],
             [
               24,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              44,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              24,
+              32
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              24,
               0
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              18
-            ],
-            [
-              0,
-              18
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              18
-            ],
-            [
-              47,
-              18
-            ]
-          ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -5708,7 +6584,7 @@
               35
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -5793,7 +6669,7 @@
     {
       "id": "starfall",
       "name": "Starfall",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "North to Starfall Approach \u00b7 South to Bellflower Prairie \u00b7 East to Dawnlight Spire \u00b7 West to Coalbank Ravine",
       "kind": "town",
       "width": 56,
       "height": 42,
@@ -5803,8 +6679,8 @@
         32
       ],
       "encounters": [],
-      "mapX": 95.0,
-      "mapY": 31.0,
+      "mapX": 80.9,
+      "mapY": 57.0,
       "spawn": {
         "x": 28,
         "y": 21
@@ -5812,18 +6688,23 @@
       "exits": [
         {
           "direction": "north",
-          "target": "mirror-marsh",
-          "at": 28
-        },
-        {
-          "direction": "west",
           "target": "starfall-approach",
-          "at": 21
+          "at": 28
         },
         {
           "direction": "south",
-          "target": "dawnlight-spire",
+          "target": "bellflower-prairie",
           "at": 28
+        },
+        {
+          "direction": "east",
+          "target": "dawnlight-spire",
+          "at": 21
+        },
+        {
+          "direction": "west",
+          "target": "coalbank-ravine",
+          "at": 21
         }
       ],
       "trails": [
@@ -5868,7 +6749,7 @@
             ],
             [
               28,
-              0
+              3
             ]
           ],
           "width": 3
@@ -5880,8 +6761,34 @@
               21
             ],
             [
-              0,
+              3,
               21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              28,
+              38
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              28,
+              0
             ]
           ],
           "width": 3
@@ -5895,6 +6802,44 @@
             [
               28,
               41
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              28,
+              26
+            ],
+            [
+              47,
+              26
+            ],
+            [
+              47,
+              21
+            ],
+            [
+              55,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              0,
+              21
             ]
           ],
           "width": 3
@@ -5981,7 +6926,7 @@
     {
       "id": "cinder-crossing",
       "name": "Cinder Crossing",
-      "subtitle": "Stone ridges \u00b7 Winding mountain trails",
+      "subtitle": "West to Emberstead \u00b7 East to Ember Gorge",
       "kind": "highland",
       "width": 64,
       "height": 30,
@@ -5998,27 +6943,22 @@
         "Ferrimaw",
         "Ironhide"
       ],
-      "mapX": 5.0,
-      "mapY": 43.5,
+      "mapX": 77,
+      "mapY": 22,
       "spawn": {
         "x": 32,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "willowfen",
-          "at": 32
-        },
-        {
-          "direction": "east",
-          "target": "rosewood-trail",
+          "direction": "west",
+          "target": "emberstead",
           "at": 15
         },
         {
-          "direction": "south",
-          "target": "fernhollow",
-          "at": 32
+          "direction": "east",
+          "target": "ember-gorge",
+          "at": 15
         }
       ],
       "trails": [
@@ -6067,10 +7007,49 @@
             ],
             [
               32,
-              0
+              3
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              60,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              32,
+              26
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              0,
+              15
+            ]
+          ],
+          "width": 2
         },
         {
           "points": [
@@ -6083,20 +7062,7 @@
               15
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              32,
-              15
-            ],
-            [
-              32,
-              29
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -6181,7 +7147,7 @@
     {
       "id": "rosewood-trail",
       "name": "Rosewood Trail",
-      "subtitle": "Fruit groves \u00b7 Paths beneath the branches",
+      "subtitle": "West to Rosepetal Walk \u00b7 South to Briar Maze \u00b7 East to Snowmelt Creek",
       "kind": "orchard",
       "width": 40,
       "height": 36,
@@ -6198,32 +7164,27 @@
         "Shroombud",
         "Glimmoth"
       ],
-      "mapX": 16.25,
-      "mapY": 43.5,
+      "mapX": 30,
+      "mapY": 65,
       "spawn": {
         "x": 20,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "sunpetal",
-          "at": 20
-        },
-        {
           "direction": "west",
-          "target": "cinder-crossing",
-          "at": 18
-        },
-        {
-          "direction": "east",
-          "target": "silver-reeds",
+          "target": "rosepetal-walk",
           "at": 18
         },
         {
           "direction": "south",
-          "target": "bellflower-prairie",
+          "target": "briar-maze",
           "at": 20
+        },
+        {
+          "direction": "east",
+          "target": "snowmelt-creek",
+          "at": 18
         }
       ],
       "trails": [
@@ -6268,7 +7229,46 @@
             ],
             [
               20,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              36,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              20,
+              32
             ]
           ],
           "width": 3
@@ -6284,20 +7284,7 @@
               18
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              18
-            ],
-            [
-              39,
-              18
-            ]
-          ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -6310,7 +7297,20 @@
               35
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              39,
+              18
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -6395,7 +7395,7 @@
     {
       "id": "silver-reeds",
       "name": "Silver Reeds",
-      "subtitle": "River country \u00b7 Islands linked by bridges",
+      "subtitle": "North to Fiddlehead Woods \u00b7 South to Snowmelt Creek",
       "kind": "wetland",
       "width": 48,
       "height": 42,
@@ -6412,8 +7412,8 @@
         "Mitelet",
         "Reedmollusk"
       ],
-      "mapX": 27.5,
-      "mapY": 43.5,
+      "mapX": 30,
+      "mapY": 55,
       "spawn": {
         "x": 24,
         "y": 21
@@ -6421,22 +7421,12 @@
       "exits": [
         {
           "direction": "north",
-          "target": "reedwater",
+          "target": "fiddlehead-woods",
           "at": 24
         },
         {
-          "direction": "west",
-          "target": "rosewood-trail",
-          "at": 21
-        },
-        {
-          "direction": "east",
-          "target": "fernway",
-          "at": 21
-        },
-        {
           "direction": "south",
-          "target": "emberstead",
+          "target": "snowmelt-creek",
           "at": 24
         }
       ],
@@ -6482,36 +7472,62 @@
             ],
             [
               24,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              44,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              24,
+              38
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              24,
               0
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              21
-            ],
-            [
-              0,
-              21
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              21
-            ],
-            [
-              47,
-              21
-            ]
-          ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -6524,7 +7540,7 @@
               41
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -6609,7 +7625,7 @@
     {
       "id": "fernway",
       "name": "Fernway",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "West to Fernhollow \u00b7 East to Dawnflower Fields",
       "kind": "forest",
       "width": 56,
       "height": 30,
@@ -6626,32 +7642,22 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 38.75,
-      "mapY": 43.5,
+      "mapX": 52.1,
+      "mapY": 17.8,
       "spawn": {
         "x": 28,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "tidemere",
-          "at": 28
-        },
-        {
           "direction": "west",
-          "target": "silver-reeds",
+          "target": "fernhollow",
           "at": 15
         },
         {
           "direction": "east",
-          "target": "fiddlehead-woods",
+          "target": "dawnflower-fields",
           "at": 15
-        },
-        {
-          "direction": "south",
-          "target": "snowmelt-creek",
-          "at": 28
         }
       ],
       "trails": [
@@ -6696,7 +7702,46 @@
             ],
             [
               28,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              3,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              52,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              28,
+              26
             ]
           ],
           "width": 3
@@ -6712,7 +7757,7 @@
               15
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -6725,20 +7770,7 @@
               15
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              28,
-              15
-            ],
-            [
-              28,
-              29
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -6823,7 +7855,7 @@
     {
       "id": "fiddlehead-woods",
       "name": "Fiddlehead Woods",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "West to Larkspur Town \u00b7 East to Mushroom Basin \u00b7 South to Silver Reeds \u00b7 North to Evergreen Reach",
       "kind": "forest",
       "width": 64,
       "height": 36,
@@ -6840,21 +7872,16 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 50.0,
-      "mapY": 43.5,
+      "mapX": 29,
+      "mapY": 46,
       "spawn": {
         "x": 32,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "copperleaf",
-          "at": 32
-        },
-        {
           "direction": "west",
-          "target": "fernway",
+          "target": "larkspur",
           "at": 18
         },
         {
@@ -6864,7 +7891,12 @@
         },
         {
           "direction": "south",
-          "target": "bellweather",
+          "target": "silver-reeds",
+          "at": 32
+        },
+        {
+          "direction": "north",
+          "target": "evergreen-reach",
           "at": 32
         }
       ],
@@ -6910,7 +7942,46 @@
             ],
             [
               32,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              60,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              32,
+              32
             ]
           ],
           "width": 3
@@ -6926,7 +7997,7 @@
               18
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -6939,7 +8010,7 @@
               18
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -6952,7 +8023,20 @@
               35
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -7037,7 +8121,7 @@
     {
       "id": "mushroom-basin",
       "name": "Mushroom Basin",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "West to Fiddlehead Woods \u00b7 East to Clover Downs \u00b7 South to Windchime Ridge",
       "kind": "forest",
       "width": 40,
       "height": 42,
@@ -7054,18 +8138,13 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 61.25,
-      "mapY": 43.5,
+      "mapX": 38,
+      "mapY": 42,
       "spawn": {
         "x": 20,
         "y": 21
       },
       "exits": [
-        {
-          "direction": "north",
-          "target": "glasswater-banks",
-          "at": 20
-        },
         {
           "direction": "west",
           "target": "fiddlehead-woods",
@@ -7073,12 +8152,12 @@
         },
         {
           "direction": "east",
-          "target": "ashen-switchbacks",
+          "target": "clover-downs",
           "at": 21
         },
         {
           "direction": "south",
-          "target": "aurora-crossing",
+          "target": "windchime-ridge",
           "at": 20
         }
       ],
@@ -7124,7 +8203,46 @@
             ],
             [
               20,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              36,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              20,
+              38
             ]
           ],
           "width": 3
@@ -7140,7 +8258,7 @@
               21
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -7153,7 +8271,7 @@
               21
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -7166,7 +8284,7 @@
               41
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -7251,7 +8369,7 @@
     {
       "id": "ashen-switchbacks",
       "name": "Ashen Switchbacks",
-      "subtitle": "Stone ridges \u00b7 Winding mountain trails",
+      "subtitle": "North to Amberrise Bluffs \u00b7 East to Coalbank Ravine",
       "kind": "highland",
       "width": 48,
       "height": 30,
@@ -7268,8 +8386,8 @@
         "Ferrimaw",
         "Ironhide"
       ],
-      "mapX": 72.5,
-      "mapY": 43.5,
+      "mapX": 65,
+      "mapY": 53,
       "spawn": {
         "x": 24,
         "y": 15
@@ -7277,23 +8395,13 @@
       "exits": [
         {
           "direction": "north",
-          "target": "glassharbor",
+          "target": "amberrise",
           "at": 24
-        },
-        {
-          "direction": "west",
-          "target": "mushroom-basin",
-          "at": 15
         },
         {
           "direction": "east",
           "target": "coalbank-ravine",
           "at": 15
-        },
-        {
-          "direction": "south",
-          "target": "snowbell",
-          "at": 24
         }
       ],
       "trails": [
@@ -7342,7 +8450,7 @@
             ],
             [
               24,
-              0
+              3
             ]
           ],
           "width": 3
@@ -7354,11 +8462,50 @@
               15
             ],
             [
-              0,
+              3,
               15
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              15
+            ],
+            [
+              44,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              15
+            ],
+            [
+              24,
+              26
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              15
+            ],
+            [
+              24,
+              0
+            ]
+          ],
+          "width": 2
         },
         {
           "points": [
@@ -7371,20 +8518,7 @@
               15
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              15
-            ],
-            [
-              24,
-              29
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -7469,7 +8603,7 @@
     {
       "id": "coalbank-ravine",
       "name": "Coalbank Ravine",
-      "subtitle": "Stone ridges \u00b7 Winding mountain trails",
+      "subtitle": "West to Ashen Switchbacks \u00b7 East to Starfall",
       "kind": "highland",
       "width": 56,
       "height": 36,
@@ -7486,18 +8620,13 @@
         "Ferrimaw",
         "Ironhide"
       ],
-      "mapX": 83.75,
-      "mapY": 43.5,
+      "mapX": 72,
+      "mapY": 55,
       "spawn": {
         "x": 28,
         "y": 18
       },
       "exits": [
-        {
-          "direction": "north",
-          "target": "starfall-approach",
-          "at": 28
-        },
         {
           "direction": "west",
           "target": "ashen-switchbacks",
@@ -7505,13 +8634,8 @@
         },
         {
           "direction": "east",
-          "target": "dawnlight-spire",
+          "target": "starfall",
           "at": 18
-        },
-        {
-          "direction": "south",
-          "target": "fernspring",
-          "at": 28
         }
       ],
       "trails": [
@@ -7560,7 +8684,46 @@
             ],
             [
               28,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              52,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              28,
+              32
             ]
           ],
           "width": 3
@@ -7576,7 +8739,7 @@
               18
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -7589,20 +8752,7 @@
               18
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              28,
-              18
-            ],
-            [
-              28,
-              35
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -7687,7 +8837,7 @@
     {
       "id": "dawnlight-spire",
       "name": "Dawnlight Spire",
-      "subtitle": "Lumidrake habitat \u00b7 Follow the guardian trail",
+      "subtitle": "West to Starfall",
       "kind": "glade",
       "width": 64,
       "height": 42,
@@ -7703,27 +8853,17 @@
         "Bloom-Bud",
         "Moon-Dancer"
       ],
-      "mapX": 95.0,
-      "mapY": 43.5,
+      "mapX": 88,
+      "mapY": 60,
       "spawn": {
         "x": 32,
         "y": 21
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "starfall",
-          "at": 32
-        },
-        {
           "direction": "west",
-          "target": "coalbank-ravine",
+          "target": "starfall",
           "at": 21
-        },
-        {
-          "direction": "south",
-          "target": "nightbrook",
-          "at": 32
         }
       ],
       "trails": [
@@ -7768,7 +8908,33 @@
             ],
             [
               32,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              32,
+              38
             ]
           ],
           "width": 3
@@ -7784,20 +8950,7 @@
               21
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              32,
-              21
-            ],
-            [
-              32,
-              41
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -7892,7 +9045,7 @@
     {
       "id": "fernhollow",
       "name": "Fernhollow",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "West to Cedar Stair \u00b7 East to Fernway \u00b7 South to Fernspring",
       "kind": "town",
       "width": 40,
       "height": 30,
@@ -7902,26 +9055,26 @@
         20
       ],
       "encounters": [],
-      "mapX": 5.0,
-      "mapY": 56.0,
+      "mapX": 45.9,
+      "mapY": 18.7,
       "spawn": {
         "x": 20,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "cinder-crossing",
-          "at": 20
+          "direction": "west",
+          "target": "cedar-stair",
+          "at": 15
         },
         {
           "direction": "east",
-          "target": "bellflower-prairie",
+          "target": "fernway",
           "at": 15
         },
         {
           "direction": "south",
-          "target": "blooming-thicket",
+          "target": "fernspring",
           "at": 20
         }
       ],
@@ -7967,7 +9120,58 @@
             ],
             [
               20,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              36,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
+              26
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
+              10
+            ],
+            [
+              9,
+              10
+            ],
+            [
+              9,
+              15
+            ],
+            [
+              0,
+              15
             ]
           ],
           "width": 3
@@ -8080,7 +9284,7 @@
     {
       "id": "bellflower-prairie",
       "name": "Bellflower Prairie",
-      "subtitle": "Open grasslands \u00b7 Flowers on the breeze",
+      "subtitle": "North to Starfall \u00b7 South to Bellweather",
       "kind": "meadow",
       "width": 48,
       "height": 36,
@@ -8097,8 +9301,8 @@
         "Tindertail",
         "Cindlark"
       ],
-      "mapX": 16.25,
-      "mapY": 56.0,
+      "mapX": 78.3,
+      "mapY": 62.5,
       "spawn": {
         "x": 24,
         "y": 18
@@ -8106,22 +9310,12 @@
       "exits": [
         {
           "direction": "north",
-          "target": "rosewood-trail",
+          "target": "starfall",
           "at": 24
         },
         {
-          "direction": "west",
-          "target": "fernhollow",
-          "at": 18
-        },
-        {
-          "direction": "east",
-          "target": "emberstead",
-          "at": 18
-        },
-        {
           "direction": "south",
-          "target": "ember-gorge",
+          "target": "bellweather",
           "at": 24
         }
       ],
@@ -8167,33 +9361,59 @@
             ],
             [
               24,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              44,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              24,
+              32
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              24,
               0
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              18
-            ],
-            [
-              0,
-              18
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              18
-            ],
-            [
-              47,
-              18
             ]
           ],
           "width": 3
@@ -8294,7 +9514,7 @@
     {
       "id": "emberstead",
       "name": "Emberstead",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "West to Dawnspire \u00b7 South to Copperwood \u00b7 East to Cinder Crossing",
       "kind": "town",
       "width": 56,
       "height": 42,
@@ -8304,32 +9524,27 @@
         24
       ],
       "encounters": [],
-      "mapX": 27.5,
-      "mapY": 56.0,
+      "mapX": 68.6,
+      "mapY": 25.6,
       "spawn": {
         "x": 28,
         "y": 21
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "silver-reeds",
-          "at": 28
-        },
-        {
           "direction": "west",
-          "target": "bellflower-prairie",
-          "at": 21
-        },
-        {
-          "direction": "east",
-          "target": "snowmelt-creek",
+          "target": "dawnspire",
           "at": 21
         },
         {
           "direction": "south",
-          "target": "singing-pines",
+          "target": "copperwood",
           "at": 28
+        },
+        {
+          "direction": "east",
+          "target": "cinder-crossing",
+          "at": 21
         }
       ],
       "trails": [
@@ -8374,7 +9589,46 @@
             ],
             [
               28,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              52,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              28,
+              38
             ]
           ],
           "width": 3
@@ -8399,8 +9653,8 @@
               21
             ],
             [
-              55,
-              21
+              28,
+              41
             ]
           ],
           "width": 3
@@ -8412,8 +9666,8 @@
               21
             ],
             [
-              28,
-              41
+              55,
+              21
             ]
           ],
           "width": 3
@@ -8500,7 +9754,7 @@
     {
       "id": "snowmelt-creek",
       "name": "Snowmelt Creek",
-      "subtitle": "River country \u00b7 Islands linked by bridges",
+      "subtitle": "North to Silver Reeds \u00b7 East to Singing Pines \u00b7 South to Moonshadow Path \u00b7 West to Rosewood Trail",
       "kind": "wetland",
       "width": 64,
       "height": 30,
@@ -8517,8 +9771,8 @@
         "Mitelet",
         "Reedmollusk"
       ],
-      "mapX": 38.75,
-      "mapY": 56.0,
+      "mapX": 40,
+      "mapY": 61,
       "spawn": {
         "x": 32,
         "y": 15
@@ -8526,23 +9780,23 @@
       "exits": [
         {
           "direction": "north",
-          "target": "fernway",
+          "target": "silver-reeds",
           "at": 32
         },
         {
-          "direction": "west",
-          "target": "emberstead",
-          "at": 15
-        },
-        {
           "direction": "east",
-          "target": "bellweather",
+          "target": "singing-pines",
           "at": 15
         },
         {
           "direction": "south",
-          "target": "frostglass-lake",
+          "target": "moonshadow-path",
           "at": 32
+        },
+        {
+          "direction": "west",
+          "target": "rosewood-trail",
+          "at": 15
         }
       ],
       "trails": [
@@ -8587,7 +9841,7 @@
             ],
             [
               32,
-              0
+              3
             ]
           ],
           "width": 3
@@ -8599,11 +9853,50 @@
               15
             ],
             [
-              0,
+              3,
               15
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              60,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              32,
+              26
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "width": 2
         },
         {
           "points": [
@@ -8616,7 +9909,7 @@
               15
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -8629,7 +9922,20 @@
               29
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              0,
+              15
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -8714,7 +10020,7 @@
     {
       "id": "bellweather",
       "name": "Bellweather",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "North to Bellflower Prairie \u00b7 South to Aurora Crossing",
       "kind": "town",
       "width": 40,
       "height": 36,
@@ -8724,8 +10030,8 @@
         28
       ],
       "encounters": [],
-      "mapX": 50.0,
-      "mapY": 56.0,
+      "mapX": 74.8,
+      "mapY": 67.4,
       "spawn": {
         "x": 20,
         "y": 18
@@ -8733,22 +10039,12 @@
       "exits": [
         {
           "direction": "north",
-          "target": "fiddlehead-woods",
+          "target": "bellflower-prairie",
           "at": 20
         },
         {
-          "direction": "west",
-          "target": "snowmelt-creek",
-          "at": 18
-        },
-        {
-          "direction": "east",
-          "target": "aurora-crossing",
-          "at": 18
-        },
-        {
           "direction": "south",
-          "target": "dusklight-fen",
+          "target": "aurora-crossing",
           "at": 20
         }
       ],
@@ -8794,33 +10090,59 @@
             ],
             [
               20,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              36,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              20,
+              32
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              20,
               0
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              18
-            ],
-            [
-              0,
-              18
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              18
-            ],
-            [
-              39,
-              18
             ]
           ],
           "width": 3
@@ -8920,7 +10242,7 @@
     {
       "id": "aurora-crossing",
       "name": "Aurora Crossing",
-      "subtitle": "Frozen country \u00b7 Ice fields and sheltered trails",
+      "subtitle": "North to Bellweather \u00b7 West to Snowbell",
       "kind": "snow",
       "width": 48,
       "height": 42,
@@ -8937,8 +10259,8 @@
         "Snoven",
         "Harefrost"
       ],
-      "mapX": 61.25,
-      "mapY": 56.0,
+      "mapX": 70.6,
+      "mapY": 71.7,
       "spawn": {
         "x": 24,
         "y": 21
@@ -8946,23 +10268,13 @@
       "exits": [
         {
           "direction": "north",
-          "target": "mushroom-basin",
+          "target": "bellweather",
           "at": 24
         },
         {
           "direction": "west",
-          "target": "bellweather",
-          "at": 21
-        },
-        {
-          "direction": "east",
           "target": "snowbell",
           "at": 21
-        },
-        {
-          "direction": "south",
-          "target": "moonshadow-path",
-          "at": 24
         }
       ],
       "trails": [
@@ -9007,10 +10319,62 @@
             ],
             [
               24,
-              0
+              3
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              44,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              24,
+              38
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              24,
+              0
+            ]
+          ],
+          "width": 2
         },
         {
           "points": [
@@ -9023,33 +10387,7 @@
               21
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              21
-            ],
-            [
-              47,
-              21
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              21
-            ],
-            [
-              24,
-              41
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -9134,7 +10472,7 @@
     {
       "id": "snowbell",
       "name": "Snowbell",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "East to Aurora Crossing \u00b7 West to Glacier Steps \u00b7 South to Frostglass Pass",
       "kind": "town",
       "width": 56,
       "height": 30,
@@ -9144,31 +10482,26 @@
         32
       ],
       "encounters": [],
-      "mapX": 72.5,
-      "mapY": 56.0,
+      "mapX": 65.7,
+      "mapY": 75.3,
       "spawn": {
         "x": 28,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "ashen-switchbacks",
-          "at": 28
-        },
-        {
-          "direction": "west",
+          "direction": "east",
           "target": "aurora-crossing",
           "at": 15
         },
         {
-          "direction": "east",
-          "target": "fernspring",
+          "direction": "west",
+          "target": "glacier-steps",
           "at": 15
         },
         {
           "direction": "south",
-          "target": "rosepetal-walk",
+          "target": "frostpass",
           "at": 28
         }
       ],
@@ -9214,7 +10547,7 @@
             ],
             [
               28,
-              0
+              3
             ]
           ],
           "width": 3
@@ -9226,8 +10559,34 @@
               15
             ],
             [
-              0,
+              3,
               15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              52,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              28,
+              26
             ]
           ],
           "width": 3
@@ -9240,6 +10599,19 @@
             ],
             [
               55,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              0,
               15
             ]
           ],
@@ -9340,7 +10712,7 @@
     {
       "id": "fernspring",
       "name": "Fernspring",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "South to Clover Downs \u00b7 North to Fernhollow",
       "kind": "forest",
       "width": 64,
       "height": 36,
@@ -9357,31 +10729,21 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 83.75,
-      "mapY": 56.0,
+      "mapX": 48,
+      "mapY": 27,
       "spawn": {
         "x": 32,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "coalbank-ravine",
+          "direction": "south",
+          "target": "clover-downs",
           "at": 32
         },
         {
-          "direction": "west",
-          "target": "snowbell",
-          "at": 18
-        },
-        {
-          "direction": "east",
-          "target": "nightbrook",
-          "at": 18
-        },
-        {
-          "direction": "south",
-          "target": "briar-maze",
+          "direction": "north",
+          "target": "fernhollow",
           "at": 32
         }
       ],
@@ -9427,7 +10789,7 @@
             ],
             [
               32,
-              0
+              3
             ]
           ],
           "width": 3
@@ -9439,7 +10801,7 @@
               18
             ],
             [
-              0,
+              3,
               18
             ]
           ],
@@ -9452,8 +10814,21 @@
               18
             ],
             [
-              63,
+              60,
               18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              32,
+              32
             ]
           ],
           "width": 3
@@ -9469,7 +10844,20 @@
               35
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -9554,7 +10942,7 @@
     {
       "id": "nightbrook",
       "name": "Nightbrook",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "East to Nightroot Woods \u00b7 North to Rosepetal Walk \u00b7 West to Dusklight Fen",
       "kind": "town",
       "width": 40,
       "height": 42,
@@ -9564,27 +10952,27 @@
         36
       ],
       "encounters": [],
-      "mapX": 95.0,
-      "mapY": 56.0,
+      "mapX": 30.8,
+      "mapY": 73.2,
       "spawn": {
         "x": 20,
         "y": 21
       },
       "exits": [
         {
+          "direction": "east",
+          "target": "nightroot-woods",
+          "at": 21
+        },
+        {
           "direction": "north",
-          "target": "dawnlight-spire",
+          "target": "rosepetal-walk",
           "at": 20
         },
         {
           "direction": "west",
-          "target": "fernspring",
+          "target": "dusklight-fen",
           "at": 21
-        },
-        {
-          "direction": "south",
-          "target": "petalwind-meadow",
-          "at": 20
         }
       ],
       "trails": [
@@ -9629,6 +11017,70 @@
             ],
             [
               20,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              20,
+              38
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              20,
+              26
+            ],
+            [
+              31,
+              26
+            ],
+            [
+              31,
+              21
+            ],
+            [
+              39,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              20,
               0
             ]
           ],
@@ -9643,19 +11095,6 @@
             [
               0,
               21
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              21
-            ],
-            [
-              20,
-              41
             ]
           ],
           "width": 3
@@ -9742,7 +11181,7 @@
     {
       "id": "blooming-thicket",
       "name": "Blooming Thicket",
-      "subtitle": "Fruit groves \u00b7 Paths beneath the branches",
+      "subtitle": "South to Bramble Orchard",
       "kind": "orchard",
       "width": 48,
       "height": 30,
@@ -9759,26 +11198,16 @@
         "Shroombud",
         "Glimmoth"
       ],
-      "mapX": 5.0,
-      "mapY": 68.5,
+      "mapX": 8,
+      "mapY": 61,
       "spawn": {
         "x": 24,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "fernhollow",
-          "at": 24
-        },
-        {
-          "direction": "east",
-          "target": "ember-gorge",
-          "at": 15
-        },
-        {
           "direction": "south",
-          "target": "cinderlake-shore",
+          "target": "bramble",
           "at": 24
         }
       ],
@@ -9824,7 +11253,7 @@
             ],
             [
               24,
-              0
+              3
             ]
           ],
           "width": 3
@@ -9836,8 +11265,21 @@
               15
             ],
             [
-              47,
+              44,
               15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              15
+            ],
+            [
+              24,
+              26
             ]
           ],
           "width": 3
@@ -9853,7 +11295,7 @@
               29
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -9938,7 +11380,7 @@
     {
       "id": "ember-gorge",
       "name": "Ember Gorge",
-      "subtitle": "Stone ridges \u00b7 Winding mountain trails",
+      "subtitle": "West to Cinder Crossing \u00b7 East to Cinderlake Shore",
       "kind": "highland",
       "width": 56,
       "height": 36,
@@ -9955,32 +11397,22 @@
         "Ferrimaw",
         "Ironhide"
       ],
-      "mapX": 16.25,
-      "mapY": 68.5,
+      "mapX": 85,
+      "mapY": 25,
       "spawn": {
         "x": 28,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "bellflower-prairie",
-          "at": 28
-        },
-        {
           "direction": "west",
-          "target": "blooming-thicket",
+          "target": "cinder-crossing",
           "at": 18
         },
         {
           "direction": "east",
-          "target": "singing-pines",
+          "target": "cinderlake-shore",
           "at": 18
-        },
-        {
-          "direction": "south",
-          "target": "windchime-ridge",
-          "at": 28
         }
       ],
       "trails": [
@@ -10029,7 +11461,46 @@
             ],
             [
               28,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              52,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              28,
+              32
             ]
           ],
           "width": 3
@@ -10045,7 +11516,7 @@
               18
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -10058,20 +11529,7 @@
               18
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              28,
-              18
-            ],
-            [
-              28,
-              35
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -10156,7 +11614,7 @@
     {
       "id": "singing-pines",
       "name": "Singing Pines",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "West to Snowmelt Creek \u00b7 South to Rosemere",
       "kind": "forest",
       "width": 64,
       "height": 42,
@@ -10173,26 +11631,16 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 27.5,
-      "mapY": 68.5,
+      "mapX": 49,
+      "mapY": 68,
       "spawn": {
         "x": 32,
         "y": 21
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "emberstead",
-          "at": 32
-        },
-        {
           "direction": "west",
-          "target": "ember-gorge",
-          "at": 21
-        },
-        {
-          "direction": "east",
-          "target": "frostglass-lake",
+          "target": "snowmelt-creek",
           "at": 21
         },
         {
@@ -10243,7 +11691,46 @@
             ],
             [
               32,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              60,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              32,
+              38
             ]
           ],
           "width": 3
@@ -10259,20 +11746,7 @@
               21
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              32,
-              21
-            ],
-            [
-              63,
-              21
-            ]
-          ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -10285,7 +11759,7 @@
               41
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -10370,7 +11844,7 @@
     {
       "id": "frostglass-lake",
       "name": "Frostglass Lake",
-      "subtitle": "Frozen country \u00b7 Ice fields and sheltered trails",
+      "subtitle": "North to Frostglass Pass",
       "kind": "snow",
       "width": 40,
       "height": 30,
@@ -10387,8 +11861,8 @@
         "Snoven",
         "Harefrost"
       ],
-      "mapX": 38.75,
-      "mapY": 68.5,
+      "mapX": 74,
+      "mapY": 89,
       "spawn": {
         "x": 20,
         "y": 15
@@ -10396,22 +11870,7 @@
       "exits": [
         {
           "direction": "north",
-          "target": "snowmelt-creek",
-          "at": 20
-        },
-        {
-          "direction": "west",
-          "target": "singing-pines",
-          "at": 15
-        },
-        {
-          "direction": "east",
-          "target": "dusklight-fen",
-          "at": 15
-        },
-        {
-          "direction": "south",
-          "target": "glacier-steps",
+          "target": "frostpass",
           "at": 20
         }
       ],
@@ -10457,49 +11916,62 @@
             ],
             [
               20,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              3,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              36,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
+              26
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              20,
               0
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              15
-            ],
-            [
-              0,
-              15
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              15
-            ],
-            [
-              39,
-              15
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              15
-            ],
-            [
-              20,
-              29
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -10584,7 +12056,7 @@
     {
       "id": "dusklight-fen",
       "name": "Dusklight Fen",
-      "subtitle": "River country \u00b7 Islands linked by bridges",
+      "subtitle": "East to Nightbrook \u00b7 West to Nightveil Hollow",
       "kind": "wetland",
       "width": 48,
       "height": 36,
@@ -10601,32 +12073,22 @@
         "Mitelet",
         "Reedmollusk"
       ],
-      "mapX": 50.0,
-      "mapY": 68.5,
+      "mapX": 23,
+      "mapY": 81,
       "spawn": {
         "x": 24,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "bellweather",
-          "at": 24
+          "direction": "east",
+          "target": "nightbrook",
+          "at": 18
         },
         {
           "direction": "west",
-          "target": "frostglass-lake",
+          "target": "nightveil-hollow",
           "at": 18
-        },
-        {
-          "direction": "east",
-          "target": "moonshadow-path",
-          "at": 18
-        },
-        {
-          "direction": "south",
-          "target": "starlit-causeway",
-          "at": 24
         }
       ],
       "trails": [
@@ -10671,7 +12133,7 @@
             ],
             [
               24,
-              0
+              3
             ]
           ],
           "width": 3
@@ -10683,8 +12145,34 @@
               18
             ],
             [
-              0,
+              3,
               18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              44,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              24,
+              32
             ]
           ],
           "width": 3
@@ -10700,7 +12188,7 @@
               18
             ]
           ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -10709,11 +12197,11 @@
               18
             ],
             [
-              24,
-              35
+              0,
+              18
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -10798,7 +12286,7 @@
     {
       "id": "moonshadow-path",
       "name": "Moonshadow Path",
-      "subtitle": "Quiet glades \u00b7 Light between ancient trees",
+      "subtitle": "North to Snowmelt Creek \u00b7 South to Starlit Causeway",
       "kind": "glade",
       "width": 56,
       "height": 42,
@@ -10815,8 +12303,8 @@
         "Whispling",
         "Radianthra"
       ],
-      "mapX": 61.25,
-      "mapY": 68.5,
+      "mapX": 42,
+      "mapY": 67,
       "spawn": {
         "x": 28,
         "y": 21
@@ -10824,22 +12312,12 @@
       "exits": [
         {
           "direction": "north",
-          "target": "aurora-crossing",
+          "target": "snowmelt-creek",
           "at": 28
         },
         {
-          "direction": "west",
-          "target": "dusklight-fen",
-          "at": 21
-        },
-        {
-          "direction": "east",
-          "target": "rosepetal-walk",
-          "at": 21
-        },
-        {
           "direction": "south",
-          "target": "nightroot-woods",
+          "target": "starlit-causeway",
           "at": 28
         }
       ],
@@ -10885,36 +12363,62 @@
             ],
             [
               28,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              52,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              28,
+              38
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              28,
               0
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              28,
-              21
-            ],
-            [
-              0,
-              21
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              28,
-              21
-            ],
-            [
-              55,
-              21
-            ]
-          ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -10927,7 +12431,7 @@
               41
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -11012,7 +12516,7 @@
     {
       "id": "rosepetal-walk",
       "name": "Rosepetal Walk",
-      "subtitle": "Fruit groves \u00b7 Paths beneath the branches",
+      "subtitle": "South to Nightbrook \u00b7 North to Willowfen Village \u00b7 East to Rosewood Trail",
       "kind": "orchard",
       "width": 64,
       "height": 30,
@@ -11029,32 +12533,27 @@
         "Shroombud",
         "Glimmoth"
       ],
-      "mapX": 72.5,
-      "mapY": 68.5,
+      "mapX": 25.5,
+      "mapY": 69.8,
       "spawn": {
         "x": 32,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "snowbell",
+          "direction": "south",
+          "target": "nightbrook",
           "at": 32
         },
         {
-          "direction": "west",
-          "target": "moonshadow-path",
-          "at": 15
+          "direction": "north",
+          "target": "willowfen",
+          "at": 32
         },
         {
           "direction": "east",
-          "target": "briar-maze",
+          "target": "rosewood-trail",
           "at": 15
-        },
-        {
-          "direction": "south",
-          "target": "everlight",
-          "at": 32
         }
       ],
       "trails": [
@@ -11099,7 +12598,7 @@
             ],
             [
               32,
-              0
+              3
             ]
           ],
           "width": 3
@@ -11111,7 +12610,7 @@
               15
             ],
             [
-              0,
+              3,
               15
             ]
           ],
@@ -11124,8 +12623,21 @@
               15
             ],
             [
-              63,
+              60,
               15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              32,
+              26
             ]
           ],
           "width": 3
@@ -11141,7 +12653,33 @@
               29
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              63,
+              15
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -11226,7 +12764,7 @@
     {
       "id": "briar-maze",
       "name": "Briar Maze",
-      "subtitle": "Fruit groves \u00b7 Paths beneath the branches",
+      "subtitle": "North to Rosewood Trail \u00b7 South to Nightroot Woods",
       "kind": "orchard",
       "width": 40,
       "height": 36,
@@ -11243,8 +12781,8 @@
         "Shroombud",
         "Glimmoth"
       ],
-      "mapX": 83.75,
-      "mapY": 68.5,
+      "mapX": 36,
+      "mapY": 68,
       "spawn": {
         "x": 20,
         "y": 18
@@ -11252,22 +12790,12 @@
       "exits": [
         {
           "direction": "north",
-          "target": "fernspring",
+          "target": "rosewood-trail",
           "at": 20
         },
         {
-          "direction": "west",
-          "target": "rosepetal-walk",
-          "at": 18
-        },
-        {
-          "direction": "east",
-          "target": "petalwind-meadow",
-          "at": 18
-        },
-        {
           "direction": "south",
-          "target": "evergreen-reach",
+          "target": "nightroot-woods",
           "at": 20
         }
       ],
@@ -11313,36 +12841,62 @@
             ],
             [
               20,
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              36,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              20,
+              32
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              20,
               0
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              18
-            ],
-            [
-              0,
-              18
-            ]
-          ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              20,
-              18
-            ],
-            [
-              39,
-              18
-            ]
-          ],
-          "width": 3
+          "width": 2
         },
         {
           "points": [
@@ -11355,7 +12909,7 @@
               35
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -11440,7 +12994,7 @@
     {
       "id": "petalwind-meadow",
       "name": "Petalwind Meadow",
-      "subtitle": "Open grasslands \u00b7 Flowers on the breeze",
+      "subtitle": "West to Clover Downs \u00b7 East to Copperleaf \u00b7 South to Amberrise Bluffs",
       "kind": "meadow",
       "width": 48,
       "height": 42,
@@ -11457,26 +13011,26 @@
         "Tindertail",
         "Cindlark"
       ],
-      "mapX": 95.0,
-      "mapY": 68.5,
+      "mapX": 58,
+      "mapY": 39,
       "spawn": {
         "x": 24,
         "y": 21
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "nightbrook",
-          "at": 24
+          "direction": "west",
+          "target": "clover-downs",
+          "at": 21
         },
         {
-          "direction": "west",
-          "target": "briar-maze",
+          "direction": "east",
+          "target": "copperleaf",
           "at": 21
         },
         {
           "direction": "south",
-          "target": "nightveil-hollow",
+          "target": "amberrise",
           "at": 24
         }
       ],
@@ -11522,7 +13076,33 @@
             ],
             [
               24,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              24,
+              38
             ]
           ],
           "width": 3
@@ -11535,6 +13115,31 @@
             ],
             [
               0,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              21
+            ],
+            [
+              24,
+              26
+            ],
+            [
+              39,
+              26
+            ],
+            [
+              39,
+              21
+            ],
+            [
+              47,
               21
             ]
           ],
@@ -11636,7 +13241,7 @@
     {
       "id": "cinderlake-shore",
       "name": "Cinderlake Shore",
-      "subtitle": "Stone ridges \u00b7 Winding mountain trails",
+      "subtitle": "West to Ember Gorge",
       "kind": "highland",
       "width": 56,
       "height": 30,
@@ -11653,21 +13258,16 @@
         "Ferrimaw",
         "Ironhide"
       ],
-      "mapX": 5.0,
-      "mapY": 81.0,
+      "mapX": 91,
+      "mapY": 20,
       "spawn": {
         "x": 28,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "blooming-thicket",
-          "at": 28
-        },
-        {
-          "direction": "east",
-          "target": "windchime-ridge",
+          "direction": "west",
+          "target": "ember-gorge",
           "at": 15
         }
       ],
@@ -11717,7 +13317,7 @@
             ],
             [
               28,
-              0
+              3
             ]
           ],
           "width": 3
@@ -11729,11 +13329,24 @@
               15
             ],
             [
-              55,
+              52,
               15
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              15
+            ],
+            [
+              0,
+              15
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -11818,7 +13431,7 @@
     {
       "id": "windchime-ridge",
       "name": "Windchime Ridge",
-      "subtitle": "Stone ridges \u00b7 Winding mountain trails",
+      "subtitle": "East to Amberrise Bluffs \u00b7 North to Mushroom Basin",
       "kind": "highland",
       "width": 64,
       "height": 36,
@@ -11835,27 +13448,22 @@
         "Ferrimaw",
         "Ironhide"
       ],
-      "mapX": 16.25,
-      "mapY": 81.0,
+      "mapX": 53,
+      "mapY": 48,
       "spawn": {
         "x": 32,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "ember-gorge",
-          "at": 32
-        },
-        {
-          "direction": "west",
-          "target": "cinderlake-shore",
-          "at": 18
-        },
-        {
           "direction": "east",
-          "target": "rosemere",
+          "target": "amberrise",
           "at": 18
+        },
+        {
+          "direction": "north",
+          "target": "mushroom-basin",
+          "at": 32
         }
       ],
       "trails": [
@@ -11904,7 +13512,7 @@
             ],
             [
               32,
-              0
+              3
             ]
           ],
           "width": 3
@@ -11916,7 +13524,20 @@
               18
             ],
             [
-              0,
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              60,
               18
             ]
           ],
@@ -11933,7 +13554,20 @@
               18
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              32,
+              18
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -12018,7 +13652,7 @@
     {
       "id": "rosemere",
       "name": "Rosemere",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "East to Glacier Steps \u00b7 West to Starlit Causeway \u00b7 North to Singing Pines",
       "kind": "town",
       "width": 40,
       "height": 42,
@@ -12028,27 +13662,27 @@
         28
       ],
       "encounters": [],
-      "mapX": 27.5,
-      "mapY": 81.0,
+      "mapX": 54.0,
+      "mapY": 78.2,
       "spawn": {
         "x": 20,
         "y": 21
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "singing-pines",
-          "at": 20
-        },
-        {
-          "direction": "west",
-          "target": "windchime-ridge",
-          "at": 21
-        },
-        {
           "direction": "east",
           "target": "glacier-steps",
           "at": 21
+        },
+        {
+          "direction": "west",
+          "target": "starlit-causeway",
+          "at": 21
+        },
+        {
+          "direction": "north",
+          "target": "singing-pines",
+          "at": 20
         }
       ],
       "trails": [
@@ -12093,7 +13727,46 @@
             ],
             [
               20,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              3,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              36,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              21
+            ],
+            [
+              39,
+              21
             ]
           ],
           "width": 3
@@ -12118,8 +13791,8 @@
               21
             ],
             [
-              39,
-              21
+              20,
+              0
             ]
           ],
           "width": 3
@@ -12206,7 +13879,7 @@
     {
       "id": "glacier-steps",
       "name": "Glacier Steps",
-      "subtitle": "Frozen country \u00b7 Ice fields and sheltered trails",
+      "subtitle": "East to Snowbell \u00b7 West to Rosemere",
       "kind": "snow",
       "width": 48,
       "height": 30,
@@ -12223,26 +13896,21 @@
         "Snoven",
         "Harefrost"
       ],
-      "mapX": 38.75,
-      "mapY": 81.0,
+      "mapX": 60.0,
+      "mapY": 77.6,
       "spawn": {
         "x": 24,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "frostglass-lake",
-          "at": 24
+          "direction": "east",
+          "target": "snowbell",
+          "at": 15
         },
         {
           "direction": "west",
           "target": "rosemere",
-          "at": 15
-        },
-        {
-          "direction": "east",
-          "target": "starlit-causeway",
           "at": 15
         }
       ],
@@ -12288,7 +13956,7 @@
             ],
             [
               24,
-              0
+              3
             ]
           ],
           "width": 3
@@ -12300,7 +13968,20 @@
               15
             ],
             [
-              0,
+              3,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              15
+            ],
+            [
+              44,
               15
             ]
           ],
@@ -12317,7 +13998,20 @@
               15
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              24,
+              15
+            ],
+            [
+              0,
+              15
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -12402,7 +14096,7 @@
     {
       "id": "starlit-causeway",
       "name": "Starlit Causeway",
-      "subtitle": "Quiet glades \u00b7 Light between ancient trees",
+      "subtitle": "East to Rosemere \u00b7 West to Everlight \u00b7 North to Moonshadow Path",
       "kind": "glade",
       "width": 56,
       "height": 36,
@@ -12419,31 +14113,26 @@
         "Whispling",
         "Radianthra"
       ],
-      "mapX": 50.0,
-      "mapY": 81.0,
+      "mapX": 48.1,
+      "mapY": 77.7,
       "spawn": {
         "x": 28,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "dusklight-fen",
-          "at": 28
+          "direction": "east",
+          "target": "rosemere",
+          "at": 18
         },
         {
           "direction": "west",
-          "target": "glacier-steps",
+          "target": "everlight",
           "at": 18
         },
         {
-          "direction": "east",
-          "target": "nightroot-woods",
-          "at": 18
-        },
-        {
-          "direction": "south",
-          "target": "eclipse-threshold",
+          "direction": "north",
+          "target": "moonshadow-path",
           "at": 28
         }
       ],
@@ -12489,7 +14178,7 @@
             ],
             [
               28,
-              0
+              3
             ]
           ],
           "width": 3
@@ -12501,8 +14190,34 @@
               18
             ],
             [
-              0,
+              3,
               18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              52,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              28,
+              32
             ]
           ],
           "width": 3
@@ -12518,7 +14233,20 @@
               18
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              28,
+              18
+            ],
+            [
+              0,
+              18
+            ]
+          ],
+          "width": 2
         },
         {
           "points": [
@@ -12528,10 +14256,10 @@
             ],
             [
               28,
-              35
+              0
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -12616,7 +14344,7 @@
     {
       "id": "nightroot-woods",
       "name": "Nightroot Woods",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "East to Everlight \u00b7 West to Nightbrook \u00b7 North to Briar Maze",
       "kind": "forest",
       "width": 64,
       "height": 42,
@@ -12633,31 +14361,26 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 61.25,
-      "mapY": 81.0,
+      "mapX": 36.6,
+      "mapY": 75.2,
       "spawn": {
         "x": 32,
         "y": 21
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "moonshadow-path",
-          "at": 32
-        },
-        {
-          "direction": "west",
-          "target": "starlit-causeway",
-          "at": 21
-        },
-        {
           "direction": "east",
           "target": "everlight",
           "at": 21
         },
         {
-          "direction": "south",
-          "target": "rosewater-delta",
+          "direction": "west",
+          "target": "nightbrook",
+          "at": 21
+        },
+        {
+          "direction": "north",
+          "target": "briar-maze",
           "at": 32
         }
       ],
@@ -12703,7 +14426,7 @@
             ],
             [
               32,
-              0
+              3
             ]
           ],
           "width": 3
@@ -12715,8 +14438,34 @@
               21
             ],
             [
-              0,
+              3,
               21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              60,
+              21
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              32,
+              38
             ]
           ],
           "width": 3
@@ -12732,7 +14481,20 @@
               21
             ]
           ],
-          "width": 3
+          "width": 2
+        },
+        {
+          "points": [
+            [
+              32,
+              21
+            ],
+            [
+              0,
+              21
+            ]
+          ],
+          "width": 2
         },
         {
           "points": [
@@ -12742,10 +14504,10 @@
             ],
             [
               32,
-              41
+              0
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -12830,7 +14592,7 @@
     {
       "id": "everlight",
       "name": "Everlight",
-      "subtitle": "A welcoming stop \u00b7 Healing and supplies",
+      "subtitle": "East to Starlit Causeway \u00b7 West to Nightroot Woods \u00b7 South to Eclipse Threshold",
       "kind": "town",
       "width": 40,
       "height": 30,
@@ -12840,17 +14602,17 @@
         36
       ],
       "encounters": [],
-      "mapX": 72.5,
-      "mapY": 81.0,
+      "mapX": 42.4,
+      "mapY": 76.6,
       "spawn": {
         "x": 20,
         "y": 15
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "rosepetal-walk",
-          "at": 20
+          "direction": "east",
+          "target": "starlit-causeway",
+          "at": 15
         },
         {
           "direction": "west",
@@ -12858,9 +14620,9 @@
           "at": 15
         },
         {
-          "direction": "east",
-          "target": "evergreen-reach",
-          "at": 15
+          "direction": "south",
+          "target": "eclipse-threshold",
+          "at": 20
         }
       ],
       "trails": [
@@ -12905,7 +14667,46 @@
             ],
             [
               20,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              3,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              36,
+              15
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              15
+            ],
+            [
+              39,
+              15
             ]
           ],
           "width": 3
@@ -12930,8 +14731,8 @@
               15
             ],
             [
-              39,
-              15
+              20,
+              29
             ]
           ],
           "width": 3
@@ -13018,7 +14819,7 @@
     {
       "id": "evergreen-reach",
       "name": "Evergreen Reach",
-      "subtitle": "Deep woodland \u00b7 Ferns and hidden clearings",
+      "subtitle": "South to Fiddlehead Woods \u00b7 West to Juniper Walk",
       "kind": "forest",
       "width": 48,
       "height": 36,
@@ -13035,26 +14836,21 @@
         "Noxling",
         "Whispling"
       ],
-      "mapX": 83.75,
-      "mapY": 81.0,
+      "mapX": 31,
+      "mapY": 36,
       "spawn": {
         "x": 24,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "briar-maze",
+          "direction": "south",
+          "target": "fiddlehead-woods",
           "at": 24
         },
         {
           "direction": "west",
-          "target": "everlight",
-          "at": 18
-        },
-        {
-          "direction": "east",
-          "target": "nightveil-hollow",
+          "target": "juniper-walk",
           "at": 18
         }
       ],
@@ -13100,10 +14896,49 @@
             ],
             [
               24,
-              0
+              3
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              3,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              44,
+              18
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              24,
+              18
+            ],
+            [
+              24,
+              35
+            ]
+          ],
+          "width": 2
         },
         {
           "points": [
@@ -13116,20 +14951,7 @@
               18
             ]
           ],
-          "width": 3
-        },
-        {
-          "points": [
-            [
-              24,
-              18
-            ],
-            [
-              47,
-              18
-            ]
-          ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -13214,7 +15036,7 @@
     {
       "id": "nightveil-hollow",
       "name": "Nightveil Hollow",
-      "subtitle": "Umbradrake habitat \u00b7 Follow the guardian trail",
+      "subtitle": "East to Dusklight Fen",
       "kind": "forest",
       "width": 56,
       "height": 42,
@@ -13230,21 +15052,16 @@
         "Fungrowth",
         "Shadowpup"
       ],
-      "mapX": 95.0,
-      "mapY": 81.0,
+      "mapX": 17,
+      "mapY": 86,
       "spawn": {
         "x": 28,
         "y": 21
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "petalwind-meadow",
-          "at": 28
-        },
-        {
-          "direction": "west",
-          "target": "evergreen-reach",
+          "direction": "east",
+          "target": "dusklight-fen",
           "at": 21
         }
       ],
@@ -13290,7 +15107,7 @@
             ],
             [
               28,
-              0
+              3
             ]
           ],
           "width": 3
@@ -13302,11 +15119,36 @@
               21
             ],
             [
-              0,
+              3,
               21
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              28,
+              21
+            ],
+            [
+              28,
+              9
+            ],
+            [
+              46,
+              9
+            ],
+            [
+              46,
+              21
+            ],
+            [
+              55,
+              21
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -13401,7 +15243,7 @@
     {
       "id": "eclipse-threshold",
       "name": "Eclipse Threshold",
-      "subtitle": "Eclipserion habitat \u00b7 Follow the guardian trail",
+      "subtitle": "North to Everlight",
       "kind": "glade",
       "width": 64,
       "height": 30,
@@ -13417,8 +15259,8 @@
         "Bloom-Bud",
         "Moon-Dancer"
       ],
-      "mapX": 50.0,
-      "mapY": 93.5,
+      "mapX": 40,
+      "mapY": 86,
       "spawn": {
         "x": 32,
         "y": 15
@@ -13426,13 +15268,8 @@
       "exits": [
         {
           "direction": "north",
-          "target": "starlit-causeway",
+          "target": "everlight",
           "at": 32
-        },
-        {
-          "direction": "east",
-          "target": "rosewater-delta",
-          "at": 15
         }
       ],
       "trails": [
@@ -13477,7 +15314,7 @@
             ],
             [
               32,
-              0
+              3
             ]
           ],
           "width": 3
@@ -13489,11 +15326,24 @@
               15
             ],
             [
-              63,
+              60,
               15
             ]
           ],
           "width": 3
+        },
+        {
+          "points": [
+            [
+              32,
+              15
+            ],
+            [
+              32,
+              0
+            ]
+          ],
+          "width": 2
         }
       ],
       "terrain": [
@@ -13588,7 +15438,7 @@
     {
       "id": "rosewater-delta",
       "name": "Rosewater Delta",
-      "subtitle": "River country \u00b7 Islands linked by bridges",
+      "subtitle": "West to Mirror Marsh",
       "kind": "wetland",
       "width": 40,
       "height": 36,
@@ -13605,21 +15455,16 @@
         "Mitelet",
         "Reedmollusk"
       ],
-      "mapX": 61.25,
-      "mapY": 93.5,
+      "mapX": 92,
+      "mapY": 42,
       "spawn": {
         "x": 20,
         "y": 18
       },
       "exits": [
         {
-          "direction": "north",
-          "target": "nightroot-woods",
-          "at": 20
-        },
-        {
           "direction": "west",
-          "target": "eclipse-threshold",
+          "target": "mirror-marsh",
           "at": 18
         }
       ],
@@ -13665,7 +15510,20 @@
             ],
             [
               20,
-              0
+              3
+            ]
+          ],
+          "width": 3
+        },
+        {
+          "points": [
+            [
+              20,
+              18
+            ],
+            [
+              3,
+              18
             ]
           ],
           "width": 3
@@ -13681,7 +15539,7 @@
               18
             ]
           ],
-          "width": 3
+          "width": 2
         }
       ],
       "terrain": [
@@ -13763,5 +15621,39 @@
       ],
       "buildings": []
     }
+  ],
+  "islandCircuit": [
+    "willowfen",
+    "sunpetal",
+    "mosswood",
+    "larkspur",
+    "windmill",
+    "reedwater",
+    "tidemere",
+    "juniper-walk",
+    "cedarwick",
+    "cedar-stair",
+    "fernhollow",
+    "fernway",
+    "dawnflower-fields",
+    "dawnspire",
+    "emberstead",
+    "copperwood",
+    "copperleaf",
+    "glasswater-banks",
+    "glassharbor",
+    "starfall-approach",
+    "starfall",
+    "bellflower-prairie",
+    "bellweather",
+    "aurora-crossing",
+    "snowbell",
+    "glacier-steps",
+    "rosemere",
+    "starlit-causeway",
+    "everlight",
+    "nightroot-woods",
+    "nightbrook",
+    "rosepetal-walk"
   ]
 }

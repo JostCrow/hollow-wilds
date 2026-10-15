@@ -42,7 +42,7 @@ export function MainMenu() {
             <span className="block -mt-4 text-transparent bg-clip-text bg-gradient-to-r from-primary via-primary/80 to-primary/40">Wilds</span>
           </h1>
           <p className="max-w-md mx-auto text-muted-foreground font-medium text-sm md:text-base leading-relaxed opacity-60">
-            Venture into the unknown. Discover creatures, forge bonds, and survive the wilds.
+            Venture into the unknown. Discover hollowings, forge bonds, and survive the wilds.
           </p>
         </div>
 
@@ -138,7 +138,7 @@ export function MainMenu() {
         <div className="pt-8 opacity-40 hover:opacity-100 transition-opacity">
           <div className="flex gap-8 items-center justify-center">
             <div className="flex flex-col items-center">
-              <span className="text-[10px] font-black uppercase text-primary mb-1">Creatures Found</span>
+              <span className="text-[10px] font-black uppercase text-primary mb-1">Hollowings Found</span>
               <span className="text-xl font-black italic">{creatures.length}</span>
             </div>
             <div className="w-px h-8 bg-border/50" />

@@ -44,7 +44,7 @@ export function CharacterSelect() {
         });
         setStarterIVs(ivs);
       })
-      .catch((error) => console.error("Error loading creatures:", error));
+      .catch((error) => console.error("Error loading hollowings:", error));
   }, []);
 
   const handleReroll = () => {

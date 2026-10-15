@@ -119,7 +119,7 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
         ]);
 
         if (!creaturesRes.ok) {
-          throw new Error(`Failed to load creatures: ${creaturesRes.status}`);
+          throw new Error(`Failed to load hollowings: ${creaturesRes.status}`);
         }
         if (!movesRes.ok) {
           throw new Error(`Failed to load moves: ${movesRes.status}`);
@@ -684,7 +684,7 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
             <Library className="w-24 h-24" />
           </div>
           <div className="space-y-2">
-            <h2 className="text-2xl font-semibold">Select a Creature</h2>
+            <h2 className="text-2xl font-semibold">Select a Hollowing</h2>
             <p className="text-muted-foreground max-w-xs">Scan a specimen from the Pokédex logs to retrieve comprehensive data.</p>
           </div>
         </div>
@@ -889,12 +889,12 @@ export const Pokedex: React.FC<PokedexProps> = ({ playerPokedex, onClose }) => {
             </Select>
           </div>
           <ScrollArea className="flex-1 min-h-0">
-            {loading && <p>Loading creatures...</p>}
+            {loading && <p>Loading hollowings...</p>}
 
             {!loading && error && <p>Error loading data.</p>}
 
             {!loading && !error && filteredCreatures.length === 0 && (
-              <p>No creatures found matching your filters.</p>
+              <p>No hollowings found matching your filters.</p>
             )}
 
             {!loading &&

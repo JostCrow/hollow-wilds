@@ -91,6 +91,8 @@ test("capture consumes an orb, registers the species, and persists the companion
   assert.equal(save.balls, 9);
   assert.equal(save.party.length, 2);
   assert.ok(save.caught.includes("Twigglo"));
+  assert.ok(save.seen.includes("Twigglo"));
+  assert.ok(!original.seen.includes("Twigglo"));
   assert.equal(original.balls, 10);
   assert.equal(original.party.length, 1); // pure turn resolution
   assert.ok(catchChance(originalBattle.enemy) > 0.85);
@@ -98,6 +100,7 @@ test("capture consumes an orb, registers the species, and persists the companion
     parseSave(JSON.parse(JSON.stringify(save))).party[1].species,
     "Twigglo",
   );
+  assert.deepEqual(parseSave(JSON.parse(JSON.stringify(save))).seen, save.seen);
 });
 
 test("a full team sends captures to storage without dropping them", () => {

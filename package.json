@@ -1,7 +1,7 @@
 {
   "name": "the-hollow-wilds",
   "version": "1.0.0",
-  "description": "A browser creature-collecting adventure with explorable towns, routes, turn-based battles, and JSON saves",
+  "description": "A browser hollowing-collecting adventure with explorable towns, routes, turn-based battles, and JSON saves",
   "main": "src/main.tsx",
   "type": "module",
   "scripts": {
