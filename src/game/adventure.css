@@ -768,7 +768,7 @@
   border: 0;
   padding: 0;
 }
-.nearby-creatures img {
+.nearby-creatures .creature-art {
   width: 100%;
   height: 43px;
 }
@@ -1021,13 +1021,13 @@
   border: 1px solid var(--ui-border, #9fb48a);
   box-shadow: 0 0 0 2px var(--ui-shadow, #9fb48a22);
 }
-.starter-option > img {
+.starter-option > .creature-art {
   width: 116px;
   height: 125px;
   margin: 3px auto 12px;
   transition: transform 0.2s;
 }
-.starter-option:hover > img {
+.starter-option:hover > .creature-art {
   transform: translateY(-5px);
 }
 .starter-option h3 {
@@ -1388,7 +1388,7 @@
   background: none;
   text-align: left;
 }
-.table-creature img {
+.table-creature .creature-art {
   width: 35px;
   height: 36px;
 }
@@ -1747,11 +1747,11 @@
   background: var(--ui-surface, #f6f9ef);
   text-align: left;
 }
-.storage-list img {
+.storage-list .creature-art {
   width: 48px;
   height: 50px;
 }
-.storage-list button > span {
+.storage-list button > span:not(.creature-art) {
   flex: 1;
 }
 .storage-list small {
@@ -2410,7 +2410,7 @@
   text-align: left;
   font-size: 10px;
 }
-.switch-list img {
+.switch-list .creature-art {
   width: 35px;
   height: 40px;
 }
@@ -3779,7 +3779,8 @@
   background: var(--ui-soft, #f5f5ed);
 }
 .audio-toggle:focus-visible,
-.audio-slider input:focus-visible {
+.audio-slider input:focus-visible,
+.camera-slider input:focus-visible {
   outline: 2px solid var(--ui-border, #567443);
   outline-offset: 4px;
 }
@@ -3798,27 +3799,33 @@
   margin-top: 4px;
   font-size: 11px;
 }
-.audio-slider {
+.audio-slider,
+.camera-slider {
   display: block;
   margin-top: 20px;
   font-size: 12px;
 }
-.audio-slider > span {
+.audio-slider > span,
+.camera-slider > span {
   display: flex;
   justify-content: space-between;
   margin-bottom: 8px;
 }
-.audio-slider output {
+.audio-slider output,
+.camera-slider output {
   font-variant-numeric: tabular-nums;
   color: var(--ui-text, #567443);
 }
-.audio-slider input {
+.audio-slider input,
+.camera-slider input {
   display: block;
   width: 100%;
   min-height: 26px;
   accent-color: var(--ui-accent, #6b8b52);
   cursor: pointer;
 }
+
+.camera-settings > .secondary-button { margin-top: 20px; }
 
 /* League progress stays alongside the field journal and existing world map. */
 .league-tracker { margin: 32px 0; }

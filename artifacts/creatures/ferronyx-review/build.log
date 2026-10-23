@@ -1,0 +1,341 @@
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/lib/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/lib/libbf_intern_meshopt_bridge.dylib
+12:14:37 | INFO: Starting glTF 2.0 export
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting.002
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting.003
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting.004
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting.005
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting.006
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting.007
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting.008
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Broad overlapping dorsal casting.009
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Dorsal saw blade
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Dorsal saw blade.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Dorsal saw blade.002
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Dorsal saw blade.003
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Dorsal saw blade.004
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Forward sloping neck core
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Great open withers gear
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Great open withers gear.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Blunt armored nose
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Central forehead spear
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Deep angular eye socket
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Deep angular eye socket.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Deep open mouth cavity
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Ear recessed channel
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Ear recessed channel.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Exposed upper metal fang
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Exposed upper metal fang.001
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Exposed upper metal fang.002
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Exposed upper metal fang.003
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Exposed upper metal fang.004
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Exposed upper metal fang.005
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Exposed upper metal fang.006
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Exposed upper metal fang.007
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Heavy overhanging brow blade
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Heavy overhanging brow blade.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Long angular muzzle half
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Long angular muzzle half.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Lower interlocking metal fang
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Lower interlocking metal fang.001
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Lower interlocking metal fang.002
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Lower interlocking metal fang.003
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Lower interlocking metal fang.004
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Lower interlocking metal fang.005
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Lower jaw armored chin
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Narrow black eye slit
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Narrow black eye slit.001
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Open lower jaw rail
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Open lower jaw rail.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Pale fierce eye
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Pale fierce eye.001
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Raised muzzle ridge
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Raised muzzle ridge.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Sphere.005
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Swept cheek cutting plate
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Swept cheek cutting plate.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Swept cheek cutting plate.002
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Swept cheek cutting plate.003
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Swept cheek cutting plate.004
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Swept cheek cutting plate.005
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Tall blade ear
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Tall blade ear.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Interleaved rib armor 1 0
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Interleaved rib armor 1 1
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Interleaved rib armor 1 2
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Interleaved rib armor 1 3
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Interleaved rib armor -1 0
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Interleaved rib armor -1 1
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Interleaved rib armor -1 2
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Interleaved rib armor -1 3
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Intermediate interlocking back gear
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Intermediate interlocking back gear.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Intermediate recessed bearing
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Intermediate recessed bearing.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Layered serrated neck blade 1 0
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Layered serrated neck blade 1 1
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Layered serrated neck blade 1 2
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Layered serrated neck blade -1 0
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Layered serrated neck blade -1 1
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Layered serrated neck blade -1 2
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Ankle keystone
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Deep shoulder bore
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Elbow axle
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Foreleg piston core
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Hollow shoulder axle lip
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Individual overlapping toe armor
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Individual overlapping toe armor.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Individual overlapping toe armor.002
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Large toothed shoulder guard
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Long angular upper foreleg casting
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Long hooked steel talon
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Long hooked steel talon.001
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Long hooked steel talon.002
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Octagonal wrist coupling
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Raised foreleg inset
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Ridged front shin shield
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Shoulder gear shadow bearing
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Angular hind thigh shield
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Ankle keystone.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Digitigrade rear drive strut
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Sphere.003
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Hind shin front ridge
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Hindquarter gear
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Hindquarter hollow hub
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Individual overlapping toe armor.003
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Individual overlapping toe armor.004
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Individual overlapping toe armor.005
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Long hooked steel talon.003
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Long hooked steel talon.004
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Long hooked steel talon.005
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Long rear hock shield
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Octagonal wrist coupling.001
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Sphere.001
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Overlapping breast keel
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Overlapping breast keel.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Overlapping breast keel.002
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Sphere
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Ankle keystone.002
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Deep shoulder bore.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Elbow axle.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Foreleg piston core.001
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Hollow shoulder axle lip.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Individual overlapping toe armor.006
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Individual overlapping toe armor.007
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Individual overlapping toe armor.008
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Large toothed shoulder guard.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Long angular upper foreleg casting.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Long hooked steel talon.006
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Long hooked steel talon.007
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Long hooked steel talon.008
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Octagonal wrist coupling.002
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Raised foreleg inset.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Ridged front shin shield.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Shoulder gear shadow bearing.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Angular hind thigh shield.001
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Ankle keystone.003
+12:14:37 | INFO: Primitives created: 2
+12:14:37 | INFO: Extracting primitive: Digitigrade rear drive strut.001
+12:14:37 | INFO: Primitives created: 1
+12:14:37 | INFO: Extracting primitive: Sphere.004
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Hind shin front ridge.001
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Hindquarter gear.001
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Hindquarter hollow hub.001
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Individual overlapping toe armor.009
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Individual overlapping toe armor.010
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Individual overlapping toe armor.011
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Long hooked steel talon.009
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Long hooked steel talon.010
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Long hooked steel talon.011
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Long rear hock shield.001
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Octagonal wrist coupling.003
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Overlapping octagonal tail segment
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Overlapping octagonal tail segment.001
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Overlapping octagonal tail segment.002
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Overlapping octagonal tail segment.003
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Overlapping octagonal tail segment.004
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Polished tail cutting edge
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Polished tail cutting edge.001
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Swept scimitar tail blade
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Tail internal articulated spine
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Tail lateral coupling
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Tail lateral coupling.001
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Tail lateral coupling.002
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Tail lateral coupling.003
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Tail lateral coupling.004
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Sphere.002
+12:14:38 | INFO: Primitives created: 1
+12:14:38 | INFO: Extracting primitive: Withers inner running rim
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Extracting primitive: Withers inner running rim.001
+12:14:38 | INFO: Primitives created: 2
+12:14:38 | INFO: Finished glTF 2.0 export in 1.7826619148254395 s
+
+Info: Saved as "ferronyx.blend"
+CREATURE_EXPORT Ferronyx 7 41
+00:10.048  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/ferronyx.png'
+Blender 5.3.0 Beta (hash 4768a6eac54c built 2026-10-23 01:30:59)
+
+Blender quit

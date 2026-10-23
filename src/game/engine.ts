@@ -1,4 +1,7 @@
 import { z } from "zod";
+import type { OpenWorldPosition } from "./worlds/types.ts";
+import { worlds } from "./worlds/registry.ts";
+import { canStand } from "./worlds/geography.ts";
 import {
   creatures,
   moves,
@@ -16,7 +19,13 @@ import {
 } from "./world.ts";
 import type { Direction } from "./world.ts";
 
-import { gyms, champions, trainers, defeated, lockReason } from "./progression.ts";
+import {
+  gyms,
+  champions,
+  trainers,
+  defeated,
+  lockReason,
+} from "./progression.ts";
 import type { Opponent, Progress } from "./progression.ts";
 import { effectiveBaseStat, traitLabel } from "./traits.ts";
 import type { Traits } from "./traits.ts";
@@ -34,6 +43,8 @@ export type Companion = Traits & {
 export type Save = Progress & {
   version: 2;
   trainer: string;
+  openWorld?: OpenWorldPosition;
+  worldVisits?: Record<string, string[]>;
   party: Companion[];
   storage: Companion[];
   zone: string;
@@ -73,7 +84,11 @@ export type Action =
   | { type: "switch"; id: string };
 export const SAVE_KEY = "hollow-wilds-adventure-v2";
 export const xpNeeded = (level: number) => 30 + level * 14;
-export const maxHp = (name: string, level: number, traits: Partial<Traits> = {}) =>
+export const maxHp = (
+  name: string,
+  level: number,
+  traits: Partial<Traits> = {},
+) =>
   Math.floor((effectiveBaseStat(name, "hp", traits) * level) / 50) + level + 18;
 export function learnedMoves(name: string, level: number) {
   const available = [
@@ -172,7 +187,20 @@ const zoneNames = z
   .max(zones.length);
 const saveSchema = z.object({
   version: z.literal(2),
+  openWorld: z
+    .object({
+      worldId: z.string().refine((id) => !!worlds[id]),
+      x: z.number().min(-100000).max(100000),
+      z: z.number().min(-100000).max(100000),
+    })
+    .optional(),
   trainer: z.string().min(1).max(20),
+  worldVisits: z
+    .record(
+      z.string().min(1).max(80),
+      z.array(z.string().min(1).max(80)).max(1000),
+    )
+    .optional(),
   party: z.array(companionSchema).min(1).max(6),
   storage: z.array(companionSchema).max(1000),
   zone: z.string().refine((id) => zones.some((z) => z.id === id)),
@@ -203,9 +231,18 @@ const saveSchema = z.object({
   collected: z.array(z.string().max(60)).max(1000),
   wins: nonnegative,
   badge: z.boolean(),
-  badges: z.array(z.string().refine((id) => gyms.some((g) => g.id === id))).max(gyms.length).default([]),
-  defeatedTrainers: z.array(z.string().refine((id) => trainers.some((t) => t.id === id))).max(trainers.length).default([]),
-  defeatedChampions: z.array(z.string().refine((id) => champions.some((c) => c.id === id))).max(champions.length).default([]),
+  badges: z
+    .array(z.string().refine((id) => gyms.some((g) => g.id === id)))
+    .max(gyms.length)
+    .default([]),
+  defeatedTrainers: z
+    .array(z.string().refine((id) => trainers.some((t) => t.id === id)))
+    .max(trainers.length)
+    .default([]),
+  defeatedChampions: z
+    .array(z.string().refine((id) => champions.some((c) => c.id === id)))
+    .max(champions.length)
+    .default([]),
   steps: nonnegative,
   savedAt: z.string(),
 });
@@ -216,6 +253,14 @@ export function parseSave(input: unknown): Save {
       "This is not a valid Hollow Wilds adventure save (version 2). Your current adventure is safe.",
     );
   const save = result.data;
+  if (
+    save.openWorld &&
+    !canStand(worlds[save.openWorld.worldId], save.openWorld)
+  )
+    save.openWorld = {
+      worldId: save.openWorld.worldId,
+      ...worlds[save.openWorld.worldId].spawn,
+    };
   const world = getWorld(save.zone);
   if (
     !walkable(world, save.x, save.y) ||
@@ -253,7 +298,7 @@ export function parseSave(input: unknown): Save {
   save.visited = [...new Set([...save.visited, save.zone])];
   return save.party.some((c) => c.hp > 0)
     ? save
-    : heal({ ...save, zone: "willowfen", x: 20, y: 15 });
+    : heal({ ...save, openWorld: undefined, zone: "willowfen", x: 20, y: 15 });
 }
 export function beginBattle(
   save: Save,
@@ -279,17 +324,24 @@ export function beginBattle(
     conditions: {},
   };
 }
-export function beginTrainerBattle(save: Save, opponent: Opponent): Battle | null {
-  if (lockReason(opponent, save) || !save.party.some((c) => c.hp > 0)) return null;
+export function beginTrainerBattle(
+  save: Save,
+  opponent: Opponent,
+): Battle | null {
+  if (lockReason(opponent, save) || !save.party.some((c) => c.hp > 0))
+    return null;
   const [first, ...rest] = opponent.team;
   const battle = beginBattle(save, first.species, first.level, true);
   battle.opponent = opponent;
   battle.reserves = rest.map((c) => makeCompanion(c.species, c.level));
-  battle.log = [`${opponent.name} sends out ${first.species}! Defeat all ${opponent.team.length} companions to win.`];
+  battle.log = [
+    `${opponent.name} sends out ${first.species}! Defeat all ${opponent.team.length} companions to win.`,
+  ];
   return battle;
 }
 export function catchChance(enemy: Companion) {
-  const rare = species[enemy.species].legendary || species[enemy.species].mythical;
+  const rare =
+    species[enemy.species].legendary || species[enemy.species].mythical;
   return rare
     ? 0.02 + (1 - enemy.hp / enemy.maxHp) * 0.16
     : Math.min(0.94, 0.22 + (1 - enemy.hp / enemy.maxHp) * 0.73);
@@ -311,7 +363,8 @@ function awardXp(c: Companion, amount: number, log: string[]) {
       c.species = evolution.evolves_to;
     }
     const nextHp = maxHp(c.species, c.level, c);
-    c.hp = c.hp > 0 ? Math.max(1, Math.min(nextHp, c.hp + nextHp - c.maxHp)) : 0;
+    c.hp =
+      c.hp > 0 ? Math.max(1, Math.min(nextHp, c.hp + nextHp - c.maxHp)) : 0;
     c.maxHp = nextHp;
     const keys = learnedMoves(c.species, c.level);
     for (const key of keys)
@@ -350,18 +403,34 @@ export function takeTurn(
       if (outcome === "won") {
         save.wins++;
         const reward = battle.opponent
-          ? (defeated(battle.opponent, original) ? Math.floor(battle.opponent.reward / 2) : battle.opponent.reward)
-          : battle.trainer ? 450 : 35 + enemy.level * 8;
+          ? defeated(battle.opponent, original)
+            ? Math.floor(battle.opponent.reward / 2)
+            : battle.opponent.reward
+          : battle.trainer
+            ? 450
+            : 35 + enemy.level * 8;
         save.money += reward;
         log.push(`You earned ${reward} coins.`);
       }
       if (battle.opponent && outcome === "won") {
         const opponent = battle.opponent;
-        const key = opponent.kind === "gym" ? "badges" : opponent.kind === "champion" ? "defeatedChampions" : "defeatedTrainers";
+        const key =
+          opponent.kind === "gym"
+            ? "badges"
+            : opponent.kind === "champion"
+              ? "defeatedChampions"
+              : "defeatedTrainers";
         save[key] = [...new Set([...save[key], opponent.id])];
-        if (opponent.kind === "gym") log.push(`You earned the ${opponent.badge} Badge! (${save.badges.length}/12)`);
-        if (opponent.kind === "champion") log.push(`You defeated ${opponent.name}! (${save.defeatedChampions.length}/3 champions)`);
-        if (save.badges.length === 12 && opponent.kind === "gym") log.push("All 12 badges earned! The Champion Halls are open.");
+        if (opponent.kind === "gym")
+          log.push(
+            `You earned the ${opponent.badge} Badge! (${save.badges.length}/12)`,
+          );
+        if (opponent.kind === "champion")
+          log.push(
+            `You defeated ${opponent.name}! (${save.defeatedChampions.length}/3 champions)`,
+          );
+        if (save.badges.length === 12 && opponent.kind === "gym")
+          log.push("All 12 badges earned! The Champion Halls are open.");
       } else if (battle.trainer && !battle.opponent) {
         save.badge = true;
         log.push(
@@ -387,7 +456,9 @@ export function takeTurn(
       battle.enemy = nextEnemy;
       enemyReplaced = true;
       save.seen = [...new Set([...save.seen, nextEnemy.species])];
-      log.push(`${battle.opponent?.name ?? "Your opponent"} sends out ${nextEnemy.species}!`);
+      log.push(
+        `${battle.opponent?.name ?? "Your opponent"} sends out ${nextEnemy.species}!`,
+      );
     }
     if (active.hp <= 0) {
       log.push(`${active.species} fainted.`);
@@ -467,11 +538,22 @@ export function takeTurn(
       d = species[defender.species],
       special = move.category === "special";
     const atk =
-      ((effectiveBaseStat(attacker.species, special ? "sp_attack" : "attack", attacker) * attacker.level) / 50 +
+      ((effectiveBaseStat(
+        attacker.species,
+        special ? "sp_attack" : "attack",
+        attacker,
+      ) *
+        attacker.level) /
+        50 +
         5) *
       stage(attacker).attack;
     const def =
-      ((effectiveBaseStat(defender.species, special ? "sp_defense" : "defense", defender) * defender.level) /
+      ((effectiveBaseStat(
+        defender.species,
+        special ? "sp_defense" : "defense",
+        defender,
+      ) *
+        defender.level) /
         50 +
         5) *
       stage(defender).defense;
@@ -518,11 +600,19 @@ export function takeTurn(
   };
   if (action.type === "run") {
     if (battle.trainer) {
-      log.push("You concede the challenge. No prize or badge awarded. Come back when you are ready.");
+      log.push(
+        "You concede the challenge. No prize or badge awarded. Come back when you are ready.",
+      );
     } else log.push("You slipped away safely.");
     finish("fled");
   } else if (action.type === "catch") {
-    if (battle.trainer || save.balls <= 0 || save.storage.length >= 1000 || ((species[enemy.species].legendary || species[enemy.species].mythical) && save.caught.includes(enemy.species)))
+    if (
+      battle.trainer ||
+      save.balls <= 0 ||
+      save.storage.length >= 1000 ||
+      ((species[enemy.species].legendary || species[enemy.species].mythical) &&
+        save.caught.includes(enemy.species))
+    )
       return { save: original, battle: originalBattle };
     save.balls--;
     log.push("You threw a capture orb…");
@@ -616,12 +706,14 @@ export function travel(save: Save, zone: string, from?: Direction): Save {
   const point = entrance
     ? exitPoint(destination, entrance, 3)
     : destination.spawn;
-  return {
+  const destinationSave: Save = {
     ...save,
     zone: destination.id,
     ...point,
     visited: [...new Set([...save.visited, destination.id])],
   };
+  delete destinationSave.openWorld;
+  return destinationSave;
 }
 
 export function stoneEvolutions(name: string) {

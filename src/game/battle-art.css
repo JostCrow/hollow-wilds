@@ -119,3 +119,4 @@
   .battle-card .move-button:not(:disabled):hover,
   .battle-card .switch-list button:not(:disabled):hover { translate: none; }
 }
+.battle-3d-stage { position:absolute; inset:0; display:block; width:100%; height:100%; }

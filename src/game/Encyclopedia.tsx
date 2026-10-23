@@ -19,7 +19,6 @@ import {
 } from "./data";
 import { useAdventure } from "./store";
 import { TraitBadges, CreatureArt, CreatureTypes, TypePill } from "./ui";
-import { hasSprite } from "./sprites";
 import { zones } from "./world";
 import { effectiveBaseStat, statKeys, shinyDescription, encounterSettings } from "./traits";
 import type { Stat, Traits } from "./traits";
@@ -402,7 +401,13 @@ export function Encyclopedia({
           </div>
         )}
       {creature && (
-        <div className="modal-backdrop" onClick={() => setSelected(null)}>
+        <div className="modal-backdrop" onClick={() => setSelected(null)} onKeyDown={(e) => {
+          if (e.key === "Escape") {
+            e.preventDefault();
+            e.stopPropagation();
+            setSelected(null);
+          }
+        }}>
           <section
             className={`creature-detail modal-card ${mode === "bestiary" && !save?.caught.includes(creature.name) ? "seen-only" : ""}`}
             role="dialog"
@@ -413,6 +418,7 @@ export function Encyclopedia({
             <button
               className="close-button"
               aria-label="Close hollowing details"
+              autoFocus
               onClick={() => setSelected(null)}
             >
               <X size={20} />
@@ -425,7 +431,7 @@ export function Encyclopedia({
                 } as React.CSSProperties
               }
             >
-              <CreatureArt name={creature.name} {...traits} />
+              <CreatureArt name={creature.name} {...traits} interactive />
               <div>
                 <span className="eyebrow">
                   FIELD GUIDE · #
@@ -444,11 +450,7 @@ export function Encyclopedia({
                       : discovered.has(creature.name) ? "Seen · Not caught" : "Undiscovered"}
                   </span>
                 </div>
-                {!hasSprite(creature.name) && (
-                  <small className="muted">
-                    Field sketch · hollowing artwork not yet available
-                  </small>
-                )}
+                <small className="muted">Drag the model or use ← / → to rotate. Home resets the view.</small>
               </div>
             </div>
             <div className="detail-body">

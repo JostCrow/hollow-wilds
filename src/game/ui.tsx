@@ -1,28 +1,7 @@
 import { type CSSProperties } from "react";
 import { species, typeColors } from "./data";
-import { spriteUrl } from "./sprites";
-import { SHINY_FILTER, traitLabel } from "./traits";
 import type { Traits } from "./traits";
-export function CreatureArt({
-  name,
-  className = "",
-  shiny = false,
-  alpha = false,
-}: {
-  name: string;
-  className?: string;
-} & Partial<Traits>) {
-  return (
-    <img
-      className={`creature-art ${alpha ? "alpha-art" : ""} ${className}`}
-      style={shiny ? { filter: SHINY_FILTER } : undefined}
-      src={spriteUrl(name)}
-      alt={`${traitLabel({ shiny, alpha })} ${name}`.trim()}
-      draggable={false}
-      loading="lazy"
-    />
-  );
-}
+export { CreatureArt } from "./CreaturePreview";
 export function TraitBadges(traits: Partial<Traits>) {
   if (!traits.shiny && !traits.alpha) return null;
   return <span className="trait-badges">

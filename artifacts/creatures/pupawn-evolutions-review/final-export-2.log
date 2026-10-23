@@ -1,0 +1,1005 @@
+INFO Draco is available, use library at /Applications/Blender.app/Contents/Resources/lib/libbf_intern_draco_bridge.dylib
+INFO MeshOptimizer is available, use library at /Applications/Blender.app/Contents/Resources/lib/libbf_intern_meshopt_bridge.dylib
+12:45:51 | INFO: Starting glTF 2.0 export
+12:45:51 | INFO: Extracting primitive: Broad shadow-striped coat
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Broad shadow-striped coat.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Broad shadow-striped coat.002
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Broad shadow-striped coat.003
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Broad shadow-striped coat.004
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Broad shadow-striped coat.005
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Broad shadow-striped coat.006
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Broad shadow-striped coat.007
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Canine nose
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Sphere.007
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Sphere.008
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Inset almond eye
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Inset almond eye.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Inset almond eye.002
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Inset almond eye.003
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Jagged snarling mouth corner
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Jagged snarling mouth corner.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Sphere.006
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Recessed ear pinna
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Recessed ear pinna.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Recessed mouth corner
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Recessed mouth corner.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Sphere.003
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Sphere.005
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Strong swept eyebrow
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Strong swept eyebrow.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Swept cheek fur
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Swept cheek fur.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Swept cheek fur.002
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Swept cheek fur.003
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Swept cheek fur.004
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Swept cheek fur.005
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Upright sculpted ear
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Upright sculpted ear.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Vertical eye pupil
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Vertical eye pupil.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Visible shadow fang
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Visible shadow fang.001
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Visible shadow fang.002
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Visible shadow fang.003
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Visible shadow fang.004
+12:45:51 | INFO: Primitives created: 1
+12:45:51 | INFO: Extracting primitive: Visible shadow fang.005
+12:45:51 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Visible shadow fang.006
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Visible shadow fang.007
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape.001
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape.002
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape.003
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape.004
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape.005
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape.006
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape.007
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape.008
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: High swept shadow nape.009
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.001
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.002
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.003
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.004
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.005
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.006
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.007
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.008
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.009
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.010
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.011
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.012
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.013
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.014
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.015
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.016
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.017
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.018
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.019
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.020
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.021
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.022
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.023
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.024
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.025
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Layered flowing neck coat.026
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.001
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.002
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.012
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.013
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.014
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.009
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.001
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.002
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Toe separation
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Toe separation.001
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.003
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.004
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.005
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.017
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.018
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.019
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.015
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.003
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.004
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.005
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Toe separation.002
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Toe separation.003
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.006
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.007
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.008
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.023
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.024
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.025
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.020
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.006
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.007
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.008
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Toe separation.004
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Toe separation.005
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.009
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.010
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Curved pointed claw.011
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.028
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.029
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.030
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere.026
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.009
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.010
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Shadow-striped leg.011
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Toe separation.006
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Toe separation.007
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Sphere
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Full flowing tail
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Swept tail fringe
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Swept tail fringe.001
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Swept tail fringe.002
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Swept tail fringe.003
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Swept tail fringe.004
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Swept tail fringe.005
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Swept tail fringe.006
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Swept tail fringe.007
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Extracting primitive: Swept tail fringe.008
+12:45:52 | INFO: Primitives created: 1
+12:45:52 | INFO: Finished glTF 2.0 export in 0.6176800727844238 s
+
+Info: Saved as "noctyros.blend"
+CREATURE_EXPORT Noctyros 7 36
+12:46:23 | INFO: Starting glTF 2.0 export
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat.001
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat.002
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat.003
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat.004
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat.005
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat.006
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat.007
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat.008
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Golden feathered back coat.009
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Canine nose
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Sphere.007
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Sphere.008
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Inset almond eye
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Inset almond eye.001
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Inset almond eye.002
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Inset almond eye.003
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Sphere.006
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Recessed ear pinna
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Recessed ear pinna.001
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Recessed mouth corner
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Recessed mouth corner.001
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Sphere.003
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Sphere.005
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Strong swept eyebrow
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Strong swept eyebrow.001
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Swept cheek fur
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Swept cheek fur.001
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Swept cheek fur.002
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Swept cheek fur.003
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Swept cheek fur.004
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Swept cheek fur.005
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Thin celestial halo
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Upright sculpted ear
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Upright sculpted ear.001
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.001
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.002
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.003
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.004
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.005
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.006
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.007
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.008
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.009
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.010
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.011
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.012
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.013
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.014
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.015
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.016
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.017
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.018
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.019
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.020
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.021
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.022
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.023
+12:46:23 | INFO: Primitives created: 1
+12:46:23 | INFO: Extracting primitive: Layered flowing neck coat.024
+12:46:23 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.025
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.026
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.027
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.028
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.029
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.030
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.031
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.032
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.033
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.034
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Layered flowing neck coat.035
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.012
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.013
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.014
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.009
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Toe separation
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Toe separation.001
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.017
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.018
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.019
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.015
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Toe separation.002
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Toe separation.003
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Long ivory-gold breast lock
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Long ivory-gold breast lock.001
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Long ivory-gold breast lock.002
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Long ivory-gold breast lock.003
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Long ivory-gold breast lock.004
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Long ivory-gold breast lock.005
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.023
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.024
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.025
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.020
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Toe separation.004
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Toe separation.005
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.028
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.029
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.030
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere.026
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Toe separation.006
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Toe separation.007
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Sphere
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Fitted sunlight through tail
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Fitted sunlight through tail.001
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Full flowing tail
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.001
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.002
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.003
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.004
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.005
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.006
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.007
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.008
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.009
+12:46:24 | INFO: Primitives created: 1
+12:46:24 | INFO: Extracting primitive: Swept tail fringe.010
+12:46:24 | INFO: Primitives created: 1
+12:46:25 | INFO: Finished glTF 2.0 export in 2.36879301071167 s
+
+Info: Saved as "solarune.blend"
+CREATURE_EXPORT Solarune 7 28
+12:46:56 | INFO: Starting glTF 2.0 export
+12:46:56 | INFO: Extracting primitive: Fracture through rock armor
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Fracture through rock armor.001
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Fracture through rock armor.002
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Fracture through rock armor.003
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Fracture through rock armor.004
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Fracture through rock armor.005
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Fracture through rock armor.006
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Fracture through rock armor.007
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Angular rock cheek
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Angular rock cheek.001
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Canine nose
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Sphere.007
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Sphere.008
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Inset almond eye
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Inset almond eye.001
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Inset almond eye.002
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Inset almond eye.003
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Sphere.006
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Recessed ear pinna
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Recessed ear pinna.001
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Recessed mouth corner
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Recessed mouth corner.001
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Sphere.003
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Sphere.005
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Strong swept eyebrow
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Strong swept eyebrow.001
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Swept cheek fur
+12:46:56 | INFO: Primitives created: 1
+12:46:56 | INFO: Extracting primitive: Swept cheek fur.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Swept cheek fur.002
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Swept cheek fur.003
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Swept cheek fur.004
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Swept cheek fur.005
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Swept rock brow
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Swept rock brow.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Upright sculpted ear
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Upright sculpted ear.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Vertical eye pupil
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Vertical eye pupil.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.002
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.002
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hexagonal stone foreleg cuff
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hexagonal stone foreleg cuff.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hexagonal stone foreleg cuff.002
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.012
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.013
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.014
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.002
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.009
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Toe separation
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Toe separation.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.003
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.004
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.005
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.003
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.004
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.005
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.017
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.018
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.019
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.003
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.004
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.005
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.015
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Toe separation.002
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Toe separation.003
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Overlapping rock shoulder mantle
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Overlapping rock shoulder mantle.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Overlapping rock shoulder mantle.002
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Overlapping rock shoulder mantle.003
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Overlapping rock shoulder mantle.004
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Overlapping rock shoulder mantle.005
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.006
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.007
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.008
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.006
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.007
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.008
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hexagonal stone foreleg cuff.003
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hexagonal stone foreleg cuff.004
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hexagonal stone foreleg cuff.005
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.023
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.024
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.025
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.006
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.007
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.008
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.020
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Toe separation.004
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Toe separation.005
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.009
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.010
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Crystal longitudinal face.011
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.009
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.010
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Hairline weathered stone crack.011
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.028
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.029
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.030
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.009
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.010
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Long faceted amber crystal talon.011
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere.026
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Toe separation.006
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Toe separation.007
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Sphere
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Serrated sandstone throat plate
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Serrated sandstone throat plate.001
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Serrated sandstone throat plate.002
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Serrated sandstone throat plate.003
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Serrated sandstone throat plate.004
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Serrated sandstone throat plate.005
+12:46:57 | INFO: Primitives created: 1
+12:46:57 | INFO: Extracting primitive: Full flowing tail
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Swept tail fringe
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Swept tail fringe.001
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Swept tail fringe.002
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Swept tail fringe.003
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Swept tail fringe.004
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle.001
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle.002
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle.003
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle.004
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle.005
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle.006
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle.007
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle.008
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Extracting primitive: Thick interlocking rock mantle.009
+12:46:58 | INFO: Primitives created: 1
+12:46:58 | INFO: Finished glTF 2.0 export in 2.709991931915283 s
+
+Info: Saved as "gravulor.blend"
+CREATURE_EXPORT Gravulor 7 43
+12:47:31 | INFO: Starting glTF 2.0 export
+12:47:31 | INFO: Extracting primitive: Dissolving chest vapor
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Dissolving chest vapor.001
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Dissolving chest vapor.002
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Dissolving chest vapor.003
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Dissolving chest vapor.004
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Dissolving chest vapor.005
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Flowing pale ghost body contour
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Flowing pale ghost body contour.001
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Flowing pale ghost body contour.002
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Flowing pale ghost body contour.003
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Flowing pale ghost body contour.004
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Flowing pale ghost body contour.005
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Flowing pale ghost body contour.006
+12:47:31 | INFO: Primitives created: 1
+12:47:31 | INFO: Extracting primitive: Flowing pale ghost body contour.007
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Canine nose
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.007
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.008
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Inset almond eye
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Inset almond eye.001
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Inset almond eye.002
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Inset almond eye.003
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.006
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Recessed ear pinna
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Recessed ear pinna.001
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Recessed mouth corner
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Recessed mouth corner.001
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.003
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.005
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Strong swept eyebrow
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Strong swept eyebrow.001
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Swept cheek fur
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Swept cheek fur.001
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Swept cheek fur.002
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Swept cheek fur.003
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Swept cheek fur.004
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Swept cheek fur.005
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Upright sculpted ear
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Upright sculpted ear.001
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.001
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.002
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.003
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.004
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.005
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.006
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.007
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.008
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.009
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.010
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.011
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.012
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.013
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.014
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.015
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.016
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Layered flowing neck coat.017
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.012
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.013
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.014
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Leg dissolving into wisps
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.009
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Toe separation
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Toe separation.001
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.017
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.018
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.019
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Leg dissolving into wisps.001
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.015
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Toe separation.002
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Toe separation.003
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.023
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.024
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.025
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Leg dissolving into wisps.002
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.020
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Toe separation.004
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Toe separation.005
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.028
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.029
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.030
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Leg dissolving into wisps.003
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Sphere.026
+12:47:32 | INFO: Primitives created: 1
+12:47:32 | INFO: Extracting primitive: Toe separation.006
+12:47:32 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: Toe separation.007
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.001
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.002
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.003
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.004
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.005
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.006
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.007
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.008
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.009
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.010
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: S-shaped rising shoulder vapor.011
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: Sphere
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: Long curling smoke tail
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: Splitting tail vapor
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: Splitting tail vapor.001
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Extracting primitive: Splitting tail vapor.002
+12:47:33 | INFO: Primitives created: 1
+12:47:33 | INFO: Finished glTF 2.0 export in 2.0245320796966553 s
+
+Info: Saved as "wraithound.blend"
+CREATURE_EXPORT Wraithound 7 29
+Blender 5.3.0 Beta (hash 4768a6eac54c built 2026-10-23 01:30:59)
+
+Blender quit

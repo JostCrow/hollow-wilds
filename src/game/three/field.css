@@ -1,0 +1,654 @@
+.field-frame {
+  overflow: hidden;
+  border: 1px solid var(--ui-border, #dce0ce);
+  border-radius: 13px;
+  background: var(--ui-surface, #fffdf6);
+  box-shadow: 0 6px 28px #394d2e08;
+}
+.field-titlebar {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding: 17px 21px;
+}
+.field-titlebar h2 {
+  font:
+    600 19px Georgia,
+    serif;
+  color: var(--ui-text, #344e3b);
+  margin: 0 0 4px;
+}
+.field-titlebar p {
+  color: var(--ui-secondary, #87907a);
+  font-size: 10px;
+  margin: 0;
+}
+.field-titlebar i,
+.field-toolbar i,
+.field-study-heading i {
+  font-style: normal;
+  padding: 0 5px;
+  opacity: 0.55;
+}
+.field-viewport {
+  position: relative;
+  height: clamp(480px, 63vh, 740px);
+  min-height: 480px;
+  isolation: isolate;
+  overflow: hidden;
+  background: #c8d9af;
+  color: #405639;
+}
+.field-viewport > canvas {
+  display: block;
+  width: 100%;
+  height: 100%;
+  cursor: default;
+  outline-offset: -4px;
+}
+.field-viewport::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  box-shadow: inset 0 -30px 70px #3c513617;
+  z-index: 1;
+}
+.field-location {
+  position: absolute;
+  left: 20px;
+  top: 19px;
+  display: flex;
+  align-items: center;
+  gap: 7px;
+  padding: 9px 13px;
+  border: 1px solid #fff7d96b;
+  border-radius: 6px;
+  background: #fdf9e8d9;
+  font-size: 10px;
+  box-shadow: 0 3px 12px #35462b08;
+}
+.field-compass {
+  position: absolute;
+  right: 24px;
+  top: 21px;
+  width: 39px;
+  height: 49px;
+  display: grid;
+  place-items: center;
+  color: #405b3e;
+}
+.field-compass > span {
+  display: grid;
+  justify-items: center;
+  gap: 4px;
+}
+.field-compass b {
+  font: 700 9px system-ui;
+}
+.field-task {
+  position: absolute;
+  left: 20px;
+  bottom: 23px;
+  display: flex;
+  gap: 11px;
+  align-items: center;
+  background: #fbf8e9e8;
+  border: 1px solid #fff9df9c;
+  border-radius: 9px;
+  padding: 13px 19px 13px 13px;
+  box-shadow: 0 4px 20px #3a512418;
+}
+.field-task-icon {
+  width: 34px;
+  height: 34px;
+  background: #e6ead6;
+  border-radius: 50%;
+  display: grid;
+  place-items: center;
+  color: #7a8b55;
+}
+.field-task small {
+  display: block;
+  font-size: 7px;
+  letter-spacing: 1.1px;
+  color: #8b967b;
+  margin-bottom: 4px;
+  font-weight: 700;
+}
+.field-task strong {
+  display: block;
+  font:
+    600 15px Georgia,
+    serif;
+  margin-bottom: 5px;
+}
+.field-task div > span {
+  font-size: 9px;
+  color: #839071;
+}
+.field-task i {
+  font-style: normal;
+  padding: 0 5px;
+}
+.field-map {
+  position: absolute;
+  right: 18px;
+  bottom: 21px;
+  width: 118px;
+  text-align: center;
+}
+.field-map svg {
+  display: block;
+  width: 107px;
+  border: 4px solid #fff8d6e6;
+  border-radius: 50%;
+  box-shadow: 0 4px 20px #3d52252b;
+  margin: 0 auto 8px;
+}
+.field-map > span {
+  font-size: 7px;
+  letter-spacing: 1.6px;
+  color: #fef9e5;
+  text-shadow: 0 1px 3px #36472c;
+  font-weight: 700;
+}
+.field-camera-actions {
+  position: absolute;
+  right: 24px;
+  bottom: 171px;
+  display: flex;
+  gap: 6px;
+}
+.field-camera-actions button {
+  display: grid;
+  place-items: center;
+  width: 30px;
+  height: 30px;
+  border: 1px solid #fff7d991;
+  border-radius: 6px;
+  background: #fbf8e9e8;
+  color: #71825a;
+  cursor: pointer;
+}
+.field-interact {
+  position: absolute;
+  left: 50%;
+  bottom: 126px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  border: 1px solid #fff5d9;
+  border-radius: 7px;
+  background: #faf6e7ee;
+  color: #405b3a;
+  padding: 9px 13px 9px 8px;
+  font-size: 11px;
+  white-space: nowrap;
+  cursor: pointer;
+  box-shadow: 0 5px 25px #354b2422;
+  z-index: 2;
+}
+.field-interact kbd {
+  border: 1px solid #dce0c6;
+  border-radius: 4px;
+  background: #eef0dd;
+  padding: 4px 7px;
+  font-size: 10px;
+}
+.field-toolbar {
+  padding: 14px 20px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 15px;
+  font-size: 9px;
+  color: var(--ui-secondary, #8b957e);
+}
+.field-toolbar > div {
+  display: flex;
+  align-items: center;
+  gap: 17px;
+  flex-wrap: wrap;
+}
+.field-toolbar > div > span {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+.field-toolbar kbd {
+  padding: 3px 4px;
+  min-width: 17px;
+  text-align: center;
+  border-radius: 3px;
+  border: 1px solid var(--ui-border, #dfe3d2);
+  color: var(--ui-text, #748366);
+  font: 8px system-ui;
+}
+.field-toolbar button {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  background: none;
+  border: none;
+  color: var(--ui-text, #647d53);
+  font-size: 9px;
+  white-space: nowrap;
+  cursor: pointer;
+}
+.field-study-heading {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 15px;
+  margin: 33px 0 17px;
+}
+.field-study-heading .eyebrow {
+  font-size: 7px;
+  letter-spacing: 1.25px;
+}
+.field-study-heading h2 {
+  margin: 6px 0 0;
+  font:
+    500 24px Georgia,
+    serif;
+  color: var(--ui-text, #40533b);
+}
+.field-study-heading > span {
+  font-size: 7px;
+  letter-spacing: 1px;
+  color: var(--ui-secondary, #8b957e);
+}
+.field-study-note {
+  margin: 19px 0 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  font-size: 9px;
+  line-height: 1.7;
+  color: var(--ui-secondary, #99a18c);
+}
+.field-inspection-title {
+  position: absolute;
+  left: 27px;
+  top: 27px;
+}
+.field-inspection-title .eyebrow {
+  color: #778358;
+  font-size: 8px;
+}
+.field-inspection-title h3 {
+  color: #3b5535;
+  font:
+    500 35px Georgia,
+    serif;
+  margin: 7px 0 10px;
+}
+.field-back {
+  position: absolute;
+  top: 24px;
+  right: 24px;
+  border: 1px solid #fff8dd;
+  background: #fbf8e9eb;
+  padding: 9px 12px;
+  border-radius: 6px;
+  color: #5f7450;
+  display: flex;
+  align-items: center;
+  gap: 9px;
+  font-size: 10px;
+  cursor: pointer;
+}
+.field-back kbd {
+  font-size: 8px;
+  color: #929e7b;
+}
+.field-reference {
+  position: absolute;
+  left: 25px;
+  bottom: 24px;
+  width: 185px;
+  border: 1px solid #fff9dd;
+  border-radius: 9px;
+  background: #fbf8ecef;
+  padding: 17px;
+  box-shadow: 0 7px 24px #3b4d2510;
+}
+.field-reference > span {
+  font-size: 6px;
+  letter-spacing: 1px;
+  font-weight: 600;
+  color: #8d977c;
+}
+.field-reference img {
+  display: block;
+  height: 130px;
+  width: 100%;
+  object-fit: contain;
+  margin: 12px 0 10px;
+}
+.field-reference strong {
+  display: block;
+  font:
+    600 18px Georgia,
+    serif;
+  color: #4b613e;
+}
+.field-reference p {
+  color: #7b886c;
+  font-size: 9px;
+  line-height: 1.7;
+  margin: 7px 0 10px;
+}
+.field-reference small {
+  display: block;
+  border-top: 1px solid #e4e6d2;
+  padding-top: 10px;
+  color: #99a187;
+  line-height: 1.7;
+  font-size: 8px;
+}
+.field-orbit-hint {
+  position: absolute;
+  bottom: 26px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  color: #f9f7e9;
+  background: #4a6344ba;
+  border-radius: 20px;
+  padding: 8px 15px;
+  font-size: 9px;
+  white-space: nowrap;
+}
+.field-guide {
+  position: absolute;
+  top: 20px;
+  right: 20px;
+  width: 270px;
+  padding: 22px;
+  border: 1px solid #fff8e6;
+  border-radius: 10px;
+  background: #fcf9edf5;
+  box-shadow: 0 6px 25px #394a2c22;
+  z-index: 3;
+}
+.field-guide > button {
+  position: absolute;
+  top: 14px;
+  right: 14px;
+  padding: 0;
+  background: none;
+  border: none;
+  color: #7d8b68;
+  cursor: pointer;
+}
+.field-guide .eyebrow {
+  font-size: 7px;
+  color: #939d7d;
+}
+.field-guide h3 {
+  font:
+    500 23px/1.15 Georgia,
+    serif;
+  margin: 9px 0;
+  color: #4a613d;
+}
+.field-guide p,
+.field-guide small {
+  font-size: 10px;
+  color: #879373;
+  line-height: 1.8;
+}
+.field-guide small {
+  font-size: 8px;
+  display: block;
+  border-top: 1px solid #e0e4cc;
+  padding-top: 13px;
+}
+.field-guide ul {
+  list-style: none;
+  padding: 0;
+  margin: 16px 0;
+}
+.field-guide li {
+  font-size: 10px;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 6px 0;
+  color: #6c7e57;
+}
+.field-guide li > span {
+  display: grid;
+  place-items: center;
+  width: 17px;
+  height: 17px;
+  border: 1px solid #d7debf;
+  border-radius: 50%;
+  color: #a7b08c;
+}
+.field-guide li > .found {
+  background: #7d945f;
+  color: #fff9df;
+  border-color: #7d945f;
+}
+.field-loading,
+.field-error {
+  position: absolute;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  align-items: center;
+  justify-content: center;
+  background: #e6eddb;
+  padding: 30px;
+  text-align: center;
+  font:
+    18px/1.6 Georgia,
+    serif;
+  z-index: 5;
+}
+.field-error p {
+  max-width: 400px;
+}
+@media (max-width: 900px) {
+  .field-study-heading > span {
+    display: none;
+  }
+  .field-toolbar > div {
+    gap: 10px;
+  }
+  .field-mouse-hint {
+    display: none !important;
+  }
+}
+@media (max-width: 600px) {
+  .field-titlebar {
+    padding: 12px;
+    gap: 9px;
+  }
+  .field-titlebar h2 {
+    font-size: 17px;
+  }
+  .field-titlebar p {
+    font-size: 8px;
+  }
+  .field-viewport {
+    height: 520px;
+  }
+  .field-task {
+    left: 12px;
+    max-width: 205px;
+    padding: 10px;
+  }
+  .field-task strong {
+    font-size: 13px;
+  }
+  .field-task-icon {
+    display: none;
+  }
+  .field-map {
+    width: 90px;
+    right: 8px;
+  }
+  .field-map svg {
+    width: 78px;
+  }
+  .field-map > span {
+    font-size: 6px;
+    letter-spacing: 1px;
+  }
+  .field-camera-actions {
+    right: 17px;
+    bottom: 137px;
+  }
+  .field-location {
+    left: 12px;
+    top: 13px;
+  }
+  .field-compass {
+    right: 14px;
+    top: 13px;
+  }
+  .field-toolbar {
+    padding: 12px;
+    gap: 10px;
+    font-size: 8px;
+  }
+  .field-toolbar > div {
+    gap: 8px;
+  }
+  .field-toolbar > div > span {
+    gap: 2px;
+  }
+  .field-toolbar kbd {
+    font-size: 7px;
+    min-width: 14px;
+    padding: 2px;
+  }
+  .field-toolbar button {
+    font-size: 8px;
+  }
+  .field-study-heading {
+    margin-top: 25px;
+  }
+  .field-study-heading h2 {
+    font-size: 23px;
+  }
+  .field-study-note {
+    align-items: flex-start;
+    justify-content: flex-start;
+    font-size: 8px;
+  }
+  .field-study-note svg {
+    flex-shrink: 0;
+    margin-top: 2px;
+  }
+  .field-inspection-title {
+    left: 17px;
+    top: 65px;
+  }
+  .field-inspection-title h3 {
+    font-size: 27px;
+  }
+  .field-back {
+    right: 12px;
+    top: 13px;
+  }
+  .field-reference {
+    left: 12px;
+    bottom: 15px;
+    width: 117px;
+    padding: 10px;
+  }
+  .field-reference > span {
+    font-size: 5px;
+    letter-spacing: 0.5px;
+  }
+  .field-reference img {
+    height: 91px;
+    margin: 9px 0;
+  }
+  .field-reference strong {
+    font-size: 16px;
+  }
+  .field-reference p {
+    display: none;
+  }
+  .field-reference small {
+    font-size: 7px;
+    margin-top: 8px;
+  }
+  .field-orbit-hint {
+    left: auto;
+    right: 10px;
+    bottom: 18px;
+    transform: none;
+    font-size: 8px;
+    padding: 7px 10px;
+  }
+  .field-guide {
+    width: 250px;
+    top: 15px;
+    right: 12px;
+  }
+  .field-interact {
+    font-size: 9px;
+    gap: 7px;
+  }
+  .field-interact > svg {
+    display: none;
+  }
+}
+.field-inspection-title {
+  padding: 13px 17px;
+  border: 1px solid #fff8df91;
+  border-radius: 8px;
+  background: #faf7e9e3;
+}
+@media (max-width: 600px) {
+  .field-inspection-title {
+    padding: 10px 13px;
+  }
+}
+.field-map-inner { position: relative; width: 145px; margin: 0 auto 9px; border: 4px solid #fff8e6; border-radius: 7px; overflow: visible; box-shadow: 0 3px 15px #30472d22; background:#abc188; }
+.field-map-inner img { display: block; width:100%; height:100%; border-radius:3px; cursor:crosshair; }
+.field-map-inner button { position:absolute; transform:translate(-50%,-50%); font-size:12px; font-weight:700; border:1px solid #e8e8c7; border-radius:4px; background:#fbf7e6eb; width:19px; height:19px; display:grid; place-items:center; color:#617a4f; cursor:pointer; }
+.field-study-near { position:absolute; left:50%; bottom:85px; transform:translateX(-50%); display:flex; align-items:center; gap:7px; padding:7px 12px; color:#f8f4dd; border:1px solid #d5dfb784; border-radius:5px; background:#496641dd; font-size:10px; cursor:pointer; z-index:2; }
+.field-study-near kbd { font:9px system-ui; border:1px solid #c8d1ae75; border-radius:3px; padding:2px 5px; }
+.field-catalogue { scroll-margin-top:24px; }
+.field-catalogue-intro { font-size:11px; line-height:1.8; color:var(--ui-secondary,#87937a); margin:-4px 0 18px; }
+.field-catalogue-tools { display:flex; gap:12px; align-items:center; margin-bottom:17px; }
+.field-catalogue-tools label { display:flex; gap:9px; align-items:center; border:1px solid var(--ui-border,#dce1ce); border-radius:6px; background:var(--ui-surface,#fffdf5); color:var(--ui-secondary,#8f9b7d); padding:10px 12px; width:310px; }
+.field-catalogue-tools input { background:none; border:0; outline:none; min-width:0; width:100%; color:var(--ui-text,#506344); font-size:11px; }
+.field-catalogue-tools button { display:flex; align-items:center; gap:6px; background:var(--ui-surface,#fffdf5); border:1px solid var(--ui-border,#dce1ce); color:var(--ui-secondary,#849271); border-radius:6px; padding:11px 13px; font-size:10px; cursor:pointer; }
+.field-catalogue-tools button[aria-pressed=true] { background:var(--ui-soft,#e8edd9); color:var(--ui-text,#536e41); }
+.field-catalogue-tools > span { font-size:9px; color:var(--ui-secondary,#97a087); margin-left:auto; }
+.field-species-grid { display:grid; grid-template-columns:repeat(4,minmax(0,1fr)); gap:10px; }
+.field-species-grid button { display:flex; align-items:center; gap:12px; padding:13px; background:var(--ui-surface,#fffdf5); border:1px solid var(--ui-border,#e0e3d3); border-radius:8px; cursor:pointer; text-align:left; color:var(--ui-text,#526849); }
+.field-species-grid button:hover,.field-species-grid button.selected { border-color:var(--ui-accent,#9bb17d); background:var(--ui-soft,#eff1e3); }
+.field-species-thumb { width:43px; height:48px; display:grid; place-items:center; flex-shrink:0; color:#92a672; }
+.field-species-thumb .creature-art { width:43px; height:48px; }
+.field-species-grid strong { display:block; font-size:11px; margin-bottom:5px; }
+.field-species-grid small { display:block; font-size:8px; color:var(--ui-secondary,#929b81); }
+.field-species-grid button > svg { margin-left:auto; flex-shrink:0; opacity:.5; }
+.field-pagination { display:flex; gap:16px; align-items:center; justify-content:center; padding-top:18px; font-size:10px; color:var(--ui-secondary,#8e987e); }
+.field-pagination button { display:grid; place-items:center; background:var(--ui-surface,#fffdf5); color:var(--ui-text,#6c8157); border:1px solid var(--ui-border,#dce2cf); border-radius:5px; width:30px; height:28px; cursor:pointer; }
+.field-pagination button:disabled { opacity:.3; cursor:default; }
+.field-size-facts { display:flex; justify-content:space-between; font-size:11px; color:#697e50; padding-bottom:10px; }
+.field-size-facts > span { color:#8b9677; font-size:10px; }
+.field-new-design { height:95px; display:grid; place-content:center; justify-items:center; gap:9px; color:#85986a; }
+.field-new-design small { border:0; text-align:center; padding:0; }
+@media (max-width:1100px) { .field-species-grid { grid-template-columns:repeat(3,minmax(0,1fr)); }.field-toolbar > div { gap:10px; }.field-titlebar p { max-width:440px; overflow:hidden; text-overflow:ellipsis; white-space:nowrap; } }
+.field-map.island-overview-map { width:160px; right:20px; bottom:22px; }
+.island-overview-map .field-map-inner { width:145px; overflow:hidden; border-radius:9px; }
+.island-overview-map svg { width:100%; height:100%; border:0; border-radius:0; margin:0; box-shadow:none; }
+.island-overview-map > span { font-size:8px; letter-spacing:1px; }
+.field-overview-toggle { position:absolute; top:19px; left:50%; transform:translateX(-50%); display:flex; align-items:center; gap:7px; padding:9px 12px; border:1px solid #fff8e5c4; border-radius:6px; background:#fcf8e9e8; color:#60774c; font-size:10px; cursor:pointer; }
+.island-overview-map { bottom:22px !important; }.island-overview-map ~ .field-camera-actions { bottom:190px; }

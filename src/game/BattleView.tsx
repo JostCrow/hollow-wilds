@@ -1,4 +1,4 @@
-import { useEffect, useRef, useState } from "react";
+import { lazy, Suspense, useEffect, useRef, useState } from "react";
 import {
   ArrowRight,
   CircleDot,
@@ -14,9 +14,9 @@ import { moves, species, effectiveness } from "./data";
 import { catchChance, xpNeeded } from "./engine";
 import type { Action } from "./engine";
 import { TraitBadges, CreatureArt, CreatureTypes, HpBar, TypePill } from "./ui";
-import battleGlade from "../../assets/world/battle-glade-v1.png";
 import "./battle-art.css";
 
+const BattleStage = lazy(() => import("./three/BattleStage"));
 export function BattleView() {
   const { battle, save, act, closeBattle } = useAdventure();
   const [switching, setSwitching] = useState(false),
@@ -60,7 +60,7 @@ export function BattleView() {
           </span>
         </div>
         <div className={`battle-field ${busy ? "is-attacking" : ""}`}>
-          <img className="battle-glade" src={battleGlade} alt="" aria-hidden="true" draggable={false} />
+          <Suspense fallback={<div className="battle-stage-loading" role="status">Preparing the battle…</div>}><BattleStage ally={active} enemy={enemy} busy={busy} caught={battle.outcome === "caught"} /></Suspense>
           <div className="enemy-info battle-info">
             <div>
               <strong>{enemy.species} <TraitBadges {...enemy} /></strong>
@@ -73,14 +73,6 @@ export function BattleView() {
               {battle.conditions[enemy.id] &&
                 ` · ${battle.conditions[enemy.id]}`}
             </small>
-          </div>
-          <div
-            className={`battle-enemy ${enemy.hp === 0 || battle.outcome === "caught" ? "fainted" : ""}`}
-          >
-            <CreatureArt name={enemy.species} shiny={enemy.shiny} alpha={enemy.alpha} />
-          </div>
-          <div className="battle-ally">
-            <CreatureArt name={active.species} shiny={active.shiny} alpha={active.alpha} />
           </div>
           <div className="ally-info battle-info">
             <div>

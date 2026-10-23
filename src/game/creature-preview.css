@@ -1,0 +1,31 @@
+.creature-model {
+  position: relative;
+  display: inline-block;
+  vertical-align: middle;
+  flex-shrink: 0;
+}
+.creature-model-canvas,
+.creature-model > img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+.creature-model-canvas[hidden] { display: none; }
+.creature-model-canvas[tabindex="0"] { cursor: grab; touch-action: pan-y; }
+.creature-model-canvas[tabindex="0"]:active { cursor: grabbing; }
+.creature-model-canvas:focus-visible { outline: 2px solid var(--ui-secondary, #789362); outline-offset: 3px; border-radius: 8px; }
+.creature-art.creature-model.alpha-art { scale: 1; }
+.creature-model-loading {
+  position: absolute;
+  left: calc(50% - 7px);
+  top: calc(50% - 7px);
+  width: 14px;
+  height: 14px;
+  border: 2px solid var(--ui-border, #dce3d0);
+  border-top-color: var(--ui-secondary, #789362);
+  border-radius: 50%;
+  animation: creature-model-spin 1s linear infinite;
+}
+@keyframes creature-model-spin { to { transform: rotate(360deg); } }
+@media (prefers-reduced-motion: reduce) { .creature-model-loading { animation: none; } }

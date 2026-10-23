@@ -1,5 +1,10 @@
 import { create } from "zustand";
+import { worldById, defaultWorldId } from "./worlds/registry.ts";
+import { nearestPlace, canStand } from "./worlds/geography.ts";
+import type { OpenWorldPosition, WorldSpawn } from "./worlds/types.ts";
+import { rollTraits } from "./traits.ts";
 import { gameAudio } from "./audio";
+import { pathPanels } from "./navigation";
 import { battleCues } from "./audio-cues";
 import { stoneByKey, species } from "./data";
 import {
@@ -22,6 +27,7 @@ import {
   zoneById,
   exitAt,
   opposite,
+  zones,
 } from "./world";
 import type { Spawn } from "./world";
 export type Panel =
@@ -33,9 +39,41 @@ export type Panel =
   | "moves"
   | "types"
   | "stats"
+  | "models"
   | "settings";
-export type Dialog = { title: string; text: string; kind?: "shop" | "ranger" | "opponent"; opponentId?: string };
-import { trainers, leagueAt, opponentById, lockReason, defeated } from "./progression";
+export type Dialog = {
+  title: string;
+  text: string;
+  kind?: "shop" | "ranger" | "opponent";
+  opponentId?: string;
+};
+import {
+  trainers,
+  leagueAt,
+  opponentById,
+  lockReason,
+  defeated,
+} from "./progression";
+function makeWorldSpawns(worldId = defaultWorldId): WorldSpawn[] {
+  const world = worldById(worldId);
+  return world.residents.map((resident) => {
+    let position = { x: resident.x, z: resident.z };
+    if (!canStand(world, position))
+      outer: for (let radius = 1; radius <= 25; radius++) {
+        for (let i = 0; i < 12; i++) {
+          const candidate = {
+            x: resident.x + Math.sin((i / 12) * Math.PI * 2) * radius,
+            z: resident.z + Math.cos((i / 12) * Math.PI * 2) * radius,
+          };
+          if (canStand(world, candidate)) {
+            position = candidate;
+            break outer;
+          }
+        }
+      }
+    return { ...resident, ...position, ...rollTraits() };
+  });
+}
 let initial: Save | null = null,
   initialError = "";
 try {
@@ -51,6 +89,11 @@ interface Adventure {
   battle: Battle | null;
   dialog: Dialog | null;
   spawns: Spawn[];
+  worldSpawns: WorldSpawn[];
+  updateOpenWorld: (position: OpenWorldPosition, travelled?: number) => void;
+  interactOpenWorld: (targetId: string) => void;
+  encounterOpenWorld: (spawnId: string) => void;
+  replenishOpenWorld: () => void;
   notice: string;
   saveError: string;
   cycle: number;
@@ -78,22 +121,16 @@ interface Adventure {
 }
 export const useAdventure = create<Adventure>((set, get) => ({
   save: initial,
-  panel:
-    (
-      {
-        "/team": "team",
-        "/journal": "journal",
-        "/map": "map",
-        "/pokedex": "bestiary",
-        "/moves": "moves",
-        "/typechart": "types",
-        "/stats": "stats",
-        "/settings": "settings",
-      } as Record<string, Panel>
-    )[window.location.pathname] ?? "adventure",
+  worldSpawns: makeWorldSpawns(initial?.openWorld?.worldId ?? defaultWorldId),
+  panel: pathPanels[window.location.pathname] ?? "adventure",
   battle: null,
   dialog: null,
-  spawns: createSpawns(initial?.zone ?? "willowfen", 0, Math.random, initial?.caught),
+  spawns: createSpawns(
+    initial?.zone ?? "willowfen",
+    0,
+    Math.random,
+    initial?.caught,
+  ),
   notice: initialError,
   saveError: "",
   cycle: 0,
@@ -101,6 +138,7 @@ export const useAdventure = create<Adventure>((set, get) => ({
   start: (starter, name) => {
     set({
       save: newSave(starter, name),
+      worldSpawns: makeWorldSpawns(),
       spawns: createSpawns("willowfen"),
       panel: "adventure",
       battle: null,
@@ -118,6 +156,7 @@ export const useAdventure = create<Adventure>((set, get) => ({
     }
     set({
       save: null,
+      worldSpawns: makeWorldSpawns(),
       panel: "adventure",
       battle: null,
       dialog: null,
@@ -131,6 +170,148 @@ export const useAdventure = create<Adventure>((set, get) => ({
     if (!get().battle && !get().dialog) set({ panel });
   },
   toast: (notice) => set({ notice }),
+  updateOpenWorld: (position, travelled = 0) => {
+    const { save, battle, dialog } = get();
+    if (!save || battle || dialog) return;
+    const world = worldById(position.worldId);
+    if (
+      !Number.isFinite(position.x) ||
+      !Number.isFinite(position.z) ||
+      !canStand(world, position)
+    )
+      return;
+    const place = nearestPlace(world, position),
+      knownLegacy = zones.some((z) => z.id === place.id),
+      legacy = zoneById(knownLegacy ? place.id : save.zone),
+      discovered =
+        Math.hypot(position.x - place.x, position.z - place.z) < place.radius;
+    set({
+      save: {
+        ...save,
+        openWorld: position,
+        zone: knownLegacy ? place.id : save.zone,
+        x: legacy.spawn.x,
+        y: legacy.spawn.y,
+        steps: save.steps + Math.max(0, Math.floor(travelled / 0.65)),
+        visited:
+          discovered && knownLegacy
+            ? [...new Set([...save.visited, place.id])]
+            : save.visited,
+        worldVisits: {
+          ...save.worldVisits,
+          [world.id]: discovered
+            ? [...new Set([...(save.worldVisits?.[world.id] ?? []), place.id])]
+            : (save.worldVisits?.[world.id] ?? []),
+        },
+      },
+    });
+  },
+  interactOpenWorld: (targetId) => {
+    const { save, battle, dialog, panel } = get();
+    if (!save?.openWorld || battle || dialog || panel !== "adventure") return;
+    const world = worldById(save.openWorld.worldId),
+      npc = world.npcs.find((n) => n.id === targetId),
+      building = world.buildings.find((b) => b.id === targetId);
+    const target = npc ?? building?.door;
+    if (
+      !target ||
+      Math.hypot(target.x - save.openWorld.x, target.z - save.openWorld.z) > 3.5
+    )
+      return;
+    const zone = npc?.placeId ?? building!.placeId;
+    const offer = (id: string) => {
+      const opponent = opponentById(id)!;
+      const locked = lockReason(opponent, save),
+        levels = opponent.team.map((c) => c.level);
+      set({
+        dialog: {
+          title: opponent.name,
+          opponentId: id,
+          kind: locked ? undefined : "opponent",
+          text:
+            locked ??
+            `${opponent.team.length} companions · Levels ${Math.min(...levels)}–${Math.max(...levels)}. ${opponent.types.join(" / ")}. Prize: ${opponent.reward} coins.`,
+        },
+      });
+    };
+    if (npc) {
+      const trainer = trainers.find(
+        (t) => t.id === `trainer-${zone}-${npc.sourceId}`,
+      );
+      if (trainer) {
+        offer(trainer.id);
+        return;
+      }
+      if (npc.role === "ranger") {
+        set({
+          dialog: {
+            title: "Ranger Elowen",
+            kind:
+              save.caught.length >= 3 && save.wins >= 3 ? "ranger" : undefined,
+            text:
+              save.caught.length >= 3 && save.wins >= 3
+                ? "You have the heart of a ranger. Ready for your field test?"
+                : `Register 3 species (${Math.min(3, save.caught.length)}/3) and win 3 battles (${Math.min(3, save.wins)}/3), then return to me.`,
+          },
+        });
+      } else set({ dialog: { title: npc.name, text: npc.dialogue } });
+      return;
+    }
+    if (building?.service === "gym" || building?.service === "champion") {
+      offer(leagueAt(zone)!.id);
+      return;
+    }
+    if (building?.service === "heal")
+      set({
+        save: heal(save),
+        dialog: {
+          title: "Rest easy, little wanderers.",
+          text: "Your whole team is restored. All HP and move PP recovered, free of charge.",
+        },
+      });
+    else if (building?.service === "shop")
+      set({
+        dialog: {
+          title: "Field Supplies",
+          kind: "shop",
+          text: "Capture orbs cost 80 coins, potions restore 30 HP for 60 coins, and evolution stones cost 300 coins.",
+        },
+      });
+    else if (building)
+      set({
+        dialog: {
+          title: building.name,
+          text: "A warm cup of tea, a well-worn map, and a place to rest. Your journey saves automatically as you explore.",
+        },
+      });
+  },
+  encounterOpenWorld: (spawnId) => {
+    const { save, battle, dialog, panel, worldSpawns } = get();
+    if (!save?.openWorld || battle || dialog || panel !== "adventure") return;
+    const spawn = worldSpawns.find((s) => s.id === spawnId);
+    if (
+      !spawn ||
+      Math.hypot(spawn.x - save.openWorld.x, spawn.z - save.openWorld.z) > 6
+    )
+      return;
+    set({
+      save: { ...save, seen: [...new Set([...save.seen, spawn.species])] },
+      battle: beginBattle(save, spawn.species, spawn.level, false, spawn),
+      worldSpawns: worldSpawns.filter((s) => s.id !== spawnId),
+      notice: "",
+    });
+  },
+  replenishOpenWorld: () => {
+    const { save, battle, dialog, worldSpawns } = get();
+    if (!save?.openWorld || battle || dialog) return;
+    const candidates = makeWorldSpawns(save.openWorld.worldId).filter(
+      (s) =>
+        !worldSpawns.some((live) => live.id === s.id) &&
+        Math.hypot(s.x - save.openWorld!.x, s.z - save.openWorld!.z) > 45,
+    );
+    if (candidates.length)
+      set({ worldSpawns: [...worldSpawns, candidates[0]] });
+  },
   move: (dx, dy) => {
     const { save, panel, battle, dialog, spawns } = get();
     if (!save || panel !== "adventure" || battle || dialog) return false;
@@ -189,22 +370,39 @@ export const useAdventure = create<Adventure>((set, get) => ({
     const world = getWorld(save.zone);
     const near = (p: { x: number; y: number }) =>
       Math.abs(p.x - save.x) + Math.abs(p.y - save.y);
-    const npc = world.npcs.find((n) => near(n) <= 2 && (!target || target === `npc:${n.id}`));
+    const npc = world.npcs.find(
+      (n) => near(n) <= 2 && (!target || target === `npc:${n.id}`),
+    );
     const building = world.buildings.find(
-      (b) => (!target || target === `building:${b.name}`) &&
+      (b) =>
+        (!target || target === `building:${b.name}`) &&
         Math.abs(save.x - (b.x + Math.floor(b.w / 2))) <= 2 &&
-        save.y >= b.y + b.h && save.y <= b.y + b.h + 2,
+        save.y >= b.y + b.h &&
+        save.y <= b.y + b.h + 2,
     );
     const offer = (id: string) => {
       const opponent = opponentById(id)!;
       const locked = lockReason(opponent, save);
       const levels = opponent.team.map((c) => c.level);
-      set({ dialog: { title: opponent.name, opponentId: id, kind: locked ? undefined : "opponent",
-        text: locked ?? `${opponent.kind === "gym" ? `${opponent.badge} Gym · ` : ""}${opponent.team.length} companions · Levels ${Math.min(...levels)}–${Math.max(...levels)}. ${opponent.types.length ? opponent.types.join(" / ") + ". " : "A varied team. "}${defeated(opponent, save) ? "Friendly rematch · " : ""}Prize: ${defeated(opponent, save) ? Math.floor(opponent.reward / 2) : opponent.reward} coins.${opponent.kind === "gym" ? ` Win to earn the ${opponent.badge} Badge.` : ""}` } });
+      set({
+        dialog: {
+          title: opponent.name,
+          opponentId: id,
+          kind: locked ? undefined : "opponent",
+          text:
+            locked ??
+            `${opponent.kind === "gym" ? `${opponent.badge} Gym · ` : ""}${opponent.team.length} companions · Levels ${Math.min(...levels)}–${Math.max(...levels)}. ${opponent.types.length ? opponent.types.join(" / ") + ". " : "A varied team. "}${defeated(opponent, save) ? "Friendly rematch · " : ""}Prize: ${defeated(opponent, save) ? Math.floor(opponent.reward / 2) : opponent.reward} coins.${opponent.kind === "gym" ? ` Win to earn the ${opponent.badge} Badge.` : ""}`,
+        },
+      });
     };
     if (npc) {
-      const trainer = trainers.find((t) => t.id === `trainer-${save.zone}-${npc.id}`);
-      if (trainer) { offer(trainer.id); return; }
+      const trainer = trainers.find(
+        (t) => t.id === `trainer-${save.zone}-${npc.id}`,
+      );
+      if (trainer) {
+        offer(trainer.id);
+        return;
+      }
       if (npc.role === "ranger") {
         set({
           dialog: {
@@ -231,8 +429,13 @@ export const useAdventure = create<Adventure>((set, get) => ({
       offer(leagueAt(save.zone)!.id);
       return;
     }
-    const wild = get().spawns.find((s) => near(s) <= 2 && (!target || target === `wild:${s.id}`));
-    if (!building && wild) { get().encounter(wild); return; }
+    const wild = get().spawns.find(
+      (s) => near(s) <= 2 && (!target || target === `wild:${s.id}`),
+    );
+    if (!building && wild) {
+      get().encounter(wild);
+      return;
+    }
     if (building?.service === "heal") {
       set({
         save: heal(save),
@@ -264,8 +467,18 @@ export const useAdventure = create<Adventure>((set, get) => ({
   },
   encounter: (spawn) => {
     const { save, battle } = get();
-    if (!save || battle || get().dialog || !get().spawns.some((s) => s.id === spawn.id)) return;
-    if ((species[spawn.species].legendary || species[spawn.species].mythical) && save.caught.includes(spawn.species)) return;
+    if (
+      !save ||
+      battle ||
+      get().dialog ||
+      !get().spawns.some((s) => s.id === spawn.id)
+    )
+      return;
+    if (
+      (species[spawn.species].legendary || species[spawn.species].mythical) &&
+      save.caught.includes(spawn.species)
+    )
+      return;
     set({
       save: { ...save, seen: [...new Set([...save.seen, spawn.species])] },
       battle: beginBattle(save, spawn.species, spawn.level, false, spawn),
@@ -277,8 +490,16 @@ export const useAdventure = create<Adventure>((set, get) => ({
     const { save, battle } = get();
     if (save && battle) {
       const next = takeTurn(save, battle, action);
-      set({ ...next, spawns: get().spawns.filter((spawn) =>
-        !(species[spawn.species].legendary || species[spawn.species].mythical) || !next.save.caught.includes(spawn.species)) });
+      set({
+        ...next,
+        spawns: get().spawns.filter(
+          (spawn) =>
+            !(
+              species[spawn.species].legendary ||
+              species[spawn.species].mythical
+            ) || !next.save.caught.includes(spawn.species),
+        ),
+      });
       gameAudio.playCues(battleCues({ save, battle }, next, action));
     }
   },
@@ -351,7 +572,14 @@ export const useAdventure = create<Adventure>((set, get) => ({
       if (!opponent) return;
       const battle = beginTrainerBattle(save, opponent);
       if (!battle) return;
-      set({ dialog: null, battle, save: { ...save, seen: [...new Set([...save.seen, battle.enemy.species])] } });
+      set({
+        dialog: null,
+        battle,
+        save: {
+          ...save,
+          seen: [...new Set([...save.seen, battle.enemy.species])],
+        },
+      });
       return;
     }
     if (dialog?.kind !== "ranger") return;
@@ -432,6 +660,7 @@ export const useAdventure = create<Adventure>((set, get) => ({
     const save = parseSave(input);
     set({
       save,
+      worldSpawns: makeWorldSpawns(save.openWorld?.worldId ?? defaultWorldId),
       spawns: createSpawns(save.zone, 0, Math.random, save.caught),
       battle: null,
       dialog: null,
@@ -442,11 +671,17 @@ export const useAdventure = create<Adventure>((set, get) => ({
   replenish: () => {
     const { save, panel, battle, dialog, spawns, cycle } = get();
     if (!save || panel !== "adventure" || battle || dialog) return;
-    const candidates = createSpawns(save.zone, cycle + 1, Math.random, save.caught).filter(
+    const candidates = createSpawns(
+      save.zone,
+      cycle + 1,
+      Math.random,
+      save.caught,
+    ).filter(
       (s) =>
         Math.abs(s.x - save.x) + Math.abs(s.y - save.y) > 3 &&
         !spawns.some((p) => Math.abs(p.x - s.x) + Math.abs(p.y - s.y) < 3) &&
-        (!(species[s.species].legendary || species[s.species].mythical) || !spawns.some((p) => p.species === s.species)),
+        (!(species[s.species].legendary || species[s.species].mythical) ||
+          !spawns.some((p) => p.species === s.species)),
     );
     if (spawns.length < getWorld(save.zone).encounterSpots.length)
       set({ spawns: [...spawns, ...candidates.slice(0, 1)], cycle: cycle + 1 });

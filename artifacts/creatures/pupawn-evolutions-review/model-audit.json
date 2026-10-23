@@ -1,0 +1,270 @@
+[
+  {
+    "name": "Ignisrael",
+    "height": 1.9,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 75760,
+    "translucentBatches": 0,
+    "emissiveBatches": 0,
+    "blendBytes": 995259,
+    "glbBytes": 1504380,
+    "runtimeBytes": 1128637
+  },
+  {
+    "name": "Torrentis",
+    "height": 1.6,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 49336,
+    "translucentBatches": 0,
+    "emissiveBatches": 0,
+    "blendBytes": 787217,
+    "glbBytes": 1062640,
+    "runtimeBytes": 755829
+  },
+  {
+    "name": "Verdama",
+    "height": 1.7,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 78112,
+    "translucentBatches": 0,
+    "emissiveBatches": 0,
+    "blendBytes": 944256,
+    "glbBytes": 1421672,
+    "runtimeBytes": 1112252
+  },
+  {
+    "name": "Runaris",
+    "height": 1.5,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 52286,
+    "translucentBatches": 0,
+    "emissiveBatches": 24,
+    "blendBytes": 836026,
+    "glbBytes": 1034644,
+    "runtimeBytes": 760543
+  },
+  {
+    "name": "Noctyros",
+    "height": 1.8,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 53174,
+    "translucentBatches": 0,
+    "emissiveBatches": 0,
+    "blendBytes": 827093,
+    "glbBytes": 1081612,
+    "runtimeBytes": 789634
+  },
+  {
+    "name": "Solarune",
+    "height": 1.8,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 58718,
+    "translucentBatches": 0,
+    "emissiveBatches": 2,
+    "blendBytes": 881997,
+    "glbBytes": 1091432,
+    "runtimeBytes": 837009
+  },
+  {
+    "name": "Gravulor",
+    "height": 2,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 51158,
+    "translucentBatches": 0,
+    "emissiveBatches": 0,
+    "blendBytes": 900828,
+    "glbBytes": 1084784,
+    "runtimeBytes": 757289
+  },
+  {
+    "name": "Wraithound",
+    "height": 1.6,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 54254,
+    "translucentBatches": 23,
+    "emissiveBatches": 1,
+    "blendBytes": 787324,
+    "glbBytes": 1006324,
+    "runtimeBytes": 775569
+  },
+  {
+    "name": "Tempestral",
+    "height": 1.7,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg",
+      "leftWing",
+      "rightWing"
+    ],
+    "triangles": 58028,
+    "translucentBatches": 0,
+    "emissiveBatches": 2,
+    "blendBytes": 844735,
+    "glbBytes": 1105392,
+    "runtimeBytes": 830229
+  },
+  {
+    "name": "Cryovelis",
+    "height": 1.6,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 54026,
+    "translucentBatches": 0,
+    "emissiveBatches": 2,
+    "blendBytes": 834332,
+    "glbBytes": 1191500,
+    "runtimeBytes": 818273
+  },
+  {
+    "name": "Voltalis",
+    "height": 1.6,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 54668,
+    "translucentBatches": 0,
+    "emissiveBatches": 0,
+    "blendBytes": 825450,
+    "glbBytes": 1122408,
+    "runtimeBytes": 807509
+  },
+  {
+    "name": "Venomaris",
+    "height": 1.8,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 55054,
+    "translucentBatches": 0,
+    "emissiveBatches": 5,
+    "blendBytes": 851513,
+    "glbBytes": 1149924,
+    "runtimeBytes": 814467
+  },
+  {
+    "name": "Ferronyx",
+    "height": 1.9,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 38582,
+    "translucentBatches": 0,
+    "emissiveBatches": 0,
+    "blendBytes": 377090,
+    "glbBytes": 2013488,
+    "runtimeBytes": 1160954
+  },
+  {
+    "name": "Eclipsera",
+    "height": 1.8,
+    "joints": [
+      "body",
+      "head",
+      "tail",
+      "leftArm",
+      "leftLeg",
+      "rightArm",
+      "rightLeg"
+    ],
+    "triangles": 65084,
+    "translucentBatches": 0,
+    "emissiveBatches": 1,
+    "blendBytes": 918110,
+    "glbBytes": 1235396,
+    "runtimeBytes": 944325
+  }
+]

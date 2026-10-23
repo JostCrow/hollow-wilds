@@ -1,0 +1,109 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="icon" href="data:,">
+  <title>World asset review</title>
+  <style>
+    *{box-sizing:border-box}body{margin:0;background:#d9dfd1;color:#334b3e;font:14px system-ui}
+    canvas{display:block;width:100%;height:100vh}nav{position:fixed;top:18px;left:18px;display:flex;gap:6px;flex-wrap:wrap;z-index:1}
+    button{border:1px solid #b4beaa;border-radius:8px;background:#f8f5e9;color:#344d3e;padding:10px 14px;cursor:pointer;font:inherit}
+    button[aria-pressed=true]{background:#4f715b;color:white}#caption{position:fixed;bottom:20px;left:20px;padding:10px 14px;background:#faf6e8e8;border-radius:8px;font-size:13px}
+  </style>
+</head>
+<body>
+  <nav aria-label="World asset review">
+    <button data-view="village" aria-pressed="true">Village</button>
+    <button data-view="woodland" aria-pressed="false">Woodland</button>
+    <button data-view="snow" aria-pressed="false">Snow country</button>
+    <button data-view="landmarks" aria-pressed="false">Landmarks</button>
+    <button data-view="building" aria-pressed="false">Building details</button>
+    <button data-view="bridge" aria-pressed="false">Bridge</button>
+  </nav>
+  <div id="caption"></div>
+  <script type="module">
+    import * as THREE from 'three';
+    import { createIslandLandscape } from '/src/game/three/island-landscape.ts';
+    import { createWorldAsset, createWorldBuilding, createWorldLandmark } from '/src/game/three/world-assets.ts';
+    import { createExplorer } from '/src/game/three/creatures.ts';
+    import { disposeObject } from '/src/game/three/resources.ts';
+    import { worldById } from '/src/game/worlds/registry.ts';
+    import { terrainHeight, groundHeight, canStand, waterAt } from '/src/game/worlds/geography.ts';
+    import { groundMaterial, worldUV } from '/src/game/three/world-surfaces.ts';
+
+    const renderer = new THREE.WebGLRenderer({antialias:true,preserveDrawingBuffer:true});
+    renderer.setPixelRatio(Math.min(devicePixelRatio,1.5));
+    renderer.setSize(innerWidth,innerHeight);
+    renderer.shadowMap.enabled=true;
+    renderer.shadowMap.type=THREE.PCFShadowMap;
+    document.body.append(renderer.domElement);
+    const scene = new THREE.Scene();
+    scene.background=new THREE.Color('#d9e2d4');
+    scene.fog=new THREE.Fog('#d9e2d4',85,180);
+    scene.add(new THREE.HemisphereLight('#fff2df','#758363',1.8));
+    const sun=new THREE.DirectionalLight('#ffefcf',2);
+    sun.castShadow=true;sun.shadow.mapSize.set(2048,2048);
+    Object.assign(sun.shadow.camera,{left:-35,right:35,top:35,bottom:-35,near:1,far:100});
+    sun.shadow.normalBias=.018;sun.shadow.bias=-.0002;scene.add(sun,sun.target);
+    const camera=new THREE.PerspectiveCamera(42,innerWidth/innerHeight,.06,350);
+    const world=worldById();
+    let content=null, landscape=null, explorer=null, focus=new THREE.Vector3();
+    function floor(size=80){
+      const g=new THREE.PlaneGeometry(size,size,1,1);g.rotateX(-Math.PI/2);
+      g.setAttribute('color',new THREE.Float32BufferAttribute(Array.from({length:4},()=>[.47,.55,.34]).flat(),3));
+      worldUV(g,4);const mesh=new THREE.Mesh(g,groundMaterial());mesh.receiveShadow=true;content.add(mesh);
+    }
+    function person(x,z,angle=0){
+      explorer=createExplorer();explorer.root.position.set(x,landscape?groundHeight(world,x,z):0,z);
+      explorer.root.rotation.y=angle;content.add(explorer.root);
+    }
+    function position(x,y,z,tx,ty,tz){camera.position.set(x,y,z);focus.set(tx,ty,tz);camera.lookAt(focus);sun.position.set(tx-10,ty+25,tz+15);sun.target.position.copy(focus);}
+    function show(view){
+      if(content)disposeObject(content);
+      landscape=null;explorer=null;content=new THREE.Group();scene.add(content);
+      let caption='';
+      if(view==='village'||view==='woodland'||view==='snow'||view==='bridge'){
+        landscape=createIslandLandscape(world);content.add(landscape.root);
+        let point;
+        if(view==='village'){
+          point={x:-627,z:323};const h=groundHeight(world,point.x,point.z);
+          position(point.x+17,h+13,point.z+26,point.x,h+1.2,point.z-5);
+          person(world.spawn.x,world.spawn.z,Math.PI);
+          caption='Willowfen Village · timber frames, tiled roofs, shutters and planted windows';
+        }else if(view==='woodland'){
+          point={x:-673,z:85};const h=groundHeight(world,point.x,point.z);
+          position(point.x+7,h+6,point.z+13,point.x,h+1.8,point.z-5);
+          person(point.x,point.z,Math.PI+.3);caption='Mosswood Hollow · shaped crowns, branched trunks, mossy rocks and wildflowers';
+        }else if(view==='snow'){
+          point={x:542,z:755};const h=groundHeight(world,point.x,point.z);
+          position(point.x+9,h+6,point.z+15,point.x,h+1.6,point.z-6);
+          person(point.x,point.z,Math.PI);caption='Snow country · layered pine boughs and snow-covered stone';
+        }else{
+          const road=world.roads.find(r=>r.points.some(p=>waterAt(world,p.x,p.z)));
+          point=road.points.find(p=>waterAt(world,p.x,p.z));const h=groundHeight(world,point.x,point.z);
+          position(point.x+13,h+10,point.z+17,point.x,h+.8,point.z);
+          caption='River crossing · weathered planks, iron pegs, posts and handrails';
+        }
+        landscape.update(point,camera.position,focus);
+      }else if(view==='building'){
+        floor();const b=createWorldBuilding({...world.buildings[1],halfWidth:2.875,halfDepth:2.3});content.add(b);
+        person(4,2.8,-.4);position(10,6.8,13,0,1.9,0);
+        caption='Healing House · carved door, stone foundation, brass lantern, flower boxes and service sign';
+      }else{
+        floor();const kinds=['windmill','shrine','ruins','fountain','cart','boat','bench','camp','crystals','mushrooms','reeds','oak'];
+        kinds.forEach((kind,i)=>{const a=createWorldLandmark(kind);a.position.set((i%4)*4.5-6.75,0,Math.floor(i/4)*5-5);content.add(a);});
+        person(-8,5,.4);position(16,14,24,0,1,0);
+        caption='Every existing landmark type · rebuilt in the explorer’s material palette';
+      }
+      document.querySelector('#caption').textContent=caption;
+      document.querySelectorAll('[data-view]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.view===view)));
+      renderer.render(scene,camera);window.worldReview={view,renderer,scene,camera,content,landscape,world};
+      console.log('WORLD_REVIEW',view,renderer.info.render.calls,renderer.info.render.triangles);
+    }
+    document.querySelectorAll('[data-view]').forEach(b=>b.onclick=()=>show(b.dataset.view));
+    window.addEventListener('resize',()=>{renderer.setSize(innerWidth,innerHeight);camera.aspect=innerWidth/innerHeight;camera.updateProjectionMatrix();renderer.render(scene,camera);});
+    show(new URLSearchParams(location.search).get('view')||'village');
+  </script>
+</body>
+</html>

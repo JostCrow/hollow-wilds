@@ -1,4 +1,5 @@
 import { AudioSettingsCard } from "./AudioControls";
+import { CameraSettingsCard } from "./CameraControls";
 import { AppearanceSettingsCard } from "./ThemeControls";
 import { useRef, useState } from "react";
 import { IslandMap } from "./IslandMap";
@@ -141,7 +142,7 @@ export function TeamPanel() {
         <div>
           <span className="eyebrow">BETTER TOGETHER</span>
           <h1>Your traveling companions.</h1>
-          <p>Six places on the team. A whole lot of possibility.</p>
+          <p>Six places on the team. Drag a companion’s model or use ← / → to rotate it.</p>
         </div>
         <span className="soft-badge">
           <FlaskConical size={16} />
@@ -157,7 +158,7 @@ export function TeamPanel() {
               </span>
               <span>Lv. {c.level}</span>
             </div>
-            <CreatureArt name={c.species} shiny={c.shiny} alpha={c.alpha} />
+            <CreatureArt name={c.species} shiny={c.shiny} alpha={c.alpha} interactive />
             <h2>{c.species}</h2>
             <TraitBadges {...c} />
             <CompanionStats companion={c} />
@@ -323,8 +324,8 @@ export function MapPanel() {
         <Compass size={20} />
         <p>
           Walk the island circuit, take an inland shortcut, or follow a side trail
-          to a crater, hidden grove, or frozen lake. Use the local map’s
-          arrows to walk toward an exit; discovered areas can be revisited here.
+          to a crater, hidden grove, or frozen lake. Use WASD or the arrow keys to explore;
+          discovered areas can be revisited here.
         </p>
       </div>
       <div className="map-filters">
@@ -502,6 +503,7 @@ export function SettingsPanel() {
       <div className="settings-grid">
         <AppearanceSettingsCard />
         <AudioSettingsCard />
+        <CameraSettingsCard />
         <section className="settings-card">
           <SaveIcon size={25} />
           <h2>Save your journey</h2>
@@ -573,12 +575,17 @@ export function SettingsPanel() {
           <h2>A few useful controls</h2>
           <dl className="controls-list">
             <div>
-              <dt>Walk</dt>
+              <dt>Forward / backward</dt>
               <dd>
                 <kbd>W</kbd>
-                <kbd>A</kbd>
                 <kbd>S</kbd>
-                <kbd>D</kbd> or arrow keys
+                or <kbd>↑</kbd><kbd>↓</kbd>
+              </dd>
+            </div>
+            <div>
+              <dt>Turn left / right</dt>
+              <dd>
+                <kbd>A</kbd><kbd>D</kbd> or <kbd>←</kbd><kbd>→</kbd>
               </dd>
             </div>
             <div>
@@ -590,12 +597,8 @@ export function SettingsPanel() {
             <div>
               <dt>Talk / interact</dt>
               <dd>
-                <kbd>E</kbd> or <kbd>Space</kbd>
+                <kbd>E</kbd>
               </dd>
-            </div>
-            <div>
-              <dt>Walk to a place</dt>
-              <dd>Click or tap the map</dd>
             </div>
             <div>
               <dt>World map</dt>
@@ -616,14 +619,14 @@ export function SettingsPanel() {
               </dd>
             </div>
             <div>
-              <dt>Back to Explore</dt>
+              <dt>Open / close menu</dt>
               <dd>
                 <kbd>Esc</kbd>
               </dd>
             </div>
             <div>
-              <dt>Mobile</dt>
-              <dd>Use the on-screen directional pad</dd>
+              <dt>Camera</dt>
+              <dd>Follows behind you. Adjust tilt and zoom in Settings.</dd>
             </div>
           </dl>
         </section>

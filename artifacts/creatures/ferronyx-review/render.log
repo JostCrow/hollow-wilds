@@ -1,0 +1,9 @@
+00:00.810  blend            | Read blend: "/Users/jorik/github/pokemon-browser/assets/models/creatures/ferronyx.blend"
+00:30.207  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/ferronyx-review/hero.png'
+01:25.413  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/ferronyx-review/side.png'
+02:04.127  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/ferronyx-review/front.png'
+03:15.053  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/ferronyx-review/rear.png'
+Ferronyx review views rendered to /Users/jorik/github/pokemon-browser/artifacts/creatures/ferronyx-review
+Blender 5.3.0 Beta (hash 4768a6eac54c built 2026-10-23 01:30:59)
+
+Blender quit

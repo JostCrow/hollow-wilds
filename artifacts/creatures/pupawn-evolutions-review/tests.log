@@ -1,0 +1,914 @@
+
+> the-hollow-wilds@1.0.0 test
+> node --experimental-strip-types --test src/game/*.test.ts
+
+TAP version 13
+# Subtest: audio preferences tolerate missing/corrupt values and clamp volumes
+ok 1 - audio preferences tolerate missing/corrupt values and clamp volumes
+  ---
+  duration_ms: 31.222
+  type: 'test'
+  ...
+# Subtest: accepted capture, escape, and potion actions have distinct cues; invalid actions stay silent
+ok 2 - accepted capture, escape, and potion actions have distinct cues; invalid actions stay silent
+  ---
+  duration_ms: 11.351583
+  type: 'test'
+  ...
+# Subtest: exploration cues follow movement, treasures, healing, and encounters without replaying on notices
+ok 3 - exploration cues follow movement, treasures, healing, and encounters without replaying on notices
+  ---
+  duration_ms: 2.246916
+  type: 'test'
+  ...
+# Subtest: audio waits for a gesture, cancels queued effects when muted/hidden, resumes, and disposes
+ok 4 - audio waits for a gesture, cancels queued effects when muted/hidden, resumes, and disposes
+  ---
+  duration_ms: 2.754542
+  type: 'test'
+  ...
+# Subtest: simultaneous actor requests share a download and create Blender geometry after loading
+ok 5 - simultaneous actor requests share a download and create Blender geometry after loading
+  ---
+  duration_ms: 241.180167
+  type: 'test'
+  ...
+# Subtest: an unsuccessful download can be retried and cannot substitute the wrong species
+ok 6 - an unsuccessful download can be retried and cannot substitute the wrong species
+  ---
+  duration_ms: 7.79775
+  type: 'test'
+  ...
+# Subtest: repeated actors share geometry while shiny colors and disposal stay isolated
+ok 7 - repeated actors share geometry while shiny colors and disposal stay isolated
+  ---
+  duration_ms: 4.95575
+  type: 'test'
+  ...
+# Subtest: authored vapor stays translucent without an opaque outline, and legacy armor stays opaque
+ok 8 - authored vapor stays translucent without an opaque outline, and legacy armor stays opaque
+  ---
+  duration_ms: 1292.582625
+  type: 'test'
+  ...
+# Subtest: glowing pigments share standard materials while shiny glow and alpha stay isolated
+ok 9 - glowing pigments share standard materials while shiny glow and alpha stay isolated
+  ---
+  duration_ms: 23.2885
+  type: 'test'
+  ...
+# Subtest: Flarepib: new game, valid save, and first battle are playable
+ok 10 - Flarepib: new game, valid save, and first battle are playable
+  ---
+  duration_ms: 338.286667
+  type: 'test'
+  ...
+# Subtest: Verdreep: new game, valid save, and first battle are playable
+ok 11 - Verdreep: new game, valid save, and first battle are playable
+  ---
+  duration_ms: 5.038791
+  type: 'test'
+  ...
+# Subtest: Rivanos: new game, valid save, and first battle are playable
+ok 12 - Rivanos: new game, valid save, and first battle are playable
+  ---
+  duration_ms: 5.15425
+  type: 'test'
+  ...
+# Subtest: every JSON creature has usable stats and a legal damaging move at each level
+ok 13 - every JSON creature has usable stats and a legal damaging move at each level
+  ---
+  duration_ms: 9.738375
+  type: 'test'
+  ...
+# Subtest: type matchups come from the original type chart and multiply dual types
+ok 14 - type matchups come from the original type chart and multiply dual types
+  ---
+  duration_ms: 0.274875
+  type: 'test'
+  ...
+# Subtest: capture consumes an orb, registers the species, and persists the companion
+ok 15 - capture consumes an orb, registers the species, and persists the companion
+  ---
+  duration_ms: 4.164542
+  type: 'test'
+  ...
+# Subtest: a full team sends captures to storage without dropping them
+ok 16 - a full team sends captures to storage without dropping them
+  ---
+  duration_ms: 0.718625
+  type: 'test'
+  ...
+# Subtest: unavailable resources, illegal moves, and trainer captures cannot advance a turn
+ok 17 - unavailable resources, illegal moves, and trainer captures cannot advance a turn
+  ---
+  duration_ms: 0.631375
+  type: 'test'
+  ...
+# Subtest: fainting switches to the next healthy companion, and a total defeat has a recovery path
+ok 18 - fainting switches to the next healthy companion, and a total defeat has a recovery path
+  ---
+  duration_ms: 4.218458
+  type: 'test'
+  ...
+# Subtest: PP depletion offers Struggle; free healing restores HP and PP
+ok 19 - PP depletion offers Struggle; free healing restores HP and PP
+  ---
+  duration_ms: 1.159709
+  type: 'test'
+  ...
+# Subtest: experience unlocks level evolution and updates moves and health
+ok 20 - experience unlocks level evolution and updates moves and health
+  ---
+  duration_ms: 0.566584
+  type: 'test'
+  ...
+# Subtest: ranger victory grants the badge and survives serialization
+ok 21 - ranger victory grants the badge and survives serialization
+  ---
+  duration_ms: 4.249458
+  type: 'test'
+  ...
+# Subtest: invalid saves are rejected; blocked positions and exhausted teams recover safely
+ok 22 - invalid saves are rejected; blocked positions and exhausted teams recover safely
+  ---
+  duration_ms: 185.418167
+  type: 'test'
+  ...
+# Subtest: Willowfen Village: routes, services, pickups, NPCs, and encounters are reachable
+ok 23 - Willowfen Village: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 109.811458
+  type: 'test'
+  ...
+# Subtest: Sunpetal Trail: routes, services, pickups, NPCs, and encounters are reachable
+ok 24 - Sunpetal Trail: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 126.343333
+  type: 'test'
+  ...
+# Subtest: Mosswood Hollow: routes, services, pickups, NPCs, and encounters are reachable
+ok 25 - Mosswood Hollow: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 204.179125
+  type: 'test'
+  ...
+# Subtest: Reedwater Crossing: routes, services, pickups, NPCs, and encounters are reachable
+ok 26 - Reedwater Crossing: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 41.705292
+  type: 'test'
+  ...
+# Subtest: Larkspur Town: routes, services, pickups, NPCs, and encounters are reachable
+ok 27 - Larkspur Town: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 18.929
+  type: 'test'
+  ...
+# Subtest: Bramble Orchard: routes, services, pickups, NPCs, and encounters are reachable
+ok 28 - Bramble Orchard: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 9.862542
+  type: 'test'
+  ...
+# Subtest: Moonwell Glade: routes, services, pickups, NPCs, and encounters are reachable
+ok 29 - Moonwell Glade: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 130.364417
+  type: 'test'
+  ...
+# Subtest: Amberrise Bluffs: routes, services, pickups, NPCs, and encounters are reachable
+ok 30 - Amberrise Bluffs: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 52.527083
+  type: 'test'
+  ...
+# Subtest: Frostglass Pass: routes, services, pickups, NPCs, and encounters are reachable
+ok 31 - Frostglass Pass: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 27.210708
+  type: 'test'
+  ...
+# Subtest: Windmill Downs: routes, services, pickups, NPCs, and encounters are reachable
+ok 32 - Windmill Downs: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 19.439334
+  type: 'test'
+  ...
+# Subtest: Tidemere Harbor: routes, services, pickups, NPCs, and encounters are reachable
+ok 33 - Tidemere Harbor: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 11.810375
+  type: 'test'
+  ...
+# Subtest: Cedar Stair: routes, services, pickups, NPCs, and encounters are reachable
+ok 34 - Cedar Stair: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 179.82875
+  type: 'test'
+  ...
+# Subtest: Cedarwick: routes, services, pickups, NPCs, and encounters are reachable
+ok 35 - Cedarwick: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 4.34625
+  type: 'test'
+  ...
+# Subtest: Juniper Walk: routes, services, pickups, NPCs, and encounters are reachable
+ok 36 - Juniper Walk: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 43.384833
+  type: 'test'
+  ...
+# Subtest: Dawnspire: routes, services, pickups, NPCs, and encounters are reachable
+ok 37 - Dawnspire: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 17.435459
+  type: 'test'
+  ...
+# Subtest: Dawnflower Fields: routes, services, pickups, NPCs, and encounters are reachable
+ok 38 - Dawnflower Fields: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 171.447042
+  type: 'test'
+  ...
+# Subtest: Sunfire Sanctum: routes, services, pickups, NPCs, and encounters are reachable
+ok 39 - Sunfire Sanctum: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 30.739417
+  type: 'test'
+  ...
+# Subtest: Sunstone Ascent: routes, services, pickups, NPCs, and encounters are reachable
+ok 40 - Sunstone Ascent: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 45.617167
+  type: 'test'
+  ...
+# Subtest: Golden Caldera: routes, services, pickups, NPCs, and encounters are reachable
+ok 41 - Golden Caldera: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 32.144458
+  type: 'test'
+  ...
+# Subtest: Clover Downs: routes, services, pickups, NPCs, and encounters are reachable
+ok 42 - Clover Downs: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 49.686041
+  type: 'test'
+  ...
+# Subtest: Copperwood: routes, services, pickups, NPCs, and encounters are reachable
+ok 43 - Copperwood: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 93.656083
+  type: 'test'
+  ...
+# Subtest: Mirror Marsh: routes, services, pickups, NPCs, and encounters are reachable
+ok 44 - Mirror Marsh: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 101.975958
+  type: 'test'
+  ...
+# Subtest: Copperleaf: routes, services, pickups, NPCs, and encounters are reachable
+ok 45 - Copperleaf: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 20.511916
+  type: 'test'
+  ...
+# Subtest: Glasswater Banks: routes, services, pickups, NPCs, and encounters are reachable
+ok 46 - Glasswater Banks: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 50.169667
+  type: 'test'
+  ...
+# Subtest: Glassharbor: routes, services, pickups, NPCs, and encounters are reachable
+ok 47 - Glassharbor: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 10.88425
+  type: 'test'
+  ...
+# Subtest: Starfall Approach: routes, services, pickups, NPCs, and encounters are reachable
+ok 48 - Starfall Approach: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 54.967083
+  type: 'test'
+  ...
+# Subtest: Starfall: routes, services, pickups, NPCs, and encounters are reachable
+ok 49 - Starfall: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 29.146583
+  type: 'test'
+  ...
+# Subtest: Cinder Crossing: routes, services, pickups, NPCs, and encounters are reachable
+ok 50 - Cinder Crossing: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 40.959834
+  type: 'test'
+  ...
+# Subtest: Rosewood Trail: routes, services, pickups, NPCs, and encounters are reachable
+ok 51 - Rosewood Trail: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 54.281792
+  type: 'test'
+  ...
+# Subtest: Silver Reeds: routes, services, pickups, NPCs, and encounters are reachable
+ok 52 - Silver Reeds: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 52.25375
+  type: 'test'
+  ...
+# Subtest: Fernway: routes, services, pickups, NPCs, and encounters are reachable
+ok 53 - Fernway: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 91.509792
+  type: 'test'
+  ...
+# Subtest: Fiddlehead Woods: routes, services, pickups, NPCs, and encounters are reachable
+ok 54 - Fiddlehead Woods: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 127.294333
+  type: 'test'
+  ...
+# Subtest: Mushroom Basin: routes, services, pickups, NPCs, and encounters are reachable
+ok 55 - Mushroom Basin: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 46.582
+  type: 'test'
+  ...
+# Subtest: Ashen Switchbacks: routes, services, pickups, NPCs, and encounters are reachable
+ok 56 - Ashen Switchbacks: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 28.078834
+  type: 'test'
+  ...
+# Subtest: Coalbank Ravine: routes, services, pickups, NPCs, and encounters are reachable
+ok 57 - Coalbank Ravine: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 78.714833
+  type: 'test'
+  ...
+# Subtest: Dawnlight Spire: routes, services, pickups, NPCs, and encounters are reachable
+ok 58 - Dawnlight Spire: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 34.248708
+  type: 'test'
+  ...
+# Subtest: Fernhollow: routes, services, pickups, NPCs, and encounters are reachable
+ok 59 - Fernhollow: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 8.314417
+  type: 'test'
+  ...
+# Subtest: Bellflower Prairie: routes, services, pickups, NPCs, and encounters are reachable
+ok 60 - Bellflower Prairie: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 176.959333
+  type: 'test'
+  ...
+# Subtest: Emberstead: routes, services, pickups, NPCs, and encounters are reachable
+ok 61 - Emberstead: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 58.2585
+  type: 'test'
+  ...
+# Subtest: Snowmelt Creek: routes, services, pickups, NPCs, and encounters are reachable
+ok 62 - Snowmelt Creek: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 59.17375
+  type: 'test'
+  ...
+# Subtest: Bellweather: routes, services, pickups, NPCs, and encounters are reachable
+ok 63 - Bellweather: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 29.579
+  type: 'test'
+  ...
+# Subtest: Aurora Crossing: routes, services, pickups, NPCs, and encounters are reachable
+ok 64 - Aurora Crossing: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 74.092833
+  type: 'test'
+  ...
+# Subtest: Snowbell: routes, services, pickups, NPCs, and encounters are reachable
+ok 65 - Snowbell: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 6.907875
+  type: 'test'
+  ...
+# Subtest: Fernspring: routes, services, pickups, NPCs, and encounters are reachable
+ok 66 - Fernspring: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 95.276917
+  type: 'test'
+  ...
+# Subtest: Nightbrook: routes, services, pickups, NPCs, and encounters are reachable
+ok 67 - Nightbrook: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 25.93375
+  type: 'test'
+  ...
+# Subtest: Blooming Thicket: routes, services, pickups, NPCs, and encounters are reachable
+ok 68 - Blooming Thicket: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 61.054792
+  type: 'test'
+  ...
+# Subtest: Ember Gorge: routes, services, pickups, NPCs, and encounters are reachable
+ok 69 - Ember Gorge: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 25.274958
+  type: 'test'
+  ...
+# Subtest: Singing Pines: routes, services, pickups, NPCs, and encounters are reachable
+ok 70 - Singing Pines: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 36.668208
+  type: 'test'
+  ...
+# Subtest: Frostglass Lake: routes, services, pickups, NPCs, and encounters are reachable
+ok 71 - Frostglass Lake: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 9.003125
+  type: 'test'
+  ...
+# Subtest: Dusklight Fen: routes, services, pickups, NPCs, and encounters are reachable
+ok 72 - Dusklight Fen: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 11.330833
+  type: 'test'
+  ...
+# Subtest: Moonshadow Path: routes, services, pickups, NPCs, and encounters are reachable
+ok 73 - Moonshadow Path: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 29.412334
+  type: 'test'
+  ...
+# Subtest: Rosepetal Walk: routes, services, pickups, NPCs, and encounters are reachable
+ok 74 - Rosepetal Walk: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 16.145334
+  type: 'test'
+  ...
+# Subtest: Briar Maze: routes, services, pickups, NPCs, and encounters are reachable
+ok 75 - Briar Maze: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 14.618375
+  type: 'test'
+  ...
+# Subtest: Petalwind Meadow: routes, services, pickups, NPCs, and encounters are reachable
+ok 76 - Petalwind Meadow: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 36.319291
+  type: 'test'
+  ...
+# Subtest: Cinderlake Shore: routes, services, pickups, NPCs, and encounters are reachable
+ok 77 - Cinderlake Shore: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 20.03075
+  type: 'test'
+  ...
+# Subtest: Windchime Ridge: routes, services, pickups, NPCs, and encounters are reachable
+ok 78 - Windchime Ridge: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 37.902
+  type: 'test'
+  ...
+# Subtest: Rosemere: routes, services, pickups, NPCs, and encounters are reachable
+ok 79 - Rosemere: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 13.140209
+  type: 'test'
+  ...
+# Subtest: Glacier Steps: routes, services, pickups, NPCs, and encounters are reachable
+ok 80 - Glacier Steps: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 24.827958
+  type: 'test'
+  ...
+# Subtest: Starlit Causeway: routes, services, pickups, NPCs, and encounters are reachable
+ok 81 - Starlit Causeway: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 35.382792
+  type: 'test'
+  ...
+# Subtest: Nightroot Woods: routes, services, pickups, NPCs, and encounters are reachable
+ok 82 - Nightroot Woods: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 52.435083
+  type: 'test'
+  ...
+# Subtest: Everlight: routes, services, pickups, NPCs, and encounters are reachable
+ok 83 - Everlight: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 8.169875
+  type: 'test'
+  ...
+# Subtest: Evergreen Reach: routes, services, pickups, NPCs, and encounters are reachable
+ok 84 - Evergreen Reach: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 27.698708
+  type: 'test'
+  ...
+# Subtest: Nightveil Hollow: routes, services, pickups, NPCs, and encounters are reachable
+ok 85 - Nightveil Hollow: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 39.924833
+  type: 'test'
+  ...
+# Subtest: Eclipse Threshold: routes, services, pickups, NPCs, and encounters are reachable
+ok 86 - Eclipse Threshold: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 20.185208
+  type: 'test'
+  ...
+# Subtest: Rosewater Delta: routes, services, pickups, NPCs, and encounters are reachable
+ok 87 - Rosewater Delta: routes, services, pickups, NPCs, and encounters are reachable
+  ---
+  duration_ms: 26.789083
+  type: 'test'
+  ...
+# Subtest: every route connects both ways and arrives inside the matching entrance
+ok 88 - every route connects both ways and arrives inside the matching entrance
+  ---
+  duration_ms: 23.0915
+  type: 'test'
+  ...
+# Subtest: the region is fully connected with branching paths and loops
+ok 89 - the region is fully connected with branching paths and loops
+  ---
+  duration_ms: 7.450375
+  type: 'test'
+  ...
+# Subtest: only marked exits open the boundary of each area
+ok 90 - only marked exits open the boundary of each area
+  ---
+  duration_ms: 53.5315
+  type: 'test'
+  ...
+# Subtest: wide and tall route positions survive save export/import and pathfinding
+ok 91 - wide and tall route positions survive save export/import and pathfinding
+  ---
+  duration_ms: 63.757292
+  type: 'test'
+  ...
+# Subtest: existing version 2 saves recover safely when terrain changes
+ok 92 - existing version 2 saves recover safely when terrain changes
+  ---
+  duration_ms: 25.320833
+  type: 'test'
+  ...
+# Subtest: Pupawn has reachable spawns in Sunpetal and Bramble on arrival
+ok 93 - Pupawn has reachable spawns in Sunpetal and Bramble on arrival
+  ---
+  duration_ms: 1.100584
+  type: 'test'
+  ...
+# Subtest: old saves receive an empty stone bag; corrupt inventories are rejected
+ok 94 - old saves receive an empty stone bag; corrupt inventories are rejected
+  ---
+  duration_ms: 7.477292
+  type: 'test'
+  ...
+# Subtest: stones cost coins, persist, and cannot be bought with insufficient money
+ok 95 - stones cost coins, persist, and cannot be bought with insufficient money
+  ---
+  duration_ms: 25.747292
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Ignisrael using fire_stone
+ok 96 - Pupawn evolves into Ignisrael using fire_stone
+  ---
+  duration_ms: 4.352583
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Torrentis using water_stone
+ok 97 - Pupawn evolves into Torrentis using water_stone
+  ---
+  duration_ms: 2.174
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Verdama using leaf_stone
+ok 98 - Pupawn evolves into Verdama using leaf_stone
+  ---
+  duration_ms: 2.277208
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Runaris using normal_stone
+ok 99 - Pupawn evolves into Runaris using normal_stone
+  ---
+  duration_ms: 1.150125
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Noctyros using dark_stone
+ok 100 - Pupawn evolves into Noctyros using dark_stone
+  ---
+  duration_ms: 4.881292
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Solarune using light_stone
+ok 101 - Pupawn evolves into Solarune using light_stone
+  ---
+  duration_ms: 1.472292
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Gravulor using ground_stone
+ok 102 - Pupawn evolves into Gravulor using ground_stone
+  ---
+  duration_ms: 2.577042
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Wraithound using ghost_stone
+ok 103 - Pupawn evolves into Wraithound using ghost_stone
+  ---
+  duration_ms: 7.308917
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Tempestral using air_stone
+ok 104 - Pupawn evolves into Tempestral using air_stone
+  ---
+  duration_ms: 3.936625
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Cryovelis using ice_stone
+ok 105 - Pupawn evolves into Cryovelis using ice_stone
+  ---
+  duration_ms: 2.125917
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Voltalis using thunder_stone
+ok 106 - Pupawn evolves into Voltalis using thunder_stone
+  ---
+  duration_ms: 4.315709
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Venomaris using poison_stone
+ok 107 - Pupawn evolves into Venomaris using poison_stone
+  ---
+  duration_ms: 3.551542
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Ferronyx using metal_stone
+ok 108 - Pupawn evolves into Ferronyx using metal_stone
+  ---
+  duration_ms: 6.141167
+  type: 'test'
+  ...
+# Subtest: Pupawn evolves into Eclipsera using shadow_stone
+ok 109 - Pupawn evolves into Eclipsera using shadow_stone
+  ---
+  duration_ms: 1.0555
+  type: 'test'
+  ...
+# Subtest: stone evolution rejects incompatible, missing, stored, and fainted companions without spending stones
+ok 110 - stone evolution rejects incompatible, missing, stored, and fainted companions without spending stones
+  ---
+  duration_ms: 0.315417
+  type: 'test'
+  ...
+# Subtest: other stone evolutions work and preserve PP on shared moves
+ok 111 - other stone evolutions work and preserve PP on shared moves
+  ---
+  duration_ms: 21.024083
+  type: 'test'
+  ...
+# Subtest: the expanded region has 15 towns, 50 wild areas, and dedicated guardian habitats
+ok 112 - the expanded region has 15 towns, 50 wild areas, and dedicated guardian habitats
+  ---
+  duration_ms: 17.943167
+  type: 'test'
+  ...
+# Subtest: shiny is 1 in 2 and alpha is independent, with exact threshold behavior
+ok 113 - shiny is 1 in 2 and alpha is independent, with exact threshold behavior
+  ---
+  duration_ms: 9.215042
+  type: 'test'
+  ...
+# Subtest: authored shiny bonuses and alpha strength stack for every species
+ok 114 - authored shiny bonuses and alpha strength stack for every species
+  ---
+  duration_ms: 8.406458
+  type: 'test'
+  ...
+# Subtest: all trait combinations survive battle, capture, storage, healing, and JSON saves
+ok 115 - all trait combinations survive battle, capture, storage, healing, and JSON saves
+  ---
+  duration_ms: 17.847167
+  type: 'test'
+  ...
+# Subtest: legacy saves default to ordinary traits and malformed traits are rejected
+ok 116 - legacy saves default to ordinary traits and malformed traits are rejected
+  ---
+  duration_ms: 2.921417
+  type: 'test'
+  ...
+# Subtest: shiny and alpha bonuses affect actual damage, defense, HP, and turn order
+ok 117 - shiny and alpha bonuses affect actual damage, defense, HP, and turn order
+  ---
+  duration_ms: 3.651
+  type: 'test'
+  ...
+# Subtest: level evolution keeps both traits and recalculates boosted HP
+ok 118 - level evolution keeps both traits and recalculates boosted HP
+  ---
+  duration_ms: 4.227958
+  type: 'test'
+  ...
+# Subtest: every town lies on one continuous, walkable island circuit
+ok 119 - every town lies on one continuous, walkable island circuit
+  ---
+  duration_ms: 564.108875
+  type: 'test'
+  ...
+# Subtest: outer trails end in plausible habitats and sanctuaries remain optional
+ok 120 - outer trails end in plausible habitats and sanctuaries remain optional
+  ---
+  duration_ms: 0.996875
+  type: 'test'
+  ...
+# Subtest: walking signposts agree with the island's north, south, east, and west
+ok 121 - walking signposts agree with the island's north, south, east, and west
+  ---
+  duration_ms: 0.529
+  type: 'test'
+  ...
+# Subtest: all places and their curved walking trails stay inside the shoreline
+ok 122 - all places and their curved walking trails stay inside the shoreline
+  ---
+  duration_ms: 988.747542
+  type: 'test'
+  ...
+# Subtest: the 12 gyms grow progressively from pure types to mixed full parties
+ok 123 - the 12 gyms grow progressively from pure types to mixed full parties
+  ---
+  duration_ms: 142.094875
+  type: 'test'
+  ...
+# Subtest: trainers inhabit every camper NPC area with fixed parties from low levels to 60
+ok 124 - trainers inhabit every camper NPC area with fixed parties from low levels to 60
+  ---
+  duration_ms: 1.614375
+  type: 'test'
+  ...
+# Subtest: badges enforce the circuit; all badges unlock successive mixed champions
+ok 125 - badges enforce the circuit; all badges unlock successive mixed champions
+  ---
+  duration_ms: 7.385042
+  type: 'test'
+  ...
+# Subtest: a gym must lose its whole party before awarding a badge, win, or prize
+ok 126 - a gym must lose its whole party before awarding a badge, win, or prize
+  ---
+  duration_ms: 117.618458
+  type: 'test'
+  ...
+# Subtest: trainer captures, conceding, and losses never award prizes or progress
+ok 127 - trainer captures, conceding, and losses never award prizes or progress
+  ---
+  duration_ms: 5.984208
+  type: 'test'
+  ...
+# Subtest: trainer and champion victories persist their own completion records
+ok 128 - trainer and champion victories persist their own completion records
+  ---
+  duration_ms: 125.59125
+  type: 'test'
+  ...
+# Subtest: legacy saves migrate league records without altering ranger progress or captured guardians
+ok 129 - legacy saves migrate league records without altering ranger progress or captured guardians
+  ---
+  duration_ms: 9.954459
+  type: 'test'
+  ...
+# Subtest: Solarius is level 80, hard to catch, and permanently absent only after capture
+ok 130 - Solarius is level 80, hard to catch, and permanently absent only after capture
+  ---
+  duration_ms: 21.395584
+  type: 'test'
+  ...
+# Subtest: Lumidrake is level 80, hard to catch, and permanently absent only after capture
+ok 131 - Lumidrake is level 80, hard to catch, and permanently absent only after capture
+  ---
+  duration_ms: 9.797958
+  type: 'test'
+  ...
+# Subtest: Umbradrake is level 80, hard to catch, and permanently absent only after capture
+ok 132 - Umbradrake is level 80, hard to catch, and permanently absent only after capture
+  ---
+  duration_ms: 7.174166
+  type: 'test'
+  ...
+# Subtest: Eclipserion is level 80, hard to catch, and permanently absent only after capture
+ok 133 - Eclipserion is level 80, hard to catch, and permanently absent only after capture
+  ---
+  duration_ms: 49.054333
+  type: 'test'
+  ...
+# Subtest: unlock checks use stable IDs for copied opponent definitions
+ok 134 - unlock checks use stable IDs for copied opponent definitions
+  ---
+  duration_ms: 0.485416
+  type: 'test'
+  ...
+# Subtest: all 93 species have distinct authored 3D profiles, including 17 new designs
+ok 135 - all 93 species have distinct authored 3D profiles, including 17 new designs
+  ---
+  duration_ms: 8.433375
+  type: 'test'
+  ...
+# Subtest: every model is grounded and scaled to its recorded height relative to a 1.70 m explorer
+ok 136 - every model is grounded and scaled to its recorded height relative to a 1.70 m explorer
+  ---
+  duration_ms: 16742.133708
+  type: 'test'
+  ...
+# Subtest: shiny palettes are isolated; alpha models are 20% larger without changing base species heights
+ok 137 - shiny palettes are isolated; alpha models are 20% larger without changing base species heights
+  ---
+  duration_ms: 27.946667
+  type: 'test'
+  ...
+# Subtest: the island merges all 65 geographic places into one continuous connected world
+ok 138 - the island merges all 65 geographic places into one continuous connected world
+  ---
+  duration_ms: 106.885333
+  type: 'test'
+  ...
+# Subtest: free movement uses fractional metres and diagonal travel, with natural shore and water boundaries
+ok 139 - free movement uses fractional metres and diagonal travel, with natural shore and water boundaries
+  ---
+  duration_ms: 217.235583
+  type: 'test'
+  ...
+# Subtest: the first island has a curated roster, independent of the complete 93-model library
+ok 140 - the first island has a curated roster, independent of the complete 93-model library
+  ---
+  duration_ms: 3.133417
+  type: 'test'
+  ...
+# Subtest: saves preserve exact continuous world coordinates while legacy saves still load
+ok 141 - saves preserve exact continuous world coordinates while legacy saves still load
+  ---
+  duration_ms: 81.539208
+  type: 'test'
+  ...
+# Subtest: forward and backward follow the explorer heading without turning on reversal
+ok 142 - forward and backward follow the explorer heading without turning on reversal
+  ---
+  duration_ms: 1.330792
+  type: 'test'
+  ...
+# Subtest: left and right turn in place and steer the walking direction
+ok 143 - left and right turn in place and steer the walking direction
+  ---
+  duration_ms: 5.892583
+  type: 'test'
+  ...
+# Subtest: steering follows the same arc at different frame rates and across the angle boundary
+ok 144 - steering follows the same arc at different frame rates and across the angle boundary
+  ---
+  duration_ms: 2.3735
+  type: 'test'
+  ...
+# Subtest: camera preferences reject invalid values and keep zoom and tilt within their limits
+ok 145 - camera preferences reject invalid values and keep zoom and tilt within their limits
+  ---
+  duration_ms: 2.170875
+  type: 'test'
+  ...
+# Subtest: world identity, terrain, residents, and saved position are independent for future islands
+ok 146 - world identity, terrain, residents, and saved position are independent for future islands
+  ---
+  duration_ms: 94.122917
+  type: 'test'
+  ...
+# Subtest: the Blender kit covers every existing landmark and exports finite indexed geometry
+ok 147 - the Blender kit covers every existing landmark and exports finite indexed geometry
+  ---
+  duration_ms: 89.819708
+  type: 'test'
+  ...
+# Subtest: all existing building doors remain walkable and service colors stay isolated
+ok 148 - all existing building doors remain walkable and service colors stay isolated
+  ---
+  duration_ms: 2566.966208
+  type: 'test'
+  ...
+# Subtest: unloading instanced scenery releases its materials without disposing shared kit geometry
+ok 149 - unloading instanced scenery releases its materials without disposing shared kit geometry
+  ---
+  duration_ms: 4.600541
+  type: 'test'
+  ...
+# Subtest: bridge deck exports keep their walkable surface thin and their boards close together
+ok 150 - bridge deck exports keep their walkable surface thin and their boards close together
+  ---
+  duration_ms: 0.62675
+  type: 'test'
+  ...
+1..150
+# tests 150
+# suites 0
+# pass 150
+# fail 0
+# cancelled 0
+# skipped 0
+# todo 0
+# duration_ms 20796.374708

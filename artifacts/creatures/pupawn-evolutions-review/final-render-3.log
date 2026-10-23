@@ -1,0 +1,33 @@
+00:14.918  blend            | Read blend: "/Users/jorik/github/pokemon-browser/assets/models/creatures/tempestral.blend"
+00:39.182  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/tempestral-hero.png'
+01:19.276  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/tempestral-side.png'
+01:49.657  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/tempestral-front.png'
+02:13.574  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/tempestral-rear.png'
+EVOLUTION_REVIEW Tempestral hero,side,front,rear
+02:13.588  blend            | Read blend: "/Users/jorik/github/pokemon-browser/assets/models/creatures/cryovelis.blend"
+02:50.716  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/cryovelis-hero.png'
+03:22.608  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/cryovelis-side.png'
+03:40.583  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/cryovelis-front.png'
+04:15.394  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/cryovelis-rear.png'
+EVOLUTION_REVIEW Cryovelis hero,side,front,rear
+04:15.442  blend            | Read blend: "/Users/jorik/github/pokemon-browser/assets/models/creatures/voltalis.blend"
+04:35.782  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/voltalis-hero.png'
+04:55.676  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/voltalis-side.png'
+05:18.205  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/voltalis-front.png'
+05:54.843  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/voltalis-rear.png'
+EVOLUTION_REVIEW Voltalis hero,side,front,rear
+05:54.935  blend            | Read blend: "/Users/jorik/github/pokemon-browser/assets/models/creatures/venomaris.blend"
+06:53.442  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/venomaris-hero.png'
+07:35.917  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/venomaris-side.png'
+08:11.788  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/venomaris-front.png'
+08:50.088  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/venomaris-rear.png'
+EVOLUTION_REVIEW Venomaris hero,side,front,rear
+08:50.119  blend            | Read blend: "/Users/jorik/github/pokemon-browser/assets/models/creatures/eclipsera.blend"
+09:07.927  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/eclipsera-hero.png'
+09:20.373  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/eclipsera-side.png'
+09:36.001  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/eclipsera-front.png'
+09:49.717  render           | Saved: '/Users/jorik/github/pokemon-browser/artifacts/creatures/pupawn-evolutions-review/eclipsera-rear.png'
+EVOLUTION_REVIEW Eclipsera hero,side,front,rear
+Blender 5.3.0 Beta (hash 4768a6eac54c built 2026-10-23 01:30:59)
+
+Blender quit

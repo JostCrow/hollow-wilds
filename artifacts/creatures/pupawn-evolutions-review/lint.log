@@ -1,0 +1,4 @@
+
+> the-hollow-wilds@1.0.0 lint
+> eslint src/game src/App.tsx src/main.tsx
+

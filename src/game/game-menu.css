@@ -1,0 +1,39 @@
+.game-menu {
+  color: var(--ink);
+  background: var(--paper);
+  border: 1px solid var(--line);
+  border-radius: 16px;
+  padding: 0;
+  margin: auto;
+  width: min(1320px, calc(100vw - 48px));
+  height: min(920px, calc(100dvh - 48px));
+  max-width: none;
+  max-height: none;
+  overflow: hidden;
+  box-shadow: 0 24px 100px #142c3433;
+}
+.game-menu[open] { display: flex; flex-direction: column; }
+.game-menu::backdrop { background: #182e2ad1; }
+.game-menu-header,
+.game-menu-header > div { display: flex; align-items: center; gap: 13px; }
+.game-menu-header { justify-content: space-between; padding: 19px 26px; border-bottom: 1px solid var(--line); }
+.game-menu-header h2 { font-size: 18px; }
+.game-menu-header span { font-size: 11px; color: var(--muted); }
+.game-menu-header kbd { margin-left: 8px; }
+.game-menu-nav { display: flex; flex-wrap: wrap; gap: 5px; padding: 12px 22px; border-bottom: 1px solid var(--line); }
+.game-menu-nav button { display: flex; align-items: center; gap: 7px; padding: 9px 11px; border: 0; border-radius: 7px; background: transparent; color: var(--muted); font-size: 12px; }
+.game-menu-nav button[aria-current="page"] { color: var(--green); background: var(--soft); font-weight: 650; }
+.game-menu-page { flex: 1; min-height: 0; overflow: auto; overscroll-behavior: contain; padding: 28px; }
+.game-menu-page[hidden] { display: none; }
+.game-menu > .toast { position: absolute; left: 50%; bottom: 16px; max-width: min(660px, calc(100% - 32px)); }
+.game-menu > .save-warning { position: absolute; left: 0; }
+@media (max-width: 720px) {
+  .game-menu { width: calc(100vw - 16px); height: calc(100dvh - 16px); border-radius: 12px; }
+  .game-menu-header { padding: 14px; gap: 10px; }
+  .game-menu-header > div > svg, .game-menu-header kbd { display: none; }
+  .game-menu-header h2 { font-size: 15px; }
+  .game-menu-header .secondary-button { font-size: 11px; padding: 9px; }
+  .game-menu-nav { padding: 9px; gap: 3px; }
+  .game-menu-nav button { padding: 8px; font-size: 11px; }
+  .game-menu-page { padding: 18px 14px; }
+}
